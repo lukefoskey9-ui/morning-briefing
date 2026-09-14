@@ -203,7 +203,7 @@
   <header class="masthead">
     <p class="kicker">Daily Digest</p>
     <h1 class="title">Morning Briefing</h1>
-    <span class="date-badge">Sunday, September 13, 2026</span>
+    <span class="date-badge">Monday, September 14, 2026</span>
     <p class="tagline">The essential cybersecurity and AI news, in under 3 minutes.</p>
   </header>
 
@@ -211,37 +211,43 @@
     <div class="section-head">
       <span class="section-icon cyber"></span>
       <h2 class="section-title">Cybersecurity</h2>
-      <span class="section-count">5 stories</span>
+      <span class="section-count">6 stories</span>
     </div>
 
     <article class="story cyber">
-      <h3>Dutch cyber agency warns of imminent attacks on two critical Check Point VPN flaws</h3>
-      <p class="summary">The Netherlands' NCSC says exploitation of CVE-2026-85102 and CVE-2026-85103 &mdash; a certificate-validation flaw and a heap overflow in Check Point's Security Gateway VPN, each rated 9.8 &mdash; is likely soon even though no public proof-of-concept exists yet. Check Point shipped fixes on September 9; unaffected deployments are limited to version R82.20.</p>
-      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/dutch-ncsc-critical-check-point-vpn-flaws-exploitation-is-imminent/">BleepingComputer</a>
+      <h3>Microsoft's biggest Patch Tuesday on record fixes two exploited Windows zero-days</h3>
+      <p class="summary">September's release patched roughly 974 vulnerabilities &mdash; Microsoft's largest single update yet &mdash; including two flaws already under active attack: CVE-2026-81963 in the Windows Update Stack and CVE-2026-85880 in Windows ALPC, both letting a local attacker escalate to SYSTEM. 105 of the fixes are rated critical, 81 of them remote-code-execution bugs.</p>
+      <a class="source-link" href="https://www.securityweek.com/microsoft-patches-record-974-vulnerabilities-including-two-exploited-zero-days/">SecurityWeek</a>
     </article>
 
     <article class="story cyber">
-      <h3>Attackers chain two JFrog Artifactory bugs to mint admin tokens and plant Rust backdoors</h3>
-      <p class="summary">Between August 15 and September 8, multiple threat actors combined CVE-2026-42018 and CVE-2026-42016 to escalate an anonymous session to a full admin token &mdash; in some cases in under five minutes &mdash; then installed malicious Groovy plugins and a Rust-based backdoor for persistence. CISA has since added the flaws, along with bugs in ConnectWise ScreenConnect and MikroTik RouterOS, to its Known Exploited Vulnerabilities catalog.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/09/attackers-chain-jfrog-artifactory-flaws.html">The Hacker News</a>
+      <h3>Adobe patches a maximum-severity Magento zero-day already dropping Rust and PHP backdoors</h3>
+      <p class="summary">Dubbed "StyleSmuggler," CVE-2026-75650 (CVSS 10.0) has been exploited since September 4 to inject unauthenticated PHP through Magento's "Payment Transaction Failed" email template, planting a Rust backdoor and a PHP web shell on compromised stores. Adobe's hotfix requires site operators to also rotate their encryption keys, since credentials may already be exposed.</p>
+      <a class="source-link" href="https://thehackernews.com/2026/09/adobe-patches-magento-zero-day.html">The Hacker News</a>
     </article>
 
     <article class="story cyber">
-      <h3>Help-desk impersonators are using fake "passkey setup" calls to raid Microsoft 365 accounts</h3>
-      <p class="summary">Microsoft says actors linked to ShinyHunters and other extortion crews have spent months calling or texting employees, posing as internal IT and claiming a passkey, MFA, or SSO update is urgently needed. Victims are steered to phishing pages that steal session tokens via device-code or adversary-in-the-middle flows, after which attackers quietly register their own MFA methods and siphon data from SharePoint, OneDrive, and Exchange Online.</p>
-      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/passkey-themed-phishing-attacks-lead-to-microsoft-365-data-theft/">BleepingComputer</a>
+      <h3>Attackers breached JetBrains' own Cadence service through an unpatched TeamCity flaw</h3>
+      <p class="summary">Between August 8 and 24, intruders exploited CVE-2026-63077, a critical deserialization bug in TeamCity, to break into JetBrains' Cadence cloud build service, extracting usernames, emails, AWS IAM credentials, source code, and secrets from a 2024 backup. JetBrains is telling affected customers to rotate every credential their Cadence pipelines ever used.</p>
+      <a class="source-link" href="https://thehackernews.com/2026/09/attackers-breached-jetbrains-cadence.html">The Hacker News</a>
     </article>
 
     <article class="story cyber">
-      <h3>Citrix NetScaler flaw with a public exploit gets a Friday KEV listing and a Federal patch deadline</h3>
-      <p class="summary">CISA added CVE-2026-19490, a critical (9.3) authentication-bypass bug in NetScaler ADC and Gateway that has been under active attack since at least September 3, to its exploited-vulnerabilities catalog alongside a Cisco Secure Firewall Management Center flaw and a Fortinet FortiOS buffer overflow. Citrix patched the bug on August 19; any internet-facing gateway or AAA virtual server left unpatched is now a live target.</p>
-      <a class="source-link" href="https://www.securityweek.com/critical-netscaler-vulnerability-exploited-in-attacks/">SecurityWeek</a>
+      <h3>Pre-auth RCE in N-able's N-central remote-monitoring platform is being actively exploited</h3>
+      <p class="summary">CVE-2026-86218, a maximum-severity static code injection flaw requiring no authentication, was found being used to compromise a fully patched customer environment on September 4. N-able shipped a hotfix and CISA gave federal agencies until September 11 to patch &mdash; a single compromised N-central instance can cascade into every endpoint an MSP manages through it.</p>
+      <a class="source-link" href="https://thehackernews.com/2026/09/n-able-n-central-pre-auth-rce-flaw.html">The Hacker News</a>
     </article>
 
     <article class="story cyber">
-      <h3>Google patches a Chrome V8 zero-day already being used to break out of the browser sandbox</h3>
-      <p class="summary">CVE-2026-85046, a type-confusion bug in Chrome's V8 JavaScript engine, let attacker-crafted web pages corrupt memory and gain arbitrary read/write access, setting up sandbox-escape code execution. Google shipped the fix in its September 3 Stable Channel update, and CISA gave federal agencies until September 18 to patch.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/09/google-releases-chrome-update-to-patch.html">The Hacker News</a>
+      <h3>CISA orders federal patching of two maximum-severity Cisco firewall-management flaws</h3>
+      <p class="summary">CVE-2026-20079 and CVE-2026-20131 &mdash; the latter a perfect 10.0 &mdash; let an unauthenticated remote attacker run arbitrary code as root on Cisco Secure Firewall Management Center and Security Cloud Control. Cisco confirmed active exploitation and CISA set a September 12 deadline for federal systems to be secured.</p>
+      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/cisco-confirms-cve-2026-20079-secure-fmc-flaw-exploited-in-attacks/">BleepingComputer</a>
+    </article>
+
+    <article class="story cyber">
+      <h3>China-aligned hackers exploit a Tencent input-method flaw to plant the GrayRabbit backdoor</h3>
+      <p class="summary">Gen Digital says a China-aligned espionage group is exploiting CVE-2026-51990, a one-click remote-code-execution bug in Tencent's widely used Sogou Input Method for Windows, to deploy a new backdoor dubbed GrayRabbit. Sogou ships on huge numbers of Chinese-language Windows systems, giving the flaw an unusually broad footprint.</p>
+      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/hackers-exploit-tencent-app-flaw-to-deploy-grayrabbit-malware/">BleepingComputer</a>
     </article>
   </section>
 
@@ -253,39 +259,39 @@
     </div>
 
     <article class="story ai">
-      <h3>Nvidia agrees to buy Hugging Face for $12.9 billion</h3>
-      <p class="summary">The deal would hand the chipmaker control of the model-sharing hub used by more than 18 million developers to distribute over 3 million models and a million applications. Nvidia says Hugging Face will keep its brand and stay open to rival clouds, frameworks, and inference providers &mdash; its second-largest acquisition on record.</p>
-      <a class="source-link" href="https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/">NVIDIA Blog</a>
+      <h3>Anthropic, OpenAI and xAI chiefs jointly back slowing AI's pace; Trump pushes back</h3>
+      <p class="summary">Following Dario Amodei's weekend warning that swarms of rogue AI agents could seize control of internet infrastructure within 6&ndash;12 months without a deliberate slowdown, OpenAI's Sam Altman and xAI's Elon Musk publicly backed "pacing" frontier development, with Altman citing risks of humans losing control or a single actor concentrating power via AI. President Trump rejected the calls, saying the US is "leading China in AI" and intends to keep it that way.</p>
+      <a class="source-link" href="https://www.cnbc.com/2026/09/14/sam-altman-ai-slowdown-anthropic-amodei-musk.html">CNBC</a>
     </article>
 
     <article class="story ai">
-      <h3>OpenAI ships GPT-6 Astra, its first model rated "critical risk" for cyber capability</h3>
-      <p class="summary">OpenAI is rolling GPT-6 Astra out to ChatGPT Plus, Pro, Business, and Enterprise users and the API, calling it its most capable and aligned model yet; president Greg Brockman said it could eventually be seen as an early step toward AGI. Under OpenAI's own preparedness framework, Astra is the first model to cross the "critical" cybersecurity threshold, meaning it can find and chain unknown vulnerabilities in well-defended systems without step-by-step human guidance.</p>
-      <a class="source-link" href="https://www.axios.com/2026/09/03/openai-astra-gpt-6-agi-brockman">Axios</a>
+      <h3>OpenAI shelves its 2026 IPO, citing AI-safety concerns</h3>
+      <p class="summary">Sam Altman told Fortune that going public now would be an "ill-advised moment" given mounting industry safety concerns, reversing earlier plans for a 2026 listing. The move lands just as rival Anthropic reports its first profitable quarter ahead of its own planned fall IPO.</p>
+      <a class="source-link" href="https://fortune.com/2026/09/12/sam-altman-openai-ipo-delay-ill-advised-moment-safety-concerns/">Fortune</a>
     </article>
 
     <article class="story ai">
-      <h3>Anthropic releases Claude Fable 5.1 and Mythos 5.1, cuts cached-context pricing 75%</h3>
-      <p class="summary">Fable 5.1 is generally available with better coding and long-running task performance than Fable 5 at the same price; Mythos 5.1, the same underlying model with lighter safeguards, is limited to trusted-access programs in cybersecurity and life sciences. Anthropic also introduced "Enterprise Frontier Safeguards," letting organizations keep agent-monitoring data inside their own infrastructure.</p>
-      <a class="source-link" href="https://www.anthropic.com/claude-fable-and-mythos-5-1">Anthropic</a>
+      <h3>Anthropic, OpenAI and Google DeepMind quietly discuss a joint AI safety standards body</h3>
+      <p class="summary">The three labs have held working-group talks since July on an industry-led body &mdash; modeled on a proposal from Google DeepMind's Demis Hassabis &mdash; to test frontier models before release. They reportedly differ on government's role: Anthropic favors closer government partnership, OpenAI prefers voluntary industry standards.</p>
+      <a class="source-link" href="https://www.cnn.com/2026/09/14/tech/ai-standards-body">CNN</a>
     </article>
 
     <article class="story ai">
-      <h3>Google ships Gemini 3.8 Flash and a locked-down "Flash Cyber" sibling</h3>
-      <p class="summary">Released just three weeks after 3.7 Flash, the new workhorse model improves on software engineering, agentic workflows, and multi-step reasoning at the same introductory price. The specialized Flash Cyber variant, gated behind Google's Fairwind program, is aimed at defensive security research.</p>
-      <a class="source-link" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/">Google Blog</a>
+      <h3>Anthropic says it disrupted a bioweapons research effort and a Russia-linked drone-targeting project</h3>
+      <p class="summary">Anthropic's September threat-intelligence report describes breaking up five cases of scientists using Claude in ways that could aid biological-weapons development, plus a Russia-linked group that used Claude Code to help build a drone system able to select human targets and issue detonation commands without a person in the loop. Anthropic also flagged large-scale scraping of Claude's capabilities it attributes to a Chinese competitor.</p>
+      <a class="source-link" href="https://www.anthropic.com/threat-intelligence-report-september-2026">Anthropic</a>
     </article>
 
     <article class="story ai">
-      <h3>Meta's Muse Spark 1.3 trims tool calls and tokens for longer agent runs</h3>
-      <p class="summary">Meta says the update uses roughly 20% fewer tool calls and 25% fewer tokens than Muse Spark 1.2 on comparable agentic coding tasks, while better sustaining long, messy, multi-step objectives across a single thread. A more compute-intensive "max mode" remains restricted pending further safety testing.</p>
-      <a class="source-link" href="https://research.meta.ai/blog/introducing-muse-spark-1-3">Meta AI Research</a>
+      <h3>Sakana AI ships Fugu Max and Fugu Ultra v2.0, cutting multi-agent orchestration costs sharply</h3>
+      <p class="summary">The Tokyo lab's Fugu models aren't standalone LLMs but learned orchestrators that route tasks across a pool of other frontier models behind one API; Ultra v2 posts best-or-joint-best results on 5 of 8 benchmarks despite excluding Fable 5.1 and GPT-6 Astra from its own model pool. Both ship at $5/$30 per million tokens, though not yet in the EU pending GDPR compliance work.</p>
+      <a class="source-link" href="https://www.marktechpost.com/2026/09/10/sakana-ai-launches-fugu-max-and-fugu-ultra-v2-for-cheaper-stronger-multi-agent-orchestration/">MarkTechPost</a>
     </article>
 
     <article class="story ai">
-      <h3>DeepSeek's V4.1 Flash nearly doubles in size while cutting prices</h3>
-      <p class="summary">The new open model uses a 552-billion-parameter encoder-decoder architecture with only 8&ndash;16 billion parameters active per token, shrinking its KV cache to about a quarter of the prior Flash generation's memory footprint. Coding benchmarks jumped sharply over the previous release &mdash; Terminal-Bench 2.1 rose from 82.7 to 90.6 &mdash; even as list prices fell.</p>
-      <a class="source-link" href="https://www.datacamp.com/blog/deepseek-v4-1-flash">DataCamp</a>
+      <h3>OpenAI opens its Agents API to the public</h3>
+      <p class="summary">The new managed API exposes OpenAI's Codex harness &mdash; session orchestration, context compaction, tool selection, and multi-agent delegation &mdash; behind a single call, with sandboxed compute available from OpenAI or partners including Vercel, DigitalOcean, and Cloudflare. There's no extra fee beyond the tokens and tools an agent actually uses.</p>
+      <a class="source-link" href="https://community.openai.com/t/introducing-the-agents-api-and-hosted-sandboxes/1396481">OpenAI</a>
     </article>
   </section>
 
