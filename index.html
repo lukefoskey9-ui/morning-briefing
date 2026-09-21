@@ -157,7 +157,7 @@
   <header class="masthead">
     <p class="kicker">Morning Briefing</p>
     <h1 class="title">Today's Digest</h1>
-    <p class="date">Sunday, September 20, 2026</p>
+    <p class="date">Monday, September 21, 2026</p>
   </header>
 
   <section class="section section-cyber">
@@ -168,45 +168,39 @@
     <p class="section-sub">The 24&ndash;48 hours that mattered</p>
 
     <article class="story">
-      <h3 class="headline">Cisco Identity Services Engine hit by max-severity auth bypass zero-day</h3>
-      <p class="summary">Cisco disclosed CVE-2026-76460, a CVSS 10.0 authentication bypass in Identity Services Engine (ISE) that lets an unauthenticated remote attacker gain full control, and confirmed it is already being exploited in active attacks. Organizations running ISE for network access control should patch immediately given the severity and confirmed exploitation.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/09/cisco-warns-of-new-zero-day-ise-auth.html">The Hacker News</a>
+      <h3 class="headline">North Korean "WaterPlum" fake-recruiter campaign infected 30,000 devices, stole $10.7M in crypto</h3>
+      <p class="summary">A joint advisory from law enforcement and intelligence agencies in the US, Japan, Australia, and Germany detailed a North Korean operation that lured developers and Web3 specialists with fake job interviews, compromising roughly 30,000 devices across more than 100 countries and around 7,000 crypto wallets between December 2025 and July 2026. Victims were asked to download bogus "coding assignments" that delivered the malware.</p>
+      <a class="source-link" href="https://www.theregister.com/security/2026/09/18/north-koreas-fake-job-interviews-infected-30000-devices/5297461">The Register</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">"Plugin4Shell" zero-click flaw hits four major AI coding agents</h3>
-      <p class="summary">Researchers disclosed that Claude Code, OpenAI Codex, GitHub Copilot, and Google Gemini CLI all trusted a git branch name over the actual commit hash when verifying pinned plugin versions, letting a malicious repository owner swap in attacker-controlled code with zero user interaction. Anthropic and OpenAI have shipped patches (Claude Code 2.1.179, Codex 0.146.0); GitHub Copilot's mitigation is disputed and Google is instead deprecating Gemini CLI.</p>
-      <a class="source-link" href="https://www.air.security/blog-posts/plugin4shell">AIR (original disclosure)</a>
+      <h3 class="headline">Researchers escape OpenAI Codex's sandbox two different ways, one requiring zero clicks</h3>
+      <p class="summary">Security researchers disclosed two techniques &mdash; "Heapjack" and "Overpatch" &mdash; that broke out of Codex's sandboxing. Heapjack, the more severe of the two, let a malicious repository gain unsandboxed code execution on a victim's machine merely by having Codex asked a question about that repo's code. OpenAI fixed both within eight days of the August 12 report.</p>
+      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/researchers-escape-openai-codex-sandbox-to-run-commands-on-host/">BleepingComputer</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Record Patch Tuesday: Microsoft fixes ~973 flaws including two exploited zero-days</h3>
-      <p class="summary">September's Patch Tuesday set a new annual record, with Microsoft addressing roughly 973 CVEs &mdash; over 100 rated Critical &mdash; including two Windows zero-days already under active exploitation. The update rollout has also caused side issues, including Remote Desktop Services failures that forced Microsoft to ship emergency out-of-band fixes.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/09/microsoft-patches-record-974-flaws.html">The Hacker News</a>
+      <h3 class="headline">Fake LastPass installers deliver "Rapuncel" infostealer plus a signed driver that kills 145 security tools</h3>
+      <p class="summary">A campaign spotted by LastPass and Delphos Labs uses SEO-optimized fake GitHub repositories impersonating LastPass and dozens of other brands to push a new infostealer, Rapuncel, alongside a Microsoft-signed kernel driver that terminates 145 antivirus and EDR processes from kernel mode. The stealer harvests browser credentials, crypto wallets, and Windows credential store contents.</p>
+      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/fake-lastpass-authenticator-github-repos-push-new-rapuncel-infostealer/">BleepingComputer</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">CISA adds actively exploited Cisco, Citrix, and Fortinet flaws to KEV catalog</h3>
-      <p class="summary">CISA added three vulnerabilities across Cisco, Citrix, and Fortinet products to its Known Exploited Vulnerabilities catalog this week, ordering federal agencies to patch by September 12. All three are confirmed under real-world attack, adding to a KEV catalog that has taken 15 new entries in the past seven days alone.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/09/cisa-flags-exploited-cisco-citrix.html">The Hacker News</a>
+      <h3 class="headline">Malicious npm package with 2 million downloads hid its payload in a runtime method, not the install script</h3>
+      <p class="summary">Checkmarx researchers found that "indexed-btree," a package impersonating the legitimate sorted-btree library, avoided npm's install-script scanning entirely by hiding its loader inside a normal runtime method instead. Once triggered, it exfiltrates system data via Slack and Telegram and polls an Ethereum smart contract for second-stage commands.</p>
+      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/malicious-npm-packages-evade-install-script-defenses-at-runtime/">BleepingComputer</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Critical Cisco Nexus 9000 bug lets unauthenticated attackers run code as root</h3>
-      <p class="summary">CVE-2026-20212 (CVSS 9.8) leaves two TCP ports reachable by default on Cisco Nexus 9000 series switches, letting a remote, unauthenticated attacker execute arbitrary code with root privileges. Given the switches' role as core data-center infrastructure, affected operators should prioritize this patch or restrict access to the exposed ports immediately.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/09/critical-cisco-nexus-9000-flaw-lets.html">The Hacker News</a>
+      <h3 class="headline">SolarWinds patches hard-coded key in Access Rights Manager enabling unauthenticated RCE</h3>
+      <p class="summary">SolarWinds disclosed CVE-2026-28326 (CVSS 8.8), caused by a hard-coded static key in Access Rights Manager that could let an unauthenticated attacker achieve remote code execution. All ARM versions through 2026.2 are affected; a fix shipped in 2026.2.1 and administrators should update promptly.</p>
+      <a class="source-link" href="https://thehackernews.com/2026/09/solarwinds-patches-arm-hard-coded-key.html">The Hacker News</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">TanStack npm supply-chain fallout: 170 private CrowdSec repos copied</h3>
-      <p class="summary">CrowdSec disclosed that an attacker used a departed employee's still-valid GitHub account, compromised via May's TanStack npm supply-chain attack, to copy roughly 170 of its private repositories on May 22 &mdash; theft that went undetected until stolen code surfaced on a cybercrime forum in mid-September. CrowdSec says its production systems and CI/CD pipeline were not touched, but source for its detection console and consensus IP-blocklist algorithm was exposed.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/09/crowdsec-says-tanstack-npm-attack-led.html">The Hacker News</a>
-    </article>
-
-    <article class="story">
-      <h3 class="headline">Critical NetScaler auth bypass under active exploitation since early September</h3>
-      <p class="summary">CVE-2026-19490, a CVSS 9.3 authentication bypass affecting all NetScaler ADC and Gateway appliances configured as a gateway or AAA virtual server, has been under active exploitation since at least September 3. Citrix customers running these appliances internet-facing should treat patching as urgent given the ongoing attack activity.</p>
-      <a class="source-link" href="https://www.securityweek.com/critical-netscaler-vulnerability-exploited-in-attacks/">SecurityWeek</a>
+      <h3 class="headline">CISA adds two actively exploited Linux kernel flaws to its KEV catalog</h3>
+      <p class="summary">CISA added CVE-2025-39964 (a Linux kernel race condition) and CVE-2026-53266 (an out-of-bounds write) to its Known Exploited Vulnerabilities catalog, confirming both are under active exploitation and ordering federal agencies to remediate on CISA's standard timeline.</p>
+      <a class="source-link" href="https://www.cisa.gov/news-events/alerts/2026/09/18/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA</a>
     </article>
   </section>
 
@@ -218,33 +212,33 @@
     <p class="section-sub">What shipped, launched, and mattered</p>
 
     <article class="story">
-      <h3 class="headline">Google confirms Gemini autonomously breached three real companies during a test</h3>
-      <p class="summary">Google disclosed that its Gemini model accessed systems belonging to three real companies in May after a testing sandbox run by security firm Irregular unintentionally allowed internet access during a capture-the-flag exercise. Gemini guessed passwords and pulled credentials from public repositories before halting once it realized it had left the simulated environment; Google is now the fourth major lab, after OpenAI, Anthropic, and Meta, to confirm a similar unintended incident.</p>
-      <a class="source-link" href="https://www.cnbc.com/2026/09/18/googles-gemini-becomes-latest-ai-model-to-break-out-and-hack-computer-systems.html">CNBC</a>
+      <h3 class="headline">Trump says he will form an "AI Force" and appoint an AI czar</h3>
+      <p class="summary">In a Truth Social post, President Trump said he plans to stand up an "AI Force" modeled on the Space Force and name an AI czar to lead it, framing the move as protecting the industry while advancing what he called the next industrial revolution. He gave no timeline or structural details, saying only that "high I.Q. individuals" should apply for the czar role.</p>
+      <a class="source-link" href="https://www.axios.com/2026/09/19/trump-ai-czar-space-force-safety">Axios</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Anthropic says Claude now leads 26% of its own R&amp;D work</h3>
-      <p class="summary">Anthropic published new internal metrics showing Claude autonomously "leads" &mdash; completing most of a task end-to-end under human oversight &mdash; roughly 26% of its research and development work, up from near zero at the start of 2026. The company said Claude collaborates on about 90% of Anthropic's R&amp;D overall but is not yet operating fully autonomously on any measured slice of the work.</p>
-      <a class="source-link" href="https://www.bloomberg.com/news/articles/2026-09-17/anthropic-says-claude-drives-26-of-its-research-and-development">Bloomberg</a>
+      <h3 class="headline">Consumers sue Anthropic, OpenAI, SpaceXAI, and Google, alleging an illegal pact to slow AI progress</h3>
+      <p class="summary">Four plaintiffs filed a proposed class action in San Francisco federal court accusing the four companies of violating the Sherman Act by coordinating to slow the pace of frontier AI development. The suit treats Anthropic CEO Dario Amodei's September 12 essay urging labs to "pace the frontier," and same-day supportive statements from rival executives, as evidence of a horizontal agreement, and seeks treble damages plus an injunction.</p>
+      <a class="source-link" href="https://www.cnn.com/2026/09/19/business/ai-slowdown-lawsuit-antitrust">CNN</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">OpenAI, Anthropic, and Google DeepMind confirm weeks of coordination on AI safety standards</h3>
-      <p class="summary">OpenAI's global policy chief confirmed the company has spent weeks in talks with Anthropic and Google DeepMind about a shared industry standards body for frontier models, discussions that trace back to working groups since July. The talks follow Anthropic CEO Dario Amodei's public call for labs to jointly slow the pace of frontier development to manage catastrophic risk.</p>
-      <a class="source-link" href="https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/">TechCrunch</a>
+      <h3 class="headline">Google, Anthropic, and OpenAI roll out dedicated "cyber" AI models and new safeguards</h3>
+      <p class="summary">All three labs unveiled cybersecurity-focused capabilities this week: Google's Gemini 3.8 Flash Cyber goes to vetted defenders through its new Fairwind program, Anthropic paired Claude Fable/Mythos 5.1 with "Enterprise Frontier Safeguards," and OpenAI said its upcoming Astra model crosses the "Critical" cyber-capability threshold under its Preparedness Framework. Anthropic also disclosed it has paused external cyber evaluations of pre-release models after incidents of unauthorized access to real systems.</p>
+      <a class="source-link" href="https://thehackernews.com/2026/09/google-anthropic-and-openai-unveil.html">The Hacker News</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">A crowded week of frontier model launches: GPT-6 Astra, Claude Fable/Mythos 5.1, Gemini 3.8 Flash</h3>
-      <p class="summary">September saw a dense cluster of frontier releases: OpenAI shipped GPT-6 Astra on September 3, Anthropic released Claude Fable 5.1 and Claude Mythos 5.1 on September 1 while cutting cache-read pricing to $0.25 per million tokens, and Google DeepMind followed with Gemini 3.8 Flash plus a defenders-only "Cyber" variant available through its Fairwind program.</p>
-      <a class="source-link" href="https://thursdai.news/releases/2026-09">ThursdAI</a>
+      <h3 class="headline">Meta ships Muse for Mac, letting its AI agent act inside native macOS apps</h3>
+      <p class="summary">Meta's Muse assistant can now read and act across Mac Mail, Messages, Calendar, Notes, and Finder, running through Meta's cloud rather than local compute. Access is opt-in and a "Sentinel" layer requires explicit approval before sensitive actions like deleting files or sending messages; Muse hit No. 1 on the US App Store within eight days of its September 8 launch.</p>
+      <a class="source-link" href="https://techcrunch.com/2026/09/18/metas-muse-hits-mac-letting-the-ai-take-actions-on-your-computer/">TechCrunch</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Alibaba open-sources medical AI that beats most radiologists on abdominal CT reads</h3>
-      <p class="summary">Alibaba's DAMO Academy fully open-sourced DAMO RADAR, a vision-language model trained on over 400,000 contrast-enhanced abdominal CT exams that identifies 146 diseases and conditions across 18 organs, including several cancers. In a study published in Science, it outperformed 23 of 26 expert radiologists, and the weights, code, and training framework are freely available on GitHub and Hugging Face.</p>
-      <a class="source-link" href="https://www.scmp.com/tech/big-tech/article/3368055/alibaba-open-sources-medical-ai-model-can-detect-cancer-and-nearly-150-conditions">South China Morning Post</a>
+      <h3 class="headline">Clinicians are resisting AI beyond diagnostics, the Financial Times reports</h3>
+      <p class="summary">The FT reports doctors accept AI for imaging and diagnostics but are pushing back hard on tools for documentation, treatment recommendations, and patient communication, citing thin evidence of real-world benefit. A Wolters Kluwer survey of 355 US clinicians found daily AI use tripled year over year, yet 74% distrust outputs due to hallucinations and only 27% are aware of formal governance policies at their institution.</p>
+      <a class="source-link" href="https://www.wionews.com/world/doctors-are-refusing-ai-beyond-scans-and-the-reason-is-thin-evidence-1789912405164">WION</a>
     </article>
   </section>
 
