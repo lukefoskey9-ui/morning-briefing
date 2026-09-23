@@ -157,7 +157,7 @@
   <header class="masthead">
     <p class="kicker">Morning Briefing</p>
     <h1 class="title">Today's Digest</h1>
-    <p class="date">Tuesday, September 22, 2026</p>
+    <p class="date">Wednesday, September 23, 2026</p>
   </header>
 
   <section class="section section-cyber">
@@ -168,39 +168,39 @@
     <p class="section-sub">The 24&ndash;48 hours that mattered</p>
 
     <article class="story">
-      <h3 class="headline">Cisco patches second actively exploited zero-day in as many days, this one a perfect 10</h3>
-      <p class="summary">CVE-2026-76460 is an authentication bypass in Cisco's Identity Services Engine (ISE) and ISE-PIC, caused by insufficient authentication on an API endpoint, letting an unauthenticated attacker gain full control of the device. Because ISE enforces network access policy, a compromised box lets attackers rewrite policy, pull stored credentials, and pivot into every segment it controls; CISA gave federal agencies three days to patch.</p>
+      <h3 class="headline">Cisco ISE zero-day patched at a perfect CVSS 10 &mdash; already under active attack</h3>
+      <p class="summary">CVE-2026-76460 is an authentication-bypass flaw in Cisco Identity Services Engine and ISE-PIC caused by insufficient checks on an API endpoint, letting an unauthenticated attacker send a crafted request and gain root-level command execution. Cisco PSIRT confirmed active exploitation and CISA added it to its Known Exploited Vulnerabilities catalog with a federal patch deadline of September 19; there is no workaround, only the fixed release.</p>
       <a class="source-link" href="https://thehackernews.com/2026/09/cisco-warns-of-new-zero-day-ise-auth.html">The Hacker News</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">"MikroTrick" SSH exploit chain leaves 120,000+ MikroTik routers exposed</h3>
-      <p class="summary">CERT Polska detailed a two-bug chain &mdash; an RSA key-verification bypass (CVE-2026-67276) and a privilege-escalation flaw (CVE-2026-86060) &mdash; that lets an attacker take full unauthenticated control of MikroTik RouterOS devices over SSH. Exploitation began around September 2, a day before patches shipped, and a single scan found more than 120,000 internet-facing devices still vulnerable.</p>
-      <a class="source-link" href="https://cert.pl/en/posts/2026/09/vulnerabilities-in-mikrotik-routeros-actively-exploited/">CERT Polska</a>
+      <h3 class="headline">Second Cisco flaw this week: unauthenticated root code execution on Nexus 9000 switches</h3>
+      <p class="summary">CVE-2026-20212 (CVSS 9.8) comes from a service bound to an unrestricted IP address on Silicon One-based Nexus 9000 switches, leaving two TCP ports reachable to anyone who can reach the device; crafted input sent to that service executes as root and can also crash and reload the switch. Cisco says it isn't aware of public exploitation yet, but patches are available now.</p>
+      <a class="source-link" href="https://thehackernews.com/2026/09/critical-cisco-nexus-9000-flaw-lets.html">The Hacker News</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Chinese-speaking actor quietly compromised nearly 1,000 Zyxel switches since August</h3>
-      <p class="summary">Attackers have been exploiting a stack-based buffer overflow (CVE-2026-7273) in unpatched Zyxel GS1900 switches since August 17, using an obfuscated Python tool to pull device configs, network topology data, and hashed root credentials from 996 switches across 48 countries. Zyxel patched the flaw back in June; CISA has now ordered federal agencies to remediate by September 24.</p>
-      <a class="source-link" href="https://www.helpnetsecurity.com/2026/09/22/zyxel-switches-cve-2026-7273-vulnerability-exploited/">Help Net Security</a>
+      <h3 class="headline">Google rushes out Chrome fix for actively exploited V8 zero-day</h3>
+      <p class="summary">Google shipped an emergency Chrome update patching a zero-day in the V8 JavaScript engine that attackers were already exploiting in the wild, and CISA added the flaw to its Known Exploited Vulnerabilities catalog within days. Chrome and other Chromium-based browsers should be updated immediately rather than left to background auto-update.</p>
+      <a class="source-link" href="https://thehackernews.com/2026/09/google-releases-chrome-update-to-patch.html">The Hacker News</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Extortion gang ShinyHunters hacks and defaces rival Clop's ransomware leak site</h3>
-      <p class="summary">ShinyHunters says it exploited a file-upload flaw in the Grav CMS running Clop's dark-web leak site, defaced it, and stole source code, logs, and the private keys behind Clop's onion service. The group is now demanding an eight-figure payment from Clop itself in an escalating feud between the two cybercrime operations, with claims of stolen data not yet independently verified.</p>
-      <a class="source-link" href="https://www.theregister.com/cyber-crime/2026/09/21/clop-gets-a-taste-of-its-own-medicine-after-shinyhunters-hijack-leak-site/5297702">The Register</a>
+      <h3 class="headline">Microsoft's biggest Patch Tuesday yet: 974 flaws, two exploited zero-days</h3>
+      <p class="summary">September's Patch Tuesday set a new record with roughly 974 CVEs fixed in one release, including two Windows zero-days already being exploited in the wild and a maximum-severity (CVSS 10.0) authentication bypass in Azure AI Foundry. The scale spans everything from the OS to Microsoft's cloud AI services, and warrants urgent attention this cycle.</p>
+      <a class="source-link" href="https://thehackernews.com/2026/09/microsoft-patches-record-974-flaws.html">The Hacker News</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Zero-click "Plugin4Shell" flaw hits Claude Code, Codex, Copilot, and Gemini CLI</h3>
-      <p class="summary">Researchers disclosed a supply-chain flaw that lets a malicious plugin update slip past SHA-pinning checks and run code with no user interaction, since these coding agents auto-update plugins in the background by default. Anthropic and OpenAI have shipped fixes (Claude Code 2.1.179, Codex 0.146.0); Microsoft's Copilot remains unpatched and Google retired Gemini CLI without fixing it.</p>
-      <a class="source-link" href="https://www.helpnetsecurity.com/2026/09/18/plugin4shell-ai-coding-agents-vulnerability/">Help Net Security</a>
+      <h3 class="headline">CISA flags seven more exploited bugs as attackers drop reverse shells and crypto miners</h3>
+      <p class="summary">CISA added seven newly exploited vulnerabilities to its KEV catalog, spanning SonicWall, JFrog Artifactory, Switchvox, Starlette, Kestra, and LiteLLM, warning that attackers are already using them to plant reverse shells and cryptocurrency miners. Federal agencies face short remediation deadlines; the mixed vendor list is a reminder that exposure isn't limited to network-edge appliances.</p>
+      <a class="source-link" href="https://thehackernews.com/2026/09/cisa-adds-seven-exploited-flaws-as.html">The Hacker News</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">GitLab's maximum-severity file-read flaw still drawing active probes</h3>
-      <p class="summary">CVE-2026-85706, a CVSS 10.0 path traversal in GitLab's commits API, lets an unauthenticated attacker read arbitrary files &mdash; including secrets and config &mdash; off self-managed GitLab servers. Mass internet scanning began within hours of the patch, and CISA added it to its Known Exploited Vulnerabilities catalog; unpatched self-managed instances remain at serious risk.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/09/gitlab-cvss-10-file-read-flaw-draws-in.html">The Hacker News</a>
+      <h3 class="headline">NVIDIA patches 14 flaws in Linux infrastructure software, including hard-coded credentials</h3>
+      <p class="summary">NVIDIA's September bulletin for its Infrastructure Controller software (versions 0 through 1.9) fixes 14 vulnerabilities, the worst a CVSS 9.8 hard-coded-credentials bug that could let a remote, unauthenticated attacker gain elevated privileges or disclose data, plus a separate SQL injection flaw. Organizations running the affected data-center management software should update to version 2.0 or later.</p>
+      <a class="source-link" href="https://cybersecuritynews.com/nvidia-fixes-linux-component-flaws/">Cyber Security News</a>
     </article>
   </section>
 
@@ -212,33 +212,39 @@
     <p class="section-sub">What shipped, launched, and mattered</p>
 
     <article class="story">
-      <h3 class="headline">AMD crosses $1 trillion market cap on AI chip demand</h3>
-      <p class="summary">AMD stock jumped about 9% to a record high on September 22, pushing its market capitalization past $1 trillion for the first time and making it the fourth U.S. chip company to hit the milestone, after Nvidia, Broadcom, and Micron. The run-up caps a five-session, roughly 24% surge in the stock, fueled by AI compute demand and this week's strong momentum around Meta's new Muse agent.</p>
-      <a class="source-link" href="https://www.investing.com/news/stock-market-news/amd-joins-1-trillion-market-cap-club-on-ai-computing-bets-4909456">Investing.com</a>
+      <h3 class="headline">Anthropic ships Claude Opus 5.5, cutting prices while matching its top model's performance</h3>
+      <p class="summary">Anthropic released Claude Opus 5.5 on September 22, the first entry in its 5.5 family, pricing it at $4/$20 per million input/output tokens &mdash; 20% below Opus 5 &mdash; while performing at roughly the level of Claude Fable 5.1 on most work and running about 40% cheaper. The model was evaluated pre-release by external testers including METR, and Anthropic says it worked with NIST's Center for AI Standards and Innovation on cyber and biological safeguards.</p>
+      <a class="source-link" href="https://techcrunch.com/2026/09/22/anthropic-releases-opus-5-5-with-lower-prices-and-fable-level-performance/">TechCrunch</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">xAI ships Grok 4.7, its biggest model yet</h3>
-      <p class="summary">xAI released Grok 4.7 on September 21 at unchanged pricing, packing 2.1 trillion parameters &mdash; up 40% from Grok 4.6 &mdash; with a 500,000-token context window and longer, more self-checking reasoning. It's live immediately with no waitlist in the Grok app, Cursor, Grok Build, and the xAI API, after a launch Musk had delayed several times since July.</p>
-      <a class="source-link" href="https://decrypt.co/378824/xai-launches-grok-4-7">Decrypt</a>
+      <h3 class="headline">OpenAI pushes GPT-6 capabilities down-market with Sol and Luna</h3>
+      <p class="summary">OpenAI launched GPT-6 Sol and GPT-6 Luna, extending improvements from its flagship GPT-6 Astra release to cheaper, faster tiers at roughly half the API price of the prior 5.6 generation. OpenAI says Sol makes about half as many mistakes as GPT-5.6 Sol on its internal benchmarks, with Luna aimed at the lowest-cost, highest-volume use cases.</p>
+      <a class="source-link" href="https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/">TechCrunch</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">OpenAI, Anthropic, and Google in talks to build a joint AI standards body</h3>
-      <p class="summary">The three labs have been meeting regularly since July on a proposal &mdash; first floated publicly by Google DeepMind's Demis Hassabis &mdash; for a FINRA-style, industry-run standards and auditing body for frontier AI rather than a new government agency. OpenAI's Sam Altman has voiced support, but the companies have yet to agree on structure or scope.</p>
-      <a class="source-link" href="https://techxplore.com/news/2026-09-openai-anthropic-google-ai-standards.html">Tech Xplore</a>
+      <h3 class="headline">Google's Intrinsic open-sources its industrial robotics stack</h3>
+      <p class="summary">Alphabet's robotics unit Intrinsic released Intrinsic Core, a ROS-compatible set of real-time control, pose estimation, motion- and grasp-planning, and simulation tools, under an Apache 2.0 license at ROSCon 2026 in Toronto. The company frames it as the same software stack it uses in its own manufacturing deployments, now packaged as reusable building blocks instead of something developers have to build from scratch.</p>
+      <a class="source-link" href="https://www.therobotreport.com/intrinsic-open-sources-key-parts-platform-easier-development/">The Robot Report</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Security vendor Aikido ships Altar-1, an open-weight model built to run on-prem</h3>
-      <p class="summary">Aikido released Altar-1, a pruned, open-weight model derived from GLM-5.3, designed to run vulnerability-hunting and pentesting workloads entirely inside a customer's own infrastructure rather than a cloud API. It's aimed at banks, healthcare providers, and other organizations that can't send source code or security findings to external inference services, and it's already finding critical bugs in Aikido's own production systems.</p>
-      <a class="source-link" href="https://www.aikido.dev/blog/aikido-altar-open-weight-ai-sovereign-security">Aikido</a>
+      <h3 class="headline">OpenAI, Anthropic, DeepSeek, and Moonshot to brief the UN Security Council on AI risk</h3>
+      <p class="summary">The UN Security Council holds a high-level briefing today on AI and international security, with OpenAI's Sam Altman attending in person and Anthropic's Dario Amodei joining remotely alongside Chinese labs DeepSeek and Moonshot &mdash; the first time the Council has hosted frontier developers from both countries together. Yoshua Bengio, co-chair of the UN's Independent International Scientific Panel on AI, is also briefing the 15-member Council.</p>
+      <a class="source-link" href="https://www.securitycouncilreport.org/whatsinblue/2026/09/artificial-intelligence-high-level-briefing-2.php">Security Council Report</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">ChatGPT desktop adds Chrome extension support inside its built-in browser</h3>
-      <p class="summary">OpenAI turned on support for installing and pinning Chrome extensions like 1Password directly inside ChatGPT desktop's in-app browser, without switching windows or profiles. The in-app browser keeps its own state separate from a user's main Chrome profile, and OpenAI says it has explicitly walled the ChatGPT agent off from extension DOM access and data.</p>
-      <a class="source-link" href="https://aiweekly.co/ai-news-today">AI Weekly</a>
+      <h3 class="headline">US Senate staff still locked out of most AI tools as Congress weighs regulation</h3>
+      <p class="summary">As lawmakers debate how to regulate AI, Senate offices are themselves largely barred from using it: staff have free access to only three enterprise chat tools &mdash; Microsoft Copilot Chat, Google's Gemini for Workspace, and ChatGPT Enterprise &mdash; with everything else off-limits. The restriction highlights a gap between the pace of frontier AI releases and the tools available to the people writing the rules for them.</p>
+      <a class="source-link" href="https://www.npr.org/2026/09/23/nx-s1-5978055/congress-ai-regulation">NPR</a>
+    </article>
+
+    <article class="story">
+      <h3 class="headline">Trump calls for renaming AI "Super Intelligence" as the White House reframes its AI push</h3>
+      <p class="summary">President Trump said artificial intelligence should be referred to as "Super Intelligence," a rebranding that follows the administration's broader push to frame US AI leadership in more ambitious terms. The remarks landed the same week OpenAI, Anthropic, and Chinese labs are briefing the UN Security Council on AI safety risks.</p>
+      <a class="source-link" href="https://www.cnbc.com/2026/09/23/trump-super-intelligence-artificial-intelligence.html">CNBC</a>
     </article>
   </section>
 
