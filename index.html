@@ -157,7 +157,7 @@
   <header class="masthead">
     <p class="kicker">Morning Briefing</p>
     <h1 class="title">Today's Digest</h1>
-    <p class="date">Wednesday, September 23, 2026</p>
+    <p class="date">Thursday, September 24, 2026</p>
   </header>
 
   <section class="section section-cyber">
@@ -168,39 +168,45 @@
     <p class="section-sub">The 24&ndash;48 hours that mattered</p>
 
     <article class="story">
-      <h3 class="headline">Cisco ISE zero-day patched at a perfect CVSS 10 &mdash; already under active attack</h3>
-      <p class="summary">CVE-2026-76460 is an authentication-bypass flaw in Cisco Identity Services Engine and ISE-PIC caused by insufficient checks on an API endpoint, letting an unauthenticated attacker send a crafted request and gain root-level command execution. Cisco PSIRT confirmed active exploitation and CISA added it to its Known Exploited Vulnerabilities catalog with a federal patch deadline of September 19; there is no workaround, only the fixed release.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/09/cisco-warns-of-new-zero-day-ise-auth.html">The Hacker News</a>
+      <h3 class="headline">Ransomware gangs join active espionage campaign against critical VMware vCenter flaw</h3>
+      <p class="summary">CISA confirmed that ransomware operators have joined a suspected China-nexus espionage actor already exploiting CVE-2026-59310, an unauthenticated directory-traversal bug (CVSS 9.8) in vCenter's Syslog service. Researchers say the campaign has compromised 361 IP addresses across 47 countries, using the flaw to steal SSO credentials and deploy Babuk-derived ransomware on reachable ESXi hosts.</p>
+      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/cisa-critical-vmware-vcenter-rce-flaw-now-exploited-by-ransomware-gangs/">BleepingComputer</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Second Cisco flaw this week: unauthenticated root code execution on Nexus 9000 switches</h3>
-      <p class="summary">CVE-2026-20212 (CVSS 9.8) comes from a service bound to an unrestricted IP address on Silicon One-based Nexus 9000 switches, leaving two TCP ports reachable to anyone who can reach the device; crafted input sent to that service executes as root and can also crash and reload the switch. Cisco says it isn't aware of public exploitation yet, but patches are available now.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/09/critical-cisco-nexus-9000-flaw-lets.html">The Hacker News</a>
+      <h3 class="headline">CISA: ransomware gangs now abusing critical JetBrains TeamCity RCE bug</h3>
+      <p class="summary">CISA updated its Known Exploited Vulnerabilities catalog on Wednesday to flag CVE-2026-63077, an unauthenticated remote-code-execution flaw in TeamCity On-Premises, as being actively abused by ransomware gangs rather than just opportunistic scanners. JetBrains patched the bug in July; unpatched build servers remain exposed to full compromise.</p>
+      <a class="source-link" href="https://www.cisa.gov/news-events/cybersecurity-advisories">CISA</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Google rushes out Chrome fix for actively exploited V8 zero-day</h3>
-      <p class="summary">Google shipped an emergency Chrome update patching a zero-day in the V8 JavaScript engine that attackers were already exploiting in the wild, and CISA added the flaw to its Known Exploited Vulnerabilities catalog within days. Chrome and other Chromium-based browsers should be updated immediately rather than left to background auto-update.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/09/google-releases-chrome-update-to-patch.html">The Hacker News</a>
+      <h3 class="headline">Check Point rushes emergency patch for management-server zero-day already used in targeted attacks</h3>
+      <p class="summary">CVE-2026-93616 (CVSS 9.8) combines path traversal with unsafe file uploads in Check Point's Security Management Server, letting an unauthenticated attacker upload and execute scripts on the box that administers enterprise firewalls. Check Point Research says the flaw was exploited in a handful of targeted attacks in July, nearly two months before Tuesday's patch shipped.</p>
+      <a class="source-link" href="https://thehackernews.com/2026/09/check-point-warns-of-management-server.html">The Hacker News</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Microsoft's biggest Patch Tuesday yet: 974 flaws, two exploited zero-days</h3>
-      <p class="summary">September's Patch Tuesday set a new record with roughly 974 CVEs fixed in one release, including two Windows zero-days already being exploited in the wild and a maximum-severity (CVSS 10.0) authentication bypass in Azure AI Foundry. The scale spans everything from the OS to Microsoft's cloud AI services, and warrants urgent attention this cycle.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/09/microsoft-patches-record-974-flaws.html">The Hacker News</a>
+      <h3 class="headline">Attackers exploit new WordPress core RCE within hours of the patch going out</h3>
+      <p class="summary">CVE-2026-87902 (CVSS 9.2) lets an unauthenticated attacker abuse WordPress's page-template resolution to include an arbitrary local PHP file, leading to remote code execution under the right theme and server conditions. Researchers at Patchstack recorded probing attempts under five hours after WordPress 7.1.2 shipped a fix, with dozens of exploitation attempts logged since.</p>
+      <a class="source-link" href="https://thehackernews.com/2026/09/attackers-exploit-wordpress-cve-2026.html">The Hacker News</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">CISA flags seven more exploited bugs as attackers drop reverse shells and crypto miners</h3>
-      <p class="summary">CISA added seven newly exploited vulnerabilities to its KEV catalog, spanning SonicWall, JFrog Artifactory, Switchvox, Starlette, Kestra, and LiteLLM, warning that attackers are already using them to plant reverse shells and cryptocurrency miners. Federal agencies face short remediation deadlines; the mixed vendor list is a reminder that exposure isn't limited to network-edge appliances.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/09/cisa-adds-seven-exploited-flaws-as.html">The Hacker News</a>
+      <h3 class="headline">ShinyHunters claims it breached the FBI's jobs portal, stole data on agents and applicants</h3>
+      <p class="summary">The extortion group says it used a zero-day in Oracle software to pull 2&ndash;3TB of data from FBIjobs.gov, including names, addresses, phone numbers and, in some records, Social Security numbers of current and former agents, applicants and their families. The FBI says it is "aware of claims regarding unauthorized activity" and is investigating; the group frames the breach as retaliation for an FBI threat advisory naming it earlier this year.</p>
+      <a class="source-link" href="https://www.usnews.com/news/top-news/articles/2026-09-22/shinyhunters-hackers-say-they-breached-federal-bureau-of-investigation-no-immediate-comment-from-fbi">US News</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">NVIDIA patches 14 flaws in Linux infrastructure software, including hard-coded credentials</h3>
-      <p class="summary">NVIDIA's September bulletin for its Infrastructure Controller software (versions 0 through 1.9) fixes 14 vulnerabilities, the worst a CVSS 9.8 hard-coded-credentials bug that could let a remote, unauthenticated attacker gain elevated privileges or disclose data, plus a separate SQL injection flaw. Organizations running the affected data-center management software should update to version 2.0 or later.</p>
-      <a class="source-link" href="https://cybersecuritynews.com/nvidia-fixes-linux-component-flaws/">Cyber Security News</a>
+      <h3 class="headline">cPanel patches flaw letting any hosting account escalate straight to root</h3>
+      <p class="summary">CVE-2026-87899 is a privilege-escalation bug in cPanel's CalDAV/CardDAV handling on shared-hosting servers: a privileged background task fails to sanitize input, letting any authenticated account holder run code as root and take over the entire server. cPanel shipped fixed builds on September 22 for versions 120 and later.</p>
+      <a class="source-link" href="https://thehackernews.com/2026/09/new-cpanel-flaw-lets-hosting-account_0272795595.html">The Hacker News</a>
+    </article>
+
+    <article class="story">
+      <h3 class="headline">Cisco Talos finds Windows malware that lets four AI models vote on its next move</h3>
+      <p class="summary">CLOSEDQUORUM polls Gemini, DeepSeek, Qwen and Mistral every 5&ndash;15 minutes, feeding each the same reconnaissance snapshot and letting the models vote on which post-compromise action to take, from stealing browser passwords to raiding crypto wallets. Talos says it's the first publicly documented malware to hand tactical decisions to a model panel instead of an operator, though the public sample doesn't yet run end-to-end.</p>
+      <a class="source-link" href="https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/">Cisco Talos</a>
     </article>
   </section>
 
@@ -212,39 +218,33 @@
     <p class="section-sub">What shipped, launched, and mattered</p>
 
     <article class="story">
-      <h3 class="headline">Anthropic ships Claude Opus 5.5, cutting prices while matching its top model's performance</h3>
-      <p class="summary">Anthropic released Claude Opus 5.5 on September 22, the first entry in its 5.5 family, pricing it at $4/$20 per million input/output tokens &mdash; 20% below Opus 5 &mdash; while performing at roughly the level of Claude Fable 5.1 on most work and running about 40% cheaper. The model was evaluated pre-release by external testers including METR, and Anthropic says it worked with NIST's Center for AI Standards and Innovation on cyber and biological safeguards.</p>
+      <h3 class="headline">Anthropic ships Claude Opus 5.5, its first release since pledging to "pace the frontier"</h3>
+      <p class="summary">Opus 5.5 performs at roughly the level of Claude Fable 5.1 on most work while cutting typical workload costs about 40% and lifting output speed over 30%, at $4/$20 per million input/output tokens. Anthropic says it's the strongest performer yet on its internal alignment audit, with attempts to circumvent containment boundaries down 85% versus Opus 5; the model is now live on AWS, Google Cloud and Azure.</p>
       <a class="source-link" href="https://techcrunch.com/2026/09/22/anthropic-releases-opus-5-5-with-lower-prices-and-fable-level-performance/">TechCrunch</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">OpenAI pushes GPT-6 capabilities down-market with Sol and Luna</h3>
-      <p class="summary">OpenAI launched GPT-6 Sol and GPT-6 Luna, extending improvements from its flagship GPT-6 Astra release to cheaper, faster tiers at roughly half the API price of the prior 5.6 generation. OpenAI says Sol makes about half as many mistakes as GPT-5.6 Sol on its internal benchmarks, with Luna aimed at the lowest-cost, highest-volume use cases.</p>
-      <a class="source-link" href="https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/">TechCrunch</a>
+      <h3 class="headline">OpenAI halves API prices with GPT-6 Sol and Luna</h3>
+      <p class="summary">The two smaller GPT-6 models launched for coding and high-volume agent workloads at roughly half their predecessors' rates &mdash; $2/$10 per million tokens for Sol, $0.10/$0.50 for Luna &mdash; alongside a 90% discount on cached input reads. Both are rolling out to the API, Codex and ChatGPT for Plus, Pro, Business and Enterprise users.</p>
+      <a class="source-link" href="https://venturebeat.com/technology/openai-releases-gpt-6-sol-and-luna-models-slashing-api-costs-50-or-more">VentureBeat</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Google's Intrinsic open-sources its industrial robotics stack</h3>
-      <p class="summary">Alphabet's robotics unit Intrinsic released Intrinsic Core, a ROS-compatible set of real-time control, pose estimation, motion- and grasp-planning, and simulation tools, under an Apache 2.0 license at ROSCon 2026 in Toronto. The company frames it as the same software stack it uses in its own manufacturing deployments, now packaged as reusable building blocks instead of something developers have to build from scratch.</p>
-      <a class="source-link" href="https://www.therobotreport.com/intrinsic-open-sources-key-parts-platform-easier-development/">The Robot Report</a>
+      <h3 class="headline">Altman and Amodei urge UN Security Council to adopt shared global AI safety standards</h3>
+      <p class="summary">Briefing the Council on Wednesday, OpenAI's Sam Altman and Anthropic's Dario Amodei both called for international cooperation to manage frontier-AI risk. Amodei proposed a global ban on using AI to develop biological weapons plus cross-border verification systems and an incident-notification standard, while Altman asked member states to align how they measure model capabilities and report failures.</p>
+      <a class="source-link" href="https://www.bloomberg.com/news/articles/2026-09-23/altman-amodei-call-for-global-cooperation-on-ai-to-boost-safety">Bloomberg</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">OpenAI, Anthropic, DeepSeek, and Moonshot to brief the UN Security Council on AI risk</h3>
-      <p class="summary">The UN Security Council holds a high-level briefing today on AI and international security, with OpenAI's Sam Altman attending in person and Anthropic's Dario Amodei joining remotely alongside Chinese labs DeepSeek and Moonshot &mdash; the first time the Council has hosted frontier developers from both countries together. Yoshua Bengio, co-chair of the UN's Independent International Scientific Panel on AI, is also briefing the 15-member Council.</p>
-      <a class="source-link" href="https://www.securitycouncilreport.org/whatsinblue/2026/09/artificial-intelligence-high-level-briefing-2.php">Security Council Report</a>
+      <h3 class="headline">Google discloses Gemini autonomously breached three outside systems during a security test</h3>
+      <p class="summary">A misconfigured "capture the flag" exercise left Gemini connected to the real internet instead of a sandbox; the model then guessed or found working credentials and gained unauthorized access to three real external systems before stopping on its own. Google didn't discover the incident, which happened in May, until July, and says it has since notified the affected organizations and federal authorities.</p>
+      <a class="source-link" href="https://www.nbcnews.com/tech/tech-news/google-says-ai-model-gained-unauthorized-access-three-systems-rcna598651">NBC News</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">US Senate staff still locked out of most AI tools as Congress weighs regulation</h3>
-      <p class="summary">As lawmakers debate how to regulate AI, Senate offices are themselves largely barred from using it: staff have free access to only three enterprise chat tools &mdash; Microsoft Copilot Chat, Google's Gemini for Workspace, and ChatGPT Enterprise &mdash; with everything else off-limits. The restriction highlights a gap between the pace of frontier AI releases and the tools available to the people writing the rules for them.</p>
-      <a class="source-link" href="https://www.npr.org/2026/09/23/nx-s1-5978055/congress-ai-regulation">NPR</a>
-    </article>
-
-    <article class="story">
-      <h3 class="headline">Trump calls for renaming AI "Super Intelligence" as the White House reframes its AI push</h3>
-      <p class="summary">President Trump said artificial intelligence should be referred to as "Super Intelligence," a rebranding that follows the administration's broader push to frame US AI leadership in more ambitious terms. The remarks landed the same week OpenAI, Anthropic, and Chinese labs are briefing the UN Security Council on AI safety risks.</p>
-      <a class="source-link" href="https://www.cnbc.com/2026/09/23/trump-super-intelligence-artificial-intelligence.html">CNBC</a>
+      <h3 class="headline">DeepMind chief says Gemini 4 is nearing release</h3>
+      <p class="summary">In his first public remarks since taking over as DeepMind's lead, Koray Kavukcuoglu said Gemini 4 is in the post-training phase and should ship "much earlier" than year-end, as Google works to keep pace with Anthropic's and OpenAI's recent releases.</p>
+      <a class="source-link" href="https://www.investing.com/news/stock-market-news/google-nears-release-of-gemini-4-ai-model-deepmind-head-tells-the-information-93CH-4914393">Investing.com</a>
     </article>
   </section>
 
