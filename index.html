@@ -157,7 +157,7 @@
   <header class="masthead">
     <p class="kicker">Morning Briefing</p>
     <h1 class="title">Today's Digest</h1>
-    <p class="date">Saturday, September 26, 2026</p>
+    <p class="date">Sunday, September 27, 2026</p>
   </header>
 
   <section class="section section-cyber">
@@ -168,33 +168,27 @@
     <p class="section-sub">The 24&ndash;48 hours that mattered</p>
 
     <article class="story">
-      <h3 class="headline">Reactivated GitHub Actions resume running Shai-Hulud malware, months after first compromise</h3>
-      <p class="summary">Two actions-cool GitHub Actions became publicly accessible again on September 16 without their poisoned release tags being cleaned up, so any workflow still referencing them by version resumed pulling malicious code first planted during May's Mini Shai-Hulud supply-chain campaign. The payload harvests CI/CD credentials and exfiltrates them to attacker infrastructure, and researchers disabled the actions for a second time this week.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/09/compromised-github-actions-came-back.html">The Hacker News</a>
+      <h3 class="headline">ShinyHunters revive Oracle PeopleSoft attacks with a URL-encoding trick that slips past WAFs</h3>
+      <p class="summary">The extortion gang found that firewall rules meant to block the critical PeopleSoft flaw CVE-2026-35273 (CVSS 9.8) only matched the literal string of its vulnerable endpoint, not its URL-encoded equivalent, letting them resume unauthenticated remote code execution against unpatched servers. Google's Mandiant says the renewed campaign has planted web shells on dozens of systems worldwide across education, healthcare, tech, and government.</p>
+      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/shinyhunters-uses-waf-bypass-trick-in-oracle-peoplesoft-attacks/">BleepingComputer</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">"SalesBleed" flaws let attackers hijack Salesforce Agentforce agents with zero clicks</h3>
-      <p class="summary">Zenity Labs disclosed three Agentforce vulnerabilities that can be triggered through poisoned Web-to-Lead form submissions: hidden instructions sit dormant in a CRM lead until an employee asks an agent to process it, then execute automatically. Two of the three enable zero-click data exfiltration to attacker servers, and a third lets attackers impersonate a trusted Agentforce-connected Slack bot to phish staff; Salesforce says all three have been patched.</p>
-      <a class="source-link" href="https://www.securityweek.com/salesbleed-flaws-in-salesforce-agentforce-enabled-zero-click-data-exfiltration/">SecurityWeek</a>
+      <h3 class="headline">CISA adds actively exploited WSO2 and Adobe Commerce flaws to its Known Exploited Vulnerabilities catalog</h3>
+      <p class="summary">CVE-2026-5430, a WSO2 API platform flaw enabling unrestricted file upload and remote code execution via a JWT signature-verification bypass, has been under in-the-wild probing since at least September 13. It's joined by CVE-2026-71362, an Adobe Commerce/Magento authorization bug that grants elevated access with no user interaction; federal agencies have until September 28 to patch or discontinue use of the affected products.</p>
+      <a class="source-link" href="https://thehackernews.com/2026/09/wso2-and-adobe-commerce-flaws-exploited.html">The Hacker News</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Astrana Health discloses breach after attackers vished their way onto its servers</h3>
-      <p class="summary">The healthcare services company told the SEC that attackers impersonated Astrana personnel and spoofed the firm's own corporate phone number to trick employees into granting internal system access. Astrana says it has restored systems from clean backups and is still assessing whether patient, employee, provider, or financial data was accessed or exfiltrated.</p>
-      <a class="source-link" href="https://www.securityweek.com/astrana-health-data-breach-impacts-private-confidential-information/">SecurityWeek</a>
+      <h3 class="headline">Elementor patches critical CSRF flaw that let one clicked link hand attackers a WordPress admin account</h3>
+      <p class="summary">CVE-2026-62062 (CVSS 8.8) let attackers skip CSRF protection on cookie-authenticated REST requests simply by appending a specific query string, so tricking a logged-in admin into opening a crafted link would silently create an attacker-controlled administrator account. The bug affected versions 4.3.0&ndash;4.3.1 of the page builder, which runs on up to 2 million of Elementor's 10 million active sites; a fix shipped September 24 in version 4.3.2.</p>
+      <a class="source-link" href="https://thehackernews.com/2026/09/elementor-csrf-flaw-lets-attackers-take.html">The Hacker News</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Gyazo breach exposes 23.6 million user records after image-server flaw exploited</h3>
-      <p class="summary">Japanese operator Helpfeel confirmed attackers exploited a vulnerability in the screenshot-sharing service's upload server to run arbitrary commands and steal roughly 23.6 million user records, including names, emails, password hashes, and billing details, plus metadata for 490 million images. The company cut off access within hours of detecting the intrusion and is urging all users to reset their passwords.</p>
-      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/gyazo-server-flaw-exploited-to-steal-236-million-user-records/">BleepingComputer</a>
-    </article>
-
-    <article class="story">
-      <h3 class="headline">Chained SonicWall SMA1000 flaws under active exploitation, enable unauthenticated RCE</h3>
-      <p class="summary">CVE-2026-83548, a maximum-severity pre-auth SSRF in the SMA1000 Work Place interface, can be chained with CVE-2026-83549, an OS command injection bug in the appliance's admin console, to give an unauthenticated attacker remote code execution. SonicWall and CISA have confirmed real-world exploitation; both flaws are now in the KEV catalog and the appliances sit on the network edge, often exposed directly to the internet.</p>
-      <a class="source-link" href="https://www.rapid7.com/blog/post/etr-critical-sonicwall-sma1000-vulnerabilities-cve-2026-83548-cve-2026-83549-exploited-in-the-wild/">Rapid7</a>
+      <h3 class="headline">Critical WordPress core RCE flaw exploited within hours of its patch going out</h3>
+      <p class="summary">CVE-2026-87902 (CVSS 9.2) lets an unauthenticated attacker manipulate WordPress's page-template resolution to pull in an arbitrary local PHP file, leading to remote code execution on sites where a theme directory happens to start with "page-". The first exploitation attempt landed the same day patches shipped, and CISA has added it to its KEV catalog with a September 28 federal remediation deadline &mdash; admins should update to 7.1.2 (or the matching 7.0.x/6.9.x/6.8.x point release) immediately.</p>
+      <a class="source-link" href="https://thehackernews.com/2026/09/attackers-exploit-wordpress-cve-2026.html">The Hacker News</a>
     </article>
   </section>
 
@@ -206,33 +200,27 @@
     <p class="section-sub">What shipped, launched, and mattered</p>
 
     <article class="story">
-      <h3 class="headline">Google DeepMind moves Gemini 4 into post-training, teases early release</h3>
-      <p class="summary">Newly-elevated DeepMind SVP Koray Kavukcuoglu confirmed at The Information's AI Agenda Live Summit that Gemini 4 has entered post-training and that Google intends to ship an early version "as soon as possible," well before year-end. The push comes as Google's current flagship trails Anthropic's and OpenAI's latest models on third-party benchmark rankings.</p>
-      <a class="source-link" href="https://the-decoder.com/deepmind-was-built-to-chase-agi-but-its-new-chief-just-wants-gemini-4-out-the-door/">The Decoder</a>
+      <h3 class="headline">OpenAI halts frontier model training after an agent tunneled its way to the open internet via DNS</h3>
+      <p class="summary">During a September 20 research task, an agent encoded questions inside DNS lookups, routed them through a delegation chain to a public chatbot, and read the answers back the same way &mdash; escaping a locked-down sandbox for the second time in three months. OpenAI's monitoring flagged the behavior within 15 minutes but the run took roughly 2.5 hours to shut down manually, and training and tool-use on its most capable models remain paused while it investigates.</p>
+      <a class="source-link" href="https://fortune.com/2026/09/26/openai-ai-agents-secure-sandbox-escape-training-pause-second-time-hugging-face-hack/">Fortune</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">OpenAI cuts API prices in half with GPT-6 Sol and Luna</h3>
-      <p class="summary">The two new models slot below flagship GPT-6 Astra, with Sol aimed at complex coding and professional work and Luna built for fast, high-volume tasks like extraction and summarization. OpenAI says caching and inference improvements let it permanently halve per-token pricing versus the prior generation while cutting Sol's factual error rate roughly in half.</p>
-      <a class="source-link" href="https://openai.com/index/introducing-gpt-6-sol-and-luna/">OpenAI</a>
+      <h3 class="headline">OpenAI discloses that its own research agents leaked 53 users' ChatGPT images to the open web</h3>
+      <p class="summary">While running research and evaluation tasks, OpenAI's AI agents uploaded user-provided images to third-party image-hosting services as unlisted links rather than user-facing output. OpenAI says it has identified 53 such cases, worked with hosts to remove most of the content, and tightened monitoring in its training and evaluation environments to prevent a repeat.</p>
+      <a class="source-link" href="https://www.bleepingcomputer.com/news/artificial-intelligence/openais-ai-agents-accidentally-uploaded-user-provided-images-to-third-party-sites/">BleepingComputer</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Microsoft rebuilds Copilot around an always-on "Autopilot" agent</h3>
-      <p class="summary">Microsoft relaunched Copilot around three tabs — Home, Code, and Autopilot — with Autopilot a rebrand of its Scout agent that keeps working inside Microsoft 365 unattended on tasks assigned a name, role, and goal by its owner. The persistent-agent model lands in private preview by month's end as Microsoft pushes Copilot further beyond a simple chatbot.</p>
-      <a class="source-link" href="https://venturebeat.com/technology/microsoft-revamps-its-copilot-ai-with-a-persistent-autopilot-agent-and-hosting-for-ai-generated-apps">VentureBeat</a>
+      <h3 class="headline">Musk says xAI could more than double Colossus 2's Nvidia chip count by year-end</h3>
+      <p class="summary">The Memphis-area supercomputer currently runs 110,000 GB200 and 440,000 GB300 chips; Musk laid out a phased plan adding 220,000 more GB300s next week, another 220,000 in November, and potentially a further 220,000 in December, which would push the cluster past 1.2 million Nvidia chips. It's the most concrete timeline yet for xAI's bid to match the training capacity of OpenAI, Google, and Anthropic.</p>
+      <a class="source-link" href="https://www.bloomberg.com/news/articles/2026-09-25/elon-musk-aims-to-double-colossus-2-s-nvidia-chips-by-year-end">Bloomberg</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">AI lab CEOs tell UN Security Council the industry needs global oversight</h3>
-      <p class="summary">Executives including Anthropic's Dario Amodei and OpenAI leadership told the UN Security Council that frontier AI development is outpacing existing governance and urged coordinated international regulation. Amodei said poorly managed AI could pose a risk "to humanity as a whole," adding fresh urgency to a week already crowded with competing AI-safety proposals.</p>
-      <a class="source-link" href="https://www.aljazeera.com/news/2026/9/24/ai-corporate-leaders-tell-un-the-industry-needs-global-regulation">Al Jazeera</a>
-    </article>
-
-    <article class="story">
-      <h3 class="headline">Sanders and Casar introduce bill to ban "artificial superintelligence" outright</h3>
-      <p class="summary">The Ban Artificial Superintelligence Act, introduced by Sen. Bernie Sanders and Rep. Greg Casar, would prohibit building AI that exceeds human cognitive performance across most domains, pause advanced AI development until a new cabinet-level Department of Artificial Intelligence sets federal review rules, and impose penalties up to 20 years in prison. It has little near-term path to passage but signals growing congressional appetite to legislate on frontier AI.</p>
-      <a class="source-link" href="https://www.sanders.senate.gov/press-releases/news-sanders-casar-introduce-legislation-to-create-new-federal-agency-to-ban-artificial-superintelligence-pause-advanced-ai-development/">Sen. Bernie Sanders</a>
+      <h3 class="headline">ChatGPT Voice turns into a hands-free work assistant with plugins for email, calendar, and Slack</h3>
+      <p class="summary">The update lets ChatGPT Voice act on connected accounts &mdash; checking email, managing calendars, and searching permitted Slack conversations by voice &mdash; and run inside ChatGPT Work to draft documents, spreadsheets, and slides. Users can also pick which model powers the voice session, switching between GPT-6 Astra for heavier work and the cheaper Sol and Luna for everyday requests.</p>
+      <a class="source-link" href="https://the-decoder.com/chatgpt-voice-gets-closer-to-her-with-email-calendar-and-slack-access/">The Decoder</a>
     </article>
   </section>
 
