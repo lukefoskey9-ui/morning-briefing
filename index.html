@@ -157,7 +157,7 @@
   <header class="masthead">
     <p class="kicker">Morning Briefing</p>
     <h1 class="title">Today's Digest</h1>
-    <p class="date">Friday, October 2, 2026</p>
+    <p class="date">Saturday, October 3, 2026</p>
   </header>
 
   <section class="section section-cyber">
@@ -168,33 +168,33 @@
     <p class="section-sub">The 24&ndash;48 hours that mattered</p>
 
     <article class="story">
-      <h3 class="headline">Pentagon breach exposes Social Security numbers of 3 million+ military and civilian personnel</h3>
-      <p class="summary">A Defense Manpower Data Center system was accessed by unauthorized users between October 2025 and July 2026, exposing names, SSNs, birth dates and job specialties for 2.76 million living people plus roughly 294,000 deceased personnel. DMDC found the breach in July and only notified victims on September 18; affected individuals are being offered a year of free credit monitoring.</p>
-      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/hackers-breach-pentagon-human-resources-management-system-steal-data-of-nearly-3-million-people/">BleepingComputer</a>
+      <h3 class="headline">Cisco Catalyst SD-WAN Manager auth-bypass flaw under active attack &mdash; fifth SD-WAN zero-day this year</h3>
+      <p class="summary">CVE-2026-76504 (CVSS 9.8) lets unauthenticated attackers reach the SD-WAN Manager management API with administrator privileges, via improper handling of URI encoding in session authentication. Cisco confirmed in-the-wild exploitation, CISA added it to its Known Exploited Vulnerabilities catalog with a remediation deadline of today, and fixed releases are already available &mdash; organizations running vManage should patch immediately rather than waiting for a scheduled cycle.</p>
+      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-new-sd-wan-authentication-bypass-zero-day-exploited-in-attacks/">BleepingComputer</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Fortinet FortiMail zero-day under active exploitation, no patch yet available</h3>
-      <p class="summary">CVE-2026-104286 (CVSS 9.8) is a path-traversal flaw letting unauthenticated attackers write arbitrary files to FortiMail systems via crafted HTTP/HTTPS requests. CISA has added it to its Known Exploited Vulnerabilities catalog; Fortinet says fixes are coming in versions 7.4.9, 7.6.7 and 8.0.2 but has given no release date, leaving affected 7.x and 8.0.x deployments exposed in the meantime.</p>
-      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-fortimail-flaw-exploited-in-zero-day-attacks/">BleepingComputer</a>
+      <h3 class="headline">GitLab patches critical 9.9 flaw letting attackers run commands on self-hosted AI Gateway servers</h3>
+      <p class="summary">A near-maximum-severity vulnerability in GitLab's self-hosted AI Gateway component allowed authenticated attackers to achieve remote command execution, putting any exposed instance at risk of full compromise. GitLab has shipped patched releases; admins running the AI Gateway on-prem should upgrade immediately rather than treating this as a routine update.</p>
+      <a class="source-link" href="https://thehackernews.com/2026/10/gitlab-patches-critical-self-hosted-ai.html">The Hacker News</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Spanish police dismantle KillSec ransomware gang, arrest 16-year-old alleged administrator</h3>
-      <p class="summary">Operation KillSwitch, led by Hamburg's state police and prosecutors, seized five of KillSec's central servers and redirected its domains to a seizure notice, recovering at least 110 terabytes of stolen data. The group, active since 2024 and accused of roughly 1,000 attacks worldwide, was allegedly run by a 16-year-old Romanian national arrested in Alicante; two accomplices in their twenties were detained in Britain and Romania.</p>
-      <a class="source-link" href="https://hackread.com/killsec-ransomware-group-dismantled-admin-arrested/">Hackread</a>
+      <h3 class="headline">Critical WordPress flaw exploited within hours of disclosure</h3>
+      <p class="summary">CVE-2026-87902 (CVSS 9.2) is a path-traversal bug in WordPress's page-template resolution that unauthenticated attackers can abuse for remote code execution. Researchers observed active exploitation beginning almost immediately after the flaw went public, underscoring how little lead time site operators now get between disclosure and attack &mdash; patch or mitigate without delay.</p>
+      <a class="source-link" href="https://www.securityweek.com/critical-wordpress-vulnerability-exploited-immediately-after-disclosure/">SecurityWeek</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">ShinyHunters claims O'Reilly Auto Parts and Dexcom as new breach victims after FBI clash</h3>
-      <p class="summary">The extortion group listed O'Reilly Automotive and medical device maker Dexcom on its leak site, threatening to publish stolen data by end of day Friday &mdash; though, unusually, it posted no proof samples with either listing. The claims follow a chaotic week in which ShinyHunters sparred publicly with the FBI and a Dutch-arrested member was linked to the group's wider breach spree.</p>
-      <a class="source-link" href="https://cybernews.com/news/shinyhunters-oreilly-auto-dexcom-breach-fbi-hack/">Cybernews</a>
+      <h3 class="headline">Dell Container Storage Modules flaws allow unauthenticated admin takeover of Kubernetes nodes</h3>
+      <p class="summary">Dell has patched multiple critical bugs in its Container Storage Modules, including CVE-2026-63688 and CVE-2026-63692 &mdash; both rated a maximum CVSS 10.0 &mdash; stemming from missing authentication on critical functions. An unauthenticated remote attacker could exploit them to gain administrative and root-level control of affected Kubernetes clusters; Dell has released fixed versions.</p>
+      <a class="source-link" href="https://thehackernews.com/2026/10/dell-csm-flaws-enable-unauthenticated.html">The Hacker News</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Android 17's Advanced Protection mode locks Accessibility Services to verified tools only</h3>
-      <p class="summary">Banking trojans and spyware have long abused Android's AccessibilityService API &mdash; tricking users into granting it, then using it to log keystrokes, overlay fake login screens and trigger fraudulent transfers. With Advanced Protection enabled, Android 17 now restricts that API exclusively to apps flagged as genuine accessibility tools (screen readers, switch-input, Braille access), shutting out automation apps, launchers and other abused categories.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/10/android-17-advanced-protection-locks.html">The Hacker News</a>
+      <h3 class="headline">Apple CoreGraphics proof-of-concept raises fears of a new WhatsApp zero-click PDF path</h3>
+      <p class="summary">Security researchers published a working proof-of-concept for CVE-2026-86950, a CoreGraphics flaw triggered by a maliciously crafted embedded font inside a PDF. Patterns in WhatsApp's own file-validation checks suggest the messaging app may be a plausible delivery vector, reviving concerns about zero-click exploit chains reaching iOS users through ordinary messages.</p>
+      <a class="source-link" href="https://thehackernews.com/2026/10/apple-coregraphics-poc-emerges-as.html">The Hacker News</a>
     </article>
   </section>
 
@@ -206,33 +206,33 @@
     <p class="section-sub">What shipped, launched, and mattered</p>
 
     <article class="story">
-      <h3 class="headline">OpenAI launches GPT-6.1 Sol, undercutting its own Astra flagship on price</h3>
-      <p class="summary">Unveiled at DevDay, GPT-6.1 Sol nearly matches flagship GPT-6 Astra on agentic coding, computer use and professional work while costing about one-fifth as much per token ($2/$10 per million input/output tokens). It's rolling out now in ChatGPT Work and Codex for Plus, Pro, Business, Enterprise and Edu users, with an "Ultrafast" variant &mdash; up to 8x faster token generation &mdash; coming shortly after.</p>
-      <a class="source-link" href="https://techcrunch.com/2026/09/29/openai-launches-gpt-6-1-sol-says-it-nearly-matches-gpt-6-astra-and-costs-less/">TechCrunch</a>
+      <h3 class="headline">OpenAI launches "Dots," always-on agents with their own cloud computer and browser</h3>
+      <p class="summary">Unveiled at DevDay, each Dot runs on GPT-6 Astra and works from a dedicated cloud computer and browser, connecting to more than 4,000 apps to do proactive research, draft documents and carry work forward in the background after a chat ends. The feature is rolling out to Pro, Business Premium and Enterprise tiers and puts OpenAI in direct competition with Meta's Muse for persistent, goal-driven assistants.</p>
+      <a class="source-link" href="https://9to5google.com/2026/09/29/openai-dots-agent/">9to5Google</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">OpenAI fires three safety researchers over alleged leak, as Astra launch stays shelved</h3>
-      <p class="summary">OpenAI says it "parted ways" with three safety-team researchers after an investigation found they mishandled sensitive company information by sharing it with an outside AI-safety organization, per a Wall Street Journal report. The departures land amid a run of security incidents involving OpenAI's agents and the company's earlier decision to scrap the planned GPT-6.1 Astra launch over safety concerns.</p>
-      <a class="source-link" href="https://techcrunch.com/2026/10/01/openai-cuts-ties-with-three-safety-researchers-wsj-reports/">TechCrunch</a>
+      <h3 class="headline">Anthropic commits $100M to train 10,000 "Frontier Deployed Engineers" by 2027</h3>
+      <p class="summary">Claude Frontier Academy, launched October 2, runs a medical-residency-style program &mdash; several days of in-person training followed by a 12-week on-the-job rotation leading a real Claude deployment &mdash; before engineers earn a Frontier Deployed Engineer badge. First cohorts start in San Francisco, New York and London with staff from Accenture, Bain, Deloitte, McKinsey, Morgan Stanley and Novo Nordisk, aimed at the talent bottleneck slowing enterprise AI rollouts.</p>
+      <a class="source-link" href="https://claude.com/programs/frontier-academy">Anthropic</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Anthropic reportedly targets mid-November IPO at up to $2 trillion valuation</h3>
-      <p class="summary">Anthropic could begin formal IPO marketing as early as the week of November 9, aiming to debut before Thanksgiving at a valuation of $1.8&ndash;2 trillion &mdash; roughly double its most recent private valuation of $965 billion from May's $65 billion Series H. The company's 2025 revenue reportedly grew more than 14x to $4.6 billion, alongside a widening net loss.</p>
-      <a class="source-link" href="https://finance.yahoo.com/markets/stocks/articles/anthropic-could-public-november-2-185958806.html">Yahoo Finance</a>
+      <h3 class="headline">Meta's Muse Spark co-authors six math papers with human mathematicians, five solving open problems</h3>
+      <p class="summary">Working through the ordinary Meta.ai chat interface, Muse Spark versions 1.1 and 1.2 helped mathematicians produce six papers spanning probability, PDEs, group theory and non-associative algebra &mdash; including a wave-equation blow-up proof that had been open since 2015 and AI-generated search code that found a 384-element counterexample to a 2024 conjecture. Each paper labels which passages were drafted by humans versus the model, and a separate group of mathematicians reviewed the results.</p>
+      <a class="source-link" href="https://research.meta.ai/blog/solving-open-research-problems-together">Meta AI Research</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Broadcom to lend Anthropic up to $42B to lease AI chips</h3>
-      <p class="summary">In the latest of the industry's circular infrastructure deals, Broadcom plans to provide up to $42 billion in financing so Anthropic can lease compute capacity, on top of existing chip-supply and equipment-leasing arrangements between the two companies. The deal underscores how reliant frontier AI labs have become on vendor financing to fund compute buildout.</p>
-      <a class="source-link" href="https://finance.yahoo.com/technology/article/broadcom-to-lend-anthropic-up-to-42-billion-to-lease-chips-in-latest-circular-investing-deal-121617505.html">Yahoo Finance</a>
+      <h3 class="headline">Google launches prototype TPU satellites as part of its orbital AI compute bet</h3>
+      <p class="summary">Google's Project Suncatcher sent four Trillium-generation TPUs into orbit on October 1 aboard a SpaceX Falcon 9, a survivability check ahead of a planned 2027 test with Planet Labs of the high-bandwidth laser inter-satellite links a real orbital compute cluster would need. Google envisions eventual ~81-satellite clusters roughly a kilometer across, betting that launch costs falling below $200/kg by the mid-2030s could make space-based compute cost-competitive with terrestrial data centers.</p>
+      <a class="source-link" href="https://www.datacenterdynamics.com/en/news/project-suncatcher-google-to-launch-tpus-into-orbit-with-planet-labs-envisions-1km-arrays-of-81-satellite-compute-clusters/">Data Center Dynamics</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Google releases Gemini 4 Argon &mdash; minus its safety guardrails &mdash; to vetted cyber defenders first</h3>
-      <p class="summary">Google's new flagship model can autonomously find, validate and patch critical software vulnerabilities, and is being made available without its standard cyber guardrails to trusted partners so defenders can use its full capability. Initial access runs through the Fairwind Program, which spans 650+ partners including national cybersecurity authorities and security vendors such as Wiz, ahead of a broader public rollout.</p>
-      <a class="source-link" href="https://deepmind.google/models/gemini/cyber/">Google DeepMind</a>
+      <h3 class="headline">Cloudflare open-sources Clef, a "decision model" that skips text generation entirely</h3>
+      <p class="summary">Clef (27B) and Clef-flash (9B), built on Qwen bases and released under Apache 2.0, run a single non-autoregressive forward pass to score typed options directly rather than generating and parsing text &mdash; cutting Clef-flash's median latency to 38.8ms versus 524.1ms for a comparable text-based model. Cloudflare is pitching the approach for cheap, low-latency routing and classification steps inside larger agentic workflows, and both models are available on Hugging Face.</p>
+      <a class="source-link" href="https://blog.cloudflare.com/clef-decision-models/">Cloudflare Blog</a>
     </article>
   </section>
 
