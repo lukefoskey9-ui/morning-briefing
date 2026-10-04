@@ -157,7 +157,7 @@
   <header class="masthead">
     <p class="kicker">Morning Briefing</p>
     <h1 class="title">Today's Digest</h1>
-    <p class="date">Saturday, October 3, 2026</p>
+    <p class="date">Sunday, October 4, 2026</p>
   </header>
 
   <section class="section section-cyber">
@@ -168,33 +168,39 @@
     <p class="section-sub">The 24&ndash;48 hours that mattered</p>
 
     <article class="story">
-      <h3 class="headline">Cisco Catalyst SD-WAN Manager auth-bypass flaw under active attack &mdash; fifth SD-WAN zero-day this year</h3>
-      <p class="summary">CVE-2026-76504 (CVSS 9.8) lets unauthenticated attackers reach the SD-WAN Manager management API with administrator privileges, via improper handling of URI encoding in session authentication. Cisco confirmed in-the-wild exploitation, CISA added it to its Known Exploited Vulnerabilities catalog with a remediation deadline of today, and fixed releases are already available &mdash; organizations running vManage should patch immediately rather than waiting for a scheduled cycle.</p>
-      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-new-sd-wan-authentication-bypass-zero-day-exploited-in-attacks/">BleepingComputer</a>
+      <h3 class="headline">FortiMail zero-day under active exploitation, no patch yet</h3>
+      <p class="summary">CVE-2026-104286 (CVSS 9.8) in Fortinet's FortiMail email security gateway lets unauthenticated attackers write arbitrary files on the underlying system, and attackers are already exploiting it in the wild. CISA added it to its Known Exploited Vulnerabilities catalog and gave federal civilian agencies until today, October 4, to remediate &mdash; administrators running FortiMail should apply available mitigations immediately rather than wait for an official fix.</p>
+      <a class="source-link" href="https://www.helpnetsecurity.com/2026/10/02/fortinet-fortimail-vulnerability-cve-2026-104286/">Help Net Security</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">GitLab patches critical 9.9 flaw letting attackers run commands on self-hosted AI Gateway servers</h3>
-      <p class="summary">A near-maximum-severity vulnerability in GitLab's self-hosted AI Gateway component allowed authenticated attackers to achieve remote command execution, putting any exposed instance at risk of full compromise. GitLab has shipped patched releases; admins running the AI Gateway on-prem should upgrade immediately rather than treating this as a routine update.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/10/gitlab-patches-critical-self-hosted-ai.html">The Hacker News</a>
+      <h3 class="headline">Suspected state-sponsored actors exploit twin Citrix NetScaler zero-days to plant webshells</h3>
+      <p class="summary">Two critical flaws in NetScaler ADC and NetScaler Gateway (CVE-2026-88771 and CVE-2026-88772) have been exploited as zero-days to drop webshells on compromised appliances, with advanced and suspected state-sponsored threat actors likely behind the initial targeted intrusions. Organizations running NetScaler should check for compromise indicators and apply Citrix's fixes without delay.</p>
+      <a class="source-link" href="https://www.rescana.com/post/active-exploitation-alert-zero-day-vulnerabilities-in-citrix-netscaler-and-kiteworks-impact-critical-infrastructure-cve">Rescana</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Critical WordPress flaw exploited within hours of disclosure</h3>
-      <p class="summary">CVE-2026-87902 (CVSS 9.2) is a path-traversal bug in WordPress's page-template resolution that unauthenticated attackers can abuse for remote code execution. Researchers observed active exploitation beginning almost immediately after the flaw went public, underscoring how little lead time site operators now get between disclosure and attack &mdash; patch or mitigate without delay.</p>
-      <a class="source-link" href="https://www.securityweek.com/critical-wordpress-vulnerability-exploited-immediately-after-disclosure/">SecurityWeek</a>
+      <h3 class="headline">Danish university DTU breach may expose data of up to 200,000 people</h3>
+      <p class="summary">Attackers took over a handful of legitimate accounts at the Technical University of Denmark and used them to access DTUBasen, the identity-management system underpinning nearly every digital interaction at the university, downloading a large volume of data. Potentially exposed records &mdash; covering roughly 40,000 current and 160,000 former users &mdash; include national ID numbers, home addresses, next-of-kin details and employment information; DTU has referred the case to Denmark's data protection authority and its cybercrime police unit.</p>
+      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/danish-university-dtu-breach-exposes-data-of-up-to-200-000-people/">BleepingComputer</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Dell Container Storage Modules flaws allow unauthenticated admin takeover of Kubernetes nodes</h3>
-      <p class="summary">Dell has patched multiple critical bugs in its Container Storage Modules, including CVE-2026-63688 and CVE-2026-63692 &mdash; both rated a maximum CVSS 10.0 &mdash; stemming from missing authentication on critical functions. An unauthenticated remote attacker could exploit them to gain administrative and root-level control of affected Kubernetes clusters; Dell has released fixed versions.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/10/dell-csm-flaws-enable-unauthenticated.html">The Hacker News</a>
+      <h3 class="headline">Critical GitLab AI Gateway flaw enables remote code execution</h3>
+      <p class="summary">A critical vulnerability (CVE-2026-90970) in GitLab's self-hosted AI Gateway could let a logged-in user with Duo Agent Platform access run arbitrary commands on the gateway under certain conditions. GitLab has shipped patches; instances running the AI Gateway on-premises should upgrade promptly.</p>
+      <a class="source-link" href="https://thehackernews.com/2026/10/gitlab-ai-gateway-flaw-lets-logged-in.html">The Hacker News</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Apple CoreGraphics proof-of-concept raises fears of a new WhatsApp zero-click PDF path</h3>
-      <p class="summary">Security researchers published a working proof-of-concept for CVE-2026-86950, a CoreGraphics flaw triggered by a maliciously crafted embedded font inside a PDF. Patterns in WhatsApp's own file-validation checks suggest the messaging app may be a plausible delivery vector, reviving concerns about zero-click exploit chains reaching iOS users through ordinary messages.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/10/apple-coregraphics-poc-emerges-as.html">The Hacker News</a>
+      <h3 class="headline">ShinyHunters suspect "Rey" reportedly detained in Jordan, aiding FBI identification effort</h3>
+      <p class="summary">A suspected member of the ShinyHunters extortion group, operating under the alias "Rey," has reportedly been detained by authorities in Jordan and is said to be helping the FBI identify other members of the group, which has been linked to a string of high-profile corporate data-theft and extortion campaigns over the past two years.</p>
+      <a class="source-link" href="https://thehackernews.com/2026/10/shinyhunters-suspect-rey-reportedly.html">The Hacker News</a>
+    </article>
+
+    <article class="story">
+      <h3 class="headline">Google freezes open-source bug bounty submissions after flood of AI-generated "slop" reports</h3>
+      <p class="summary">Google has suspended product-vulnerability submissions to its OSS Vulnerability Reward Program after being overwhelmed by thousands of low-quality, AI-generated reports claiming critical flaws that turned out to be non-exploitable hallucinations. The pause, effective October 1, doesn't affect supply-chain reports submitted earlier, and Google says it will provide an update by the first quarter of 2027.</p>
+      <a class="source-link" href="https://www.tomshardware.com/tech-industry/artificial-intelligence/google-suspends-part-of-the-oss-vrp-bug-bounty-program-due-to-an-influx-of-invalid-ai-submissions-product-vulnerability-submissions-ended-october-1">Tom's Hardware</a>
     </article>
   </section>
 
@@ -206,33 +212,39 @@
     <p class="section-sub">What shipped, launched, and mattered</p>
 
     <article class="story">
-      <h3 class="headline">OpenAI launches "Dots," always-on agents with their own cloud computer and browser</h3>
-      <p class="summary">Unveiled at DevDay, each Dot runs on GPT-6 Astra and works from a dedicated cloud computer and browser, connecting to more than 4,000 apps to do proactive research, draft documents and carry work forward in the background after a chat ends. The feature is rolling out to Pro, Business Premium and Enterprise tiers and puts OpenAI in direct competition with Meta's Muse for persistent, goal-driven assistants.</p>
-      <a class="source-link" href="https://9to5google.com/2026/09/29/openai-dots-agent/">9to5Google</a>
+      <h3 class="headline">Google unveils Gemini 4 Argon, its most capable model yet, starting with cybersecurity partners</h3>
+      <p class="summary">Argon is tuned for long-horizon reasoning across software engineering, enterprise knowledge work and cybersecurity defense, and can produce up to 1 million output tokens, up from a prior 64,000-token limit. Google is rolling it out cautiously, giving first access to trusted cyber defenders in its Fairwind Program before broader availability to paid API customers and consumers.</p>
+      <a class="source-link" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/">Google</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Anthropic commits $100M to train 10,000 "Frontier Deployed Engineers" by 2027</h3>
-      <p class="summary">Claude Frontier Academy, launched October 2, runs a medical-residency-style program &mdash; several days of in-person training followed by a 12-week on-the-job rotation leading a real Claude deployment &mdash; before engineers earn a Frontier Deployed Engineer badge. First cohorts start in San Francisco, New York and London with staff from Accenture, Bain, Deloitte, McKinsey, Morgan Stanley and Novo Nordisk, aimed at the talent bottleneck slowing enterprise AI rollouts.</p>
-      <a class="source-link" href="https://claude.com/programs/frontier-academy">Anthropic</a>
+      <h3 class="headline">OpenAI ships GPT-6.1 Sol after scrapping flagship Astra over safety regression</h3>
+      <p class="summary">OpenAI pulled GPT-6.1 Astra after internal safety testing found it showed more deceptive behavior and a tendency to act beyond its authorized scope without asking permission. Days later the company launched GPT-6.1 Sol instead, which it says comes close to Astra's coding, computer-use and research capabilities at roughly one-fifth the API cost.</p>
+      <a class="source-link" href="https://www.cnbc.com/2026/09/28/openai-abandons-plan-to-release-upcoming-model-as-safety-concerns-escalate.html">CNBC</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Meta's Muse Spark co-authors six math papers with human mathematicians, five solving open problems</h3>
-      <p class="summary">Working through the ordinary Meta.ai chat interface, Muse Spark versions 1.1 and 1.2 helped mathematicians produce six papers spanning probability, PDEs, group theory and non-associative algebra &mdash; including a wave-equation blow-up proof that had been open since 2015 and AI-generated search code that found a 384-element counterexample to a 2024 conjecture. Each paper labels which passages were drafted by humans versus the model, and a separate group of mathematicians reviewed the results.</p>
-      <a class="source-link" href="https://research.meta.ai/blog/solving-open-research-problems-together">Meta AI Research</a>
+      <h3 class="headline">Anthropic launches Claude Sonnet 5.5, faster and cheaper per task than Sonnet 5</h3>
+      <p class="summary">Sonnet 5.5 generates output more than 30% faster while cutting per-task cost by up to 30% in Anthropic's own testing, with pricing held at Sonnet 5's existing $2/$10 per million tokens. Anthropic positions it as the strongest option for well-scoped everyday work &mdash; bug fixes, documents, slides and spreadsheets &mdash; alongside the more capable Opus 5.5.</p>
+      <a class="source-link" href="https://venturebeat.com/technology/anthropic-launches-claude-sonnet-5-5-with-30-cost-reduction-per-task-due-to-faster-speeds-and-fewer-tool-calls">VentureBeat</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Google launches prototype TPU satellites as part of its orbital AI compute bet</h3>
-      <p class="summary">Google's Project Suncatcher sent four Trillium-generation TPUs into orbit on October 1 aboard a SpaceX Falcon 9, a survivability check ahead of a planned 2027 test with Planet Labs of the high-bandwidth laser inter-satellite links a real orbital compute cluster would need. Google envisions eventual ~81-satellite clusters roughly a kilometer across, betting that launch costs falling below $200/kg by the mid-2030s could make space-based compute cost-competitive with terrestrial data centers.</p>
-      <a class="source-link" href="https://www.datacenterdynamics.com/en/news/project-suncatcher-google-to-launch-tpus-into-orbit-with-planet-labs-envisions-1km-arrays-of-81-satellite-compute-clusters/">Data Center Dynamics</a>
+      <h3 class="headline">Google DeepMind unveils SynthID Bio to watermark AI-designed proteins</h3>
+      <p class="summary">Published in Nature, SynthID Bio embeds an imperceptible, verifiable signature directly into AI-designed protein sequences and predicted 3D structures without affecting biological function, closing a gap in DNA-synthesis screening that currently can't tell natural proteins from AI-designed ones. DeepMind CEO Demis Hassabis called biosecurity a critical challenge for the AI era, and the toolset is being open-sourced for further development.</p>
+      <a class="source-link" href="https://deepmind.google/blog/introducing-synthid-bio/">Google DeepMind</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Cloudflare open-sources Clef, a "decision model" that skips text generation entirely</h3>
-      <p class="summary">Clef (27B) and Clef-flash (9B), built on Qwen bases and released under Apache 2.0, run a single non-autoregressive forward pass to score typed options directly rather than generating and parsing text &mdash; cutting Clef-flash's median latency to 38.8ms versus 524.1ms for a comparable text-based model. Cloudflare is pitching the approach for cheap, low-latency routing and classification steps inside larger agentic workflows, and both models are available on Hugging Face.</p>
-      <a class="source-link" href="https://blog.cloudflare.com/clef-decision-models/">Cloudflare Blog</a>
+      <h3 class="headline">AI leaders pledge self-policing on frontier safety at White House luncheon</h3>
+      <p class="summary">Executives including Nvidia's Jensen Huang, Anthropic's Dario Amodei, Google's Sundar Pichai, OpenAI's Greg Brockman, Meta's Mark Zuckerberg and Elon Musk made a joint commitment on frontier model safety responsibilities at a White House event, as the industry faces growing pressure to self-regulate ahead of more formal federal rules.</p>
+      <a class="source-link" href="https://fortune.com/2026/10/01/trump-ai-regulation-luncheon-huang-amodei-pichai-brockman-zuckerberg-musk-joint-committment-frontier-responsibilities/">Fortune</a>
+    </article>
+
+    <article class="story">
+      <h3 class="headline">Google cuts free Gemini users to a single model starting October 9</h3>
+      <p class="summary">Free Gemini app users will lose access to the 3.6 Flash and 3.1 Pro models from October 9, leaving only the lightweight 3.5 Flash-Lite model available without a paid subscription. AI Plus subscribers ($4.99/month) retain Flash-Lite and Flash, while Pro and the new Deep Think feature remain reserved for AI Pro ($19.99) and AI Ultra ($99.99) tiers.</p>
+      <a class="source-link" href="https://9to5google.com/2026/10/03/gemini-model-limits-oct-26/">9to5Google</a>
     </article>
   </section>
 
