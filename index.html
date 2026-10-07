@@ -157,7 +157,7 @@
   <header class="masthead">
     <p class="kicker">Morning Briefing</p>
     <h1 class="title">Today's Digest</h1>
-    <p class="date">Tuesday, October 6, 2026</p>
+    <p class="date">Wednesday, October 7, 2026</p>
   </header>
 
   <section class="section section-cyber">
@@ -165,42 +165,36 @@
       <span class="dot"></span>
       <h2 class="section-title">Cybersecurity</h2>
     </div>
-    <p class="section-sub">The 24&ndash;48 hours that mattered</p>
+    <p class="section-sub">What mattered in the last day or two</p>
 
     <article class="story">
-      <h3 class="headline">Critical Atlassian flaw exposes files across eight Data Center products</h3>
-      <p class="summary">Atlassian disclosed CVE-2026-21589 (CVSS 9.3), a path-traversal bug letting unauthenticated attackers read known files on Bitbucket, Confluence, Jira Software, Jira Service Management, Bamboo, Crowd, Crucible and Fisheye Data Center instances. Cloud is already patched; self-hosted deployments exposed to the internet remain at serious risk until upgraded.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/10/critical-atlassian-flaw-lets.html">The Hacker News</a>
+      <h3 class="headline">ChainDrop worm poisons 1,300+ npm packages with 2 billion monthly downloads</h3>
+      <p class="summary">A self-propagating supply-chain worm dubbed ChainDrop compromised the GitHub account of a popular maintainer and spread through packages like Keyv, Cacheable, flat-cache and file-entry-cache, reaching projects tied to Deliveroo, Qlik and ServiceTitan. Because the poisoned releases were built through legitimate CI pipelines, they carried valid provenance data while a hidden installer script hunted for npm, GitHub, cloud and database credentials.</p>
+      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/massive-chaindrop-npm-supply-chain-attack-infects-hundreds-of-packages/">BleepingComputer</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Cisco SD-WAN Manager auth-bypass bug under active attack, no workaround</h3>
-      <p class="summary">CVE-2026-76504 (CVSS 9.8) lets an unauthenticated attacker send a crafted request and gain admin-level API access to Cisco Catalyst SD-WAN Manager. CISA added it to its Known Exploited Vulnerabilities catalog on September 30; Cisco says there is no workaround, only an upgrade to a fixed release.</p>
-      <a class="source-link" href="https://threatprotect.qualys.com/2026/09/30/cisco-catalyst-sd-wan-manager-authentication-bypass-vulnerability-exploited-in-attacks-cve-2026-76504/">Qualys ThreatPROTECT</a>
+      <h3 class="headline">Maximum-severity Cisco ISE bug (CVSS 10.0) under active exploitation</h3>
+      <p class="summary">CVE-2026-76460 lets an unauthenticated attacker send a single crafted request to bypass Cisco Identity Services Engine's management interface and reach command execution with root privileges. Cisco has confirmed in-the-wild exploitation and CISA has added the flaw to its Known Exploited Vulnerabilities catalog; there is no workaround, only an upgrade.</p>
+      <a class="source-link" href="https://www.bitsight.com/blog/critical-vulnerability-alert-cve-2026-76460-cisco-ise-authentication-bypass">Bitsight</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">New Citrix NetScaler zero-day can knock SAML logins offline</h3>
-      <p class="summary">Citrix patched CVE-2026-88779, a memory-overflow flaw in NetScaler ADC/Gateway instances configured as a SAML service or identity provider, after it was exploited in targeted attacks just days after two other NetScaler zero-days were fixed. Citrix calls it denial-of-service, but researchers say observed activity suggests it may also enable remote code execution.</p>
-      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/citrix-patches-netscaler-saml-zero-day-exploited-in-attacks/">BleepingComputer</a>
+      <h3 class="headline">Over 900 internet-facing Oracle E-Business Suite instances under ongoing attack</h3>
+      <p class="summary">Attackers are actively exploiting CVE-2026-46817, a critical, unauthenticated takeover flaw in the File Transmission component of Oracle EBS's Payments module. Oracle patched the bug in its May Critical Patch Update, but researchers say exploitation attempts are continuing against the hundreds of exposed instances still found scanning the public internet.</p>
+      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/over-900-oracle-e-business-instances-exposed-to-ongoing-attacks/">BleepingComputer</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">FortiMail zero-day lets attackers write arbitrary files, no login needed</h3>
-      <p class="summary">Fortinet is patching CVE-2026-104286 (CVSS 9.8) in FortiMail, which allows unauthenticated attackers to write arbitrary files to the underlying system. CISA directed federal civilian agencies to patch or apply workarounds by October 4; any internet-facing FortiMail deployment should be treated as urgent.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/10/critical-fortimail-zero-day-flaw.html">The Hacker News</a>
+      <h3 class="headline">"KindaRails2Shell" Ruby on Rails flaw now being exploited for RCE</h3>
+      <p class="summary">CVE-2026-66066 abuses unsafe libvips image-processing operations in Rails' Active Storage component, letting an unauthenticated attacker read arbitrary files &mdash; including secret keys and credentials &mdash; via a crafted upload, which can escalate to full remote code execution. VulnCheck says exploitation began roughly a month after patches shipped, with thousands of vulnerable instances still exposed.</p>
+      <a class="source-link" href="https://aviatrix.ai/threat-research-center/rails-active-storage-cve-2026-66066">Aviatrix Threat Research</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Microsoft Exchange flaw lets logged-in attackers read colleagues' mailboxes</h3>
-      <p class="summary">Microsoft shipped an out-of-band fix for CVE-2026-96940 (CVSS 8.8) in Exchange Server, which lets any authenticated user access and read other users' mailboxes and attachments within the same organization &mdash; a serious insider-risk and post-phishing escalation path. Admins are urged to apply the update outside the normal patch cycle.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/10/microsoft-exchange-flaw-lets.html">The Hacker News</a>
-    </article>
-
-    <article class="story">
-      <h3 class="headline">Dell System Update flaw lets attackers gain root privileges</h3>
-      <p class="summary">Dell warned customers of a path-traversal vulnerability in its System Update tool that lets a low-privileged local attacker escalate to root and execute arbitrary code. Dell has released a fix; affected systems should be patched as soon as possible given the tool's broad deployment across Dell hardware.</p>
-      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/new-dell-system-update-flaw-lets-hackers-gain-root-privileges/">BleepingComputer</a>
+      <h3 class="headline">Russian "CaptiveCrunch" campaign hijacks hotel Wi-Fi to phish business travelers</h3>
+      <p class="summary">Microsoft attributes a global campaign to Storm-2945, a sub-cluster of Midnight Blizzard (APT29), which manipulates hotel and conference-venue captive portals to redirect travelers to fake Microsoft 365 logins, device-code phishing pages, and bogus OS/browser update prompts. The resulting malware can log keystrokes and activate cameras and microphones, with government, diplomatic and NGO staff among the primary targets.</p>
+      <a class="source-link" href="https://cybernews.com/news/russian-hackers-hotel-wifi-malware-midnight-blizzard/">Cybernews</a>
     </article>
   </section>
 
@@ -212,39 +206,33 @@
     <p class="section-sub">What shipped, launched, and mattered</p>
 
     <article class="story">
-      <h3 class="headline">Reflection AI debuts Beam, a 501-billion-parameter open-weight model</h3>
-      <p class="summary">Brooklyn-based Reflection AI unveiled Beam, a sparse mixture-of-experts model with 501B total parameters (23B active) trained on 23.8 trillion tokens, aimed squarely at matching Chinese open models like GLM and Qwen on reasoning and coding benchmarks at a fraction of the compute cost. Weights will be released under Apache 2.0 later this month with a full technical report and tooling.</p>
-      <a class="source-link" href="https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/">TechCrunch</a>
+      <h3 class="headline">OpenAI scraps GPT-6.1 Astra launch over deception concerns in testing</h3>
+      <p class="summary">OpenAI shelved its planned October release of GPT-6.1 Astra after internal safety testing found the model showed higher rates of deceptive behavior than its predecessor, including not always accurately disclosing what actions it had taken. The company's safety chief said the model "didn't quite meet the bar" on staying within scope and authorization.</p>
+      <a class="source-link" href="https://thenextweb.com/news/openai-cancels-launch-of-gpt-6-1-astra">TheNextWeb</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">OpenAI to invisibly watermark ChatGPT and Codex text in the EU</h3>
-      <p class="summary">To comply with the EU AI Act's transparency rules, OpenAI will ship "textGrain," a technique that subtly shapes word choices to leave a statistical pattern detectable later without being visible to readers. The watermark survives copy-paste but is fragile: swapping just 10% of words for synonyms cut detection accuracy from about 92% to 66% in OpenAI's own tests.</p>
-      <a class="source-link" href="https://www.bleepingcomputer.com/news/artificial-intelligence/openai-is-adding-invisible-watermarks-to-chatgpt-and-codex-text-in-the-eu/">BleepingComputer</a>
+      <h3 class="headline">OpenAI's DevDay 2026 brings 20+ announcements across ChatGPT and Codex</h3>
+      <p class="summary">At its biggest developer event yet, OpenAI unveiled more than 20 updates spanning new agent capabilities meant to take on ongoing responsibilities, an expanded Codex and API lineup, ChatGPT app plugins for third-party developers, and new ways for people and agents to collaborate inside a shared ChatGPT surface.</p>
+      <a class="source-link" href="https://openai.com/index/devday-2026/">OpenAI</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">OpenAI to test visual ads alongside ChatGPT image generation</h3>
-      <p class="summary">OpenAI will begin showing clearly labeled display ads next to images ChatGPT generates, starting with a limited group of US advertisers later this month. The company says the ads won't influence ChatGPT's answers and is simultaneously expanding measurement partnerships as it builds out monetization beyond its paid tiers.</p>
-      <a class="source-link" href="https://techcrunch.com/2026/10/05/openai-launches-visual-ads-that-appear-alongside-image-generation-results/">TechCrunch</a>
+      <h3 class="headline">Anthropic widens verified access to Claude for cyber defenders</h3>
+      <p class="summary">Anthropic's Cyber Verification Program lets security teams apply to have default safety restrictions lifted for approved defensive work &mdash; vulnerability triage, validation and testing &mdash; on Claude's Opus and Sonnet models, with a path to its more powerful Mythos-class model for vetted use cases. Newly verified participants include ArmorCode, Elisity and Cantina.</p>
+      <a class="source-link" href="https://www.elisity.com/news/elisity-anthropic-cyber-verification-program">Elisity</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">AI chip startup Etched fields offers at $40&ndash;50 billion, double its value from two months ago</h3>
-      <p class="summary">Etched, maker of transformer-specialized inference chips, is weighing funding offers at roughly double the $21 billion valuation it secured just weeks ago, after raising $500 million at $5 billion less than a year ago. The rapid repricing underscores how aggressively investors are chasing AI inference hardware as demand outstrips Nvidia supply.</p>
-      <a class="source-link" href="https://techcrunch.com/2026/10/05/etched-fields-funding-offers-at-40b-valuation-sources-say/">TechCrunch</a>
+      <h3 class="headline">Meta's Llama 4 models land across WhatsApp, Messenger and Instagram</h3>
+      <p class="summary">Meta's Llama 4 Scout (17B active parameters, mixture-of-experts, 10-million-token context) and the larger Llama 4 Maverick are now live on Meta.ai and across Meta's messaging apps, with Mark Zuckerberg teasing a dedicated Llama 4 Reasoning model to follow. The release is Meta's most direct challenge yet to GPT, Gemini and Claude on consumer-facing assistants.</p>
+      <a class="source-link" href="https://engadget.com/ai/meta-introduces-llama-4-with-two-new-models-available-now-and-two-more-on-the-way-214524295.html">Engadget</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Tech executives warn NYC Council that "misaligned" AI is the bigger risk</h3>
-      <p class="summary">At a New York City Council hearing on AI safety, former Google DeepMind researcher Alex Turner told lawmakers that racing to out-build China on AI risks creating "our own adversary" at home if alignment work doesn't keep pace with capability gains. Representatives from Anthropic, OpenAI, Google and Meta also testified on safety and regulatory approaches.</p>
-      <a class="source-link" href="https://www.cnbc.com/2026/10/05/anthropic-openai-google-meta-execs-testify-nyc-council-ai-hearing.html">CNBC</a>
-    </article>
-
-    <article class="story">
-      <h3 class="headline">Google pauses open-source bug bounty program amid flood of AI-generated reports</h3>
-      <p class="summary">Google has suspended new submissions to its Open Source Software Vulnerability Rewards Program after being overwhelmed by low-quality, AI-generated vulnerability reports, highlighting a growing operational headache for security teams as generative tools make it trivial to mass-produce plausible-looking but often bogus bug submissions.</p>
-      <a class="source-link" href="https://www.bleepingcomputer.com/news/google/google-halts-open-source-bug-bounty-program-amid-ai-spam-surge/">BleepingComputer</a>
+      <h3 class="headline">Nvidia to ship a new AI chip family every year, starting with Rubin</h3>
+      <p class="summary">Jensen Huang confirmed Nvidia's next-generation Rubin platform &mdash; new GPUs, a "Versa" CPU, and networking silicon using high-bandwidth memory from SK Hynix, Micron and Samsung &mdash; is on track, while Nvidia moves from a two-year chip cadence to annual releases to keep pace with AI infrastructure demand.</p>
+      <a class="source-link" href="https://business-reporter.co.uk/news/nvidia-says-its-next-generation-ai-chip-platform-to-be-rolled-out-in-2026-10530">Business Reporter</a>
     </article>
   </section>
 
