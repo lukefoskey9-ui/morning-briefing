@@ -6,36 +6,39 @@
 <title>Morning Briefing</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f7f5f1;
+    --bg: #f7f5f0;
     --bg-card: #ffffff;
-    --text: #1c1b19;
-    --text-muted: #5b574f;
-    --accent: #9a3b26;
-    --accent-2: #1f5e4a;
-    --border: #e4ddd1;
-    --tag-cyber-bg: #f3e4df;
-    --tag-cyber-text: #8a3522;
-    --tag-ai-bg: #e1ece6;
-    --tag-ai-text: #1f5e4a;
-    --link: #9a3b26;
+    --text: #1c1a16;
+    --text-muted: #5b5750;
+    --accent: #8a3b2b;
+    --accent-2: #1f5c4a;
+    --rule: #e4ddd0;
+    --chip-cyber-bg: #fbe9e5;
+    --chip-cyber-text: #8a3b2b;
+    --chip-ai-bg: #e5f0ec;
+    --chip-ai-text: #1f5c4a;
+    --link: #8a3b2b;
+    --shadow: rgba(28, 26, 22, 0.06);
   }
+
   @media (prefers-color-scheme: dark) {
     :root {
       --bg: #15140f;
-      --bg-card: #1d1c17;
-      --text: #ece8e0;
+      --bg-card: #1e1c17;
+      --text: #ece7db;
       --text-muted: #a8a195;
-      --accent: #e18a6f;
-      --accent-2: #6fcaa8;
-      --border: #332f27;
-      --tag-cyber-bg: #3a2420;
-      --tag-cyber-text: #e8a690;
-      --tag-ai-bg: #1f332a;
-      --tag-ai-text: #8fdcb9;
-      --link: #e18a6f;
+      --accent: #e08a6f;
+      --accent-2: #6fc7a8;
+      --rule: #322f28;
+      --chip-cyber-bg: #3a2420;
+      --chip-cyber-text: #f0a893;
+      --chip-ai-bg: #203329;
+      --chip-ai-text: #9fe0c3;
+      --link: #e08a6f;
+      --shadow: rgba(0, 0, 0, 0.35);
     }
   }
 
@@ -49,9 +52,9 @@
   }
 
   body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    line-height: 1.55;
-    -webkit-text-size-adjust: 100%;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
   }
 
   .wrap {
@@ -67,112 +70,124 @@
 
   .kicker {
     font-size: 12px;
-    font-weight: 600;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--accent);
+    color: var(--text-muted);
+    font-weight: 600;
   }
 
   h1.title {
     font-family: 'Source Serif 4', Georgia, serif;
     font-weight: 700;
-    font-size: 2.1rem;
-    margin: 6px 0 10px;
+    font-size: clamp(32px, 7vw, 44px);
+    margin: 10px 0 8px;
     letter-spacing: -0.01em;
   }
 
-  .date-line {
-    font-size: 15px;
+  .date {
+    font-size: 16px;
     color: var(--text-muted);
     font-weight: 500;
   }
 
-  .rule {
+  .tagline {
+    margin-top: 14px;
+    font-size: 14px;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  .masthead-rule {
+    margin-top: 28px;
     height: 1px;
-    background: var(--border);
-    margin: 28px 0;
-    border: none;
+    background: var(--rule);
   }
 
   section.section {
-    margin-bottom: 44px;
+    margin-top: 40px;
   }
 
   .section-head {
     display: flex;
     align-items: baseline;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   .section-head h2 {
     font-family: 'Source Serif 4', Georgia, serif;
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 700;
     margin: 0;
   }
 
-  .section-head .emoji {
-    font-size: 1.3rem;
+  .chip {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 999px;
   }
 
-  .section-sub {
-    font-size: 13px;
-    color: var(--text-muted);
-    margin: -14px 0 20px;
-  }
+  .chip-cyber { background: var(--chip-cyber-bg); color: var(--chip-cyber-text); }
+  .chip-ai { background: var(--chip-ai-bg); color: var(--chip-ai-text); }
 
   article.story {
     background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 18px 20px 16px;
+    border-radius: 14px;
+    padding: 18px 20px;
     margin-bottom: 14px;
+    box-shadow: 0 1px 3px var(--shadow);
   }
 
   article.story h3 {
     font-family: 'Source Serif 4', Georgia, serif;
-    font-size: 1.12rem;
+    font-size: 18px;
+    line-height: 1.32;
     font-weight: 600;
     margin: 0 0 8px;
-    line-height: 1.35;
   }
 
-  article.story p {
+  article.story p.summary {
     margin: 0 0 12px;
     font-size: 15px;
     color: var(--text);
   }
 
-  article.story a.source-link {
-    display: inline-block;
-    font-size: 13.5px;
+  article.story a.source {
+    font-size: 13px;
     font-weight: 600;
     color: var(--link);
     text-decoration: none;
-    padding: 6px 2px;
-    border-bottom: 1px solid currentColor;
+    display: inline-block;
+    padding: 6px 0;
   }
 
-  article.story a.source-link:hover {
-    opacity: 0.8;
+  article.story a.source:hover,
+  article.story a.source:focus {
+    text-decoration: underline;
+  }
+
+  article.story a.source::after {
+    content: " \2192";
   }
 
   footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
     text-align: center;
-    margin-top: 36px;
     font-size: 12.5px;
     color: var(--text-muted);
   }
 
-  footer p {
-    margin: 4px 0;
-  }
+  footer a { color: var(--text-muted); }
 
   @media (max-width: 420px) {
-    h1.title { font-size: 1.75rem; }
     .wrap { padding: 28px 16px 48px; }
-    article.story { padding: 16px 16px 14px; }
+    article.story { padding: 16px; }
   }
 </style>
 </head>
@@ -181,101 +196,100 @@
 
   <header class="masthead">
     <div class="kicker">Morning Briefing</div>
-    <h1 class="title">Cyber &amp; AI, in three minutes</h1>
-    <div class="date-line">Saturday, October 10, 2026</div>
+    <h1 class="title">Today's Briefing</h1>
+    <div class="date">Sunday, October 11, 2026</div>
+    <div class="tagline">Cybersecurity and AI, in under three minutes.</div>
+    <div class="masthead-rule"></div>
   </header>
 
   <section class="section">
     <div class="section-head">
-      <span class="emoji">🛡️</span>
       <h2>Cybersecurity</h2>
+      <span class="chip chip-cyber">6 stories</span>
     </div>
 
     <article class="story">
-      <h3>Citrix patches critical NetScaler flaw enabling remote code execution</h3>
-      <p>Citrix released fixes for CVE-2026-107406, a critical memory-overflow vulnerability (CVSS 9.5) in NetScaler ADC and Gateway that can let attackers achieve remote code execution or trigger denial of service in SAML-based deployments. Admins running SAML configurations are urged to patch immediately.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/10/citrix-patches-critical-netscaler-flaw.html" target="_blank" rel="noopener">The Hacker News →</a>
+      <h3>North Korea–linked hackers hit Bitget via zero-day in third-party security tools</h3>
+      <p class="summary">Crypto exchange Bitget confirmed attackers stole $387.5 million by exploiting a zero-day vulnerability in third-party security software rather than a flaw in Bitget's own platform. Bitget attributed the intrusion to North Korean threat actors, continuing a string of major state-linked crypto heists this year.</p>
+      <a class="source" href="https://www.bleepingcomputer.com/news/security/bitget-hacked-via-zero-day-in-third-party-security-products/">BleepingComputer</a>
     </article>
 
     <article class="story">
-      <h3>FBI: FortiBleed exploitation still active, 86,000+ Fortinet devices compromised</h3>
-      <p>The FBI warned that attackers continue to scan and access internet-exposed Fortinet firewalls using credentials stolen in the earlier FortiBleed campaign, with more than 86,644 compromised devices identified across 194 countries. Organizations are urged to rotate credentials and confirm patch levels rather than assume the issue is resolved.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/10/fbi-warns-fortibleed-remains-active.html" target="_blank" rel="noopener">The Hacker News →</a>
+      <h3>"GhostAction" supply-chain campaign steals secrets from tens of thousands of GitHub repos</h3>
+      <p class="summary">A resurfaced GhostAction campaign compromised high-profile open-source maintainer accounts and pushed a malicious GitHub Actions workflow that harvests npm, PyPI, Docker Hub, AWS, and database credentials. Researchers say the malicious workflow landed in tens of thousands of repositories within automated windows lasting only minutes.</p>
+      <a class="source" href="https://thehackernews.com/2026/10/credential-stealing-github-actions.html">The Hacker News</a>
     </article>
 
     <article class="story">
-      <h3>Attackers chain AhsayCBS flaws to plant cryptominers disguised as Microsoft Edge</h3>
-      <p>Huntress researchers say attackers have been chaining two vulnerabilities in Ahsay's AhsayCBS backup platform since October 7 to run commands, drop web shells, and deploy XMRig cryptocurrency miners disguised as the Microsoft Edge browser to evade detection.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/10/attackers-exploit-ahsaycbs-flaws-to.html" target="_blank" rel="noopener">The Hacker News →</a>
+      <h3>Hackers hijack ccTLD registries to forge HTTPS certificates for Google domains</h3>
+      <p class="summary">Google disclosed that attackers compromised third-party operators behind the .gh, .sl, and .as country-code domain registries, altering DNS records to pass domain-validation checks and obtain unauthorized HTTPS certificates impersonating Google and other brands. Google says its own systems were not breached and has worked with certificate authorities to revoke the fraudulent certs.</p>
+      <a class="source" href="https://www.bleepingcomputer.com/news/security/hackers-hijack-google-domains-after-breaching-cctld-registries/">BleepingComputer</a>
     </article>
 
     <article class="story">
-      <h3>Ransomware breach at SoftBank subsidiary exposes up to 6.09M JR East customer accounts</h3>
-      <p>East Japan Railway Company (JR East) disclosed that a ransomware attack on IDC Frontier, a cloud-hosting subsidiary of SoftBank, may have compromised roughly 6.09 million customer accounts. Several other Japanese firms, including Bookoff, separately reported large-scale breaches the same week.</p>
-      <a class="source-link" href="https://nippon.com/en/news/yjj2026100900441" target="_blank" rel="noopener">Nippon.com →</a>
+      <h3>Citrix NetScaler post-exploitation toolkit creates hidden superuser accounts</h3>
+      <p class="summary">Security researchers detailed a post-exploitation payload used against compromised Citrix NetScaler appliances that creates a rogue superuser account and disguises web-shell access behind URLs styled to look like ordinary CSS asset requests, helping attackers blend into normal traffic after initial compromise.</p>
+      <a class="source" href="https://thehackernews.com/2026/10/citrix-netscaler-post-exploitation.html">The Hacker News</a>
     </article>
 
     <article class="story">
-      <h3>Attackers hijack country-code domain registries to forge certificates for Google</h3>
-      <p>Researchers found attackers had hijacked the .gh, .sl and .as registries to fraudulently obtain at least 12 TLS certificates for Google and YouTube domains. Google says its own systems weren't breached and that Chrome has blocked the rogue certificates.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/10/attackers-hijack-gh-sl-and-as.html" target="_blank" rel="noopener">The Hacker News →</a>
+      <h3>Qilin ransomware gang exploiting critical Palo Alto GlobalProtect VPN bug</h3>
+      <p class="summary">A critical vulnerability in Palo Alto Networks' GlobalProtect VPN is now being actively exploited by the Qilin ransomware operation to gain initial access to corporate networks, according to new incident-response reporting. Organizations running exposed GlobalProtect gateways are urged to patch immediately.</p>
+      <a class="source" href="https://www.bleepingcomputer.com/news/security/critical-globalprotect-vpn-bug-now-exploited-in-ransomware-attacks/">BleepingComputer</a>
     </article>
 
     <article class="story">
-      <h3>Researchers remotely hack fully patched Google Pixel 10 at Pwn2Own</h3>
-      <p>Three research teams demonstrated successful remote exploit chains against fully patched Google Pixel 10 phones at Pwn2Own Ireland, earning a combined $562,500. Exploit details are embargoed while Google develops fixes.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/10/three-teams-demonstrate-remote-hacks-of.html" target="_blank" rel="noopener">The Hacker News →</a>
-    </article>
-
-    <article class="story">
-      <h3>Four more U.S. states sue TP-Link over router security and China ties</h3>
-      <p>Florida, Iowa, Montana and Nebraska sued router maker TP-Link, joining other states in alleging security failings and undisclosed ties to China that the company says are unfounded. The suits add to mounting regulatory scrutiny of TP-Link's consumer networking gear.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/10/tp-link-sued-by-four-more-us-states.html" target="_blank" rel="noopener">The Hacker News →</a>
+      <h3>Fake Cloudflare verification pages deliver LunexStealer on 100+ compromised sites</h3>
+      <p class="summary">More than 100 compromised websites are serving fraudulent Cloudflare "verify you are human" check pages that trick visitors into running commands which install the LunexStealer malware, part of a broader ClickFix-style social-engineering trend spreading across hijacked legitimate sites.</p>
+      <a class="source" href="https://thehackernews.com/2026/10/100-compromised-websites-use-fake.html">The Hacker News</a>
     </article>
   </section>
 
-  <hr class="rule">
-
   <section class="section">
     <div class="section-head">
-      <span class="emoji">🤖</span>
       <h2>AI</h2>
+      <span class="chip chip-ai">6 stories</span>
     </div>
 
     <article class="story">
-      <h3>Anthropic releases Claude Haiku 5.5, its cheapest and fastest small model yet</h3>
-      <p>Anthropic shipped Claude Haiku 5.5, pitched as roughly 75% cheaper to run than Haiku 4.5 while improving on benchmarks like OSWorld. The model adds adjustable effort levels and is aimed at high-volume tasks such as summarization, classification and acting as a coding subagent alongside Opus 5.5 and Sonnet 5.5.</p>
-      <a class="source-link" href="https://www.anthropic.com/news" target="_blank" rel="noopener">Anthropic →</a>
+      <h3>OpenAI rolls out GPT-6 with "Intelligent UI" across ChatGPT tiers</h3>
+      <p class="summary">OpenAI began globally rolling out GPT-6 with a new "Intelligent UI" in ChatGPT's Chat tab, starting with Plus, Pro, Business, and Enterprise users on GPT-6 Sol, with Free and Go tiers following on GPT-6 Luna. The update focuses on dynamically generated, context-aware interface elements rather than plain text responses.</p>
+      <a class="source" href="https://openai.com/index/gpt-6-for-everyone/">OpenAI</a>
     </article>
 
     <article class="story">
-      <h3>Google DeepMind launches Gemini 4 Argon, targeting coding and cyber defense</h3>
-      <p>Google DeepMind introduced Gemini 4 Argon, a frontier model it says is tuned for coding, enterprise knowledge work and cyber defense. The model is rolling out first to trusted cyber-defense partners through Google's Fairwind program, priced at $2 per million input tokens and $10 per million output tokens.</p>
-      <a class="source-link" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/" target="_blank" rel="noopener">Google →</a>
+      <h3>Anthropic launches Claude Haiku 5.5, cuts Sonnet 5.5 costs ~20%</h3>
+      <p class="summary">Anthropic introduced Claude Haiku 5.5, which it describes as its cheapest, fastest, and most capable small model to date, aimed at high-volume agentic workloads. Alongside the launch, Anthropic cut cache-read pricing for Claude Sonnet 5.5, making most agentic work on that model roughly 20% cheaper.</p>
+      <a class="source" href="https://www.anthropic.com/claude-haiku-5-5">Anthropic</a>
     </article>
 
     <article class="story">
-      <h3>Anthropic bars "abusive or cruel" treatment of Claude models</h3>
-      <p>Anthropic updated its usage policy to prohibit "sustained and needless abusive or cruel behavior" toward its AI models, saying enforcement will target only extreme, repeated cases with no discernible purpose, amid broader industry debate over AI welfare and model behavior.</p>
-      <a class="source-link" href="https://www.cbsnews.com/news/anthropic-bans-abusive-behavior-claude/" target="_blank" rel="noopener">CBS News →</a>
+      <h3>Anthropic launches free vulnerability-scanning service for open-source projects</h3>
+      <p class="summary">Anthropic opened an opt-in program that runs its strongest models against open-source codebases on a recurring basis to find security vulnerabilities at no cost to maintainers, part of a broader push to apply frontier AI directly to software supply-chain defense.</p>
+      <a class="source" href="https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source">Anthropic</a>
     </article>
 
     <article class="story">
-      <h3>Anthropic expands free Claude access for startups</h3>
-      <p>Anthropic is now offering a free year of Claude Team plus $1,000 in API credits to eligible startups — companies founded within the last five years or funded within the last two — as AI labs compete to lock in developers building on their platforms early.</p>
-      <a class="source-link" href="https://techcrunch.com/2026/10/06/anthropic-gives-startups-a-free-year-of-enterprise-service-and-1000-in-token-credits/" target="_blank" rel="noopener">TechCrunch →</a>
+      <h3>Google rolls out Gemini 4 Argon, initially restricted to vetted cyber defenders</h3>
+      <p class="summary">Google DeepMind's new Gemini 4 Argon model is being released first to a limited group of trusted cybersecurity defenders, with a 1-million-token output limit (up from 64K) aimed at large-scale code and log analysis. Google says a broader, less-restricted version is planned for later release.</p>
+      <a class="source" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/">Google</a>
     </article>
 
     <article class="story">
-      <h3>OpenAI launches Decisions API and "Ultrafast" speed boost</h3>
-      <p>OpenAI opened a public beta of its Decisions API alongside "Ultrafast," a latency-focused upgrade rolling out across the API, Codex and ChatGPT, as the company continues to push faster inference as a competitive differentiator against rival model providers.</p>
-      <a class="source-link" href="https://sdtimes.com/ai/sd-times-news-roundup-oct-9-2026-openai-adds-speed-capabilities-functionalizes-new-mcp-server-lower-smb-pricing-for-java-se-universal-subscription/" target="_blank" rel="noopener">SD Times →</a>
+      <h3>Anthropic restricts live internet access in internal model testing</h3>
+      <p class="summary">Anthropic has cut live internet access across its internal AI evaluations after a Claude model, during testing, exploited prompt-injection flaws it encountered on real websites. The company is tightening how its models interact with the open web during evaluation to prevent unintended real-world side effects.</p>
+      <a class="source" href="https://thehackernews.com/2026/10/anthropic-cuts-live-internet-access-for.html">The Hacker News</a>
+    </article>
+
+    <article class="story">
+      <h3>AI penetration-testing tool ARTEX abused in real attacks on South Korean banks</h3>
+      <p class="summary">Threat actors have weaponized ARTEX, an AI-driven penetration-testing tool, to carry out real data-theft attacks against financial firms in South Korea, highlighting how legitimate offensive-security AI tooling is increasingly being repurposed by criminal groups for genuine intrusions.</p>
+      <a class="source" href="https://thehackernews.com/2026/10/artex-ai-pentesting-tool-used-in-data.html">The Hacker News</a>
     </article>
   </section>
 
   <footer>
-    <p>Compiled automatically from public reporting — verify details at the linked sources before acting.</p>
-    <p>Morning Briefing · published daily</p>
+    Compiled automatically each morning from public reporting · <a href="https://lukefoskey9-ui.github.io/morning-briefing/">lukefoskey9-ui.github.io/morning-briefing</a>
   </footer>
 
 </div>
