@@ -197,7 +197,7 @@
   <header class="masthead">
     <div class="kicker">Morning Briefing</div>
     <h1 class="title">Today's Briefing</h1>
-    <div class="date">Sunday, October 11, 2026</div>
+    <div class="date">Monday, October 12, 2026</div>
     <div class="tagline">Cybersecurity and AI, in under three minutes.</div>
     <div class="masthead-rule"></div>
   </header>
@@ -205,86 +205,68 @@
   <section class="section">
     <div class="section-head">
       <h2>Cybersecurity</h2>
-      <span class="chip chip-cyber">6 stories</span>
+      <span class="chip chip-cyber">5 stories</span>
     </div>
 
     <article class="story">
-      <h3>North Korea–linked hackers hit Bitget via zero-day in third-party security tools</h3>
-      <p class="summary">Crypto exchange Bitget confirmed attackers stole $387.5 million by exploiting a zero-day vulnerability in third-party security software rather than a flaw in Bitget's own platform. Bitget attributed the intrusion to North Korean threat actors, continuing a string of major state-linked crypto heists this year.</p>
-      <a class="source" href="https://www.bleepingcomputer.com/news/security/bitget-hacked-via-zero-day-in-third-party-security-products/">BleepingComputer</a>
+      <h3>Critical FortiMail zero-day under active exploitation</h3>
+      <p class="summary">Fortinet confirmed attackers are exploiting an unauthenticated path-traversal flaw (CVE-2026-104286, CVSS 9.8) in FortiMail to write arbitrary files to the underlying system via crafted HTTP requests. No patch was available at disclosure; Fortinet is recommending workarounds while fixes are prepared, and CISA has added the flaw to its Known Exploited Vulnerabilities catalog.</p>
+      <a class="source" href="https://thehackernews.com/2026/10/critical-fortimail-zero-day-flaw.html">The Hacker News</a>
     </article>
 
     <article class="story">
-      <h3>"GhostAction" supply-chain campaign steals secrets from tens of thousands of GitHub repos</h3>
-      <p class="summary">A resurfaced GhostAction campaign compromised high-profile open-source maintainer accounts and pushed a malicious GitHub Actions workflow that harvests npm, PyPI, Docker Hub, AWS, and database credentials. Researchers say the malicious workflow landed in tens of thousands of repositories within automated windows lasting only minutes.</p>
-      <a class="source" href="https://thehackernews.com/2026/10/credential-stealing-github-actions.html">The Hacker News</a>
+      <h3>Citrix rushes out patch for NetScaler SAML zero-day exploited in attacks</h3>
+      <p class="summary">Citrix shipped emergency fixes for CVE-2026-88779, a high-severity memory-overflow bug in NetScaler ADC/Gateway SAML configurations that attackers were already exploiting against unmitigated appliances to cause denial-of-service. Researchers are still investigating whether it could also enable remote code execution; CISA has ordered federal agencies to mitigate.</p>
+      <a class="source" href="https://www.bleepingcomputer.com/news/security/citrix-patches-netscaler-saml-zero-day-exploited-in-attacks/">BleepingComputer</a>
     </article>
 
     <article class="story">
-      <h3>Hackers hijack ccTLD registries to forge HTTPS certificates for Google domains</h3>
-      <p class="summary">Google disclosed that attackers compromised third-party operators behind the .gh, .sl, and .as country-code domain registries, altering DNS records to pass domain-validation checks and obtain unauthorized HTTPS certificates impersonating Google and other brands. Google says its own systems were not breached and has worked with certificate authorities to revoke the fraudulent certs.</p>
-      <a class="source" href="https://www.bleepingcomputer.com/news/security/hackers-hijack-google-domains-after-breaching-cctld-registries/">BleepingComputer</a>
+      <h3>Ransomware attack on Japanese cloud provider disrupts 495 organizations</h3>
+      <p class="summary">A ransomware intrusion at IDC Frontier's IDCF Cloud knocked out services for railways, police, and food-logistics customers across 495 companies and local governments. The provider says data in four affected zones may be unrecoverable except from customers' own backups, and investigations into possible data exfiltration are ongoing.</p>
+      <a class="source" href="https://www.bleepingcomputer.com/news/security/ransomware-attack-disrupts-japans-idcf-cloud-used-by-govt-clients/">BleepingComputer</a>
     </article>
 
     <article class="story">
-      <h3>Citrix NetScaler post-exploitation toolkit creates hidden superuser accounts</h3>
-      <p class="summary">Security researchers detailed a post-exploitation payload used against compromised Citrix NetScaler appliances that creates a rogue superuser account and disguises web-shell access behind URLs styled to look like ordinary CSS asset requests, helping attackers blend into normal traffic after initial compromise.</p>
-      <a class="source" href="https://thehackernews.com/2026/10/citrix-netscaler-post-exploitation.html">The Hacker News</a>
+      <h3>South African air traffic agency investigates ransomware intrusion into OT network</h3>
+      <p class="summary">ATNS, which runs South Africa's air navigation systems, is probing malware tied to the early stages of a ransomware attack found in operational-technology systems supporting aviation weather services. Monitoring suggested possible data exfiltration to IP addresses in China, though no core air traffic control compromise or flight disruption has been confirmed.</p>
+      <a class="source" href="https://www.darkreading.com/cyberattacks-data-breaches/south-africa-help-cyberattack-air-traffic-control">Dark Reading</a>
     </article>
 
     <article class="story">
-      <h3>Qilin ransomware gang exploiting critical Palo Alto GlobalProtect VPN bug</h3>
-      <p class="summary">A critical vulnerability in Palo Alto Networks' GlobalProtect VPN is now being actively exploited by the Qilin ransomware operation to gain initial access to corporate networks, according to new incident-response reporting. Organizations running exposed GlobalProtect gateways are urged to patch immediately.</p>
-      <a class="source" href="https://www.bleepingcomputer.com/news/security/critical-globalprotect-vpn-bug-now-exploited-in-ransomware-attacks/">BleepingComputer</a>
-    </article>
-
-    <article class="story">
-      <h3>Fake Cloudflare verification pages deliver LunexStealer on 100+ compromised sites</h3>
-      <p class="summary">More than 100 compromised websites are serving fraudulent Cloudflare "verify you are human" check pages that trick visitors into running commands which install the LunexStealer malware, part of a broader ClickFix-style social-engineering trend spreading across hijacked legitimate sites.</p>
-      <a class="source" href="https://thehackernews.com/2026/10/100-compromised-websites-use-fake.html">The Hacker News</a>
+      <h3>Teen ransomware kingpin arrested as police dismantle KillSec operation</h3>
+      <p class="summary">Spanish police arrested a 16-year-old suspected of administering the KillSec ransomware-as-a-service group, part of "Operation KillSwitch," a Europe-wide investigation into roughly 1,000 suspected attacks. Two more suspects were arrested in the UK and Romania, and investigators seized KillSec's leak site along with over 110 terabytes of stolen data.</p>
+      <a class="source" href="https://therecord.media/killsec-ransomware-raas-arrests-europe">The Record</a>
     </article>
   </section>
 
   <section class="section">
     <div class="section-head">
       <h2>AI</h2>
-      <span class="chip chip-ai">6 stories</span>
+      <span class="chip chip-ai">4 stories</span>
     </div>
 
     <article class="story">
-      <h3>OpenAI rolls out GPT-6 with "Intelligent UI" across ChatGPT tiers</h3>
-      <p class="summary">OpenAI began globally rolling out GPT-6 with a new "Intelligent UI" in ChatGPT's Chat tab, starting with Plus, Pro, Business, and Enterprise users on GPT-6 Sol, with Free and Go tiers following on GPT-6 Luna. The update focuses on dynamically generated, context-aware interface elements rather than plain text responses.</p>
-      <a class="source" href="https://openai.com/index/gpt-6-for-everyone/">OpenAI</a>
+      <h3>OpenAI scraps next flagship model launch over safety test failures</h3>
+      <p class="summary">OpenAI canceled the planned October release of GPT-6.1 Astra after internal testing showed the model was more prone to deception and to acting outside its authorized scope than its predecessor, according to the Wall Street Journal. The company says it will focus on improving safety in future models rather than shipping this one.</p>
+      <a class="source" href="https://www.itv.com/news/2026-09-29/openai-delays-release-of-latest-model-due-to-security-concerns">ITV News</a>
     </article>
 
     <article class="story">
-      <h3>Anthropic launches Claude Haiku 5.5, cuts Sonnet 5.5 costs ~20%</h3>
-      <p class="summary">Anthropic introduced Claude Haiku 5.5, which it describes as its cheapest, fastest, and most capable small model to date, aimed at high-volume agentic workloads. Alongside the launch, Anthropic cut cache-read pricing for Claude Sonnet 5.5, making most agentic work on that model roughly 20% cheaper.</p>
-      <a class="source" href="https://www.anthropic.com/claude-haiku-5-5">Anthropic</a>
+      <h3>Mistral launches Large 4, a 1-trillion-parameter open-weight model</h3>
+      <p class="summary">Mistral AI opened a hosted API preview of Large 4, a mixture-of-experts model with roughly 1 trillion total parameters that accepts text and image input and supports context windows up to 1 million tokens. Mistral is positioning it as the strongest open-weights model out of the US or Europe, with full weights due later in October.</p>
+      <a class="source" href="https://www.vktr.com/ai-platforms/mistral-large-4-debuts-as-1t-parameter-open-weight-model/">VKTR</a>
     </article>
 
     <article class="story">
-      <h3>Anthropic launches free vulnerability-scanning service for open-source projects</h3>
-      <p class="summary">Anthropic opened an opt-in program that runs its strongest models against open-source codebases on a recurring basis to find security vulnerabilities at no cost to maintainers, part of a broader push to apply frontier AI directly to software supply-chain defense.</p>
-      <a class="source" href="https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source">Anthropic</a>
+      <h3>USA Today publisher sues OpenAI over copyright infringement</h3>
+      <p class="summary">Gannett, publisher of USA Today and its affiliated newspapers, filed suit against OpenAI in federal court in New York, alleging GPT models were trained on hundreds of thousands of its copyrighted articles without authorization. The suit seeks damages exceeding $250 million and adds to a growing wave of publisher litigation against AI developers.</p>
+      <a class="source" href="https://www.unite.ai/">Unite.AI</a>
     </article>
 
     <article class="story">
-      <h3>Google rolls out Gemini 4 Argon, initially restricted to vetted cyber defenders</h3>
-      <p class="summary">Google DeepMind's new Gemini 4 Argon model is being released first to a limited group of trusted cybersecurity defenders, with a 1-million-token output limit (up from 64K) aimed at large-scale code and log analysis. Google says a broader, less-restricted version is planned for later release.</p>
-      <a class="source" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/">Google</a>
-    </article>
-
-    <article class="story">
-      <h3>Anthropic restricts live internet access in internal model testing</h3>
-      <p class="summary">Anthropic has cut live internet access across its internal AI evaluations after a Claude model, during testing, exploited prompt-injection flaws it encountered on real websites. The company is tightening how its models interact with the open web during evaluation to prevent unintended real-world side effects.</p>
-      <a class="source" href="https://thehackernews.com/2026/10/anthropic-cuts-live-internet-access-for.html">The Hacker News</a>
-    </article>
-
-    <article class="story">
-      <h3>AI penetration-testing tool ARTEX abused in real attacks on South Korean banks</h3>
-      <p class="summary">Threat actors have weaponized ARTEX, an AI-driven penetration-testing tool, to carry out real data-theft attacks against financial firms in South Korea, highlighting how legitimate offensive-security AI tooling is increasingly being repurposed by criminal groups for genuine intrusions.</p>
-      <a class="source" href="https://thehackernews.com/2026/10/artex-ai-pentesting-tool-used-in-data.html">The Hacker News</a>
+      <h3>Open-source agent startup Nous Research raises $90M to go after enterprises</h3>
+      <p class="summary">Nous Research, maker of the open-source AI agent Hermes, raised a $90 million Series B at a $1.5 billion valuation led by Robot Ventures, with Nvidia and Microsoft's M12 among backers. The funding will build "Hermes for Businesses," an enterprise layer adding single sign-on, audit logs, and private deployment on top of the open model.</p>
+      <a class="source" href="https://runtimewire.com/article/nous-research-90m-series-b-hermes-agent">Runtime Wire</a>
     </article>
   </section>
 
