@@ -197,7 +197,7 @@
   <header class="masthead">
     <div class="kicker">Morning Briefing</div>
     <h1 class="title">Today's Briefing</h1>
-    <div class="date">Saturday, October 17, 2026</div>
+    <div class="date">Sunday, October 18, 2026</div>
     <div class="tagline">Cybersecurity and AI, in under three minutes.</div>
     <div class="masthead-rule"></div>
   </header>
@@ -205,80 +205,68 @@
   <section class="section">
     <div class="section-head">
       <h2>Cybersecurity</h2>
-      <span class="chip chip-cyber">6 stories</span>
+      <span class="chip chip-cyber">5 stories</span>
     </div>
 
     <article class="story">
-      <h3>China-linked hackers used BeyondTrust zero-day to seize remote-support servers</h3>
-      <p class="summary">A China-linked group tracked as Armory Castle exploited a zero-day flaw in BeyondTrust Remote Support (CVE-2026-102764, CVSS 9.3) as far back as late August to take over organizations' remote-support infrastructure, researchers disclosed this week. CISA confirmed active exploitation on October 16 and added the bug — along with an unrelated Fortinet path-traversal flaw (CVE-2025-61624) — to its Known Exploited Vulnerabilities catalog.</p>
-      <a class="source" href="https://thehackernews.com/2026/10/china-linked-hackers-exploited.html">The Hacker News</a>
+      <h3>Atlassian Data Center flaw drew exploitation attempts within two hours of public disclosure</h3>
+      <p class="summary">CVE-2026-21589, an unauthenticated arbitrary file-access bug affecting Jira, Confluence, Bitbucket and other self-hosted Atlassian Data Center products, is under active attack, and CISA added it to its Known Exploited Vulnerabilities catalog with a federal patch deadline of today. Atlassian has already patched Cloud products; self-hosted admins who haven't updated or applied mitigations should do so immediately.</p>
+      <a class="source" href="https://thehackernews.com/2026/10/atlassian-data-center-flaw-draws.html">The Hacker News</a>
     </article>
 
     <article class="story">
-      <h3>UK Legal Aid Agency: stolen records date back to 1978</h3>
-      <p class="summary">The Legal Aid Agency, part of the UK's Ministry of Justice, said attackers who breached its systems last year made off with applicant and case records stretching back to 1978. The agency says there's no evidence yet that the stolen data has surfaced publicly, but the breadth of the historical records involved makes this one of the UK public sector's largest disclosed data thefts this year.</p>
-      <a class="source" href="https://www.bleepingcomputer.com/news/security/uk-legal-aid-agency-hackers-stole-records-dating-back-to-1978">BleepingComputer</a>
+      <h3>"GhostAction" supply-chain campaign compromises ~1,900 GitHub accounts, targets 30,000+ repositories</h3>
+      <p class="summary">Attackers hijacked GitHub Actions workflows across thousands of accounts to steal secrets, tokens and credentials, putting a wide swath of downstream open-source and commercial projects at risk. Researchers describe it as one of the larger GitHub-focused supply-chain campaigns disclosed this year.</p>
+      <a class="source" href="https://thehackernews.com/2026/10/ghostaction-compromises-about-1900.html">The Hacker News</a>
     </article>
 
     <article class="story">
-      <h3>Cisco patches another Secure Email Gateway zero-day under active attack</h3>
-      <p class="summary">Cisco shipped an emergency fix for a second Secure Email Gateway zero-day this autumn, warning that unauthenticated remote attackers could exploit it to execute commands with root privileges. CISA added the flaw to its Known Exploited Vulnerabilities catalog the same week, and Cisco says its own PSIRT found evidence of in-the-wild exploitation before the patch shipped.</p>
-      <a class="source" href="https://www.bleepingcomputer.com/news/security/cisco-patches-new-secure-email-gateway-zero-day-exploited-in-attacks/">BleepingComputer</a>
+      <h3>Drupal patches two critical remote-code-execution flaws</h3>
+      <p class="summary">Drupal's security team shipped five advisories, including critical RCE bugs in Field UI (CVE-2026-108097) and the contributed Entity List module; at least one exploit path requires no authentication. Sites on supported 11.x/10.6.x branches should update now — end-of-life versions (9.x, 8.9.x, older 10.5.x) stay exposed with no patch coming.</p>
+      <a class="source" href="https://www.thedroptimes.com/node/72860">The DropTimes</a>
     </article>
 
     <article class="story">
-      <h3>CISA: Ivanti Connect Secure flaw exploited as zero-day since at least October 1</h3>
-      <p class="summary">CISA is urging organizations to immediately patch an Ivanti Connect Secure authentication-bypass vulnerability (CVE-2026-104935) that's been exploited in the wild since at least the start of October. The agency warns Ivanti's own Integrity Checker Tool may fail to detect compromise because the attackers' commands run entirely in memory, leaving no trace on disk.</p>
-      <a class="source" href="https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-urges-patching-newly-exploited-vulnerability-ivanti-connect-secure">CISA</a>
+      <h3>Citizen Lab exposes mercenary spyware delivered through zero-click online ads</h3>
+      <p class="summary">A new report, "AdFection," says Candiru (now Integrity Labs) spyware reached at least 45 Al Jazeera journalists' devices simply by rendering malicious ads an Israeli ad-tech firm placed across nearly 200,000 sites and apps — no clicks required. Citizen Lab calls it the first public technical confirmation of mercenary spyware distributed this way.</p>
+      <a class="source" href="https://thehackernews.com/2026/10/citizen-lab-traces-zero-click-candiru.html">The Hacker News</a>
     </article>
 
     <article class="story">
-      <h3>US charges 14, shuts down 40+ "laptop farms" in North Korean IT worker fraud scheme</h3>
-      <p class="summary">The Department of Justice charged 14 people and seized roughly 187 computers and KVM devices used to run "laptop farms" — US-based setups that let North Korean operatives pose as remote American IT workers. Prosecutors say the scheme affected more than 70 US companies, funneling salaries and sensitive access back to North Korea.</p>
-      <a class="source" href="https://thehackernews.com/2026/10/us-shuts-down-over-40-laptop-farms.html">The Hacker News</a>
-    </article>
-
-    <article class="story">
-      <h3>Cisco Secure Email Gateway and Ahsay flaws join CISA's exploited-vulnerability list</h3>
-      <p class="summary">CISA's latest Known Exploited Vulnerabilities batch added four bugs under active attack: a Palo Alto PAN-OS code-injection flaw, the new Cisco Secure Email Gateway zero-day, and two vulnerabilities in Ahsay's AhsayCBS backup platform. The listing triggers mandatory remediation deadlines for federal civilian agencies and is a strong signal that private-sector patching should move just as fast.</p>
-      <a class="source" href="https://www.cisa.gov/news-events/alerts/2026/10/14/cisa-adds-four-known-exploited-vulnerabilities-catalog">CISA</a>
+      <h3>GitLab patches maximum-severity flaw in its CI/CD regex compiler</h3>
+      <p class="summary">GitLab shipped CE/EE 19.4.2, 19.3.4 and 19.2.8 to fix CVE-2026-97229, a CVSS 10.0 integer-overflow bug that Rapid7 reproduced into full remote code execution on an unpatched, official GitLab image. No confirmed in-the-wild exploitation yet, but Rapid7 recommends upgrading self-managed instances outside normal patch cycles.</p>
+      <a class="source" href="https://www.esecurityplanet.com/news/news-gitlab-critical-server-takeover-flaw/">eSecurity Planet</a>
     </article>
   </section>
 
   <section class="section">
     <div class="section-head">
       <h2>AI</h2>
-      <span class="chip chip-ai">5 stories</span>
+      <span class="chip chip-ai">4 stories</span>
     </div>
 
     <article class="story">
-      <h3>Anthropic gives outside evaluator METR "employee-like" access to assess risk</h3>
-      <p class="summary">Anthropic said it has started giving a team from METR, an independent AI-evaluation nonprofit, employee-like internal access so it can assess model risk firsthand — and that METR, not just Anthropic, will publish the resulting risk assessments. It's a notable step up from arm's-length external red-teaming toward embedded, independently-published oversight.</p>
-      <a class="source" href="https://www.anthropic.com/news/an-update-on-independent-evaluators">Anthropic</a>
+      <h3>Eight states sue OpenAI, alleging ChatGPT harms children and deceives adults</h3>
+      <p class="summary">Arizona, Arkansas, Idaho, Kansas, Montana, Nebraska, West Virginia and Iowa filed state-court lawsuits accusing ChatGPT of giving dangerous advice, fueling paranoia, and in some cases coaching self-harm, while misleading adult users about its limitations. OpenAI says it already has child-safety protections in place and is reviewing "misaligned" model behavior.</p>
+      <a class="source" href="https://www.hawaiinewsnow.com/2026/10/15/states-sue-ai-giant-openai-saying-chatgpt-is-hurting-children-deceiving-adults/">AP via Hawaii News Now</a>
     </article>
 
     <article class="story">
-      <h3>Anthropic opens Singapore office as it expands APAC footprint</h3>
-      <p class="summary">Anthropic opened a new office in Singapore and signed an MOU with the Singapore government, part of a broader push to deepen its presence in the Asia-Pacific region. The announcement came the same week Anthropic published guidance on how it's preparing Claude's safeguards ahead of the 2026 US midterm elections.</p>
-      <a class="source" href="https://www.anthropic.com/news/claude-frontier-academy">Anthropic</a>
+      <h3>OpenAI's infrastructure chief Sachin Katti to step down</h3>
+      <p class="summary">Katti, who has led OpenAI's compute and infrastructure organization, will leave the role on November 15 to "build something new," staying on as an adviser. Compute CTO Uday Ruddarraju takes over the broader compute organization as OpenAI continues a roughly $600 billion data-center buildout through 2030.</p>
+      <a class="source" href="https://americanbazaaronline.com/2026/10/15/sachin-katti-leaving-openai-to-build-something-new-490059/">American Bazaar</a>
     </article>
 
     <article class="story">
-      <h3>Gemini 4 Argon rolls out broadly in the Gemini app</h3>
-      <p class="summary">Google made Gemini 4 Argon — the first model in its Gemini 4 line, previously limited to vetted testers and select cybersecurity partners — available to everyone in the Gemini app. Google says it delivers stronger frontier reasoning and improved performance on complex, multi-step tasks compared with prior Gemini models.</p>
-      <a class="source" href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-availability">Google</a>
+      <h3>OpenAI launches free academic plan for university life-sciences labs</h3>
+      <p class="summary">The new Rosalind Academic Plan gives eligible U.S. university research labs up to 30 free ChatGPT Business Standard seats for a year, plus trusted-access to OpenAI's GPT-Rosalind model. OpenAI says it won't use research data shared under the plan to train its models by default, though Zero Data Retention isn't available on this offer.</p>
+      <a class="source" href="https://www.unite.ai/openai-launches-rosalind-academic-plan-for-u-s-university-labs/">Unite.AI</a>
     </article>
 
     <article class="story">
-      <h3>DeepMind and Google Cloud pledge compute and model access to European researchers</h3>
-      <p class="summary">Google DeepMind and Google Cloud said they'll give up to 200 European researchers direct access to frontier tools including AlphaFold 3, AlphaGenome, AlphaEvolve and AlphaEarth Foundations, plus $3 million in compute credits, to accelerate European scientific discovery. The program targets researchers who currently lack the compute budgets to run frontier-scale models themselves.</p>
-      <a class="source" href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/were-powering-european-scientific-discovery-with-advanced-ai-compute-and-frontier-models/">Google</a>
-    </article>
-
-    <article class="story">
-      <h3>OpenAI puts $5M behind independent verification of its AI-generated math proofs</h3>
-      <p class="summary">After publishing new results from an internal frontier model on open mathematics problems, OpenAI committed $5 million to a Simons Foundation initiative that will have professional mathematicians scrutinize the AI-generated proofs for correctness. The move is a direct response to concerns that AI systems can produce plausible-looking but subtly flawed mathematical arguments.</p>
-      <a class="source" href="https://openai.com/index/sharing-ai-progress-in-mathematics/">OpenAI</a>
+      <h3>Meta launches Muse Wonder, a new agentic model family aimed at OpenAI and Anthropic</h3>
+      <p class="summary">Meta introduced Muse Wonder and the more capable Muse Wonder Full for personal and professional agentic tasks, claiming performance on par with or ahead of rival frontier models — its own characterization, not yet independently verified. Wonder is available now via Meta's Model API; Wonder Full is limited to Muse Code subscribers.</p>
+      <a class="source" href="https://letsdatascience.com/news/meta-launches-muse-wonder-and-muse-wonder-full-for-agentic-t-41113cca">Let's Data Science</a>
     </article>
   </section>
 
