@@ -6,38 +6,32 @@
 <title>Morning Briefing</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #f7f5f0;
     --bg-card: #ffffff;
-    --text: #1c1a16;
-    --text-muted: #5b5750;
-    --accent: #8a3b2b;
-    --accent-2: #1f5c4a;
-    --rule: #e4ddd0;
-    --chip-cyber-bg: #fbe9e5;
-    --chip-cyber-text: #8a3b2b;
-    --chip-ai-bg: #e5f0ec;
-    --chip-ai-text: #1f5c4a;
-    --link: #8a3b2b;
-    --shadow: rgba(28, 26, 22, 0.06);
+    --text: #1c1b19;
+    --text-muted: #5b574f;
+    --rule: #ddd8cc;
+    --accent-cyber: #9a3324;
+    --accent-ai: #2d5a4a;
+    --tag-bg: #efe9da;
+    --link: #1c1b19;
+    --shadow: rgba(30, 25, 15, 0.06);
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #15140f;
-      --bg-card: #1e1c17;
-      --text: #ece7db;
-      --text-muted: #a8a195;
-      --accent: #e08a6f;
-      --accent-2: #6fc7a8;
-      --rule: #322f28;
-      --chip-cyber-bg: #3a2420;
-      --chip-cyber-text: #f0a893;
-      --chip-ai-bg: #203329;
-      --chip-ai-text: #9fe0c3;
-      --link: #e08a6f;
+      --bg: #15161a;
+      --bg-card: #1d1f25;
+      --text: #ece9e2;
+      --text-muted: #a6a39a;
+      --rule: #343640;
+      --accent-cyber: #e2776a;
+      --accent-ai: #6fcfae;
+      --tag-bg: #262932;
+      --link: #ece9e2;
       --shadow: rgba(0, 0, 0, 0.35);
     }
   }
@@ -54,140 +48,146 @@
   body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
   }
 
   .wrap {
     max-width: 680px;
     margin: 0 auto;
-    padding: 36px 20px 64px;
+    padding: 2.25rem 1.25rem 4rem;
   }
 
   header.masthead {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 2rem;
   }
 
   .kicker {
-    font-size: 12px;
+    font-size: 0.72rem;
+    font-weight: 600;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--text-muted);
-    font-weight: 600;
+    margin: 0 0 0.6rem;
   }
 
   h1.title {
     font-family: 'Source Serif 4', Georgia, serif;
     font-weight: 700;
-    font-size: clamp(32px, 7vw, 44px);
-    margin: 10px 0 8px;
+    font-size: 2.25rem;
+    line-height: 1.1;
+    margin: 0 0 0.75rem;
     letter-spacing: -0.01em;
   }
 
-  .date {
-    font-size: 16px;
+  .date-line {
+    font-size: 1rem;
     color: var(--text-muted);
-    font-weight: 500;
-  }
-
-  .tagline {
-    margin-top: 14px;
-    font-size: 14px;
-    color: var(--text-muted);
-    font-style: italic;
+    margin: 0;
   }
 
   .masthead-rule {
-    margin-top: 28px;
-    height: 1px;
-    background: var(--rule);
+    border: none;
+    border-top: 2px solid var(--text);
+    margin: 1.5rem 0 0;
+  }
+
+  .intro {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin: 1.25rem 0 0;
   }
 
   section.section {
-    margin-top: 40px;
+    margin-top: 2.75rem;
   }
 
   .section-head {
     display: flex;
     align-items: baseline;
-    gap: 10px;
-    margin-bottom: 18px;
+    gap: 0.6rem;
+    margin-bottom: 1.1rem;
   }
 
-  .section-head h2 {
+  .section-icon {
+    font-size: 1.3rem;
+    line-height: 1;
+  }
+
+  h2.section-title {
     font-family: 'Source Serif 4', Georgia, serif;
-    font-size: 24px;
     font-weight: 700;
+    font-size: 1.55rem;
     margin: 0;
+    letter-spacing: -0.01em;
   }
 
-  .chip {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    padding: 3px 9px;
-    border-radius: 999px;
-  }
+  .section.cyber h2.section-title { color: var(--accent-cyber); }
+  .section.ai h2.section-title { color: var(--accent-ai); }
 
-  .chip-cyber { background: var(--chip-cyber-bg); color: var(--chip-cyber-text); }
-  .chip-ai { background: var(--chip-ai-bg); color: var(--chip-ai-text); }
+  .section-rule {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 0 0 1.4rem;
+  }
 
   article.story {
     background: var(--bg-card);
-    border-radius: 14px;
-    padding: 18px 20px;
-    margin-bottom: 14px;
+    border-radius: 12px;
+    padding: 1.15rem 1.3rem 1.3rem;
+    margin-bottom: 1rem;
     box-shadow: 0 1px 3px var(--shadow);
   }
 
-  article.story h3 {
-    font-family: 'Source Serif 4', Georgia, serif;
-    font-size: 18px;
-    line-height: 1.32;
-    font-weight: 600;
-    margin: 0 0 8px;
+  article.story:last-child {
+    margin-bottom: 0;
   }
 
-  article.story p.summary {
-    margin: 0 0 12px;
-    font-size: 15px;
+  h3.headline {
+    font-size: 1.07rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    line-height: 1.35;
+  }
+
+  p.summary {
+    margin: 0 0 0.75rem;
+    font-size: 0.95rem;
     color: var(--text);
   }
 
-  article.story a.source {
-    font-size: 13px;
+  a.source-link {
+    display: inline-block;
+    font-size: 0.85rem;
     font-weight: 600;
     color: var(--link);
     text-decoration: none;
-    display: inline-block;
-    padding: 6px 0;
+    border-bottom: 1px solid currentColor;
+    padding: 0.15rem 0;
+    min-height: 1.4em;
   }
 
-  article.story a.source:hover,
-  article.story a.source:focus {
-    text-decoration: underline;
-  }
+  a.source-link:hover { opacity: 0.7; }
 
-  article.story a.source::after {
-    content: " \2192";
-  }
+  .section.cyber a.source-link { color: var(--accent-cyber); }
+  .section.ai a.source-link { color: var(--accent-ai); }
 
-  footer {
-    margin-top: 48px;
-    padding-top: 20px;
+  footer.colophon {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
     border-top: 1px solid var(--rule);
     text-align: center;
-    font-size: 12.5px;
+    font-size: 0.8rem;
     color: var(--text-muted);
   }
 
-  footer a { color: var(--text-muted); }
+  footer.colophon p { margin: 0.3rem 0; }
 
   @media (max-width: 420px) {
-    .wrap { padding: 28px 16px 48px; }
-    article.story { padding: 16px; }
+    h1.title { font-size: 1.85rem; }
+    .wrap { padding: 1.75rem 1rem 3rem; }
+    article.story { padding: 1rem 1.05rem 1.15rem; }
   }
 </style>
 </head>
@@ -195,89 +195,106 @@
 <div class="wrap">
 
   <header class="masthead">
-    <div class="kicker">Morning Briefing</div>
-    <h1 class="title">Today's Briefing</h1>
-    <div class="date">Friday, October 23, 2026</div>
-    <div class="tagline">Cybersecurity and AI, in under three minutes.</div>
-    <div class="masthead-rule"></div>
+    <p class="kicker">Daily Digest</p>
+    <h1 class="title">Morning Briefing</h1>
+    <p class="date-line">Saturday, October 24, 2026</p>
+    <hr class="masthead-rule">
+    <p class="intro">The cybersecurity and AI stories worth knowing before you start your day.</p>
   </header>
 
-  <section class="section">
+  <section class="section cyber">
     <div class="section-head">
-      <h2>Cybersecurity</h2>
-      <span class="chip chip-cyber">5 stories</span>
+      <span class="section-icon">🛡️</span>
+      <h2 class="section-title">Cybersecurity</h2>
     </div>
+    <hr class="section-rule">
 
     <article class="story">
-      <h3>Ahold Delhaize confirms outside attackers, services still coming back online</h3>
-      <p class="summary">In a Monday update on the cyberattack first disclosed October 12, grocery giant Ahold Delhaize confirmed the disruption was caused by the "malicious actions" of outside actors and said it has filed a police report in the Netherlands. Albert Heijn's site and app are back and Belgian e-commerce is fully restored, but some US and European systems are still being brought back online more than a week later, with no evidence yet that customer data was stolen.</p>
-      <a class="source" href="https://www.grocerydive.com/news/ahold-delhaize-adusa-cybersecurity-update/833414/">Grocery Dive</a>
+      <h3 class="headline">LiteLLM's PyPI package backdoored in a second supply-chain attack</h3>
+      <p class="summary">A malicious version of the popular LiteLLM AI-proxy package (v1.107.0) was uploaded to PyPI on Oct 21 and quarantined about 13 hours later. Wiz says it carried a credential stealer targeting cloud, browser, and AI secrets, and that the attacker used GitHub CLI OAuth tokens stolen from three maintainers' accounts — the project's second PyPI compromise this year.</p>
+      <a class="source-link" href="https://www.wiz.io/blog/litellm-compromised-steals-credentials" target="_blank" rel="noopener">Wiz Research →</a>
     </article>
 
     <article class="story">
-      <h3>Ransomware gangs keep breaching networks through a months-old Palo Alto VPN bug</h3>
-      <p class="summary">Palo Alto Networks' Unit 42 updated its threat brief on October 19, naming the Qilin and Inc ransomware operations among groups that have been exploiting a GlobalProtect authentication-bypass flaw (CVE-2026-0257) since early June. Attackers use the bug to slip past MFA and establish a VPN session, then deploy legitimate IT tools to move through the network before stealing data and detonating ransomware.</p>
-      <a class="source" href="https://www.bleepingcomputer.com/news/security/critical-globalprotect-vpn-bug-now-exploited-in-ransomware-attacks/">BleepingComputer</a>
+      <h3 class="headline">"PHP2Shell" flaws force emergency patches across nearly every PHP site</h3>
+      <p class="summary">The PHP team rushed out fixes on Oct 21 for two linked, unauthenticated remote-code-execution flaws (CVE-2026-109618, CVE-2026-109619) affecting PHP-FPM, mod_php, php-cgi, FrankenPHP, and LiteSpeed — effectively any PHP install that serves web requests. Wiz demonstrated working exploits against stock WordPress, Drupal, and Joomla deployments; patched releases are 8.5.12, 8.4.27, 8.3.36, and 8.2.35.</p>
+      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/php-ships-emergency-patches-for-critical-php2shell-flaws" target="_blank" rel="noopener">BleepingComputer →</a>
     </article>
 
     <article class="story">
-      <h3>Ransomware attacks hit a record high in the third quarter</h3>
-      <p class="summary">A new analysis counted 2,627 ransomware attacks in Q3 2026, the highest quarterly total on record, with US organizations taking the brunt at 41% of all attacks. The Qilin and Gentlemen groups were the most active operators, each linked to more than 300 attacks in the quarter.</p>
-      <a class="source" href="https://blog.knowbe4.com/report-ransomware-attacks-hit-a-record-high-in-q3-2026">KnowBe4</a>
+      <h3 class="headline">CISA adds Collabora Online command-injection bug to its exploited list</h3>
+      <p class="summary">CISA added CVE-2026-110447, an OS command-injection vulnerability in Collabora Online's built-in CODE server, to its Known Exploited Vulnerabilities catalog on Oct 23, confirming active exploitation in the wild and setting a remediation deadline for federal agencies.</p>
+      <a class="source-link" href="https://www.cisa.gov/news-events/alerts/2026/10/23/cisa-adds-one-known-exploited-vulnerability-catalog-0" target="_blank" rel="noopener">CISA Advisory →</a>
     </article>
 
     <article class="story">
-      <h3>CISA issues six new industrial control system advisories</h3>
-      <p class="summary">CISA released six ICS advisories covering flaws in HMS Networks' PCAN Windows drivers, WAGO's Linux-based OS, Moxa's AIG-302 ThingsPro Edge gateway, and Hitachi Energy's MicroSCADA X SYS600 and RTU500 products. Operators of affected equipment are urged to apply vendor mitigations, since several of the flaws could allow remote attackers to disrupt or take control of exposed devices.</p>
-      <a class="source" href="https://content.govdelivery.com/accounts/USDHSCISA/bulletins/42fd2a7">CISA</a>
+      <h3 class="headline">Attackers point autonomous AI agents at 1,200+ corporate websites</h3>
+      <p class="summary">Researchers tracked a campaign using autonomous AI agents to probe and attempt breaches across more than 1,200 sites, reaching companies including Deere, SharkNinja, and Cummins. The activity was uncovered by scanning for exposed instances of the open-source agent tool Cairn.</p>
+      <a class="source-link" href="https://thehackernews.com/2026/10/hackers-use-autonomous-ai-agents-to.html" target="_blank" rel="noopener">The Hacker News →</a>
     </article>
 
     <article class="story">
-      <h3>Suspected Qilin ransomware member arrested in Japan, extradited to Germany</h3>
-      <p class="summary">Japanese authorities detained a Russian national accused of being a key member of the Qilin ransomware-as-a-service operation and handed him over to German custody earlier this month. Qilin has been one of the most prolific ransomware brands this year, and the arrest marks one of the few concrete law-enforcement wins against its affiliate network.</p>
-      <a class="source" href="https://www.nippon.com/en/news/yjj2026100600755/">Nippon.com</a>
+      <h3 class="headline">OpenCode Console breach may have exposed OpenAI, Anthropic, and Google API keys</h3>
+      <p class="summary">An intruder accessed OpenCode Console, the hosted dashboard for the OpenCode AI coding agent, potentially exposing stored API keys for major AI providers. The company says roughly 1.4% of Console users were affected and has urged them to revoke and rotate their keys.</p>
+      <a class="source-link" href="https://thehackernews.com/2026/10/opencode-console-breach-may-have.html" target="_blank" rel="noopener">The Hacker News →</a>
     </article>
+
+    <article class="story">
+      <h3 class="headline">Suspected China-linked group exploited BeyondTrust zero-day</h3>
+      <p class="summary">A China-linked threat actor exploited a zero-day in BeyondTrust Remote Support software in late August to take over remote-support servers and deploy a web shell, according to new research published this week.</p>
+      <a class="source-link" href="https://thehackernews.com/2026/10/china-linked-hackers-exploited.html" target="_blank" rel="noopener">The Hacker News →</a>
+    </article>
+
+    <article class="story">
+      <h3 class="headline">GhostAction campaign compromised ~1,900 GitHub accounts, targeted 30,000+ repos</h3>
+      <p class="summary">A supply-chain campaign dubbed GhostAction compromised about 1,900 GitHub accounts and targeted more than 30,000 repositories, according to GitGuardian, in one of the larger source-code-platform campaigns reported this month.</p>
+      <a class="source-link" href="https://thehackernews.com/2026/10/ghostaction-compromises-about-1900.html" target="_blank" rel="noopener">The Hacker News →</a>
+    </article>
+
   </section>
 
-  <section class="section">
+  <section class="section ai">
     <div class="section-head">
-      <h2>AI</h2>
-      <span class="chip chip-ai">5 stories</span>
+      <span class="section-icon">✦</span>
+      <h2 class="section-title">Artificial Intelligence</h2>
     </div>
+    <hr class="section-rule">
 
     <article class="story">
-      <h3>Anthropic hands its Agent Skills standard to a new industry foundation</h3>
-      <p class="summary">Anthropic announced it is donating its open Agent Skills standard, a format for packaging reusable AI agent capabilities, to the newly formed Agentic AI Foundation. The company says more than 70 agent platforms have already adopted the standard, positioning it as a shared, vendor-neutral building block for the agent ecosystem rather than an Anthropic-only format.</p>
-      <a class="source" href="https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation">Anthropic</a>
+      <h3 class="headline">Anthropic launches Claude Duet, an always-on background agent</h3>
+      <p class="summary">Anthropic introduced Claude Duet on Oct 21 as a research preview: a proactive agent, powered by Claude Opus 5.5, that monitors connected apps like email and calendar and checks in periodically rather than waiting for prompts. It's rolling out via waitlist to U.S. Pro and Max subscribers and requires sign-off before taking consequential actions.</p>
+      <a class="source-link" href="https://iphoneincanada.ca/2026/10/21/claude-duet-proactive-ai-agent-app" target="_blank" rel="noopener">iPhone in Canada →</a>
     </article>
 
     <article class="story">
-      <h3>Anthropic commits a growing equity stake to a new Public Benefit Fund</h3>
-      <p class="summary">Anthropic said it is setting aside a portion of its shares for a newly created Public Benefit Fund, structured so the fund's stake grows in step with the company's value. The move is framed as a concrete commitment behind Anthropic's public-benefit corporate structure, giving a philanthropic vehicle a direct, scaling stake in the company's success.</p>
-      <a class="source" href="https://www.anthropic.com/news/public-benefit-fund">Anthropic</a>
+      <h3 class="headline">Google makes Gemini 4 Argon generally available</h3>
+      <p class="summary">Google moved its flagship Gemini 4 Argon model to general availability on Oct 13 after a restricted launch, giving developers and Gemini app subscribers access to a unified context window supporting up to 1 million output tokens. Independent benchmarks place it near the top of the field alongside Claude and GPT-6 Astra.</p>
+      <a class="source-link" href="https://letsdatascience.com/news/google-releases-gemini-4-argon-for-scientific-computing-644a49ff" target="_blank" rel="noopener">Let's Data Science →</a>
     </article>
 
     <article class="story">
-      <h3>Anthropic opens a Singapore office and signs an AI cooperation deal with the government</h3>
-      <p class="summary">Anthropic has opened an office in Singapore and signed a memorandum of understanding with the Singapore government aimed at promoting responsible AI adoption across the public and private sectors. It's the latest in a string of international moves by frontier labs to deepen ties with governments shaping AI policy in Asia.</p>
-      <a class="source" href="https://www.anthropic.com/news/singapore-office-opening">Anthropic</a>
+      <h3 class="headline">Character.AI files for bankruptcy; Disney leads bid for its assets</h3>
+      <p class="summary">Character.AI filed for Chapter 11 bankruptcy on Oct 12 and named Disney as the stalking-horse bidder, offering $20 million for a non-exclusive license to certain IP, following lawsuits alleging its chatbots harmed minors. The company expects a sale process to close by late November or early December.</p>
+      <a class="source-link" href="https://www.thestar.com.my/tech/tech-news/2026/10/13/characterai-files-for-bankruptcy-agrees-to-sell-some-assets-to-disney-for-20-million" target="_blank" rel="noopener">The Star →</a>
     </article>
 
     <article class="story">
-      <h3>Meta pushes back into the frontier race with Muse Wonder</h3>
-      <p class="summary">Meta launched Muse Wonder and Muse Wonder Full, which it calls its most capable models yet for agentic work, built around new "Active Memory" and "Active Focus" features that let the models recall past conversations and recover from errors on hard tasks. Independent benchmark trackers put the models slightly behind Claude Opus 5.5 on overall capability, but the launch signals Meta re-entering frontier-model competition after a quieter stretch.</p>
-      <a class="source" href="https://yourstory.com/ai-story/muse-wonder-meta-ai-race-frontier-models">YourStory</a>
+      <h3 class="headline">OpenAI reportedly seeking $30B at a $1.4T valuation</h3>
+      <p class="summary">OpenAI is in early-stage talks for a funding round of at least $30 billion that could value the company around $1.4 trillion, with reports suggesting the company wants to close the round before Anthropic's expected IPO. Terms are not yet final.</p>
+      <a class="source-link" href="https://www.arise.tv/openai-eyes-30bn-funding-round-as-investors-push-valuation-toward-1-4tn/" target="_blank" rel="noopener">Arise News →</a>
     </article>
 
     <article class="story">
-      <h3>Harvard astrophysicist joins the trust that oversees Anthropic's board</h3>
-      <p class="summary">Christopher Stubbs, a Harvard physics and astronomy professor and former dean of science, has joined Anthropic's Long-Term Benefit Trust, becoming the first physicist to sit on the body. The Trust can elect a majority of Anthropic's board and advises leadership on AI risk and societal impact, and Stubbs fills one of two seats that opened up this year.</p>
-      <a class="source" href="https://fortune.com/2026/10/21/anthropic-adds-harvard-astrophysicist-to-the-trust-that-controls-its-board">Fortune</a>
+      <h3 class="headline">Anthropic said to be lining up an IPO roadshow for November</h3>
+      <p class="summary">Bloomberg reports Anthropic is preparing to begin IPO investor meetings, with a possible listing targeting a valuation of up to $2 trillion. The company is reportedly working with Morgan Stanley, Goldman Sachs, and JPMorgan, though exact timing has shifted in prior reporting and could change again.</p>
+      <a class="source-link" href="https://news.bloomberglaw.com/ip-law/anthropic-is-said-to-plan-ipo-investor-meetings-as-listing-nears" target="_blank" rel="noopener">Bloomberg Law →</a>
     </article>
+
   </section>
 
-  <footer>
-    Compiled automatically each morning from public reporting · <a href="https://lukefoskey9-ui.github.io/morning-briefing/">lukefoskey9-ui.github.io/morning-briefing</a>
+  <footer class="colophon">
+    <p>Compiled automatically each morning from public reporting.</p>
+    <p>Verify critical details against the linked primary sources before acting.</p>
   </footer>
 
 </div>
