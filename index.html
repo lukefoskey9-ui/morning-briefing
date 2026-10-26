@@ -191,7 +191,7 @@
   <header class="masthead">
     <p class="kicker">Morning Briefing</p>
     <h1 class="title">Cyber &amp; AI, in 3 minutes</h1>
-    <p class="date-line">Sunday, October 25, 2026</p>
+    <p class="date-line">Monday, October 26, 2026</p>
   </header>
 
   <section class="topic cyber">
@@ -202,39 +202,39 @@
     <p class="section-sub">The exploits, breaches, and advisories that mattered in the last day or two.</p>
 
     <article class="story">
-      <h3>Brotli decompression bug threatens Node.js, Bun, Python, and more</h3>
-      <p>A memory-corruption flaw (CVE-2026-111497) in Google's widely used Brotli decoder sits inside Node.js, Bun, Python's brotli/brotlicffi packages, and Envoy proxies. Researchers demonstrated working remote code execution against an unpatched Node.js build; Node.js disclosed the bug and shipped fixes on October 21.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/10/brotli-decoder-flaw-behind-nodejs-rce.html">The Hacker News</a>
+      <h3>PHP ships emergency patches for critical "PHP2Shell" RCE flaws</h3>
+      <p>Two unauthenticated remote-code-execution bugs (CVE-2026-109618 and CVE-2026-109619, both rated 9.2 on CVSS) affect nearly every PHP deployment that serves web requests, including PHP-FPM, mod_php, php-cgi and FrankenPHP. Disclosure details leaked early, forcing the PHP team to rush out fixes on October 21; scanners have since turned up more than 22 million potentially exposed instances. Patch to 8.5.12, 8.4.27, 8.3.36 or 8.2.35 now.</p>
+      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/php-ships-emergency-patches-for-critical-php2shell-flaws">BleepingComputer</a>
     </article>
 
     <article class="story">
-      <h3>Leaked LiteLLM master key led to stolen GitHub tokens and a tainted release</h3>
-      <p>An unrevoked LiteLLM master key, accidentally published to a public repo back in May, was used on October 10 to breach an internal agent platform, extract a GitHub CLI OAuth token, and push a malicious PyPI release. The rogue package and related Docker images have since been pulled.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/10/leaked-litellm-master-key-let-attackers.html">The Hacker News</a>
+      <h3>Qilin and INC ransomware exploit Palo Alto VPN auth-bypass flaw</h3>
+      <p>Palo Alto's Unit 42 confirmed on October 19 that the Qilin and INC ransomware gangs have been actively exploiting an authentication-bypass bug in PAN-OS GlobalProtect (CVE-2026-0257) since at least June, letting attackers forge valid sessions and connect to internal VPNs without real credentials. Investigators report follow-on credential theft, Active Directory database extraction and lateral movement across affected networks.</p>
+      <a class="source-link" href="https://www.cybersecuritydive.com/news/ransomware-targeting-palo-alto-networks-vulnerability/833474/">Cybersecurity Dive</a>
     </article>
 
     <article class="story">
-      <h3>Maximum-severity GitLab flaw allows unauthenticated RCE across 12 years of releases</h3>
-      <p>A newly disclosed GitLab vulnerability scores a perfect 10.0 on CVSS and could let an unauthenticated attacker run code on self-managed instances spanning more than a decade of releases. GitLab says it has seen no evidence of in-the-wild exploitation so far, but admins should patch immediately.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/10/critical-gitlab-flaw-cvss-100-could.html">The Hacker News</a>
+      <h3>BeyondTrust zero-day exploited by suspected China-linked actor since August</h3>
+      <p>A critical authentication-bypass flaw in BeyondTrust Remote Support (CVE-2026-102764, CVSS 9.3) let unauthenticated attackers perform file operations on affected appliances. Google's threat intelligence team ties the activity to a suspected PRC-nexus espionage group it calls ARMORY CASTLE. CISA added the bug to its Known Exploited Vulnerabilities catalog on October 16 alongside a separately exploited Fortinet path-traversal flaw.</p>
+      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/beyondtrust-patches-zero-day-exploited-in-attacks-since-august/">BleepingComputer</a>
     </article>
 
     <article class="story">
-      <h3>Arista patches critical VeloCloud zero-day already under attack</h3>
-      <p>Arista warned that a SQL-injection flaw in VeloCloud Orchestrator (CVE-2026-114625, CVSS 9.9) is being actively exploited, letting even a low-privileged, read-only customer account escalate to operator privileges. Organizations running VeloCloud On-Prem deployments should patch now.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/10/arista-warns-of-critical-velocloud-sql.html">The Hacker News</a>
+      <h3>Quest Diagnostics confirms breach exposing patient records</h3>
+      <p>The clinical lab giant says it discovered unauthorized access to its Quanum LSM system on October 21 and confirmed a data breach two days later. The company says it is still determining exactly which patient data was exposed.</p>
+      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/quest-diagnostics-confirms-data-breach-exposed-patient-records/">BleepingComputer</a>
     </article>
 
     <article class="story">
-      <h3>Capcom confirms breach exposing 11.7 million accounts</h3>
-      <p>Capcom disclosed that attackers breached its CAPCOM ID account system, exposing email addresses and related account details for roughly 11.7 million customers. The company says passwords and payment card data were not affected.</p>
-      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/capcom-confirms-data-breach-affecting-117-million-accounts/">BleepingComputer</a>
+      <h3>KB Kookmin Bank: 2,091 more customers hit in ongoing breach</h3>
+      <p>South Korea's KB Kookmin Bank disclosed today that an additional 2,091 customers had personal information exposed, the latest update in a hacking incident the bank is still investigating.</p>
+      <a class="source-link" href="https://en.sedaily.com/finance/2026/10/26/kb-kookmin-bank-confirms-2091-more-customers-hit-by-data">Seoul Economic Daily</a>
     </article>
 
     <article class="story">
-      <h3>CISA orders federal agencies to patch actively exploited Plex2Shell, Siemens, SiteGuard flaws</h3>
-      <p>CISA added a fresh batch of actively exploited vulnerabilities to its Known Exploited Vulnerabilities catalog, including Plex Media Server, Siemens Software Center, and EG Secure Solutions SiteGuard, giving federal civilian agencies a tight remediation deadline and urging all defenders to do the same.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html">The Hacker News</a>
+      <h3>Keystone Hardware Wallet discloses website breach</h3>
+      <p>The crypto hardware wallet maker says unauthorized access to its website on October 20 exposed customer names, addresses and order details. Private keys, recovery phrases and payment details were not affected, but the company is warning customers to watch for impersonation scams.</p>
+      <a class="source-link" href="https://coinfomania.com/keystone-hardware-wallet-confirms-customer-data-exposure/">Coinfomania</a>
     </article>
 
   </section>
@@ -249,39 +249,39 @@
     <p class="section-sub">What the major labs shipped and announced recently.</p>
 
     <article class="story">
-      <h3>OpenAI and Google Cloud strike a partnership for frontier models and Codex</h3>
-      <p>OpenAI is bringing its frontier models and Codex agentic coding workflows into Google Cloud's Model Garden, giving Google Cloud customers native access to OpenAI's models. General availability is planned in the coming weeks; Microsoft remains OpenAI's primary cloud partner.</p>
-      <a class="source-link" href="https://openai.com/index/openai-models-google-cloud/">OpenAI</a>
+      <h3>Anthropic files for a Nasdaq IPO under ticker "ANT"</h3>
+      <p>Anthropic publicly filed its Form S-1 with the SEC today, confirming plans to list Class A common stock on the Nasdaq Global Select Market. Share count and price range are not yet set; press reports peg a target valuation around $2 trillion, though that figure comes from reporting rather than the filing itself.</p>
+      <a class="source-link" href="https://www.anthropic.com/news/s1-sec">Anthropic</a>
     </article>
 
     <article class="story">
-      <h3>Anthropic gives Agent Skills to a new industry foundation</h3>
-      <p>Anthropic is donating Agent Skills — its open standard for packaging specialized agent knowledge and workflows — to the newly formed Agentic AI Foundation. More than 70 agent platforms have adopted the standard since it launched in December 2025.</p>
-      <a class="source-link" href="https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation">Anthropic</a>
+      <h3>Anthropic launches Claude Duet, a proactive AI agent</h3>
+      <p>Unveiled October 21 as a waitlisted research preview for US Pro and Max subscribers, Duet monitors connected apps like email and calendars, sends a morning brief, and checks in periodically — asking for approval before consequential actions such as sending messages or making payments. It runs on Claude Opus 5.5 and can spin up its own cloud VM with a browser to get work done.</p>
+      <a class="source-link" href="https://www.macrumors.com/2026/10/21/anthropic-claude-duet/">MacRumors</a>
     </article>
 
     <article class="story">
-      <h3>Google's Gemini 4 Argon reaches general availability</h3>
-      <p>After a restricted launch to cybersecurity defenders in September, Google's Gemini 4 Argon model is now generally available on the paid Gemini API tier, in the Gemini app and Search for Pro/Ultra subscribers, and in Google Antigravity, with early independent benchmarks ranking it among the top frontier models.</p>
-      <a class="source-link" href="https://ai.google.dev/gemini-api/docs/models/gemini-4-argon">Google AI</a>
+      <h3>Google's TPUs now run inside Meta's data centers</h3>
+      <p>In a direct challenge to Nvidia, Google has begun selling its custom TPU AI chips to outside customers for the first time, with Meta reportedly running production AI workloads on them via a PyTorch-native version of the SGLang inference engine.</p>
+      <a class="source-link" href="https://www.tomshardware.com/tech-industry/artificial-intelligence/googles-tpus-for-ai-workloads-now-run-in-at-metas-data-centers-tpus-sold-to-external-customers-for-the-first-time-threaten-nvidias-market-dominance">Tom's Hardware</a>
     </article>
 
     <article class="story">
-      <h3>Anthropic commits a growing equity stake to a new Public Benefit Fund</h3>
-      <p>Anthropic announced it is dedicating a portion of its shares to a newly created Anthropic Public Benefit Fund, whose stake is designed to grow alongside the company, directing more resources toward public-benefit work over time.</p>
-      <a class="source-link" href="https://www.anthropic.com/news/public-benefit-fund">Anthropic</a>
+      <h3>Mistral opens Timestral, four time-series foundation models</h3>
+      <p>The French lab released an open family of time-series forecasting models on October 19, claiming leading results on the GIFT-Eval, TIME and fev-bench benchmarks — aimed at industrial forecasting workloads rather than chat.</p>
+      <a class="source-link" href="https://mistral.ai/news/">Mistral AI</a>
     </article>
 
     <article class="story">
-      <h3>Anthropic deepens independent oversight of its frontier models</h3>
-      <p>Anthropic is giving the nonprofit AI evaluator METR "employee-like" access to scrutinize its frontier models and says it's in early talks with other outside evaluators, including Hugging Face, to expand independent scrutiny of its systems.</p>
-      <a class="source-link" href="https://www.anthropic.com/news/an-update-on-independent-evaluators">Anthropic</a>
+      <h3>Eight states sue OpenAI over ChatGPT's alleged harm to minors</h3>
+      <p>Attorneys general from Arizona, Arkansas, Idaho, Iowa, Kansas, Montana, Nebraska and West Virginia filed separate consumer-protection suits alleging ChatGPT harmed minors and misled users about its safety. The suits seek disgorgement of related profits and a halt to what they call deceptive safety claims; OpenAI points to existing parental controls and age-appropriate model protections.</p>
+      <a class="source-link" href="https://www.kbtx.com/2026/10/15/states-sue-ai-giant-openai-saying-chatgpt-is-hurting-children-deceiving-adults/">KBTX</a>
     </article>
 
     <article class="story">
-      <h3>Anthropic launches a long-term "Cyber Mission"</h3>
-      <p>Anthropic unveiled a long-term commitment focused on using AI to help secure the critical systems people depend on, framing cybersecurity as a core, ongoing priority area rather than a one-off initiative.</p>
-      <a class="source-link" href="https://www.anthropic.com/news/anthropic-cyber-mission">Anthropic</a>
+      <h3>Meta ships Muse Wonder, its first frontier-class AI model</h3>
+      <p>Meta's Superintelligence Lab released Muse Wonder and the more capable Muse Wonder Full on October 12 — the company's first attempt at a frontier model built to compete directly with OpenAI and Anthropic, with features aimed at longer-running agentic tasks.</p>
+      <a class="source-link" href="https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder">TechCrunch</a>
     </article>
 
   </section>
