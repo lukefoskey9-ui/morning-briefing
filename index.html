@@ -191,7 +191,7 @@
   <header class="masthead">
     <p class="kicker">Morning Briefing</p>
     <h1 class="title">Cyber &amp; AI, in 3 minutes</h1>
-    <p class="date-line">Monday, October 26, 2026</p>
+    <p class="date-line">Tuesday, October 27, 2026</p>
   </header>
 
   <section class="topic cyber">
@@ -202,39 +202,33 @@
     <p class="section-sub">The exploits, breaches, and advisories that mattered in the last day or two.</p>
 
     <article class="story">
-      <h3>PHP ships emergency patches for critical "PHP2Shell" RCE flaws</h3>
-      <p>Two unauthenticated remote-code-execution bugs (CVE-2026-109618 and CVE-2026-109619, both rated 9.2 on CVSS) affect nearly every PHP deployment that serves web requests, including PHP-FPM, mod_php, php-cgi and FrankenPHP. Disclosure details leaked early, forcing the PHP team to rush out fixes on October 21; scanners have since turned up more than 22 million potentially exposed instances. Patch to 8.5.12, 8.4.27, 8.3.36 or 8.2.35 now.</p>
-      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/php-ships-emergency-patches-for-critical-php2shell-flaws">BleepingComputer</a>
+      <h3>Apple patches CoreGraphics zero-day as public exploit code surfaces</h3>
+      <p>Apple's fix for CVE-2026-86950 — an out-of-bounds write in CoreGraphics that can lead to arbitrary code execution when a device opens a malicious file — closes a flaw Apple says was used in an "extremely sophisticated" attack against specific targeted individuals on iOS versions before iOS 27. A working proof-of-concept exploit is now circulating publicly, raising the risk of broader exploitation for anyone still on unpatched versions.</p>
+      <a class="source-link" href="https://securityaffairs.com/200175/hacking/public-poc-released-for-apple-coregraphics-zero-day-cve-2026-86950.html">Security Affairs</a>
     </article>
 
     <article class="story">
-      <h3>Qilin and INC ransomware exploit Palo Alto VPN auth-bypass flaw</h3>
-      <p>Palo Alto's Unit 42 confirmed on October 19 that the Qilin and INC ransomware gangs have been actively exploiting an authentication-bypass bug in PAN-OS GlobalProtect (CVE-2026-0257) since at least June, letting attackers forge valid sessions and connect to internal VPNs without real credentials. Investigators report follow-on credential theft, Active Directory database extraction and lateral movement across affected networks.</p>
-      <a class="source-link" href="https://www.cybersecuritydive.com/news/ransomware-targeting-palo-alto-networks-vulnerability/833474/">Cybersecurity Dive</a>
+      <h3>Node.js patches critical Brotli decoder flaw with public exploit code</h3>
+      <p>Node.js shipped emergency fixes (22.23.4, 24.22.1, 26.12.1) on October 21 for CVE-2026-111497, a high-severity out-of-bounds write in the bundled Brotli decompression code reachable through <code>node:zlib</code> or <code>fetch()</code> responses using Brotli content-encoding. Proof-of-concept code that can crash affected services is already public; researchers say full remote-code-execution exploitation hasn't been demonstrated yet, but patching now is strongly advised.</p>
+      <a class="source-link" href="https://cybernews.com/security/php-node-js-vulnerabilities-patch-exploit/">Cybernews</a>
     </article>
 
     <article class="story">
-      <h3>BeyondTrust zero-day exploited by suspected China-linked actor since August</h3>
-      <p>A critical authentication-bypass flaw in BeyondTrust Remote Support (CVE-2026-102764, CVSS 9.3) let unauthenticated attackers perform file operations on affected appliances. Google's threat intelligence team ties the activity to a suspected PRC-nexus espionage group it calls ARMORY CASTLE. CISA added the bug to its Known Exploited Vulnerabilities catalog on October 16 alongside a separately exploited Fortinet path-traversal flaw.</p>
-      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/beyondtrust-patches-zero-day-exploited-in-attacks-since-august/">BleepingComputer</a>
+      <h3>FBI and CISA: SafePay ransomware has hit 600+ organizations since 2024</h3>
+      <p>A joint advisory details how the SafePay ransomware group has struck businesses and critical infrastructure across North America, South America, Europe and Australia, gaining initial access through stolen VPN credentials, brute-forcing, and known flaws in Cisco ASA/FTD, Veeam Backup &amp; Replication, and SonicWall SonicOS. The group also deletes shadow copies and wipes NAS-based backups to block recovery. CISA urges prioritizing patches for internet-facing VPNs and firewalls plus MFA and offline, immutable backups.</p>
+      <a class="source-link" href="https://www.esecurityplanet.com/threats/news-fbi-safepay-ransomware-600-organizations/">eSecurity Planet</a>
     </article>
 
     <article class="story">
-      <h3>Quest Diagnostics confirms breach exposing patient records</h3>
-      <p>The clinical lab giant says it discovered unauthorized access to its Quanum LSM system on October 21 and confirmed a data breach two days later. The company says it is still determining exactly which patient data was exposed.</p>
-      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/quest-diagnostics-confirms-data-breach-exposed-patient-records/">BleepingComputer</a>
+      <h3>HashiCorp Consul authorization bypass let RBAC rules match too broadly</h3>
+      <p>CVE-2026-88021 stems from Consul generating Envoy RBAC rules without properly escaping special characters in service names, namespaces and partitions — letting generated rules match more traffic than intended inside the Connect service mesh. A related flaw, CVE-2026-87090, let an authenticated attacker delete another node's catalog registration and seize its identity. Both are fixed in Consul 2.0.4 and the corresponding Enterprise releases; the Canadian Centre for Cyber Security has also issued an advisory.</p>
+      <a class="source-link" href="https://cyber.gc.ca/en/alerts-advisories/hashicorp-security-advisory-av26-910">Canadian Centre for Cyber Security</a>
     </article>
 
     <article class="story">
-      <h3>KB Kookmin Bank: 2,091 more customers hit in ongoing breach</h3>
-      <p>South Korea's KB Kookmin Bank disclosed today that an additional 2,091 customers had personal information exposed, the latest update in a hacking incident the bank is still investigating.</p>
-      <a class="source-link" href="https://en.sedaily.com/finance/2026/10/26/kb-kookmin-bank-confirms-2091-more-customers-hit-by-data">Seoul Economic Daily</a>
-    </article>
-
-    <article class="story">
-      <h3>Keystone Hardware Wallet discloses website breach</h3>
-      <p>The crypto hardware wallet maker says unauthorized access to its website on October 20 exposed customer names, addresses and order details. Private keys, recovery phrases and payment details were not affected, but the company is warning customers to watch for impersonation scams.</p>
-      <a class="source-link" href="https://coinfomania.com/keystone-hardware-wallet-confirms-customer-data-exposure/">Coinfomania</a>
+      <h3>Zimbra RCE flaw keeps claiming unpatched servers</h3>
+      <p>Microsoft found attackers exploiting CVE-2026-73570 — an OS command-injection bug in Zimbra Collaboration Suite's optional SNMP component — within days of the July 20 patch, before public disclosure. CISA added it to its Known Exploited Vulnerabilities catalog on August 21, but scans have continued turning up hundreds of compromised instances and thousands more still unpatched, underscoring how slowly some organizations apply fixes even for actively exploited bugs.</p>
+      <a class="source-link" href="https://www.securityweek.com/zimbra-vulnerability-exploited-in-the-wild-prior-to-public-disclosure/">SecurityWeek</a>
     </article>
 
   </section>
@@ -249,39 +243,27 @@
     <p class="section-sub">What the major labs shipped and announced recently.</p>
 
     <article class="story">
-      <h3>Anthropic files for a Nasdaq IPO under ticker "ANT"</h3>
-      <p>Anthropic publicly filed its Form S-1 with the SEC today, confirming plans to list Class A common stock on the Nasdaq Global Select Market. Share count and price range are not yet set; press reports peg a target valuation around $2 trillion, though that figure comes from reporting rather than the filing itself.</p>
-      <a class="source-link" href="https://www.anthropic.com/news/s1-sec">Anthropic</a>
+      <h3>Google starts rolling out Gemini 4 Argon — but only to vetted cyber defenders</h3>
+      <p>Argon is Google's first Gemini 4-generation model to ship, but initial access is deliberately restricted to trusted partners through its "Fairwind" cyber-defense program before any wider release. Google says Argon tops Claude Opus 5.5 and other rivals on a majority of its internal benchmarks and supports a one-million-token output limit, and frames the staged rollout as a safeguard against misuse of its strongest cyber-relevant capabilities.</p>
+      <a class="source-link" href="https://letsdatascience.com/news/google-releases-gemini-4-argon-to-cyber-defenders-1093bb0b">Let's Data Science</a>
     </article>
 
     <article class="story">
-      <h3>Anthropic launches Claude Duet, a proactive AI agent</h3>
-      <p>Unveiled October 21 as a waitlisted research preview for US Pro and Max subscribers, Duet monitors connected apps like email and calendars, sends a morning brief, and checks in periodically — asking for approval before consequential actions such as sending messages or making payments. It runs on Claude Opus 5.5 and can spin up its own cloud VM with a browser to get work done.</p>
-      <a class="source-link" href="https://www.macrumors.com/2026/10/21/anthropic-claude-duet/">MacRumors</a>
+      <h3>Google DeepMind confirms full Gemini 4 flagship is close, aiming for before year-end</h3>
+      <p>Speaking at an industry summit, Google DeepMind's newly appointed SVP said the next flagship Gemini 4 model has completed pre-training and entered post-training, with the team targeting release before the end of 2026 — a step beyond the narrower Argon variant already shipping to select partners.</p>
+      <a class="source-link" href="https://northeasttimes.com/2026/09/24/google-deepmind-s-new-chief-signals-gemini-4-launch-is-close/">Northeast Times</a>
     </article>
 
     <article class="story">
-      <h3>Google's TPUs now run inside Meta's data centers</h3>
-      <p>In a direct challenge to Nvidia, Google has begun selling its custom TPU AI chips to outside customers for the first time, with Meta reportedly running production AI workloads on them via a PyTorch-native version of the SGLang inference engine.</p>
-      <a class="source-link" href="https://www.tomshardware.com/tech-industry/artificial-intelligence/googles-tpus-for-ai-workloads-now-run-in-at-metas-data-centers-tpus-sold-to-external-customers-for-the-first-time-threaten-nvidias-market-dominance">Tom's Hardware</a>
+      <h3>OpenAI launches "Dots," an always-on personal AI agent</h3>
+      <p>Unveiled at DevDay, Dots runs continuously inside ChatGPT on its own cloud computer and browser, connecting to more than 4,000 apps to work toward a user's goals around the clock and checking in via ChatGPT, Slack or Microsoft Teams. OpenAI has restricted it to read-only research for now, blocking it from sending messages or taking unauthorized actions without explicit approval.</p>
+      <a class="source-link" href="https://propakistani.pk/2026/09/30/openai-launches-personal-ai-agents-that-work-24-7/">ProPakistani</a>
     </article>
 
     <article class="story">
-      <h3>Mistral opens Timestral, four time-series foundation models</h3>
-      <p>The French lab released an open family of time-series forecasting models on October 19, claiming leading results on the GIFT-Eval, TIME and fev-bench benchmarks — aimed at industrial forecasting workloads rather than chat.</p>
-      <a class="source-link" href="https://mistral.ai/news/">Mistral AI</a>
-    </article>
-
-    <article class="story">
-      <h3>Eight states sue OpenAI over ChatGPT's alleged harm to minors</h3>
-      <p>Attorneys general from Arizona, Arkansas, Idaho, Iowa, Kansas, Montana, Nebraska and West Virginia filed separate consumer-protection suits alleging ChatGPT harmed minors and misled users about its safety. The suits seek disgorgement of related profits and a halt to what they call deceptive safety claims; OpenAI points to existing parental controls and age-appropriate model protections.</p>
-      <a class="source-link" href="https://www.kbtx.com/2026/10/15/states-sue-ai-giant-openai-saying-chatgpt-is-hurting-children-deceiving-adults/">KBTX</a>
-    </article>
-
-    <article class="story">
-      <h3>Meta ships Muse Wonder, its first frontier-class AI model</h3>
-      <p>Meta's Superintelligence Lab released Muse Wonder and the more capable Muse Wonder Full on October 12 — the company's first attempt at a frontier model built to compete directly with OpenAI and Anthropic, with features aimed at longer-running agentic tasks.</p>
-      <a class="source-link" href="https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder">TechCrunch</a>
+      <h3>OpenAI reportedly in talks to raise $30B at a $1.4T valuation, pushing IPO to 2027</h3>
+      <p>Bloomberg reports OpenAI is in early talks for a funding round that would value the company at roughly $1.4 trillion excluding new money — nearly double its $852 billion valuation from a round closed just months earlier. CEO Sam Altman has ruled out a 2026 listing, citing AI-safety concerns, with a public offering now expected no earlier than 2027.</p>
+      <a class="source-link" href="https://www.freepressjournal.in/business/openai-seeks-30-billion-funding-at-14-trillion-valuation-after-delaying-ipo-plans">Free Press Journal</a>
     </article>
 
   </section>
