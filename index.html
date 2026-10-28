@@ -191,7 +191,7 @@
   <header class="masthead">
     <p class="kicker">Morning Briefing</p>
     <h1 class="title">Cyber &amp; AI, in 3 minutes</h1>
-    <p class="date-line">Tuesday, October 27, 2026</p>
+    <p class="date-line">Wednesday, October 28, 2026</p>
   </header>
 
   <section class="topic cyber">
@@ -202,33 +202,39 @@
     <p class="section-sub">The exploits, breaches, and advisories that mattered in the last day or two.</p>
 
     <article class="story">
-      <h3>Apple patches CoreGraphics zero-day as public exploit code surfaces</h3>
-      <p>Apple's fix for CVE-2026-86950 — an out-of-bounds write in CoreGraphics that can lead to arbitrary code execution when a device opens a malicious file — closes a flaw Apple says was used in an "extremely sophisticated" attack against specific targeted individuals on iOS versions before iOS 27. A working proof-of-concept exploit is now circulating publicly, raising the risk of broader exploitation for anyone still on unpatched versions.</p>
-      <a class="source-link" href="https://securityaffairs.com/200175/hacking/public-poc-released-for-apple-coregraphics-zero-day-cve-2026-86950.html">Security Affairs</a>
+      <h3>CISA confirms PHP2Shell flaws now under active attack, sets Oct. 29 deadline</h3>
+      <p>CISA added CVE-2026-109618 and CVE-2026-109619 — two critical PHP interpreter bugs (CVSS 9.2) patched on October 21 — to its Known Exploited Vulnerabilities catalog after reversing an earlier "not yet observed" assessment. The pair allows unauthenticated remote code execution and is being chained into a technique researchers call PHP2Shell; federal civilian agencies have until October 29 to patch.</p>
+      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/cisa-confirms-php2shell-vulnerabilities-now-exploited-in-attacks/">BleepingComputer</a>
     </article>
 
     <article class="story">
-      <h3>Node.js patches critical Brotli decoder flaw with public exploit code</h3>
-      <p>Node.js shipped emergency fixes (22.23.4, 24.22.1, 26.12.1) on October 21 for CVE-2026-111497, a high-severity out-of-bounds write in the bundled Brotli decompression code reachable through <code>node:zlib</code> or <code>fetch()</code> responses using Brotli content-encoding. Proof-of-concept code that can crash affected services is already public; researchers say full remote-code-execution exploitation hasn't been demonstrated yet, but patching now is strongly advised.</p>
-      <a class="source-link" href="https://cybernews.com/security/php-node-js-vulnerabilities-patch-exploit/">Cybernews</a>
+      <h3>Microsoft's October Patch Tuesday fixes a record 1,400+ flaws, including an exploited zero-day</h3>
+      <p>Microsoft's largest-ever monthly release addressed more than 1,400 vulnerabilities — around 70 rated critical and 317 enabling remote code execution — alongside three zero-days, one of which (a Windows Shell security-feature bypass) Microsoft confirms has already been exploited in the wild. Researchers note the sheer volume is straining patch-prioritization efforts industry-wide.</p>
+      <a class="source-link" href="https://darkreading.com/vulnerabilities-threats/zero-days-microsoft-october-patch-tuesday">Dark Reading</a>
     </article>
 
     <article class="story">
-      <h3>FBI and CISA: SafePay ransomware has hit 600+ organizations since 2024</h3>
-      <p>A joint advisory details how the SafePay ransomware group has struck businesses and critical infrastructure across North America, South America, Europe and Australia, gaining initial access through stolen VPN credentials, brute-forcing, and known flaws in Cisco ASA/FTD, Veeam Backup &amp; Replication, and SonicWall SonicOS. The group also deletes shadow copies and wipes NAS-based backups to block recovery. CISA urges prioritizing patches for internet-facing VPNs and firewalls plus MFA and offline, immutable backups.</p>
-      <a class="source-link" href="https://www.esecurityplanet.com/threats/news-fbi-safepay-ransomware-600-organizations/">eSecurity Planet</a>
+      <h3>Unpatched Tailscale SSH flaw lets a standard login escalate straight to root</h3>
+      <p>Researchers disclosed an unpatched issue, dubbed "Tailworm," in which ordinary SSH port forwarding lets a non-privileged session reach Tailscale's root-level process and connect to a root-only socket — in one test, enough to read the password file. No fixed version or vendor bulletin exists yet; the only mitigation currently is disabling SSH port forwarding where possible.</p>
+      <a class="source-link" href="https://thehackernews.com/2026/10/unpatched-tailscale-ssh-flaws-could-let.html">The Hacker News</a>
     </article>
 
     <article class="story">
-      <h3>HashiCorp Consul authorization bypass let RBAC rules match too broadly</h3>
-      <p>CVE-2026-88021 stems from Consul generating Envoy RBAC rules without properly escaping special characters in service names, namespaces and partitions — letting generated rules match more traffic than intended inside the Connect service mesh. A related flaw, CVE-2026-87090, let an authenticated attacker delete another node's catalog registration and seize its identity. Both are fixed in Consul 2.0.4 and the corresponding Enterprise releases; the Canadian Centre for Cyber Security has also issued an advisory.</p>
-      <a class="source-link" href="https://cyber.gc.ca/en/alerts-advisories/hashicorp-security-advisory-av26-910">Canadian Centre for Cyber Security</a>
+      <h3>Energy giant ENGIE discloses customer data breach via third-party marketing platform</h3>
+      <p>French energy company ENGIE confirmed attackers stole customer data after breaching a marketing platform used by business partners, rather than ENGIE's own infrastructure. The company says it has cut off the attackers' access and that internal systems were not compromised, though the scope of exposed customer data hasn't been fully detailed.</p>
+      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/energy-giant-engie-discloses-data-breach-affecting-customers/">BleepingComputer</a>
     </article>
 
     <article class="story">
-      <h3>Zimbra RCE flaw keeps claiming unpatched servers</h3>
-      <p>Microsoft found attackers exploiting CVE-2026-73570 — an OS command-injection bug in Zimbra Collaboration Suite's optional SNMP component — within days of the July 20 patch, before public disclosure. CISA added it to its Known Exploited Vulnerabilities catalog on August 21, but scans have continued turning up hundreds of compromised instances and thousands more still unpatched, underscoring how slowly some organizations apply fixes even for actively exploited bugs.</p>
-      <a class="source-link" href="https://www.securityweek.com/zimbra-vulnerability-exploited-in-the-wild-prior-to-public-disclosure/">SecurityWeek</a>
+      <h3>Japan's GMO Internet shuts down cloud service after breach hits up to 26,739 servers</h3>
+      <p>GMO Internet halted its Onamae.com Desktop Cloud service after disclosing that a third party gained unauthorized access and planted malicious programs on customer servers, with no restoration date set. A follow-up notice said attackers may also have obtained and misused login credentials for trading accounts stored on affected servers; the identity of the attacker and the malware involved remain unconfirmed.</p>
+      <a class="source-link" href="https://dailysecurityreview.com/?p=44938">Daily Security Review</a>
+    </article>
+
+    <article class="story">
+      <h3>CISA adds Arista VeloCloud SQL injection bug to exploited-vulnerabilities list</h3>
+      <p>CVE-2026-114625, a SQL injection flaw in Arista's VeloCloud Orchestrator, was added to CISA's Known Exploited Vulnerabilities catalog based on confirmed active exploitation. The addition triggers the standard federal patching deadline and signals organizations running VeloCloud-managed SD-WAN deployments should prioritize the update.</p>
+      <a class="source-link" href="https://www.cisa.gov/news-events/alerts/2026/10/23/cisa-adds-one-known-exploited-vulnerability-catalog">CISA</a>
     </article>
 
   </section>
@@ -243,27 +249,39 @@
     <p class="section-sub">What the major labs shipped and announced recently.</p>
 
     <article class="story">
-      <h3>Google starts rolling out Gemini 4 Argon — but only to vetted cyber defenders</h3>
-      <p>Argon is Google's first Gemini 4-generation model to ship, but initial access is deliberately restricted to trusted partners through its "Fairwind" cyber-defense program before any wider release. Google says Argon tops Claude Opus 5.5 and other rivals on a majority of its internal benchmarks and supports a one-million-token output limit, and frames the staged rollout as a safeguard against misuse of its strongest cyber-relevant capabilities.</p>
-      <a class="source-link" href="https://letsdatascience.com/news/google-releases-gemini-4-argon-to-cyber-defenders-1093bb0b">Let's Data Science</a>
+      <h3>Anthropic files for IPO, disclosing $16.3B in first-half revenue and a widening loss</h3>
+      <p>Anthropic filed an S-1 registration with the SEC for a proposed public offering, planning to list under the ticker "ANT." The filing is the company's first public disclosure of its financials, showing $16.3 billion in revenue for the first half of 2026 alongside an $80 billion loss as it continues to pour money into model training and compute.</p>
+      <a class="source-link" href="https://techcrunch.com/2026/10/26/anthropic-officially-files-for-its-public-debut/">TechCrunch</a>
     </article>
 
     <article class="story">
-      <h3>Google DeepMind confirms full Gemini 4 flagship is close, aiming for before year-end</h3>
-      <p>Speaking at an industry summit, Google DeepMind's newly appointed SVP said the next flagship Gemini 4 model has completed pre-training and entered post-training, with the team targeting release before the end of 2026 — a step beyond the narrower Argon variant already shipping to select partners.</p>
-      <a class="source-link" href="https://northeasttimes.com/2026/09/24/google-deepmind-s-new-chief-signals-gemini-4-launch-is-close/">Northeast Times</a>
+      <h3>Google DeepMind unveils Genie 4, a natural-language-steerable world simulator</h3>
+      <p>Genie 4 generates interactive, navigable 3D environments that users can reshape in real time by typing instructions — changing weather, adding objects or people, or redirecting the scene — while Gemini models handle reasoning to keep events coherent and Gemini Omni renders visuals and physics. DeepMind is rolling it out first as a research preview to trusted testers, positioning it as a training ground for robotics and autonomous agents ahead of any consumer release.</p>
+      <a class="source-link" href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/">Google DeepMind</a>
     </article>
 
     <article class="story">
-      <h3>OpenAI launches "Dots," an always-on personal AI agent</h3>
-      <p>Unveiled at DevDay, Dots runs continuously inside ChatGPT on its own cloud computer and browser, connecting to more than 4,000 apps to work toward a user's goals around the clock and checking in via ChatGPT, Slack or Microsoft Teams. OpenAI has restricted it to read-only research for now, blocking it from sending messages or taking unauthorized actions without explicit approval.</p>
-      <a class="source-link" href="https://propakistani.pk/2026/09/30/openai-launches-personal-ai-agents-that-work-24-7/">ProPakistani</a>
+      <h3>OpenAI says it will stop training models directly on the live internet</h3>
+      <p>Citing the unpredictability and risk of pulling directly from the ever-changing live web, OpenAI said future model training will instead draw on cached and simulated snapshots of internet content. The company frames the shift as a safety and reliability measure rather than a change driven by licensing or legal pressure, though it affects how fresh real-world information can be before it reaches a model.</p>
+      <a class="source-link" href="https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks">TechCrunch</a>
     </article>
 
     <article class="story">
-      <h3>OpenAI reportedly in talks to raise $30B at a $1.4T valuation, pushing IPO to 2027</h3>
-      <p>Bloomberg reports OpenAI is in early talks for a funding round that would value the company at roughly $1.4 trillion excluding new money — nearly double its $852 billion valuation from a round closed just months earlier. CEO Sam Altman has ruled out a 2026 listing, citing AI-safety concerns, with a public offering now expected no earlier than 2027.</p>
-      <a class="source-link" href="https://www.freepressjournal.in/business/openai-seeks-30-billion-funding-at-14-trillion-valuation-after-delaying-ipo-plans">Free Press Journal</a>
+      <h3>Meta prices $95B stock offering as Nvidia and AMD invest to deepen AI ties</h3>
+      <p>Meta upsized and priced its largest-ever equity raise — $25 billion in public stock plus a further at-the-market program — to fund its AI infrastructure buildout. Nvidia is investing $3 billion and AMD $1 billion into the offering; Nvidia also said the deal expands Meta's planned Vera Rubin chip deployment and deepens collaboration on Muse, Meta's AI agent platform.</p>
+      <a class="source-link" href="https://www.cnbc.com/2026/10/27/nvidia-invest-meta.html">CNBC</a>
+    </article>
+
+    <article class="story">
+      <h3>Anthropic donates its Agent Skills standard to the Agentic AI Foundation</h3>
+      <p>Following the same path it took with the Model Context Protocol, Anthropic transferred the Agent Skills name, GitHub organization, and agentskills.io domain to the Linux Foundation-hosted Agentic AI Foundation. The standard — now reportedly used across more than 70 agent platforms with roughly 280 million installs — will keep Anthropic involved in development but move to shared, vendor-neutral governance.</p>
+      <a class="source-link" href="https://letsdatascience.com/news/anthropic-donates-agent-skills-standard-to-agentic-ai-founda-f70093cd">Let's Data Science</a>
+    </article>
+
+    <article class="story">
+      <h3>OpenAI says a frontier model helped crack long-standing open math problems</h3>
+      <p>OpenAI published results from an internal frontier model tackling unsolved problems in mathematics, including progress related to the Kakeya conjecture and a claimed disproof bearing on the Exponential Time Hypothesis. The company is also committing $5 million to a new Simons Foundation initiative that will have mathematicians independently vet AI-generated proofs before they're treated as verified results.</p>
+      <a class="source-link" href="https://openai.com/index/sharing-ai-progress-in-mathematics/">OpenAI</a>
     </article>
 
   </section>
