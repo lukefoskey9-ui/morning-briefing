@@ -9,179 +9,141 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #faf8f5;
+    --bg: #f7f5f0;
     --bg-card: #ffffff;
-    --text: #1a1a1a;
-    --text-muted: #5a5a5a;
-    --accent-cyber: #9b2c2c;
-    --accent-ai: #1e4d8c;
-    --border: #e4ded4;
-    --date-color: #8a8378;
-    --link: #1e4d8c;
-    --badge-bg: #f1ece3;
+    --text: #1c1b19;
+    --text-dim: #5b574e;
+    --accent-cyber: #9d2d2d;
+    --accent-ai: #1f5f4e;
+    --border: #e4dfd4;
+    --chip-bg: #eee9dc;
+    --link: #1c1b19;
   }
-
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #15161a;
-      --bg-card: #1e2026;
-      --text: #ececec;
-      --text-muted: #a3a3a8;
-      --accent-cyber: #e07a7a;
-      --accent-ai: #7aa7e0;
-      --border: #30323a;
-      --date-color: #8d8d93;
-      --link: #8fb8ef;
-      --badge-bg: #272a32;
+      --bg: #15151a;
+      --bg-card: #1c1c22;
+      --text: #ecebe6;
+      --text-dim: #a7a49a;
+      --accent-cyber: #e2726d;
+      --accent-ai: #5fc9a8;
+      --border: #30303a;
+      --chip-bg: #26262e;
+      --link: #ecebe6;
     }
   }
-
   * { box-sizing: border-box; }
-
   html { -webkit-text-size-adjust: 100%; }
-
   body {
     margin: 0;
-    padding: 0;
     background: var(--bg);
     color: var(--text);
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    line-height: 1.5;
+    line-height: 1.55;
     -webkit-font-smoothing: antialiased;
   }
-
   .wrap {
     max-width: 680px;
     margin: 0 auto;
-    padding: 2.25rem 1.25rem 3.5rem;
+    padding: 36px 20px 64px;
   }
-
   header.masthead {
     text-align: center;
-    margin-bottom: 2.25rem;
+    margin-bottom: 36px;
   }
-
   .kicker {
-    font-size: 0.72rem;
-    letter-spacing: 0.18em;
+    font-size: 12px;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--text-muted);
+    color: var(--text-dim);
     font-weight: 600;
-    margin: 0 0 0.6rem;
   }
-
   h1.title {
     font-family: 'Source Serif 4', Georgia, serif;
     font-weight: 700;
-    font-size: 2.1rem;
-    margin: 0 0 0.5rem;
+    font-size: 40px;
+    margin: 6px 0 10px;
     letter-spacing: -0.01em;
   }
-
-  .date-line {
-    font-size: 0.95rem;
-    color: var(--date-color);
+  .date {
+    font-size: 16px;
+    color: var(--text-dim);
     font-weight: 500;
-    margin: 0;
   }
-
-  .divider {
+  .rule {
     border: none;
     border-top: 1px solid var(--border);
-    margin: 2rem 0;
+    margin: 32px 0;
   }
-
-  section.topic {
-    margin-bottom: 2.5rem;
+  section.section {
+    margin-bottom: 44px;
   }
-
   .section-head {
     display: flex;
     align-items: baseline;
-    gap: 0.6rem;
-    margin-bottom: 1.1rem;
+    gap: 10px;
+    margin-bottom: 20px;
   }
-
-  .section-head h2 {
+  .section-dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  .section-dot.cyber { background: var(--accent-cyber); }
+  .section-dot.ai { background: var(--accent-ai); }
+  h2.section-title {
     font-family: 'Source Serif 4', Georgia, serif;
-    font-size: 1.5rem;
-    margin: 0;
+    font-size: 24px;
     font-weight: 700;
+    margin: 0;
   }
-
-  .section-head .emoji {
-    font-size: 1.3rem;
-  }
-
-  section.topic.cyber .section-head h2 { color: var(--accent-cyber); }
-  section.topic.ai .section-head h2 { color: var(--accent-ai); }
-
   .section-sub {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    margin: -0.6rem 0 1.2rem;
+    font-size: 13px;
+    color: var(--text-dim);
+    margin: 0 0 20px 21px;
   }
-
-  article.story {
+  article.item {
     background: var(--bg-card);
     border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.1rem 1.25rem 1.2rem;
-    margin-bottom: 0.9rem;
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin-bottom: 14px;
   }
-
-  article.story h3 {
-    font-size: 1.04rem;
+  article.item h3 {
+    font-size: 17px;
     font-weight: 600;
-    margin: 0 0 0.45rem;
+    margin: 0 0 8px;
     line-height: 1.35;
   }
-
-  article.story p {
-    margin: 0 0 0.7rem;
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    line-height: 1.55;
+  article.item p {
+    margin: 0 0 12px;
+    font-size: 15px;
+    color: var(--text-dim);
   }
-
-  article.story a.source-link {
+  article.item a.src {
     display: inline-block;
-    font-size: 0.85rem;
+    font-size: 13px;
     font-weight: 600;
     color: var(--link);
     text-decoration: none;
-    padding: 0.35rem 0;
-    min-height: 24px;
+    border-bottom: 1px solid var(--accent-cyber);
+    padding: 4px 0 6px;
   }
-
-  article.story a.source-link:hover,
-  article.story a.source-link:active {
-    text-decoration: underline;
-  }
-
-  article.story a.source-link::after {
-    content: " \2192";
-  }
-
+  .ai article.item a.src { border-bottom-color: var(--accent-ai); }
+  article.item a.src:hover { opacity: 0.7; }
   footer {
     text-align: center;
-    margin-top: 2.5rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--border);
-    font-size: 0.8rem;
-    color: var(--date-color);
+    color: var(--text-dim);
+    font-size: 12px;
+    margin-top: 40px;
+    line-height: 1.7;
   }
-
-  footer a {
-    color: var(--link);
-    text-decoration: none;
-  }
-
-  @media (max-width: 480px) {
-    .wrap { padding: 1.5rem 1rem 3rem; }
-    h1.title { font-size: 1.75rem; }
-    .section-head h2 { font-size: 1.3rem; }
-    article.story { padding: 1rem 1rem 1.05rem; }
+  @media (max-width: 420px) {
+    h1.title { font-size: 32px; }
+    .wrap { padding: 28px 16px 56px; }
+    article.item { padding: 16px; }
   }
 </style>
 </head>
@@ -189,105 +151,98 @@
 <div class="wrap">
 
   <header class="masthead">
-    <p class="kicker">Morning Briefing</p>
+    <div class="kicker">Morning Briefing</div>
     <h1 class="title">Cyber &amp; AI, in 3 minutes</h1>
-    <p class="date-line">Wednesday, October 28, 2026</p>
+    <div class="date">Thursday, October 29, 2026</div>
   </header>
 
-  <section class="topic cyber">
+  <section class="section">
     <div class="section-head">
-      <span class="emoji">🛡️</span>
-      <h2>Cybersecurity</h2>
+      <span class="section-dot cyber"></span>
+      <h2 class="section-title">Cybersecurity</h2>
     </div>
-    <p class="section-sub">The exploits, breaches, and advisories that mattered in the last day or two.</p>
+    <p class="section-sub">Active exploits and advisories from the last day or two.</p>
 
-    <article class="story">
-      <h3>CISA confirms PHP2Shell flaws now under active attack, sets Oct. 29 deadline</h3>
-      <p>CISA added CVE-2026-109618 and CVE-2026-109619 — two critical PHP interpreter bugs (CVSS 9.2) patched on October 21 — to its Known Exploited Vulnerabilities catalog after reversing an earlier "not yet observed" assessment. The pair allows unauthenticated remote code execution and is being chained into a technique researchers call PHP2Shell; federal civilian agencies have until October 29 to patch.</p>
-      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/cisa-confirms-php2shell-vulnerabilities-now-exploited-in-attacks/">BleepingComputer</a>
+    <article class="item">
+      <h3>Cisco patches actively exploited ASA/FTD VPN flaw that can crash firewalls</h3>
+      <p>Cisco shipped fixes for CVE-2026-76418 (CVSS 8.6) in ASA and FTD VPN code after confirming real-world exploitation. An unauthenticated remote attacker can force affected devices to reload unexpectedly, knocking out VPN access for enterprises that rely on them.</p>
+      <a class="src" href="https://thehackernews.com/2026/10/cisco-patches-actively-exploited-asa.html">The Hacker News →</a>
     </article>
 
-    <article class="story">
-      <h3>Microsoft's October Patch Tuesday fixes a record 1,400+ flaws, including an exploited zero-day</h3>
-      <p>Microsoft's largest-ever monthly release addressed more than 1,400 vulnerabilities — around 70 rated critical and 317 enabling remote code execution — alongside three zero-days, one of which (a Windows Shell security-feature bypass) Microsoft confirms has already been exploited in the wild. Researchers note the sheer volume is straining patch-prioritization efforts industry-wide.</p>
-      <a class="source-link" href="https://darkreading.com/vulnerabilities-threats/zero-days-microsoft-october-patch-tuesday">Dark Reading</a>
+    <article class="item">
+      <h3>Hackers exploited a Cisco SD-WAN flaw to plant "KeyDrift" malware</h3>
+      <p>Cisco Talos found attackers abusing a Catalyst SD-WAN vulnerability to install a custom malware family dubbed KeyDrift, built to harvest and stash the encryption keys that protect site-to-site traffic for later decryption.</p>
+      <a class="src" href="https://thehackernews.com/2026/10/hackers-exploited-cisco-sd-wan-flaw-to.html">The Hacker News →</a>
     </article>
 
-    <article class="story">
-      <h3>Unpatched Tailscale SSH flaw lets a standard login escalate straight to root</h3>
-      <p>Researchers disclosed an unpatched issue, dubbed "Tailworm," in which ordinary SSH port forwarding lets a non-privileged session reach Tailscale's root-level process and connect to a root-only socket — in one test, enough to read the password file. No fixed version or vendor bulletin exists yet; the only mitigation currently is disabling SSH port forwarding where possible.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/10/unpatched-tailscale-ssh-flaws-could-let.html">The Hacker News</a>
+    <article class="item">
+      <h3>"PHP2Shell" exploit chain roots 25 servers, hits a US government-affiliated network</h3>
+      <p>CISA added the PHP2Shell flaws to its Known Exploited Vulnerabilities catalog after a suspected China-linked group used an AI-assisted exploit chain built on them to compromise 25 servers, including three systems tied to a US government-affiliated environment.</p>
+      <a class="src" href="https://thehackernews.com/2026/10/php2shell-attack-roots-25-servers.html">The Hacker News →</a>
     </article>
 
-    <article class="story">
-      <h3>Energy giant ENGIE discloses customer data breach via third-party marketing platform</h3>
-      <p>French energy company ENGIE confirmed attackers stole customer data after breaching a marketing platform used by business partners, rather than ENGIE's own infrastructure. The company says it has cut off the attackers' access and that internal systems were not compromised, though the scope of exposed customer data hasn't been fully detailed.</p>
-      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/energy-giant-engie-discloses-data-breach-affecting-customers/">BleepingComputer</a>
+    <article class="item">
+      <h3>CISA gives agencies two weeks to patch critical "Node2Shell" flaw</h3>
+      <p>CISA confirmed active exploitation of a critical vulnerability tied to the Brotli compression library, nicknamed Node2Shell, and ordered federal agencies to remediate it by November 10.</p>
+      <a class="src" href="https://bleepingcomputer.com/news/security/cisa-warns-of-hackers-now-exploiting-critical-node2shell-flaw">BleepingComputer →</a>
     </article>
 
-    <article class="story">
-      <h3>Japan's GMO Internet shuts down cloud service after breach hits up to 26,739 servers</h3>
-      <p>GMO Internet halted its Onamae.com Desktop Cloud service after disclosing that a third party gained unauthorized access and planted malicious programs on customer servers, with no restoration date set. A follow-up notice said attackers may also have obtained and misused login credentials for trading accounts stored on affected servers; the identity of the attacker and the malware involved remain unconfirmed.</p>
-      <a class="source-link" href="https://dailysecurityreview.com/?p=44938">Daily Security Review</a>
+    <article class="item">
+      <h3>Attackers already scanning for critical Oracle E-Business Suite RCE flaw</h3>
+      <p>Days after Oracle's October patch for CVE-2026-101767, a critical remote-code-execution flaw in E-Business Suite, threat-intel firm Defused observed mass internet scanning as attackers race to find unpatched systems.</p>
+      <a class="src" href="https://thehackernews.com/2026/10/hackers-target-critical-oracle-e.html">The Hacker News →</a>
     </article>
 
-    <article class="story">
-      <h3>CISA adds Arista VeloCloud SQL injection bug to exploited-vulnerabilities list</h3>
-      <p>CVE-2026-114625, a SQL injection flaw in Arista's VeloCloud Orchestrator, was added to CISA's Known Exploited Vulnerabilities catalog based on confirmed active exploitation. The addition triggers the standard federal patching deadline and signals organizations running VeloCloud-managed SD-WAN deployments should prioritize the update.</p>
-      <a class="source-link" href="https://www.cisa.gov/news-events/alerts/2026/10/23/cisa-adds-one-known-exploited-vulnerability-catalog">CISA</a>
+    <article class="item">
+      <h3>Adobe Commerce "PolyShell" attacks breach hundreds of online stores</h3>
+      <p>A campaign dubbed PolyShell has compromised hundreds of Adobe Commerce (Magento) stores, with new exploit traffic now also leveraging a Brotli-related flaw to widen the attack's reach.</p>
+      <a class="src" href="https://thehackernews.com/2026/10/adobe-commerce-polyshell-attacks-breach.html">The Hacker News →</a>
     </article>
-
   </section>
 
-  <hr class="divider">
+  <hr class="rule">
 
-  <section class="topic ai">
+  <section class="section ai">
     <div class="section-head">
-      <span class="emoji">✨</span>
-      <h2>Artificial Intelligence</h2>
+      <span class="section-dot ai"></span>
+      <h2 class="section-title">AI</h2>
     </div>
-    <p class="section-sub">What the major labs shipped and announced recently.</p>
+    <p class="section-sub">Model releases and lab news from the last day or two.</p>
 
-    <article class="story">
-      <h3>Anthropic files for IPO, disclosing $16.3B in first-half revenue and a widening loss</h3>
-      <p>Anthropic filed an S-1 registration with the SEC for a proposed public offering, planning to list under the ticker "ANT." The filing is the company's first public disclosure of its financials, showing $16.3 billion in revenue for the first half of 2026 alongside an $80 billion loss as it continues to pour money into model training and compute.</p>
-      <a class="source-link" href="https://techcrunch.com/2026/10/26/anthropic-officially-files-for-its-public-debut/">TechCrunch</a>
+    <article class="item">
+      <h3>Anthropic files S-1 with the SEC for a proposed IPO</h3>
+      <p>Anthropic confirmed it has filed an S-1 registration statement with the SEC, a major step toward a proposed initial public offering and public-company status.</p>
+      <a class="src" href="https://www.anthropic.com/news/s1-sec">Anthropic →</a>
     </article>
 
-    <article class="story">
-      <h3>Google DeepMind unveils Genie 4, a natural-language-steerable world simulator</h3>
-      <p>Genie 4 generates interactive, navigable 3D environments that users can reshape in real time by typing instructions — changing weather, adding objects or people, or redirecting the scene — while Gemini models handle reasoning to keep events coherent and Gemini Omni renders visuals and physics. DeepMind is rolling it out first as a research preview to trusted testers, positioning it as a training ground for robotics and autonomous agents ahead of any consumer release.</p>
-      <a class="source-link" href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/">Google DeepMind</a>
+    <article class="item">
+      <h3>Google debuts Gemini 4 Argon, starting with cyber defenders</h3>
+      <p>Google introduced Gemini 4 Argon, its newest frontier model, rolling it out first to trusted cybersecurity defenders through its Fairwind Program. Google says the model can autonomously find, validate, and patch software vulnerabilities, with broader developer and consumer access planned later.</p>
+      <a class="src" href="https://www.vktr.com/ai-news/google-debuts-gemini-4-argon-for-cyber-defenders/">VKTR →</a>
     </article>
 
-    <article class="story">
-      <h3>OpenAI says it will stop training models directly on the live internet</h3>
-      <p>Citing the unpredictability and risk of pulling directly from the ever-changing live web, OpenAI said future model training will instead draw on cached and simulated snapshots of internet content. The company frames the shift as a safety and reliability measure rather than a change driven by licensing or legal pressure, though it affects how fresh real-world information can be before it reaches a model.</p>
-      <a class="source-link" href="https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks">TechCrunch</a>
+    <article class="item">
+      <h3>OpenAI ships GPT-6.1 Terra at half the price of its predecessor</h3>
+      <p>OpenAI launched GPT-6.1 Terra, a mid-tier model priced at roughly $1/$5 per million input/output tokens, about half the cost of the model it replaces, while claiming performance close to its top-tier GPT-6 Astra model at a fraction of the price.</p>
+      <a class="src" href="https://forkast.news/gpt-6-1-terra-arrives-at-1-5-half-the-rate-of-a-model-openai-shipped-27-days-ago/">Forkast News →</a>
     </article>
 
-    <article class="story">
-      <h3>Meta prices $95B stock offering as Nvidia and AMD invest to deepen AI ties</h3>
-      <p>Meta upsized and priced its largest-ever equity raise — $25 billion in public stock plus a further at-the-market program — to fund its AI infrastructure buildout. Nvidia is investing $3 billion and AMD $1 billion into the offering; Nvidia also said the deal expands Meta's planned Vera Rubin chip deployment and deepens collaboration on Muse, Meta's AI agent platform.</p>
-      <a class="source-link" href="https://www.cnbc.com/2026/10/27/nvidia-invest-meta.html">CNBC</a>
+    <article class="item">
+      <h3>Anthropic reports early progress accelerating drug development with Claude</h3>
+      <p>Anthropic published research describing early results from using Claude to speed up stages of drug discovery and development, part of its broader push into AI for scientific research.</p>
+      <a class="src" href="https://www.anthropic.com/research/early-progress-drug-development">Anthropic →</a>
     </article>
 
-    <article class="story">
-      <h3>Anthropic donates its Agent Skills standard to the Agentic AI Foundation</h3>
-      <p>Following the same path it took with the Model Context Protocol, Anthropic transferred the Agent Skills name, GitHub organization, and agentskills.io domain to the Linux Foundation-hosted Agentic AI Foundation. The standard — now reportedly used across more than 70 agent platforms with roughly 280 million installs — will keep Anthropic involved in development but move to shared, vendor-neutral governance.</p>
-      <a class="source-link" href="https://letsdatascience.com/news/anthropic-donates-agent-skills-standard-to-agentic-ai-founda-f70093cd">Let's Data Science</a>
+    <article class="item">
+      <h3>Anthropic's "AI for Science" program expands to more foundations and research institutions</h3>
+      <p>Anthropic said it is widening its AI for Science initiative to include additional foundations and research institutions, extending Claude access for scientific research use cases.</p>
+      <a class="src" href="https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions">Anthropic →</a>
     </article>
-
-    <article class="story">
-      <h3>OpenAI says a frontier model helped crack long-standing open math problems</h3>
-      <p>OpenAI published results from an internal frontier model tackling unsolved problems in mathematics, including progress related to the Kakeya conjecture and a claimed disproof bearing on the Exponential Time Hypothesis. The company is also committing $5 million to a new Simons Foundation initiative that will have mathematicians independently vet AI-generated proofs before they're treated as verified results.</p>
-      <a class="source-link" href="https://openai.com/index/sharing-ai-progress-in-mathematics/">OpenAI</a>
-    </article>
-
   </section>
 
   <footer>
-    Compiled automatically from public reporting. Links go to the original sources.
+    Compiled automatically each morning from public reporting.<br>
+    Items reflect the last 24–48 hours and may be updated or corrected as stories develop.
   </footer>
 
 </div>
