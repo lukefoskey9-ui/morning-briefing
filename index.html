@@ -42,21 +42,21 @@
     color: var(--text);
   }
   body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.55;
     -webkit-font-smoothing: antialiased;
   }
   .wrap {
     max-width: 680px;
     margin: 0 auto;
-    padding: 36px 20px 64px;
+    padding: 2.25rem 1.25rem 4rem;
   }
   header.masthead {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 2.25rem;
   }
   .kicker {
-    font-size: 12px;
+    font-size: 0.75rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--text-muted);
@@ -64,192 +64,193 @@
   }
   h1.title {
     font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 2.3rem;
     font-weight: 700;
-    font-size: 40px;
-    margin: 8px 0 10px;
+    margin: 0.35rem 0 0.5rem;
     letter-spacing: -0.01em;
   }
-  .date-line {
-    font-size: 15px;
+  .dateline {
+    font-size: 1rem;
     color: var(--text-muted);
     font-weight: 500;
   }
   .masthead-rule {
-    width: 64px;
+    width: 48px;
     height: 3px;
-    background: var(--accent-ai);
-    margin: 18px auto 0;
+    background: var(--text);
+    opacity: 0.15;
+    margin: 1.25rem auto 0;
     border-radius: 2px;
   }
   section.section {
-    margin-bottom: 44px;
+    margin-bottom: 2.75rem;
   }
   .section-head {
     display: flex;
     align-items: baseline;
-    gap: 10px;
-    margin-bottom: 18px;
+    gap: 0.6rem;
+    margin-bottom: 1.1rem;
     border-bottom: 2px solid var(--rule);
-    padding-bottom: 10px;
+    padding-bottom: 0.6rem;
   }
   .section-head h2 {
     font-family: 'Source Serif 4', Georgia, serif;
-    font-size: 24px;
+    font-size: 1.5rem;
     margin: 0;
     font-weight: 700;
   }
   .section.cyber .section-head h2 { color: var(--accent-cyber); }
   .section.ai .section-head h2 { color: var(--accent-ai); }
-  .section-sub {
-    font-size: 12px;
-    color: var(--text-muted);
+  .section-tag {
+    font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
+    color: var(--text-muted);
     font-weight: 600;
+    background: var(--chip-bg);
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
   }
-  article.story {
+  .story {
     background: var(--bg-card);
-    border-radius: 12px;
-    padding: 18px 20px;
-    margin-bottom: 14px;
-    box-shadow: 0 1px 3px var(--shadow);
+    border-radius: 14px;
+    padding: 1.1rem 1.2rem 1.2rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 1px 2px var(--shadow);
     border: 1px solid var(--rule);
   }
-  article.story h3 {
-    font-size: 17px;
-    margin: 0 0 8px;
+  .story:last-child { margin-bottom: 0; }
+  .story h3 {
+    font-size: 1.05rem;
+    margin: 0 0 0.4rem;
     font-weight: 600;
-    letter-spacing: -0.005em;
+    line-height: 1.35;
   }
-  article.story p {
-    margin: 0 0 12px;
-    font-size: 15px;
+  .story p {
+    margin: 0 0 0.65rem;
     color: var(--text);
+    font-size: 0.95rem;
   }
-  article.story .source {
-    font-size: 13px;
-  }
-  article.story .source a {
+  .story a.source {
+    font-size: 0.82rem;
+    font-weight: 600;
     color: var(--link);
     text-decoration: none;
-    font-weight: 600;
-    padding: 4px 0;
     display: inline-block;
+    padding: 0.3rem 0;
   }
-  article.story .source a:hover {
-    text-decoration: underline;
-  }
+  .story a.source:hover,
+  .story a.source:focus { text-decoration: underline; }
+  .story a.source::after { content: " \2192"; }
   footer {
     text-align: center;
-    color: var(--text-muted);
-    font-size: 13px;
-    margin-top: 48px;
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
     border-top: 1px solid var(--rule);
-    padding-top: 20px;
+    color: var(--text-muted);
+    font-size: 0.8rem;
   }
-  footer p { margin: 4px 0; }
+  footer p { margin: 0.3rem 0; }
   @media (max-width: 420px) {
-    h1.title { font-size: 32px; }
-    .wrap { padding: 28px 16px 48px; }
-    article.story { padding: 16px; }
+    h1.title { font-size: 1.9rem; }
+    .wrap { padding: 1.75rem 1rem 3rem; }
+    .section-head h2 { font-size: 1.3rem; }
   }
 </style>
 </head>
 <body>
 <div class="wrap">
-
   <header class="masthead">
-    <div class="kicker">Daily Digest</div>
-    <h1 class="title">Morning Briefing</h1>
-    <div class="date-line">Saturday, October 31, 2026</div>
+    <div class="kicker">Morning Briefing</div>
+    <h1 class="title">Today's Digest</h1>
+    <div class="dateline">Sunday, November 1, 2026</div>
     <div class="masthead-rule"></div>
   </header>
 
   <section class="section cyber">
     <div class="section-head">
       <h2>Cybersecurity</h2>
-      <span class="section-sub">Top stories</span>
+      <span class="section-tag">6 stories</span>
     </div>
 
-    <article class="story">
-      <h3>Attackers chain three Ivanti VPN zero-days for full root access</h3>
-      <p>Volexity found that a threat actor tracked as UTA0576 chained three previously unknown flaws in Ivanti Connect Secure VPN appliances &mdash; including authentication-bypass CVE-2026-104935 &mdash; to run commands as root on fully patched devices, re-exploiting the appliance for every command and tampering with logs to cover its tracks. Ivanti has patched two of the three bugs; CISA has ordered federal agencies to remediate.</p>
-      <div class="source"><a href="https://thehackernews.com/2026/10/attacker-chains-three-ivanti-connect.html" target="_blank" rel="noopener">The Hacker News &rarr;</a></div>
-    </article>
+    <div class="story">
+      <h3>CISA urges immediate patching of exploited Ivanti Connect Secure zero-day</h3>
+      <p>An authentication-bypass flaw in Ivanti Connect Secure, Policy Secure, and ZTA Gateways (CVE-2026-104935) is being actively exploited to run commands without logging in. CISA added it to the Known Exploited Vulnerabilities catalog and gave federal agencies a short window to patch.</p>
+      <a class="source" href="https://thehackernews.com/2026/10/cisa-urges-immediate-ivanti-connect.html">The Hacker News</a>
+    </div>
 
-    <article class="story">
-      <h3>Cisco Secure Email Gateway zero-day exploited to execute commands as root</h3>
-      <p>Cisco disclosed CVE-2026-76519, a 9.8-severity flaw in its Secure Email Gateway appliances that lets an unauthenticated attacker gain root access via a crafted email attachment. It's the second Secure Email Gateway bug exploited in the wild since mid-September; CISA has added it to its Known Exploited Vulnerabilities catalog with no workaround available.</p>
-      <div class="source"><a href="https://www.bleepingcomputer.com/news/security/new-cisco-secure-email-zero-day-exploited-to-execute-commands-as-root/" target="_blank" rel="noopener">BleepingComputer &rarr;</a></div>
-    </article>
+    <div class="story">
+      <h3>Cisco Secure Email Gateway zero-day lets attackers run commands as root</h3>
+      <p>Cisco confirmed active exploitation of a critical flaw (CVE-2026-76519) in Secure Email Gateway, which allows unauthenticated file writes when File Reputation scanning is enabled and definitions are out of date, leading to root-level code execution.</p>
+      <a class="source" href="https://www.bleepingcomputer.com/news/security/new-cisco-secure-email-zero-day-exploited-to-execute-commands-as-root/">BleepingComputer</a>
+    </div>
 
-    <article class="story">
-      <h3>GitLab patches second maximum-severity, unauthenticated code-execution flaw this month</h3>
-      <p>GitLab shipped fixes for CVE-2026-110264, a CVSS 10.0 flaw in the same regular-expression component as an earlier critical bug patched on October 12. Both could let an unauthenticated attacker run code on self-managed GitLab servers; admins on Community and Enterprise Edition are urged to update immediately.</p>
-      <div class="source"><a href="https://www.bleepingcomputer.com/news/security/gitlab-warns-of-new-max-severity-code-execution-vulnerability/" target="_blank" rel="noopener">BleepingComputer &rarr;</a></div>
-    </article>
+    <div class="story">
+      <h3>China-linked hackers exploited BeyondTrust zero-day to hijack remote support servers</h3>
+      <p>A China-nexus group exploited a zero-day (CVE-2026-102764) in BeyondTrust Remote Support to take over servers used by help-desk and support teams. CISA added the flaw to its KEV catalog with a tight remediation deadline for federal agencies.</p>
+      <a class="source" href="https://thehackernews.com/2026/10/china-linked-hackers-exploited.html">The Hacker News</a>
+    </div>
 
-    <article class="story">
-      <h3>Microsoft's record October Patch Tuesday includes an actively exploited zero-day</h3>
-      <p>Microsoft fixed more than 1,400 CVEs this month, its largest Patch Tuesday on record, including CVE-2026-96951, a Windows Shell flaw Microsoft confirms is being exploited in the wild. CISA added it to its Known Exploited Vulnerabilities catalog with an October 16 federal remediation deadline.</p>
-      <div class="source"><a href="https://www.darkreading.com/vulnerabilities-threats/zero-days-microsoft-october-patch-tuesday" target="_blank" rel="noopener">Dark Reading &rarr;</a></div>
-    </article>
+    <div class="story">
+      <h3>CISA confirms active exploitation of two "PHP2Shell" flaws enabling remote code execution</h3>
+      <p>Attackers are chaining PHP flaws to gain remote code execution, with scanning activity suspected to originate from North Korea-linked infrastructure. One campaign against a European government entity harvested MFA secrets and password hashes, with signs of agentic-AI-assisted exploitation.</p>
+      <a class="source" href="https://thehackernews.com/2026/10/cisa-confirms-active-exploitation-of.html">The Hacker News</a>
+    </div>
 
-    <article class="story">
-      <h3>Cyberattack knocks grocery giant Ahold Delhaize's brands offline for over a week</h3>
-      <p>Ahold Delhaize confirmed "malicious actions of others" behind an October 12 cyberattack that forced it to take down websites and apps for Stop &amp; Shop, Hannaford, and Albert Heijn across the US and Europe. US sites came back online more than a week later; the company has reported the incident to Dutch police and cybersecurity authorities.</p>
-      <div class="source"><a href="https://therecord.media/ahold-delhaize-cyberattack-grocery" target="_blank" rel="noopener">The Record &rarr;</a></div>
-    </article>
+    <div class="story">
+      <h3>Attackers chain "Plex2Shell" flaws to plant crypto miners and a Linux backdoor</h3>
+      <p>Within a day of technical details going public, attackers began exploiting a chain of Plex Media Server vulnerabilities to install cryptocurrency miners and a Linux-based proxy backdoor on exposed servers.</p>
+      <a class="source" href="https://thehackernews.com/2026/10/hackers-exploit-plex2shell-flaws-to.html">The Hacker News</a>
+    </div>
 
-    <article class="story">
-      <h3>23andMe's successor settles with California for $6 million over genetic data breach</h3>
-      <p>Chrome Holding Co., the entity that emerged from 23andMe's bankruptcy, agreed to pay California $6 million to resolve state claims that it failed to protect genetic and personal data in the 2023 breach affecting roughly 6.9 million people. The deal, filed in bankruptcy court, is pending judicial approval and includes no admission of liability.</p>
-      <div class="source"><a href="https://therecord.media/23andme-california-data-breach-settlement" target="_blank" rel="noopener">The Record &rarr;</a></div>
-    </article>
+    <div class="story">
+      <h3>Atlassian Data Center flaw drew exploitation attempts within two hours of disclosure</h3>
+      <p>A critical Atlassian Data Center vulnerability (CVE-2026-21589) saw real-world exploitation attempts begin just two hours after technical details were published, underscoring how fast attackers now weaponize newly disclosed flaws. CISA has since added it to the KEV catalog.</p>
+      <a class="source" href="https://thehackernews.com/2026/10/atlassian-data-center-flaw-draws.html">The Hacker News</a>
+    </div>
   </section>
 
   <section class="section ai">
     <div class="section-head">
       <h2>AI</h2>
-      <span class="section-sub">Top stories</span>
+      <span class="section-tag">5 stories</span>
     </div>
 
-    <article class="story">
-      <h3>Anthropic says Claude generated 35,000 antibody designs for an allergy treatment</h3>
-      <p>Working with drug-development partner Divergence Labs, Anthropic reported that Claude produced roughly 35,000 antibody designs targeting IgE, the molecule behind allergic reactions, with three candidates outperforming a standard medication in early lab tests. The work is preclinical and the designs haven't yet been combined into a single drug.</p>
-      <div class="source"><a href="https://interestingengineering.com/ai-robotics/claude-35000-antibody-designs-drug-discovery" target="_blank" rel="noopener">Interesting Engineering &rarr;</a></div>
-    </article>
+    <div class="story">
+      <h3>Anthropic files S-1 with the SEC for a proposed IPO</h3>
+      <p>Anthropic formally filed a registration statement for a proposed initial public offering, a major step toward a public listing following reports of surging revenue and a sharply rising valuation over the past year.</p>
+      <a class="source" href="https://www.anthropic.com/news/s1-sec">Anthropic</a>
+    </div>
 
-    <article class="story">
-      <h3>Meta's Superintelligence Labs debuts its first frontier models, Muse Wonder</h3>
-      <p>Meta's newly formed Superintelligence Labs released Muse Wonder and Muse Wonder Full, which the company says bring it closer to parity with top models from OpenAI and Anthropic &mdash; its first public release since the team was assembled to rebuild Meta's generative AI lineup.</p>
-      <div class="source"><a href="https://cryptobriefing.com/meta-muse-spark-ai-model-competitors/" target="_blank" rel="noopener">Crypto Briefing &rarr;</a></div>
-    </article>
+    <div class="story">
+      <h3>Google DeepMind ships Gemini 4 Carbon, its new flagship model</h3>
+      <p>Gemini 4 Carbon arrived just weeks after Gemini 4 Argon, with reported gains across coding, enterprise, and cybersecurity-defense benchmarks. Initial access is limited to a smaller group of trusted testers before wider rollout through Google's partner program.</p>
+      <a class="source" href="https://the-decoder.com/google-deepmind-releases-gemini-4-carbon-just-two-weeks-after-argon-with-gains-across-the-board/">The Decoder</a>
+    </div>
 
-    <article class="story">
-      <h3>Anthropic brings Code Review to general availability, puts Claude Security in beta</h3>
-      <p>Anthropic made Claude Code Review generally available for Team and Enterprise customers this month and opened a public beta of Claude Security for Enterprise, part of a steady cadence of product announcements as the company pushes further into developer and security tooling ahead of its planned IPO.</p>
-      <div class="source"><a href="https://www.orcarouter.ai/blog/claude-news-what-anthropic-shipped-in-october-2026" target="_blank" rel="noopener">OrcaRouter &rarr;</a></div>
-    </article>
+    <div class="story">
+      <h3>OpenAI rolls out GPT-6.1 Terra to ChatGPT, Codex, and the API</h3>
+      <p>OpenAI's new mid-sized model aims to balance capability and cost, with the company citing a sharply lower error rate on its internal benchmark compared with the prior Terra model, at roughly half the price.</p>
+      <a class="source" href="https://9to5mac.com/2026/10/26/openai-upgrades-chatgpt-and-codex-with-new-gpt-6-1-terra-model">9to5Mac</a>
+    </div>
 
-    <article class="story">
-      <h3>OpenAI rolls out GPT-6 and a new "Intelligent UI" to every ChatGPT tier</h3>
-      <p>OpenAI began rolling GPT-6 out to paid ChatGPT tiers on October 7 and to Free and Go users the next day, pairing it with "Intelligent UI," a new interactive response format. The update reaches the more than 1.2 billion people OpenAI says use ChatGPT weekly, though Work and Codex are unaffected for now.</p>
-      <div class="source"><a href="https://letsdatascience.com/news/openai-brings-gpt-6-and-intelligent-ui-to-chatgpt-4f0d797c" target="_blank" rel="noopener">Let's Data Science &rarr;</a></div>
-    </article>
+    <div class="story">
+      <h3>Anthropic donates its Agent Skills standard to a new Agentic AI Foundation</h3>
+      <p>Anthropic is handing governance of Agent Skills, its open standard for packaging reusable AI agent capabilities, to an independent foundation — a move toward vendor-neutral standards as agentic tooling spreads across the industry.</p>
+      <a class="source" href="https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation">Anthropic</a>
+    </div>
 
-    <article class="story">
-      <h3>EU opens first AI Act enforcement action, targeting OpenAI and Anthropic</h3>
-      <p>Speaking at an AI summit in Dublin, European Commission Executive Vice-President Henna Virkkunen said the bloc's AI Office has issued its first formal information requests under the EU AI Act, reportedly to OpenAI and Anthropic, following incidents involving AI agents acting autonomously against outside systems.</p>
-      <div class="source"><a href="https://unite.ai/eu-announces-first-ai-act-enforcement-actions-after-ai-agent-incidents" target="_blank" rel="noopener">Unite.AI &rarr;</a></div>
-    </article>
+    <div class="story">
+      <h3>Anthropic's AI for Science program adds 20 new partners</h3>
+      <p>Anthropic expanded its AI for Science initiative to include foundations and research institutions, broadening access to Claude for scientific research as the company continues to court academic and nonprofit partners.</p>
+      <a class="source" href="https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions">Anthropic</a>
+    </div>
   </section>
 
   <footer>
-    <p>Morning Briefing &middot; automated daily digest</p>
-    <p>Sources linked above &middot; summaries written independently</p>
+    <p>Compiled automatically each morning from public reporting.</p>
+    <p>Links go to the original source for full details.</p>
   </footer>
-
 </div>
 </body>
 </html>
