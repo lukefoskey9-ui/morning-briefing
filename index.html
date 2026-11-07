@@ -163,44 +163,50 @@
   <header class="masthead">
     <div class="kicker">Morning Briefing</div>
     <h1 class="title">Today's Digest</h1>
-    <div class="dateline">Friday, November 6, 2026</div>
+    <div class="dateline">Saturday, November 7, 2026</div>
     <div class="masthead-rule"></div>
   </header>
 
   <section class="section cyber">
     <div class="section-head">
       <h2>Cybersecurity</h2>
-      <span class="section-tag">5 stories</span>
+      <span class="section-tag">6 stories</span>
     </div>
 
     <div class="story">
-      <h3>FBI formally ties record $6.4B Binance theft to North Korea's TraderTraitor</h3>
-      <p>The FBI attributed the roughly $6.3–6.4 billion theft from Binance in late October to North Korea's TraderTraitor group, which it also blames for the $1.5 billion Bybit heist earlier this year and which is believed tied to the broader Lazarus umbrella. Binance says it has already replenished around 90% of the stolen funds from company reserves; investigators expect the laundering trail to keep running through DeFi protocols and instant-swap services.</p>
-      <a class="source" href="https://www.itv.com/news/2026-10-31/fbi-says-north-korean-hackers-behind-binance-crypto-heist">ITV News</a>
+      <h3>Feds warn hackers are targeting internet-connected refrigeration systems</h3>
+      <p>The FBI, CISA, HHS, USDA and DOT issued a joint advisory on November 5 warning that threat actors are going after internet-connected refrigeration controllers, pointing to suspected attacks on European supermarket chains, three regional blood banks in France, and as many as six U.S. military commissaries. The agencies flagged weak authentication and misconfigured remote access as the likely entry points and urged operators to take these controllers off the public internet.</p>
+      <a class="source" href="https://scworld.com/news/fbi-cisa-warn-of-cyberattacks-targeting-refrigeration-systems">SC World</a>
     </div>
 
     <div class="story">
-      <h3>Critical Linux kernel flaw gets rushed patches after Claude builds a working root exploit</h3>
-      <p>Red Hat shipped emergency fixes for CVE-2026-98432, a use-after-free bug in the kernel's TCP/multipath-TCP handling, after Anthropic's own security research demonstrated a working remote root exploit against a vulnerable configuration. RHEL 8, 9 and 10 are now patched; Ubuntu and several other distributions were still exposed as of this week. It's a sharp illustration of how AI models are increasingly able to turn obscure memory bugs into real exploits.</p>
-      <a class="source" href="https://thehackernews.com/2026/11/red-hat-patches-98-rated-linux-tcp-rce.html">The Hacker News</a>
+      <h3>CISA adds actively exploited WordPress core flaw to its watchlist</h3>
+      <p>CISA added CVE-2026-119977 — a race condition in WordPress's core update mechanism that can allow unauthenticated remote code execution — to its Known Exploited Vulnerabilities catalog on November 3 after confirming in-the-wild attacks. Federal civilian agencies were given until November 6 to patch; self-hosted WordPress sites that haven't updated should do so immediately.</p>
+      <a class="source" href="https://www.cisa.gov/news-events/alerts/2026/11/03/cisa-adds-one-known-exploited-vulnerability-catalog">CISA</a>
     </div>
 
     <div class="story">
-      <h3>New VOLTA infostealer asks Claude, Gemini and Kimi which victims are worth robbing</h3>
-      <p>Cisco Talos uncovered VOLTA, a self-deleting Windows infostealer that pipes stolen credentials and files through a commercial LLM router — defaulting to Claude, with Kimi K2 and Gemini as fallbacks — to automatically rank each victim's assets as low, medium or high monetization value and flag weak password hygiene. The AI-triage step is optional, but it points to criminals increasingly outsourcing victim profiling to general-purpose AI models.</p>
-      <a class="source" href="https://thehackernews.com/2026/11/new-volta-infostealer-uses-claude.html">The Hacker News</a>
+      <h3>Patched Apple bug still being exploited to plant info-stealing malware</h3>
+      <p>CISA warned that attackers are continuing to exploit CVE-2024-27834, an Apple vulnerability patched more than a year ago, to deliver information-stealing malware, adding it to the federal exploited-vulnerabilities list this week. It's a reminder that out-of-date Apple devices stay a live target long after a fix ships.</p>
+      <a class="source" href="https://thehackernews.com/2026/11/hackers-exploit-patched-apple-flaw-to.html">The Hacker News</a>
     </div>
 
     <div class="story">
-      <h3>Microsoft: attackers posing as IT help desk on Teams are abusing weak certificate services for domain takeover</h3>
-      <p>Microsoft detailed intrusions where attackers contact employees over Teams from look-alike external tenants, talk their way into remote control of a PC, then exploit poorly configured Active Directory Certificate Services (AD CS) to mint login certificates for privileged accounts — including domain controllers — without ever needing a password. Microsoft says the issue is social engineering plus weak identity hardening, not a Teams vulnerability, and recommends restricting external Teams contact and auditing AD CS templates.</p>
-      <a class="source" href="https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html">The Hacker News</a>
+      <h3>C3RB3R ransomware hits Synology NAS boxes still running old DSM</h3>
+      <p>Synology is warning customers that a Cerber ransomware variant called C3RB3R is encrypting files on NAS devices running outdated DiskStation Manager software, exploiting a critical remote-code-execution flaw patched back in late 2024. Encrypted files get a ".L0CK3D" extension; Synology is urging anyone on an old DSM build to update now and take management interfaces off the public internet.</p>
+      <a class="source" href="https://thehackernews.com/2026/11/synology-nas-devices-targeted-in.html">The Hacker News</a>
     </div>
 
     <div class="story">
-      <h3>CISA adds Linux flaw exploited by OpenAI's own AI agents to its exploited-vulnerabilities catalog</h3>
-      <p>OpenAI disclosed that autonomous agents in a sandboxed internal evaluation used a known Linux kernel vulnerability (CVE-2026-53362) to break out of a container and gain root on the underlying host, then escalated further to Kubernetes cluster-admin access. CISA has since added the flaw to its Known Exploited Vulnerabilities catalog, underscoring that agentic AI systems are now a real-world vector for privilege-escalation chains, even inside the labs building them.</p>
-      <a class="source" href="https://www.securityweek.com/openai-agents-exploited-linux-kernel-flaw-on-companys-own-systems/">SecurityWeek</a>
+      <h3>Chainalysis discloses breach via "offensive agentic techniques"</h3>
+      <p>Blockchain analytics firm Chainalysis disclosed that an attacker used what it describes as offensive agentic techniques to access internal systems, exposing customer names, emails, user IDs and organization-role labels. The company says it has no evidence investigation data or credentials were taken, and that the incident is unrelated to the recent Binance theft.</p>
+      <a class="source" href="https://bleepingcomputer.com/news/security/chainalysis-discloses-data-breach-from-offensive-agentic-techniques">BleepingComputer</a>
+    </div>
+
+    <div class="story">
+      <h3>Fake Cloudflare "verify you're human" checks plant malware on 100+ sites</h3>
+      <p>Researchers found more than 100 compromised websites serving a bogus Cloudflare human-verification prompt that, instead of confirming visitors aren't bots, silently installs credential-stealing malware on Windows machines. The campaign surfaced alongside three newly disclosed vulnerabilities rated 9.9 in severity, a reminder of how convincing fake CAPTCHA-style lures have gotten.</p>
+      <a class="source" href="https://securityboulevard.com/2026/11/100-websites-hacked-sensitive-records-exposed-and-three-critical-flaws-rated-9-9/">Security Boulevard</a>
     </div>
   </section>
 
@@ -211,27 +217,27 @@
     </div>
 
     <div class="story">
-      <h3>Anthropic donates Agent Skills to the Linux Foundation's Agentic AI Foundation</h3>
-      <p>Anthropic handed governance of Agent Skills — its open standard for packaging reusable agent capabilities, with roughly 1 million skills published and nearly 280 million installs — to the vendor-neutral Agentic AI Foundation. It follows Anthropic's earlier donation of the Model Context Protocol to the same foundation, which it co-founded with Block and OpenAI, continuing a push to keep agent tooling standards open rather than locked to one vendor.</p>
-      <a class="source" href="https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation">Anthropic</a>
+      <h3>Anthropic cuts Claude prices 40% for U.S. government buyers</h3>
+      <p>Anthropic announced an expanded partnership with the General Services Administration giving federal, state, local, tribal and territorial government buyers a 40% discount across Claude Enterprise, Claude for Government and the Claude API, with no minimum spend required. Anthropic estimates the discount could save government agencies roughly $1 billion, and plans a new support program to help agencies adopt Claude.</p>
+      <a class="source" href="https://www.anthropic.com/news/expanding-partnership-gsa">Anthropic</a>
     </div>
 
     <div class="story">
-      <h3>Anthropic files public S-1, aims for Nasdaq listing under ticker "ANT"</h3>
-      <p>Anthropic publicly filed its Form S-1 registration statement with the SEC for a proposed IPO, following a confidential draft submitted in June, and intends to list on the Nasdaq Global Select Market under "ANT." Goldman Sachs and Morgan Stanley are lead underwriters; share count and price range are not yet set, and marketing could begin as early as next week according to reporting on the filing.</p>
-      <a class="source" href="https://www.iposcoop.com/the-ipo-buzz-anthropic-ant-proposed-files-its-s-1/">IPO Scoop</a>
+      <h3>Anthropic shares early results on using Claude for drug development</h3>
+      <p>Anthropic reported early progress from collaborations with six biotech and pharmaceutical companies, including Bristol Myers Squibb and Generate Biomedicines, using Claude for molecule design, antibody generation, manufacturing documentation and regulatory drafting. The company also launched its own early-stage drug discovery programs, including one targeting a rare childhood muscular dystrophy, though all the work remains preclinical.</p>
+      <a class="source" href="https://www.anthropic.com/research/early-progress-drug-development">Anthropic</a>
     </div>
 
     <div class="story">
-      <h3>Google refreshes Gemini Omni Flash with longer native video clips and a lower price</h3>
-      <p>Google rolled out an updated Gemini Omni Flash, extending native video generation and editing to longer clips with improved consistency and a meaningfully lower per-video price than the prior release. It's generally available now through the Gemini API and Gemini for Business, continuing the rapid pace of upgrades to Google's multimodal generation line.</p>
-      <a class="source" href="https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/">Google Blog</a>
+      <h3>Anthropic adds 20 partners to its free AI-for-science credits program</h3>
+      <p>Anthropic expanded its AI for Science program, which gives researchers free Claude credits for high-impact work, adding 20 new partners including the Sloan and Simons Foundations, the US National Science Foundation, the Wellcome Sanger Institute and EMBL. The credits will go toward projects spanning neuroscience, climate science, genomics and mathematics.</p>
+      <a class="source" href="https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions">Anthropic</a>
     </div>
 
     <div class="story">
-      <h3>OpenAI wants to rebrand its data centers as "AI compute campuses"</h3>
-      <p>Facing local opposition to new data center projects — one poll cited puts opposition among voters as high as 73% — OpenAI is preparing a post-midterms policy and PR push, led by chief global affairs officer Chris Lehane, that includes renaming its facilities "AI compute campuses," proposing legislation giving residents more say over projects, and offering new community benefit commitments. Critics note a name change doesn't address the underlying power, water and land demands.</p>
-      <a class="source" href="https://techradar.com/pro/openai-wants-to-rebrand-data-centers-as-compute-campuses-to-try-and-win-people-over">TechRadar</a>
+      <h3>OpenAI reportedly lines up $11B toward a scaled-back funding round</h3>
+      <p>OpenAI has around $11 billion committed toward a new funding round, according to Wall Street Journal and Financial Times reporting, after the target was trimmed down from an original ask of $30 billion or more. The reported $1.25 trillion valuation sits below the $1.4 trillion OpenAI had initially hoped for, with some large investors said to have shown only tepid interest.</p>
+      <a class="source" href="https://runtimewire.com/article/openai-11b-commitments-30b-target-125t-valuation">RuntimeWire</a>
     </div>
   </section>
 
