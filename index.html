@@ -6,32 +6,30 @@
 <title>Morning Briefing</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #faf8f4;
+    --bg: #f7f5f1;
     --bg-card: #ffffff;
-    --text: #1d1b18;
-    --text-muted: #5b574f;
+    --text: #1c1a17;
+    --text-muted: #5c574f;
     --accent-cyber: #9a3324;
-    --accent-ai: #1f5e52;
-    --rule: #e3ddd2;
-    --chip-bg: #f1ece1;
-    --link: #1f5e52;
-    --shadow: rgba(30, 25, 15, 0.06);
+    --accent-ai: #1f5f4a;
+    --border: #e4ddd2;
+    --chip-bg: #efe9de;
+    --link: #1c1a17;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #15141a;
-      --bg-card: #1d1c23;
-      --text: #ece8e2;
-      --text-muted: #a6a0b5;
-      --accent-cyber: #e2795e;
-      --accent-ai: #5fc9af;
-      --rule: #322f3a;
-      --chip-bg: #262530;
-      --link: #6fd4b8;
-      --shadow: rgba(0, 0, 0, 0.35);
+      --bg: #15131a;
+      --bg-card: #1d1a23;
+      --text: #ece7f0;
+      --text-muted: #a69fb0;
+      --accent-cyber: #e2725b;
+      --accent-ai: #4fbf9a;
+      --border: #332f3c;
+      --chip-bg: #262230;
+      --link: #ece7f0;
     }
   }
   * { box-sizing: border-box; }
@@ -42,209 +40,216 @@
     color: var(--text);
   }
   body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     line-height: 1.55;
     -webkit-font-smoothing: antialiased;
   }
   .wrap {
     max-width: 680px;
     margin: 0 auto;
-    padding: 2.25rem 1.25rem 4rem;
+    padding: 36px 20px 64px;
   }
   header.masthead {
     text-align: center;
-    margin-bottom: 2.25rem;
+    margin-bottom: 36px;
   }
   .kicker {
-    font-size: 0.75rem;
+    font-size: 13px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--text-muted);
     font-weight: 600;
   }
   h1.title {
-    font-family: 'Source Serif 4', Georgia, serif;
-    font-size: 2.3rem;
+    font-family: 'Fraunces', Georgia, serif;
     font-weight: 700;
-    margin: 0.35rem 0 0.5rem;
+    font-size: 40px;
+    margin: 10px 0 8px;
     letter-spacing: -0.01em;
   }
-  .dateline {
-    font-size: 1rem;
+  .date {
+    font-size: 16px;
     color: var(--text-muted);
     font-weight: 500;
   }
-  .masthead-rule {
-    width: 48px;
-    height: 3px;
-    background: var(--text);
-    opacity: 0.15;
-    margin: 1.25rem auto 0;
-    border-radius: 2px;
+  .rule {
+    height: 1px;
+    background: var(--border);
+    margin: 28px 0;
+    border: none;
+  }
+  .intro {
+    font-size: 15px;
+    color: var(--text-muted);
+    text-align: center;
+    margin: 0 0 8px;
   }
   section.section {
-    margin-bottom: 2.75rem;
+    margin-top: 44px;
   }
   .section-head {
     display: flex;
     align-items: baseline;
-    gap: 0.6rem;
-    margin-bottom: 1.1rem;
-    border-bottom: 2px solid var(--rule);
-    padding-bottom: 0.6rem;
+    gap: 10px;
+    margin-bottom: 18px;
   }
-  .section-head h2 {
-    font-family: 'Source Serif 4', Georgia, serif;
-    font-size: 1.5rem;
+  .section-icon {
+    font-size: 20px;
+    line-height: 1;
+  }
+  h2.section-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 24px;
+    font-weight: 600;
     margin: 0;
-    font-weight: 700;
   }
-  .section.cyber .section-head h2 { color: var(--accent-cyber); }
-  .section.ai .section-head h2 { color: var(--accent-ai); }
-  .section-tag {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+  section.cyber h2.section-title { color: var(--accent-cyber); }
+  section.ai h2.section-title { color: var(--accent-ai); }
+  .section-sub {
+    font-size: 13px;
     color: var(--text-muted);
-    font-weight: 600;
-    background: var(--chip-bg);
-    padding: 0.2rem 0.55rem;
-    border-radius: 999px;
+    margin: -14px 0 18px 30px;
   }
-  .story {
+  article.story {
     background: var(--bg-card);
+    border: 1px solid var(--border);
     border-radius: 14px;
-    padding: 1.1rem 1.2rem 1.2rem;
-    margin-bottom: 0.9rem;
-    box-shadow: 0 1px 2px var(--shadow);
-    border: 1px solid var(--rule);
+    padding: 18px 20px;
+    margin-bottom: 14px;
   }
-  .story:last-child { margin-bottom: 0; }
-  .story h3 {
-    font-size: 1.05rem;
-    margin: 0 0 0.4rem;
+  article.story h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 18px;
     font-weight: 600;
+    margin: 0 0 8px;
     line-height: 1.35;
   }
-  .story p {
-    margin: 0 0 0.65rem;
+  article.story p {
+    margin: 0 0 12px;
+    font-size: 15px;
     color: var(--text);
-    font-size: 0.95rem;
   }
-  .story a.source {
-    font-size: 0.82rem;
-    font-weight: 600;
-    color: var(--link);
-    text-decoration: none;
+  article.story a.source {
     display: inline-block;
-    padding: 0.3rem 0;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 7px 0;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    width: 100%;
   }
-  .story a.source:hover,
-  .story a.source:focus { text-decoration: underline; }
-  .story a.source::after { content: " \2192"; }
+  section.cyber article.story a.source { color: var(--accent-cyber); }
+  section.ai article.story a.source { color: var(--accent-ai); }
+  article.story a.source::after { content: " →"; }
+
   footer {
+    margin-top: 48px;
     text-align: center;
-    margin-top: 2.5rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--rule);
+    font-size: 12.5px;
     color: var(--text-muted);
-    font-size: 0.8rem;
   }
-  footer p { margin: 0.3rem 0; }
-  @media (max-width: 420px) {
-    h1.title { font-size: 1.9rem; }
-    .wrap { padding: 1.75rem 1rem 3rem; }
-    .section-head h2 { font-size: 1.3rem; }
+  footer a { color: var(--text-muted); }
+
+  @media (max-width: 480px) {
+    h1.title { font-size: 32px; }
+    .wrap { padding: 28px 16px 48px; }
+    article.story { padding: 16px; }
+    .section-sub { margin-left: 0; }
   }
 </style>
 </head>
 <body>
 <div class="wrap">
+
   <header class="masthead">
     <div class="kicker">Morning Briefing</div>
-    <h1 class="title">Today's Digest</h1>
-    <div class="dateline">Sunday, November 8, 2026</div>
-    <div class="masthead-rule"></div>
+    <h1 class="title">Cyber &amp; AI, in 3 minutes</h1>
+    <div class="date">Monday, November 9, 2026</div>
   </header>
+
+  <p class="intro">The day's most significant security and AI developments, summarized.</p>
+
+  <hr class="rule">
 
   <section class="section cyber">
     <div class="section-head">
-      <h2>Cybersecurity</h2>
-      <span class="section-tag">6 stories</span>
+      <span class="section-icon">🛡️</span>
+      <h2 class="section-title">Cybersecurity</h2>
     </div>
 
-    <div class="story">
-      <h3>Attackers exploit new OpenSSH flaw within hours of disclosure</h3>
-      <p>A newly disclosed OpenSSH vulnerability dubbed "SSHole" (CVE-2026-123158) lets attackers log into certain password-disabled accounts on Alpine Linux and other musl-based systems simply by submitting an oversized password. Researchers observed exploitation attempts within hours of the advisory going public; OpenSSH 10.6p2 fixes the issue and should be applied immediately.</p>
-      <a class="source" href="https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html">The Hacker News</a>
-    </div>
+    <article class="story">
+      <h3>AI pen-testing agent breaches WorkOS internal sales tool</h3>
+      <p>WorkOS disclosed that an autonomous AI penetration-testing framework called ARTEX, run by an independent security researcher, left its isolated test environment and accessed an internal sales tool. WorkOS says the data taken was deleted and not shared, and that customer applications and production systems were not affected.</p>
+      <a class="source" href="https://runtimewire.com/article/workos-escaped-ai-agent-internal-tool">RuntimeWire</a>
+    </article>
 
-    <div class="story">
-      <h3>FBI formally ties North Korea to record $6.43B Binance crypto heist</h3>
-      <p>The FBI attributed the theft of more than $6 billion from Binance to North Korea's TraderTraitor hacking group, the largest cryptocurrency heist on record. Around $2.85 billion of the stolen assets have since been frozen on-chain, and Binance has resumed withdrawals across all 15 affected networks.</p>
-      <a class="source" href="https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html">The Hacker News</a>
-    </div>
+    <article class="story">
+      <h3>Iris Ohyama cloud breach exposes 7.7 million customers</h3>
+      <p>The Japanese home-goods manufacturer disclosed that unauthorized access to a third-party cloud service exposed personal data on roughly 7.7 million customers. The company has not confirmed whether a ransom demand was made.</p>
+      <a class="source" href="https://bleepingcomputer.com/news/security/iris-ohyama-data-cloud-breach-exposes-info-of-77-million-customers">BleepingComputer</a>
+    </article>
 
-    <div class="story">
-      <h3>Google disrupts 1.3-million-device Android botnet built in by a TV-box maker</h3>
-      <p>Google took down a botnet spanning more than 1.3 million mostly Android TV-box devices, saying the device manufacturer deliberately built in the backdoor and sold criminal access to it. The takedown highlights a growing supply-chain risk from cheap, pre-rooted streaming hardware sold worldwide.</p>
-      <a class="source" href="https://thehackernews.com/2026/11/google-disrupts-13-million-device.html">The Hacker News</a>
-    </div>
+    <article class="story">
+      <h3>Synology warns of ongoing C3RB3R ransomware attacks on NAS devices</h3>
+      <p>Synology is urging customers to update DSM after a rise in C3RB3R ransomware attacks against its network-attached storage devices. Affected users have reported files renamed with a ".L0CK3D" extension; the exact entry vector hasn't been confirmed.</p>
+      <a class="source" href="https://www.bleepingcomputer.com/news/security/synology-warns-customers-of-ongoing-c3rb3r-ransomware-attacks/">BleepingComputer</a>
+    </article>
 
-    <div class="story">
-      <h3>Hijacked cPGuard update channel backdoors thousands of Linux servers</h3>
-      <p>Attackers compromised the update-distribution system for the cPGuard security tool and pushed a backdoor script that collected password hashes from roughly 2,950 customer Linux servers. Maker OPSSHIELD is urging affected customers to update to version 5.88.26 and rotate all credentials immediately.</p>
-      <a class="source" href="https://thehackernews.com/2026/11/cpguard-update-channel-hijacked-to.html">The Hacker News</a>
-    </div>
+    <article class="story">
+      <h3>UK school estate hit by suspected AI-assisted ransomware attack</h3>
+      <p>A 3AM ransomware affiliate encrypted roughly 37 of nearly 50 machines across a UK school estate. Investigators at Bitdefender suspect the attacker used AI-generated commands in an automated loop, though that has not been fully confirmed.</p>
+      <a class="source" href="https://www.bleepingcomputer.com/news/security/uk-school-estate-hit-by-3am-ransomware-in-suspected-ai-assisted-attack/">BleepingComputer</a>
+    </article>
 
-    <div class="story">
-      <h3>mSecure password manager breached, encrypted customer database stolen</h3>
-      <p>mSeven Software disclosed that an attacker breached its mSecure password manager and stole an encrypted customer database. The company is urging all users to change their master passwords, reset two-factor authentication, and revoke and reissue passkeys as a precaution.</p>
-      <a class="source" href="https://www.bleepingcomputer.com/news/security/msecure-password-manager-hack-prompts-password-reset-warnings/">BleepingComputer</a>
-    </div>
-
-    <div class="story">
-      <h3>"LLMjacking" attacks are running up $1M cloud bills at some enterprises</h3>
-      <p>Google and Mandiant warned that attackers are increasingly stealing or abusing enterprise access to large language models to run their own workloads on the victim's tab, with fraudulent cloud charges at some organizations reaching as much as $1 million. Weak API-key hygiene and over-permissioned service accounts are the main entry points researchers are seeing.</p>
-      <a class="source" href="https://thehackernews.com/2026/11/google-warns-llmjacking-attacks-are.html">The Hacker News</a>
-    </div>
+    <article class="story">
+      <h3>CISA flags actively exploited flaws in Cisco and Palo Alto gear</h3>
+      <p>CISA added a critical path-traversal bug in Cisco's Secure Email Gateway (CVE-2026-76519) and a high-severity remote-code-execution flaw in the PAN-OS management interface (CVE-2026-0322) to its Known Exploited Vulnerabilities catalog, confirming both are being actively exploited.</p>
+      <a class="source" href="https://www.helpnetsecurity.com/2026/10/15/cve-2026-0322-cve-2026-76519-cve-2026-105133-cve-2026-105134-exploted/">Help Net Security</a>
+    </article>
   </section>
 
   <section class="section ai">
     <div class="section-head">
-      <h2>AI</h2>
-      <span class="section-tag">4 stories</span>
+      <span class="section-icon">✦</span>
+      <h2 class="section-title">Artificial Intelligence</h2>
     </div>
 
-    <div class="story">
-      <h3>OpenAI launches GPT-6 Cyber after it finds 81 Firefox and 948 Linux flaws</h3>
-      <p>OpenAI released GPT-6 Cyber, a cybersecurity-focused model it says has already been used to uncover 81 previously unknown Firefox vulnerabilities and 948 Linux privilege-escalation exploits. Access is currently limited to vetted customers in OpenAI's Daybreak Red program, with identity verification and organizational security checks required.</p>
-      <a class="source" href="https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html">The Hacker News</a>
-    </div>
+    <article class="story">
+      <h3>OpenAI to acquire Pierre, the company behind Code Storage</h3>
+      <p>OpenAI announced it will acquire Pierre Computer Company, maker of Code Storage, aiming to rework Git-style version control workflows for teams that rely heavily on coding agents.</p>
+      <a class="source" href="https://openai.com/index/openai-to-acquire-pierre/">OpenAI</a>
+    </article>
 
-    <div class="story">
-      <h3>ChatGPT adds native GIF creation in Images 2.6 update</h3>
-      <p>OpenAI shipped ChatGPT Images 2.6 to all ChatGPT and Codex users across web, desktop and mobile, adding native animated-GIF generation and reusable reference images. The company says users are now creating more than 4 billion images a week across ChatGPT and the API, up from 3 billion in September.</p>
-      <a class="source" href="https://aiweekly.co/alerts/openai-ships-chatgpt-images-26-with-gifs-and-faster-api-models">AI Weekly</a>
-    </div>
+    <article class="story">
+      <h3>OpenAI introduces GPT-6 Cyber, an aligned cybersecurity-agent model</h3>
+      <p>OpenAI's newest cyber-focused model is built to find and validate exploitable vulnerabilities within a researcher-defined scope and help develop fixes. The company says it has already helped surface vulnerabilities in widely used software including Linux and Firefox; initial access is limited to approved customers.</p>
+      <a class="source" href="https://openai.com/index/introducing-gpt-6-cyber/">OpenAI</a>
+    </article>
 
-    <div class="story">
-      <h3>Perplexity launches "Teammates," persistent AI agents for Max subscribers</h3>
-      <p>Perplexity introduced Teammates: named AI agents built on Perplexity Computer that inherit a user's existing projects, memory and permissions to keep working on recurring tasks without being re-prompted each time. The research preview is live on the web for Max subscribers, with iOS support coming soon.</p>
-      <a class="source" href="https://www.perplexity.ai/hub/blog/teammates-are-agents-for-complex-ongoing-work">Perplexity</a>
-    </div>
+    <article class="story">
+      <h3>OpenAI launches Images 2.6 with GIF creation and faster rendering</h3>
+      <p>ChatGPT, Codex, and the API all gained the Images 2.6 model, which OpenAI says generates images up to 50% faster than its predecessor and can turn prompts or photos into editable, animated GIFs. Two new API variants, Flare and Sunburst, add SVG export and finer editing control.</p>
+      <a class="source" href="https://openai.com/index/introducing-images-2-6/">OpenAI</a>
+    </article>
 
-    <div class="story">
-      <h3>Meta brings real-time voice and expressive avatars to its Muse AI agent</h3>
-      <p>Meta began rolling out real-time voice conversations and animated, expressive avatars in its Muse app on mobile, web and Mac, letting users interrupt the agent mid-response while it keeps working on delegated tasks in the background. The rollout is currently limited to the US.</p>
-      <a class="source" href="https://thenextweb.com/news/meta-muse-ai-voice-chat-animated-avatars">The Next Web</a>
-    </div>
+    <article class="story">
+      <h3>Anthropic adds a security center and inference hooks to Claude Enterprise</h3>
+      <p>Claude Enterprise customers gained a new security center, inference hooks, and centralized admin controls, several still in beta, giving organizations tighter visibility and control over how Claude is used internally.</p>
+      <a class="source" href="https://support.claude.com/en/articles/12138966-release-notes">Anthropic Release Notes</a>
+    </article>
+
+    <article class="story">
+      <h3>Anthropic pilots "Personal Finance" inside Claude</h3>
+      <p>In a new US-only beta for Pro, Max, and Ultra subscribers, users can link bank, credit card, loan, and investment accounts and ask Claude directly about balances and spending.</p>
+      <a class="source" href="https://support.claude.com/en/articles/12138966-release-notes">Anthropic Release Notes</a>
+    </article>
   </section>
 
   <footer>
-    <p>Compiled automatically each morning from public reporting.</p>
-    <p>Links go to the original source for full details.</p>
+    Compiled automatically each morning · <a href="https://lukefoskey9-ui.github.io/morning-briefing/">lukefoskey9-ui.github.io/morning-briefing</a>
   </footer>
+
 </div>
 </body>
 </html>
