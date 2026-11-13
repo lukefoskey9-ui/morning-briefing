@@ -6,242 +6,262 @@
 <title>Morning Briefing</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f7f5f1;
+    --bg: #faf8f4;
     --bg-card: #ffffff;
     --text: #1c1a17;
-    --text-dim: #5a5650;
-    --rule: #ddd8cf;
+    --text-dim: #5b564d;
     --accent-cyber: #9a3324;
-    --accent-ai: #1f5f4a;
-    --chip-cyber-bg: #f6e6e1;
-    --chip-ai-bg: #e2f0e9;
-    --link: #1c1a17;
-    --shadow: rgba(30, 25, 15, 0.06);
+    --accent-ai: #1f5c4a;
+    --rule: #e3ddd1;
+    --chip-bg: #f1ece1;
+    --link: #7a2a1d;
+    --link-ai: #154335;
+    --shadow: rgba(28, 26, 23, 0.06);
   }
+
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #15140f;
-      --bg-card: #1d1b16;
-      --text: #ece8de;
-      --text-dim: #a6a096;
-      --rule: #37342c;
-      --accent-cyber: #e1796a;
-      --accent-ai: #6bbf9e;
-      --chip-cyber-bg: #3a2320;
-      --chip-ai-bg: #1f3129;
-      --link: #ece8de;
-      --shadow: rgba(0, 0, 0, 0.35);
+      --bg: #141210;
+      --bg-card: #1c1a17;
+      --text: #ece7de;
+      --text-dim: #a89f91;
+      --accent-cyber: #e2795f;
+      --accent-ai: #5fcba6;
+      --rule: #322d26;
+      --chip-bg: #262220;
+      --link: #f0a085;
+      --link-ai: #8fe3c4;
+      --shadow: rgba(0, 0, 0, 0.3);
     }
   }
+
   * { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; }
-  body {
+
+  html, body {
     margin: 0;
+    padding: 0;
     background: var(--bg);
     color: var(--text);
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif;
-    line-height: 1.55;
-    -webkit-font-smoothing: antialiased;
   }
+
+  body {
+    font-family: 'Inter', -apple-system, system-ui, sans-serif;
+    line-height: 1.55;
+    -webkit-text-size-adjust: 100%;
+  }
+
   .wrap {
     max-width: 680px;
     margin: 0 auto;
-    padding: 32px 20px 64px;
+    padding: 2.25rem 1.25rem 4rem;
   }
-  header.masthead {
+
+  header {
+    margin-bottom: 2.25rem;
     text-align: center;
-    padding-bottom: 22px;
-    border-bottom: 2px solid var(--text);
-    margin-bottom: 28px;
   }
-  .kicker {
-    font-size: 12px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--text-dim);
-    margin: 0 0 8px;
-    font-weight: 600;
-  }
-  h1.title {
+
+  .masthead {
     font-family: 'Source Serif 4', Georgia, serif;
     font-weight: 700;
-    font-size: clamp(32px, 8vw, 44px);
-    margin: 0 0 10px;
+    font-size: 2.1rem;
     letter-spacing: -0.01em;
+    margin: 0 0 0.5rem;
   }
+
   .date-line {
-    font-size: 15px;
+    font-size: 0.95rem;
     color: var(--text-dim);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
     font-weight: 500;
   }
+
+  .rule {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 1.5rem 0 0;
+  }
+
   .intro {
-    font-family: 'Source Serif 4', Georgia, serif;
-    font-style: italic;
-    font-size: 17px;
     color: var(--text-dim);
+    font-size: 0.95rem;
     text-align: center;
-    margin: 0 0 40px;
-    padding: 0 8px;
+    margin: 0.75rem 0 0;
   }
+
   section.section {
-    margin-bottom: 44px;
+    margin-top: 2.75rem;
   }
+
   .section-head {
     display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 18px;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin-bottom: 1.25rem;
   }
+
   .section-icon {
-    width: 34px;
-    height: 34px;
-    border-radius: 9px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 17px;
-    flex-shrink: 0;
+    font-size: 1.3rem;
+    line-height: 1;
   }
-  .section-icon.cyber { background: var(--chip-cyber-bg); }
-  .section-icon.ai { background: var(--chip-ai-bg); }
+
   h2.section-title {
     font-family: 'Source Serif 4', Georgia, serif;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     margin: 0;
+    letter-spacing: -0.01em;
   }
-  h2.section-title.cyber { color: var(--accent-cyber); }
-  h2.section-title.ai { color: var(--accent-ai); }
+
+  .section--cyber h2.section-title { color: var(--accent-cyber); }
+  .section--ai h2.section-title { color: var(--accent-ai); }
+
   article.story {
     background: var(--bg-card);
     border: 1px solid var(--rule);
-    border-radius: 14px;
-    padding: 18px 20px;
-    margin-bottom: 14px;
+    border-radius: 12px;
+    padding: 1.1rem 1.25rem 1.2rem;
+    margin-bottom: 1rem;
     box-shadow: 0 1px 3px var(--shadow);
   }
+
   article.story:last-child { margin-bottom: 0; }
+
   h3.headline {
-    font-size: 16.5px;
-    font-weight: 700;
-    margin: 0 0 8px;
-    line-height: 1.35;
-  }
-  p.summary {
-    margin: 0 0 12px;
-    font-size: 15px;
-    color: var(--text);
-  }
-  a.source-link {
-    display: inline-block;
-    font-size: 13px;
+    font-size: 1.05rem;
     font-weight: 600;
-    color: var(--link);
-    text-decoration: none;
-    border-bottom: 1.5px solid currentColor;
-    padding: 4px 0 3px;
-    opacity: 0.8;
+    margin: 0 0 0.45rem;
+    letter-spacing: -0.005em;
   }
-  a.source-link:active { opacity: 0.55; }
-  @media (hover: hover) {
-    a.source-link:hover { opacity: 1; }
-  }
-  a.source-link::after { content: " →"; }
-  footer {
-    text-align: center;
-    padding-top: 24px;
-    border-top: 1px solid var(--rule);
+
+  p.summary {
+    margin: 0 0 0.65rem;
     color: var(--text-dim);
-    font-size: 12.5px;
+    font-size: 0.96rem;
   }
-  footer p { margin: 4px 0; }
+
+  a.source {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.4rem 0.1rem;
+    border-bottom: 1px solid currentColor;
+  }
+
+  .section--cyber a.source { color: var(--link); }
+  .section--ai a.source { color: var(--link-ai); }
+
+  footer {
+    margin-top: 3rem;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
+
+  footer .tag {
+    display: inline-block;
+    background: var(--chip-bg);
+    border-radius: 999px;
+    padding: 0.3rem 0.8rem;
+    margin-top: 0.75rem;
+    font-size: 0.78rem;
+  }
+
+  @media (max-width: 480px) {
+    .masthead { font-size: 1.75rem; }
+    h2.section-title { font-size: 1.3rem; }
+    .wrap { padding: 1.75rem 1rem 3rem; }
+    article.story { padding: 1rem 1rem 1.05rem; }
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <header class="masthead">
-    <p class="kicker">Morning Briefing</p>
-    <h1 class="title">Today's Digest</h1>
-    <p class="date-line">Thursday, November 12, 2026</p>
+  <header>
+    <div class="masthead">Morning Briefing</div>
+    <div class="date-line">Friday, November 13, 2026</div>
+    <hr class="rule">
+    <p class="intro">Cybersecurity and AI, in under three minutes.</p>
   </header>
 
-  <p class="intro">Everything worth knowing in cybersecurity and AI before you start your day &mdash; roughly a three-minute read.</p>
-
-  <section class="section">
+  <section class="section section--cyber">
     <div class="section-head">
-      <span class="section-icon cyber">&#128272;</span>
-      <h2 class="section-title cyber">Cybersecurity</h2>
+      <span class="section-icon">🛡️</span>
+      <h2 class="section-title">Cybersecurity</h2>
     </div>
 
     <article class="story">
-      <h3 class="headline">"SSHole" OpenSSH flaw under active exploitation</h3>
-      <p class="summary">Attackers are exploiting CVE-2026-123158, an OpenSSH authentication-bypass bug (CVSS 8.1) affecting servers built on musl libc with PAM disabled &mdash; notably Alpine Linux's default configuration &mdash; to run commands, steal credentials, and plant persistent access. GreyNoise clocked the first in-the-wild exploitation within roughly 40 hours of the patch shipping; a fix is available in OpenSSH 10.6p2.</p>
-      <a class="source-link" href="https://bleepingcomputer.com/news/security/hackers-exploit-sshole-openssh-flaw-to-breach-linux-systems">BleepingComputer</a>
+      <h3 class="headline">CISA adds four actively exploited flaws to its KEV catalog</h3>
+      <p class="summary">On November 9, CISA added vulnerabilities in GPUStack (CVE-2026-102895), SignalWire FreeSWITCH (CVE-2026-116779, CVSS 9.8), OpenSSH on musl-based Linux dubbed "SSHole" (CVE-2026-123158), and IBM Aspera Faspex (CVE-2026-123218, CVSS 9.8) to its Known Exploited Vulnerabilities list, with federal agencies given until November 12 to patch. Attackers exploiting the GPUStack flaw reportedly planted persistent admin keys that survive an upgrade.</p>
+      <a class="source" href="https://thehackernews.com/2026/11/cisa-warns-of-active-exploitation-of.html">The Hacker News →</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Ivanti Connect Secure zero-day chain: second CISA deadline hits tomorrow</h3>
-      <p class="summary">CISA added two more Ivanti Connect Secure flaws &mdash; CVE-2026-111357 (missing authentication) and CVE-2026-118527 (predictable identifiers) &mdash; to its Known Exploited Vulnerabilities catalog after they were chained together in zero-day attacks. Federal agencies had until November 2 to remediate the first; the deadline for the second lands November 13.</p>
-      <a class="source-link" href="https://www.helpnetsecurity.com/2026/11/09/cisa-ivanti-connect-secure-cve-2026-111357-cve-2026-118527/">Help Net Security</a>
+      <h3 class="headline">Debian and Ubuntu patch APT flaw letting MITM attackers run code as root</h3>
+      <p class="summary">Debian, Ubuntu, and the APT maintainers disclosed CVE-2026-109518 on November 4: an attacker able to tamper with HTTP traffic can trick APT into installing an unverified package, which runs with root privileges. The bug, reported by Max Justicz, is triggered by APT's default retry behavior and affects plain-HTTP mirrors; HTTPS sources are not exposed. Fixed in Debian DSA-6607-1 and Ubuntu USN-8996-1.</p>
+      <a class="source" href="https://thehackernews.com/2026/11/debian-and-ubuntu-apt-flaw-lets-mitm.html">The Hacker News →</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">APT package manager flaw lets network attackers run code as root</h3>
-      <p class="summary">Debian, Ubuntu, and the APT project disclosed a flaw where an attacker positioned between a host and its package mirror can slip in an unverified package when APT retries a failed download &mdash; the default behavior since Debian 12 and Ubuntu 22.04. The injected code then executes with root privileges, making it a serious supply-chain risk for Linux fleets.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/11/weekly-recap-sshole-exploited-apt-root.html">The Hacker News</a>
+      <h3 class="headline">Binance confirms roughly $6.3 billion stolen in the largest crypto heist on record</h3>
+      <p class="summary">Binance says a multi-month, multi-stage campaign — not a single compromised device — led to the theft of about $6.3-6.4 billion in crypto, the biggest crypto hack ever recorded. Blockchain analytics firms TRM Labs and Chainalysis attribute the theft with high confidence to North Korea's TraderTraitor group, though Binance and governments haven't officially named a culprit. Roughly $2.85 billion has since been frozen or intercepted.</p>
+      <a class="source" href="https://bleepingcomputer.com/news/security/binance-probes-potential-58-billion-crypto-theft-hack">BleepingComputer →</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Zyxel GS1900 switches hit by zero-day that survived an earlier patch</h3>
-      <p class="summary">Researchers say an attacker exploited roughly 1,000 Zyxel GS1900 switches across 48 countries using CVE-2026-107441, a separate, unpatched flaw that kept working even on devices already updated against a related June bug. Zyxel shipped Patch 3 firmware on October 22 and published its advisory November 3; admins should apply the new patch even if the earlier one was already installed.</p>
-      <a class="source-link" href="https://bleepingcomputer.com/news/security/zyxel-fixes-zero-day-exploited-to-hack-nearly-1-000-network-switches">BleepingComputer</a>
+      <h3 class="headline">WordPress plugin flaws exploited to plant hidden admin backdoors</h3>
+      <p class="summary">Attackers are chaining stored XSS bugs in two unrelated plugins — Ninja Forms (CVE-2026-94504, 500,000+ installs) and WPC Product Bundles for WooCommerce (CVE-2026-93836, 30,000+ installs) — to install a fake plugin and create rogue administrator accounts on compromised sites. Patching to the fixed versions closes the entry point but does not remove an existing infection.</p>
+      <a class="source" href="https://bleepingcomputer.com/news/security/ninja-forms-plugin-flaw-exploited-to-hack-wordpress-sites">BleepingComputer →</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">CISA adds four more flaws to its Known Exploited Vulnerabilities catalog</h3>
-      <p class="summary">This week's additions span AI infrastructure and enterprise software: GPUStack (improper authentication), SignalWire FreeSWITCH (code injection), OpenBSD OpenSSH, and IBM Aspera Faspex (incorrect authorization). All four are confirmed as actively exploited, and federal agencies face standard BOD 22-01 remediation deadlines.</p>
-      <a class="source-link" href="https://www.cisa.gov/news-events/alerts">CISA Alerts</a>
+      <h3 class="headline">November Patch Tuesday brings a record update and an Outlook zero-day</h3>
+      <p class="summary">Microsoft's November 2026 Patch Tuesday, released November 10, fixes an actively exploited zero-day in Outlook (CVE-2026-124194) — a spoofing bug that could let an attacker impersonate a user and that requires the Microsoft 365 Apps/Office update, not just the Windows cumulative patch. Reported totals for the release run into the thousands of CVEs once republished third-party and Chromium bugs are counted.</p>
+      <a class="source" href="https://blog.qualys.com/vulnerabilities-threat-research/2026/11/10/microsoft-patch-tuesday-november-2026-security-update-review">Qualys →</a>
     </article>
   </section>
 
-  <section class="section">
+  <section class="section section--ai">
     <div class="section-head">
-      <span class="section-icon ai">&#10024;</span>
-      <h2 class="section-title ai">Artificial Intelligence</h2>
+      <span class="section-icon">🤖</span>
+      <h2 class="section-title">AI</h2>
     </div>
 
     <article class="story">
-      <h3 class="headline">Anthropic ships Claude Fable 5.2 and a vetted-access Mythos 5.2</h3>
-      <p class="summary">Anthropic released Fable 5.2, generally available across all platforms with built-in cybersecurity and biology safeguards, alongside Mythos 5.2, restricted to organizations vetted under Anthropic's Life Sciences and Cyber Verification Programs. Both generate output up to 30% faster than their 5.1 predecessors; Fable 5.2 scored 49.1% on the FrontierCode 2.0 agentic coding benchmark versus 45.5% for Opus 5.5.</p>
-      <a class="source-link" href="https://sdtimes.com/ai/anthropic-introduces-claude-fable-5-2-mythos-5-2/">SD Times</a>
+      <h3 class="headline">OpenAI launches GPT-6 Cyber, its first "Critical"-rated cybersecurity model</h3>
+      <p class="summary">OpenAI released GPT-6 Cyber on November 5, a cybersecurity-specialized variant of GPT-6 Astra built for authorized vulnerability discovery and exploit development. OpenAI rates it "Critical" under its Preparedness Framework — up from "High" for its predecessor — and is restricting access to approved enterprise customers. The model's benchmark score on ExploitGym jumped to 48.5% from 32.1%, and OpenAI says it's already helped surface vulnerabilities in widely used software including Linux and Firefox.</p>
+      <a class="source" href="https://www.esecurityplanet.com/news/news-openai-gpt-6-cyber-security-benchmarks/">eSecurity Planet →</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">OpenAI cuts off Cursor's model access today, after SpaceX's buyout</h3>
-      <p class="summary">OpenAI is winding down the contract that supplies its models to Cursor, with a shutoff date of November 12 &mdash; today &mdash; following SpaceX's roughly $60 billion all-stock acquisition of Cursor's parent company, Anysphere. OpenAI cited concerns over SpaceX's ability to comply with its terms of service post-acquisition; newer OpenAI models were already withheld from the coding tool.</p>
-      <a class="source-link" href="https://openai.com/blog/our-decision-on-cursor-following-its-acquisition-by-spacex">OpenAI</a>
+      <h3 class="headline">Moonshot AI releases Kimi K3.1 Pro open weights</h3>
+      <p class="summary">Chinese AI lab Moonshot published the full open weights for Kimi K3.1 Pro on November 4, a mixture-of-experts model in the multi-trillion-parameter class with a 1-million-token context window. Moonshot says it stripped cyber-related data from training while keeping general coding ability, and claims performance nearing Claude Opus 5.5 on coding tests — a vendor claim not yet independently confirmed post-release.</p>
+      <a class="source" href="https://technode.com/2026/11/05/moonshot-ai-releases-kimi-k3-1-pro-model-weights/">TechNode →</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Google DeepMind adds agentic chemistry tools to Antigravity</h3>
-      <p class="summary">DeepMind's new Cheminformatics Skills let an AI agent inside its Antigravity platform search the literature, run molecular-pair analysis, train potency models, and propose rigidified macrocycle drug candidates with synthesis routes &mdash; compressing a process that typically takes days into about an hour. Google is also giving 10,000 selected scientists six months of free access to its top Antigravity tier.</p>
-      <a class="source-link" href="https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/">Google DeepMind</a>
+      <h3 class="headline">METR: Anthropic's AI-assisted R&D is running at roughly twice its prior pace</h3>
+      <p class="summary">Independent evaluator METR published an assessment on November 5, based on high-access evaluation work between August and October, estimating Anthropic's capability progress has accelerated to roughly twice the rate seen from March 2024 to October 2025, with wide uncertainty (1.3x-3x). METR says a majority of today's acceleration is likely attributable to Anthropic's own heavy internal use of AI for R&D, though the report covers only one lab and Anthropic redacted much of the underlying evidence from the public version.</p>
+      <a class="source" href="https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment">METR →</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">AI startups raised roughly $9.8B over the past two weeks</h3>
-      <p class="summary">A tally of early-November funding rounds puts AI startup investment at about $9.8 billion across 25 deals, led by a $800 million round for AI-security firm Cyera. The pace underscores how much capital is still chasing security, infrastructure, and model-layer startups even as the frontier labs' own valuations climb ahead of expected IPO activity.</p>
-      <a class="source-link" href="https://aifunding.me/insights/weekly-roundup-nov-2-6-2026">AI Funding Weekly</a>
+      <h3 class="headline">Meta pauses controversial business terms after web-scraping backlash</h3>
+      <p class="summary">Meta indefinitely paused a business-terms update — originally set to take effect November 20 — that would have let it scrape websites tied to business accounts for ad and product purposes. The reversal, posted November 5, followed preliminary court injunctions in Norway and Brazil, a UK competition-authority probe, and pressure from US senators Adam Schiff and Marsha Blackburn. Meta hasn't said whether or when a revised version might return.</p>
+      <a class="source" href="https://www.mediapost.com/publications/article/419294/meta-pauses-data-scraping-terms-following-publishe.html">MediaPost →</a>
     </article>
   </section>
 
   <footer>
-    <p>Compiled automatically from public reporting. Verify critical items against primary sources before acting.</p>
-    <p>Morning Briefing &middot; published daily</p>
+    Compiled automatically from public reporting. Verify critical details against primary sources before acting.
+    <div class="tag">Morning Briefing · updates daily</div>
   </footer>
 
 </div>
