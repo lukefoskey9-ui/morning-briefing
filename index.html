@@ -186,7 +186,7 @@
 
   <header>
     <div class="masthead">Morning Briefing</div>
-    <div class="date-line">Friday, November 13, 2026</div>
+    <div class="date-line">Saturday, November 14, 2026</div>
     <hr class="rule">
     <p class="intro">Cybersecurity and AI, in under three minutes.</p>
   </header>
@@ -198,33 +198,33 @@
     </div>
 
     <article class="story">
-      <h3 class="headline">CISA adds four actively exploited flaws to its KEV catalog</h3>
-      <p class="summary">On November 9, CISA added vulnerabilities in GPUStack (CVE-2026-102895), SignalWire FreeSWITCH (CVE-2026-116779, CVSS 9.8), OpenSSH on musl-based Linux dubbed "SSHole" (CVE-2026-123158), and IBM Aspera Faspex (CVE-2026-123218, CVSS 9.8) to its Known Exploited Vulnerabilities list, with federal agencies given until November 12 to patch. Attackers exploiting the GPUStack flaw reportedly planted persistent admin keys that survive an upgrade.</p>
-      <a class="source" href="https://thehackernews.com/2026/11/cisa-warns-of-active-exploitation-of.html">The Hacker News →</a>
+      <h3 class="headline">CISA flags Cisco BroadWorks flaw as actively exploited</h3>
+      <p class="summary">CISA added CVE-2026-20320 — an unauthenticated XXE flaw (CVSS 7.5) in the BroadWorks OCI XML parser — to its Known Exploited Vulnerabilities catalog on November 10, giving federal agencies until November 24 to patch. The bug, which Cisco disclosed in August, can let a remote attacker read sensitive files; Cisco's fix is release RI.2026.07 and there is no workaround.</p>
+      <a class="source" href="https://www.bleepingcomputer.com/news/security/cisa-flags-cisco-broadworks-flaw-as-actively-exploited-in-attacks/">BleepingComputer →</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Debian and Ubuntu patch APT flaw letting MITM attackers run code as root</h3>
-      <p class="summary">Debian, Ubuntu, and the APT maintainers disclosed CVE-2026-109518 on November 4: an attacker able to tamper with HTTP traffic can trick APT into installing an unverified package, which runs with root privileges. The bug, reported by Max Justicz, is triggered by APT's default retry behavior and affects plain-HTTP mirrors; HTTPS sources are not exposed. Fixed in Debian DSA-6607-1 and Ubuntu USN-8996-1.</p>
-      <a class="source" href="https://thehackernews.com/2026/11/debian-and-ubuntu-apt-flaw-lets-mitm.html">The Hacker News →</a>
+      <h3 class="headline">"Node2Shell" Brotli flaw under active exploitation</h3>
+      <p class="summary">CISA confirmed in-the-wild exploitation of CVE-2026-111497, an out-of-bounds write in the Brotli decompression library bundled with Node.js, Microsoft's .NET, and VMware products — security firms logged exploitation attempts in late October. Rated critical (CVSS 9.2), the flaw allows memory exposure and potential remote code execution; there's no workaround, so updating Node.js (22.23.4, 24.22.1 or 26.12.1) or the relevant .NET/VMware patch is the only fix.</p>
+      <a class="source" href="https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-now-exploiting-critical-node2shell-flaw/">BleepingComputer →</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Binance confirms roughly $6.3 billion stolen in the largest crypto heist on record</h3>
-      <p class="summary">Binance says a multi-month, multi-stage campaign — not a single compromised device — led to the theft of about $6.3-6.4 billion in crypto, the biggest crypto hack ever recorded. Blockchain analytics firms TRM Labs and Chainalysis attribute the theft with high confidence to North Korea's TraderTraitor group, though Binance and governments haven't officially named a culprit. Roughly $2.85 billion has since been frozen or intercepted.</p>
-      <a class="source" href="https://bleepingcomputer.com/news/security/binance-probes-potential-58-billion-crypto-theft-hack">BleepingComputer →</a>
+      <h3 class="headline">Chained AhsayCBS bugs used to plant a sandbox-evading Python backdoor</h3>
+      <p class="summary">Researchers at Huntress and Bitdefender detail a campaign chaining two AhsayCBS backup-platform flaws — an auth bypass (CVE-2026-105133) and a command-injection bug (CVE-2026-105134) — to deploy webshells, a cryptominer, and a Python implant that refuses to run outside its intended host to frustrate analysis. Both CVEs are now in CISA's KEV catalog; Ahsay's fix is v10.3.4.45 (v10) or v9.15.2.70 (v7–v9), and affected organizations should also hunt for leftover webshells.</p>
+      <a class="source" href="https://thehackernews.com/2026/11/attackers-exploit-ahsaycbs-flaws-to.html">The Hacker News →</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">WordPress plugin flaws exploited to plant hidden admin backdoors</h3>
-      <p class="summary">Attackers are chaining stored XSS bugs in two unrelated plugins — Ninja Forms (CVE-2026-94504, 500,000+ installs) and WPC Product Bundles for WooCommerce (CVE-2026-93836, 30,000+ installs) — to install a fake plugin and create rogue administrator accounts on compromised sites. Patching to the fixed versions closes the entry point but does not remove an existing infection.</p>
-      <a class="source" href="https://bleepingcomputer.com/news/security/ninja-forms-plugin-flaw-exploited-to-hack-wordpress-sites">BleepingComputer →</a>
+      <h3 class="headline">Google dismantles 1.3-million-device Android TV botnet, bans the manufacturer</h3>
+      <p class="summary">Google and partners took down XCPE, a botnet built from malware baked directly into device firmware by Shenzhen-based manufacturer Videostrong — not a vulnerability or user error. Google revoked Videostrong's certified Android TV license, banned its future subsidiaries, and moved legally against the botnet's control infrastructure, though the dormant backdoor code remains on affected devices, including some TV boxes, telehealth units, and karaoke machines.</p>
+      <a class="source" href="https://www.bleepingcomputer.com/news/security/google-disrupts-million-device-xcpe-android-malware-botnet-bans-tv-box-maker/">BleepingComputer →</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">November Patch Tuesday brings a record update and an Outlook zero-day</h3>
-      <p class="summary">Microsoft's November 2026 Patch Tuesday, released November 10, fixes an actively exploited zero-day in Outlook (CVE-2026-124194) — a spoofing bug that could let an attacker impersonate a user and that requires the Microsoft 365 Apps/Office update, not just the Windows cumulative patch. Reported totals for the release run into the thousands of CVEs once republished third-party and Chromium bugs are counted.</p>
-      <a class="source" href="https://blog.qualys.com/vulnerabilities-threat-research/2026/11/10/microsoft-patch-tuesday-november-2026-security-update-review">Qualys →</a>
+      <h3 class="headline">APT29-linked hackers hijacked an analytics script to hit phones</h3>
+      <p class="summary">Sekoia reports that hackers tied to Russia's APT29 compromised a Ukrainian web-analytics script for about a week, fingerprinting visitors' phones and serving one of three patched n-day exploit chains — two for iOS, one for Android Chrome — only to devices matching a vulnerable profile. The near-zero-click campaign aimed to steal cookies, messages, and Wi-Fi passwords from targeted visitors.</p>
+      <a class="source" href="https://thehackernews.com/2026/11/apt29-linked-hackers-hijack-web.html">The Hacker News →</a>
     </article>
   </section>
 
@@ -235,27 +235,33 @@
     </div>
 
     <article class="story">
-      <h3 class="headline">OpenAI launches GPT-6 Cyber, its first "Critical"-rated cybersecurity model</h3>
-      <p class="summary">OpenAI released GPT-6 Cyber on November 5, a cybersecurity-specialized variant of GPT-6 Astra built for authorized vulnerability discovery and exploit development. OpenAI rates it "Critical" under its Preparedness Framework — up from "High" for its predecessor — and is restricting access to approved enterprise customers. The model's benchmark score on ExploitGym jumped to 48.5% from 32.1%, and OpenAI says it's already helped surface vulnerabilities in widely used software including Linux and Firefox.</p>
-      <a class="source" href="https://www.esecurityplanet.com/news/news-openai-gpt-6-cyber-security-benchmarks/">eSecurity Planet →</a>
+      <h3 class="headline">Anthropic launches Nasdaq IPO roadshow</h3>
+      <p class="summary">Anthropic began marketing its IPO on November 10, offering 825 million Class A shares at an expected $70–78 each under the ticker "ANT," in a push toward a listing before Thanksgiving. Reported fundraising targets run as high as $64 billion; final pricing and timing haven't been confirmed.</p>
+      <a class="source" href="https://smartscope.blog/en/blog/anthropic-ipo-roadshow-launched-announced-november-10-offering-2026/">SmartScope →</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Moonshot AI releases Kimi K3.1 Pro open weights</h3>
-      <p class="summary">Chinese AI lab Moonshot published the full open weights for Kimi K3.1 Pro on November 4, a mixture-of-experts model in the multi-trillion-parameter class with a 1-million-token context window. Moonshot says it stripped cyber-related data from training while keeping general coding ability, and claims performance nearing Claude Opus 5.5 on coding tests — a vendor claim not yet independently confirmed post-release.</p>
-      <a class="source" href="https://technode.com/2026/11/05/moonshot-ai-releases-kimi-k3-1-pro-model-weights/">TechNode →</a>
+      <h3 class="headline">OpenAI's quarterly revenue tops $10B for the first time — losses grow too</h3>
+      <p class="summary">Investor materials reviewed by reporters show OpenAI's Q3 2026 revenue rose roughly 50% quarter-over-quarter to about $10 billion, while its operating loss widened from $10.1B to $10.9B. The same reporting puts Anthropic ahead on quarterly revenue, at roughly $16.96 billion with a far smaller $567 million operating loss.</p>
+      <a class="source" href="https://gulfnews.com/business/openai-revenue-hits-10b-but-operating-loss-widens-1.500743326">Gulf News →</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">METR: Anthropic's AI-assisted R&D is running at roughly twice its prior pace</h3>
-      <p class="summary">Independent evaluator METR published an assessment on November 5, based on high-access evaluation work between August and October, estimating Anthropic's capability progress has accelerated to roughly twice the rate seen from March 2024 to October 2025, with wide uncertainty (1.3x-3x). METR says a majority of today's acceleration is likely attributable to Anthropic's own heavy internal use of AI for R&D, though the report covers only one lab and Anthropic redacted much of the underlying evidence from the public version.</p>
-      <a class="source" href="https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment">METR →</a>
+      <h3 class="headline">Nvidia's GR00T 2 teaches robots skills mostly by watching humans</h3>
+      <p class="summary">Unveiled November 9 at the Conference on Robot Learning, Nvidia's GR00T 2 trained on roughly 400,000 hours of first-person human video plus smaller sets of gripper and teleoperation data. In simulation, success on 50 tasks never demonstrated on the test robot rose from 40% to 95% after just five examples; Nvidia is releasing a 100,000-hour slice of the human-video dataset openly, and says Foxconn and Siemens are already testing the model.</p>
+      <a class="source" href="https://www.techrepublic.com/article/news-nvidia-gr00t-2-robot-training-human-demonstrations/">TechRepublic →</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Meta pauses controversial business terms after web-scraping backlash</h3>
-      <p class="summary">Meta indefinitely paused a business-terms update — originally set to take effect November 20 — that would have let it scrape websites tied to business accounts for ad and product purposes. The reversal, posted November 5, followed preliminary court injunctions in Norway and Brazil, a UK competition-authority probe, and pressure from US senators Adam Schiff and Marsha Blackburn. Meta hasn't said whether or when a revised version might return.</p>
-      <a class="source" href="https://www.mediapost.com/publications/article/419294/meta-pauses-data-scraping-terms-following-publishe.html">MediaPost →</a>
+      <h3 class="headline">Google DeepMind uses AI agents to formally verify Signal's encryption code</h3>
+      <p class="summary">DeepMind's AlphaProof Code framework had AI agents write machine-checked mathematical proofs — verified by the Lean proof assistant — of key security properties in the Signal protocol's actual implementation, which DeepMind calls the first formal verification of a widely deployed protocol's code by any method. The four-week proof-of-concept found no new vulnerabilities but didn't cover the entire Signal app, and DeepMind is releasing the verification artifacts for others to build on.</p>
+      <a class="source" href="https://deepmind.google/blog/introducing-alphaproof-code/">Google DeepMind →</a>
+    </article>
+
+    <article class="story">
+      <h3 class="headline">ChatGPT adds animated GIFs and reusable reference images</h3>
+      <p class="summary">OpenAI's Images 2.6 update, rolling out since November 4, lets users turn a prompt or photo into an editable, looping GIF and save reference images — a face, pet, or character — to reuse across future chats without re-uploading. Two new API models, GPT-Image-2.6 Flare and Sunburst, bring the same GIF output to developers.</p>
+      <a class="source" href="https://www.techrepublic.com/article/news-chatgpt-images-2-6-gif-creation/">TechRepublic →</a>
     </article>
   </section>
 
