@@ -186,7 +186,7 @@
 
   <header>
     <div class="masthead">Morning Briefing</div>
-    <div class="date-line">Saturday, November 14, 2026</div>
+    <div class="date-line">Sunday, November 15, 2026</div>
     <hr class="rule">
     <p class="intro">Cybersecurity and AI, in under three minutes.</p>
   </header>
@@ -198,33 +198,27 @@
     </div>
 
     <article class="story">
-      <h3 class="headline">CISA flags Cisco BroadWorks flaw as actively exploited</h3>
-      <p class="summary">CISA added CVE-2026-20320 — an unauthenticated XXE flaw (CVSS 7.5) in the BroadWorks OCI XML parser — to its Known Exploited Vulnerabilities catalog on November 10, giving federal agencies until November 24 to patch. The bug, which Cisco disclosed in August, can let a remote attacker read sensitive files; Cisco's fix is release RI.2026.07 and there is no workaround.</p>
-      <a class="source" href="https://www.bleepingcomputer.com/news/security/cisa-flags-cisco-broadworks-flaw-as-actively-exploited-in-attacks/">BleepingComputer →</a>
+      <h3 class="headline">CISA adds four actively exploited flaws to its watch list — OpenSSH "SSHole" among them</h3>
+      <p class="summary">On November 9, CISA added four exploited vulnerabilities to its Known Exploited Vulnerabilities catalog: an OpenSSH authentication bypass on musl-based Linux without PAM (CVE-2026-123158, dubbed "SSHole," reportedly abused within hours of disclosure), a 9.8-severity code-injection flaw in FreeSWITCH, a bug in the GPUStack AI-infrastructure platform, and an incorrect-authorization flaw in IBM Aspera Faspex. Federal civilian agencies had until November 12 to patch.</p>
+      <a class="source" href="https://www.esecurityplanet.com/vulnerabilities/news-cisa-kev-gpustack-freeswitch-openssh-ibm-november-2026/">eSecurity Planet →</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">"Node2Shell" Brotli flaw under active exploitation</h3>
-      <p class="summary">CISA confirmed in-the-wild exploitation of CVE-2026-111497, an out-of-bounds write in the Brotli decompression library bundled with Node.js, Microsoft's .NET, and VMware products — security firms logged exploitation attempts in late October. Rated critical (CVSS 9.2), the flaw allows memory exposure and potential remote code execution; there's no workaround, so updating Node.js (22.23.4, 24.22.1 or 26.12.1) or the relevant .NET/VMware patch is the only fix.</p>
-      <a class="source" href="https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-now-exploiting-critical-node2shell-flaw/">BleepingComputer →</a>
+      <h3 class="headline">SonicWall SSLVPN flaw lets attackers defeat MFA — now on CISA's exploited list</h3>
+      <p class="summary">CISA added CVE-2026-19868 to its KEV catalog on November 6: a SonicOS SSLVPN authentication-enforcement flaw that can bypass SAML-based login controls, including multi-factor authentication, on Gen7 and Gen8 SonicWall firewalls. Federal agencies have until November 20 to apply mitigations; admins running affected builds should check SonicWall's advisory now.</p>
+      <a class="source" href="https://www.esecurityplanet.com/vulnerabilities/news-sonicwall-sslvpn-authentication-bypass-cve-2026-19868/">eSecurity Planet →</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Chained AhsayCBS bugs used to plant a sandbox-evading Python backdoor</h3>
-      <p class="summary">Researchers at Huntress and Bitdefender detail a campaign chaining two AhsayCBS backup-platform flaws — an auth bypass (CVE-2026-105133) and a command-injection bug (CVE-2026-105134) — to deploy webshells, a cryptominer, and a Python implant that refuses to run outside its intended host to frustrate analysis. Both CVEs are now in CISA's KEV catalog; Ahsay's fix is v10.3.4.45 (v10) or v9.15.2.70 (v7–v9), and affected organizations should also hunt for leftover webshells.</p>
-      <a class="source" href="https://thehackernews.com/2026/11/attackers-exploit-ahsaycbs-flaws-to.html">The Hacker News →</a>
+      <h3 class="headline">Debian and Ubuntu patch a bug that could turn a retried download into root access</h3>
+      <p class="summary">Debian, Ubuntu and the APT project shipped fixes for CVE-2026-109518, a flaw that can let an attacker reach root-level code execution when APT retries a failed package download under specific conditions. Exploitation isn't trivial, but patched versions are already out, so a prompt system update closes the hole.</p>
+      <a class="source" href="https://thehackernews.com/2026/11/weekly-recap-sshole-exploited-apt-root.html">The Hacker News →</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Google dismantles 1.3-million-device Android TV botnet, bans the manufacturer</h3>
-      <p class="summary">Google and partners took down XCPE, a botnet built from malware baked directly into device firmware by Shenzhen-based manufacturer Videostrong — not a vulnerability or user error. Google revoked Videostrong's certified Android TV license, banned its future subsidiaries, and moved legally against the botnet's control infrastructure, though the dormant backdoor code remains on affected devices, including some TV boxes, telehealth units, and karaoke machines.</p>
-      <a class="source" href="https://www.bleepingcomputer.com/news/security/google-disrupts-million-device-xcpe-android-malware-botnet-bans-tv-box-maker/">BleepingComputer →</a>
-    </article>
-
-    <article class="story">
-      <h3 class="headline">APT29-linked hackers hijacked an analytics script to hit phones</h3>
-      <p class="summary">Sekoia reports that hackers tied to Russia's APT29 compromised a Ukrainian web-analytics script for about a week, fingerprinting visitors' phones and serving one of three patched n-day exploit chains — two for iOS, one for Android Chrome — only to devices matching a vulnerable profile. The near-zero-click campaign aimed to steal cookies, messages, and Wi-Fi passwords from targeted visitors.</p>
-      <a class="source" href="https://thehackernews.com/2026/11/apt29-linked-hackers-hijack-web.html">The Hacker News →</a>
+      <h3 class="headline">Hijacked update channel pushes a backdoor to nearly 3,000 servers</h3>
+      <p class="summary">OpsShield says an attacker used stolen credentials — not a software bug — to break into the update-distribution infrastructure for its cPGuard hosting-security product on November 2 and push a tampered update that harvested password hashes, database configs and SSH files. Roughly 2,950 servers running affected versions (5.88.12–5.88.19) pulled the malicious update before it was caught; OpsShield is telling customers to patch and rotate any exposed credentials.</p>
+      <a class="source" href="https://www.networkworld.com/article/4244919/attackers-turned-opsshields-trusted-update-channel-into-a-supply-chain-attack.html">Network World →</a>
     </article>
   </section>
 
@@ -235,33 +229,27 @@
     </div>
 
     <article class="story">
-      <h3 class="headline">Anthropic launches Nasdaq IPO roadshow</h3>
-      <p class="summary">Anthropic began marketing its IPO on November 10, offering 825 million Class A shares at an expected $70–78 each under the ticker "ANT," in a push toward a listing before Thanksgiving. Reported fundraising targets run as high as $64 billion; final pricing and timing haven't been confirmed.</p>
-      <a class="source" href="https://smartscope.blog/en/blog/anthropic-ipo-roadshow-launched-announced-november-10-offering-2026/">SmartScope →</a>
+      <h3 class="headline">Anthropic turns Claude into a fuller workplace suite, with meetings on the way</h3>
+      <p class="summary">On November 10, Anthropic rolled out Claude Sheets and Claude Whiteboards, and upgraded its app connectors — starting with Adobe, Atlassian and HubSpot — so Claude can open and work inside those apps directly rather than just preview them. The company also previewed Claude Meetings, coming in beta for Team and Enterprise plans, which will join video calls (starting with Google Meet) to take notes and spin up follow-up work.</p>
+      <a class="source" href="https://claude.com/blog/more-ways-to-work-with-claude-sheets-whiteboards-and-interactive-connectors">Claude →</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">OpenAI's quarterly revenue tops $10B for the first time — losses grow too</h3>
-      <p class="summary">Investor materials reviewed by reporters show OpenAI's Q3 2026 revenue rose roughly 50% quarter-over-quarter to about $10 billion, while its operating loss widened from $10.1B to $10.9B. The same reporting puts Anthropic ahead on quarterly revenue, at roughly $16.96 billion with a far smaller $567 million operating loss.</p>
-      <a class="source" href="https://gulfnews.com/business/openai-revenue-hits-10b-but-operating-loss-widens-1.500743326">Gulf News →</a>
+      <h3 class="headline">OpenAI gives vetted defenders a model built for offensive security work</h3>
+      <p class="summary">OpenAI began rolling out GPT-6 Cyber on November 5 to an initial group of approved "Daybreak Red" customers doing authorized vulnerability research and exploit development. OpenAI rates the model "critical" risk for exploit development — up from "high" for its predecessor — and says it scored 48.5% on its internal ExploitGym benchmark, well ahead of GPT-5.6 Cyber's 32.1%.</p>
+      <a class="source" href="https://openai.com/index/introducing-gpt-6-cyber/">OpenAI →</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Nvidia's GR00T 2 teaches robots skills mostly by watching humans</h3>
-      <p class="summary">Unveiled November 9 at the Conference on Robot Learning, Nvidia's GR00T 2 trained on roughly 400,000 hours of first-person human video plus smaller sets of gripper and teleoperation data. In simulation, success on 50 tasks never demonstrated on the test robot rose from 40% to 95% after just five examples; Nvidia is releasing a 100,000-hour slice of the human-video dataset openly, and says Foxconn and Siemens are already testing the model.</p>
-      <a class="source" href="https://www.techrepublic.com/article/news-nvidia-gr00t-2-robot-training-human-demonstrations/">TechRepublic →</a>
+      <h3 class="headline">OpenAI's split with Cursor takes effect, cutting a major coding tool off its models</h3>
+      <p class="summary">As of November 12, OpenAI's models are no longer directly available inside Cursor, the AI coding editor SpaceX acquired earlier this year. OpenAI said in August it couldn't be confident SpaceX would keep its technology within OpenAI's terms of service, citing past breaches at X and xAI. Cursor users can still reach OpenAI's models with their own API keys, alongside the Anthropic, Google and xAI models Cursor continues to offer natively.</p>
+      <a class="source" href="https://alternativeto.net/news/2026/8/openai-says-it-will-cut-off-cursor-s-access-to-its-ai-models-starting-november-12-2026/">AlternativeTo →</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Google DeepMind uses AI agents to formally verify Signal's encryption code</h3>
-      <p class="summary">DeepMind's AlphaProof Code framework had AI agents write machine-checked mathematical proofs — verified by the Lean proof assistant — of key security properties in the Signal protocol's actual implementation, which DeepMind calls the first formal verification of a widely deployed protocol's code by any method. The four-week proof-of-concept found no new vulnerabilities but didn't cover the entire Signal app, and DeepMind is releasing the verification artifacts for others to build on.</p>
-      <a class="source" href="https://deepmind.google/blog/introducing-alphaproof-code/">Google DeepMind →</a>
-    </article>
-
-    <article class="story">
-      <h3 class="headline">ChatGPT adds animated GIFs and reusable reference images</h3>
-      <p class="summary">OpenAI's Images 2.6 update, rolling out since November 4, lets users turn a prompt or photo into an editable, looping GIF and save reference images — a face, pet, or character — to reuse across future chats without re-uploading. Two new API models, GPT-Image-2.6 Flare and Sunburst, bring the same GIF output to developers.</p>
-      <a class="source" href="https://www.techrepublic.com/article/news-chatgpt-images-2-6-gif-creation/">TechRepublic →</a>
+      <h3 class="headline">Moonshot AI open-sources a 2.8-trillion-parameter model — minus its sharpest hacking edge</h3>
+      <p class="summary">China's Moonshot AI published open weights for Kimi K3.1 Pro on November 4, a 2.8-trillion-parameter, million-token-context model that ranks among the largest open-weight releases to date. The company says it deliberately limited the model's offensive cyber capabilities, saying it didn't want an open-weight release to set a new high-water mark for cyberattack potential.</p>
+      <a class="source" href="https://technode.com/2026/11/05/moonshot-ai-releases-kimi-k3-1-pro-model-weights/">TechNode →</a>
     </article>
   </section>
 
