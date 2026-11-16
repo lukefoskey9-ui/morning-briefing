@@ -186,7 +186,7 @@
 
   <header>
     <div class="masthead">Morning Briefing</div>
-    <div class="date-line">Sunday, November 15, 2026</div>
+    <div class="date-line">Monday, November 16, 2026</div>
     <hr class="rule">
     <p class="intro">Cybersecurity and AI, in under three minutes.</p>
   </header>
@@ -198,27 +198,45 @@
     </div>
 
     <article class="story">
-      <h3 class="headline">CISA adds four actively exploited flaws to its watch list — OpenSSH "SSHole" among them</h3>
-      <p class="summary">On November 9, CISA added four exploited vulnerabilities to its Known Exploited Vulnerabilities catalog: an OpenSSH authentication bypass on musl-based Linux without PAM (CVE-2026-123158, dubbed "SSHole," reportedly abused within hours of disclosure), a 9.8-severity code-injection flaw in FreeSWITCH, a bug in the GPUStack AI-infrastructure platform, and an incorrect-authorization flaw in IBM Aspera Faspex. Federal civilian agencies had until November 12 to patch.</p>
-      <a class="source" href="https://www.esecurityplanet.com/vulnerabilities/news-cisa-kev-gpustack-freeswitch-openssh-ibm-november-2026/">eSecurity Planet →</a>
+      <h3 class="headline">Google: attackers are now running autonomous AI agents to weaponize patches, not just prompting chatbots</h3>
+      <p class="summary">Google's Threat Intelligence Group reports it has observed threat actors moving from manually prompting AI tools to deploying autonomous, multi-agent offensive frameworks in live intrusions — automatically turning freshly released vendor patches into working exploits and speeding up both vulnerability weaponization and phishing operations.</p>
+      <a class="source" href="https://thehackernews.com/2026/11/google-finds-hackers-using-ai-agents-to.html">The Hacker News →</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">SonicWall SSLVPN flaw lets attackers defeat MFA — now on CISA's exploited list</h3>
-      <p class="summary">CISA added CVE-2026-19868 to its KEV catalog on November 6: a SonicOS SSLVPN authentication-enforcement flaw that can bypass SAML-based login controls, including multi-factor authentication, on Gen7 and Gen8 SonicWall firewalls. Federal agencies have until November 20 to apply mitigations; admins running affected builds should check SonicWall's advisory now.</p>
-      <a class="source" href="https://www.esecurityplanet.com/vulnerabilities/news-sonicwall-sslvpn-authentication-bypass-cve-2026-19868/">eSecurity Planet →</a>
+      <h3 class="headline">BO Team used a years-old Log4Shell bug to breach a Russian software vendor's build pipeline</h3>
+      <p class="summary">Kaspersky documented a months-long compromise in which the BO Team group exploited the long-known Log4Shell flaw in a VMware vCenter server to reach a Russian developer's CI/CD and code-signing infrastructure. No malicious release has been confirmed yet, but the access raises supply-chain concerns and underscores how old, unpatched bugs keep paying off for attackers.</p>
+      <a class="source" href="https://thehackernews.com/2026/11/bo-team-exploits-log4shell-in-vmware.html">The Hacker News →</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Debian and Ubuntu patch a bug that could turn a retried download into root access</h3>
-      <p class="summary">Debian, Ubuntu and the APT project shipped fixes for CVE-2026-109518, a flaw that can let an attacker reach root-level code execution when APT retries a failed package download under specific conditions. Exploitation isn't trivial, but patched versions are already out, so a prompt system update closes the hole.</p>
-      <a class="source" href="https://thehackernews.com/2026/11/weekly-recap-sshole-exploited-apt-root.html">The Hacker News →</a>
+      <h3 class="headline">FBI: North Korean hackers stole over $400 million in crypto using deepfake video calls</h3>
+      <p class="summary">The FBI says DPRK-linked actors ran an 18-month scheme — which it calls FaceStealer — using deepfake video calls to trick crypto-industry employees and job candidates into installing malware or handing over access, netting more than $400 million. It's the latest in a long run of North Korean state-linked crypto theft used to fund the regime.</p>
+      <a class="source" href="https://thehackernews.com/2026/11/fbi-says-north-korean-hackers-stole.html">The Hacker News →</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Hijacked update channel pushes a backdoor to nearly 3,000 servers</h3>
-      <p class="summary">OpsShield says an attacker used stolen credentials — not a software bug — to break into the update-distribution infrastructure for its cPGuard hosting-security product on November 2 and push a tampered update that harvested password hashes, database configs and SSH files. Roughly 2,950 servers running affected versions (5.88.12–5.88.19) pulled the malicious update before it was caught; OpsShield is telling customers to patch and rotate any exposed credentials.</p>
-      <a class="source" href="https://www.networkworld.com/article/4244919/attackers-turned-opsshields-trusted-update-channel-into-a-supply-chain-attack.html">Network World →</a>
+      <h3 class="headline">FBI warns an AI-driven hacking framework called ARTEX is fueling attacks worldwide</h3>
+      <p class="summary">The FBI has issued a warning that ARTEX, an AI-assisted penetration-testing and exploitation framework, is being repurposed by criminal groups to automate intrusions at scale. The bureau says the tool remains in wide circulation through community forks, archived copies, localized versions, and even a commercial "ARTEX PRO" edition, making it hard to stamp out.</p>
+      <a class="source" href="https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/">BleepingComputer →</a>
+    </article>
+
+    <article class="story">
+      <h3 class="headline">Decade-old Linux kernel bug "NoisyTCP" can remotely crash servers across nearly every distro</h3>
+      <p class="summary">Researchers disclosed CVE-2026-99288, an 11-year-old flaw in the Linux kernel's TCP stack that lets a remote attacker crash affected servers, though it doesn't allow code execution. Because the bug has been present for so long, it affects almost all mainstream Linux distributions; a patch is already available and admins are being urged to apply it.</p>
+      <a class="source" href="https://www.bleepingcomputer.com/news/linux/new-noisytcp-linux-kernel-flaw-lets-attackers-crash-servers/">BleepingComputer →</a>
+    </article>
+
+    <article class="story">
+      <h3 class="headline">Google patches Chrome's eighth actively-exploited zero-day of 2026</h3>
+      <p class="summary">Google shipped an emergency Chrome update fixing nine flaws, including one already being exploited in the wild — the browser's eighth zero-day of the year. CISA added the bug to its Known Exploited Vulnerabilities catalog, giving federal agencies until November 24 to patch; everyone else should update now too.</p>
+      <a class="source" href="https://thehackernews.com/2026/11/google-issues-chrome-security-update.html">The Hacker News →</a>
+    </article>
+
+    <article class="story">
+      <h3 class="headline">Police take down Gootloader, CastleRAT and StealC malware infrastructure</h3>
+      <p class="summary">An international law-enforcement operation dismantled server infrastructure behind three widely used malware families — Gootloader, CastleRAT and StealC — that have been used as initial-access tools and credential stealers feeding ransomware and data-theft campaigns. The takedown should disrupt, at least temporarily, a meaningful slice of the criminal access-broker ecosystem.</p>
+      <a class="source" href="https://www.bleepingcomputer.com/news/security/police-dismantles-gootloader-castlerat-stealc-malware-infrastructure/">BleepingComputer →</a>
     </article>
   </section>
 
@@ -229,27 +247,45 @@
     </div>
 
     <article class="story">
-      <h3 class="headline">Anthropic turns Claude into a fuller workplace suite, with meetings on the way</h3>
-      <p class="summary">On November 10, Anthropic rolled out Claude Sheets and Claude Whiteboards, and upgraded its app connectors — starting with Adobe, Atlassian and HubSpot — so Claude can open and work inside those apps directly rather than just preview them. The company also previewed Claude Meetings, coming in beta for Team and Enterprise plans, which will join video calls (starting with Google Meet) to take notes and spin up follow-up work.</p>
-      <a class="source" href="https://claude.com/blog/more-ways-to-work-with-claude-sheets-whiteboards-and-interactive-connectors">Claude →</a>
+      <h3 class="headline">OpenAI launches GPT-6 Cyber after its AI found 81 Firefox bugs and generated 948 Linux exploits</h3>
+      <p class="summary">OpenAI is rolling out GPT-6 Cyber, a model aimed at vulnerability research and exploit development, after demonstrating an automated pipeline that discovered 81 flaws in Firefox and generated 948 working Linux privilege-escalation exploits during a single 30-hour run. OpenAI rates the model "critical" risk for cyber misuse and is limiting initial access to vetted security researchers and defenders.</p>
+      <a class="source" href="https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html">The Hacker News →</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">OpenAI gives vetted defenders a model built for offensive security work</h3>
-      <p class="summary">OpenAI began rolling out GPT-6 Cyber on November 5 to an initial group of approved "Daybreak Red" customers doing authorized vulnerability research and exploit development. OpenAI rates the model "critical" risk for exploit development — up from "high" for its predecessor — and says it scored 48.5% on its internal ExploitGym benchmark, well ahead of GPT-5.6 Cyber's 32.1%.</p>
-      <a class="source" href="https://openai.com/index/introducing-gpt-6-cyber/">OpenAI →</a>
+      <h3 class="headline">Anthropic kicks off its IPO roadshow, aiming to list on Nasdaq as "ANT"</h3>
+      <p class="summary">Anthropic has launched the investor roadshow for its proposed initial public offering, targeting a price range of $70–$78 per share. The company has applied to list its Class A common stock on the Nasdaq Global Select Market, following its earlier confidential and then public S-1 filing with the SEC.</p>
+      <a class="source" href="https://www.anthropic.com/news/roadshow-launch">Anthropic →</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">OpenAI's split with Cursor takes effect, cutting a major coding tool off its models</h3>
-      <p class="summary">As of November 12, OpenAI's models are no longer directly available inside Cursor, the AI coding editor SpaceX acquired earlier this year. OpenAI said in August it couldn't be confident SpaceX would keep its technology within OpenAI's terms of service, citing past breaches at X and xAI. Cursor users can still reach OpenAI's models with their own API keys, alongside the Anthropic, Google and xAI models Cursor continues to offer natively.</p>
-      <a class="source" href="https://alternativeto.net/news/2026/8/openai-says-it-will-cut-off-cursor-s-access-to-its-ai-models-starting-november-12-2026/">AlternativeTo →</a>
+      <h3 class="headline">Anthropic introduces Claude Fable 5.2 and Claude Mythos 5.2</h3>
+      <p class="summary">Anthropic released two new models built on the same underlying system: Claude Fable 5.2, available to all users, and the more capable Claude Mythos 5.2, restricted to vetted organizations through its Cyber and Life Sciences Verification Programs. Anthropic says both improve on coding, reasoning and vision versus the 5.1 generation, with testers reporting notably faster output.</p>
+      <a class="source" href="https://www.anthropic.com/claude-fable-and-mythos-5-2">Anthropic →</a>
     </article>
 
     <article class="story">
-      <h3 class="headline">Moonshot AI open-sources a 2.8-trillion-parameter model — minus its sharpest hacking edge</h3>
-      <p class="summary">China's Moonshot AI published open weights for Kimi K3.1 Pro on November 4, a 2.8-trillion-parameter, million-token-context model that ranks among the largest open-weight releases to date. The company says it deliberately limited the model's offensive cyber capabilities, saying it didn't want an open-weight release to set a new high-water mark for cyberattack potential.</p>
-      <a class="source" href="https://technode.com/2026/11/05/moonshot-ai-releases-kimi-k3-1-pro-model-weights/">TechNode →</a>
+      <h3 class="headline">Google DeepMind's Gemini Robotics 2.5 lifts robot task success by up to 100%</h3>
+      <p class="summary">DeepMind unveiled Gemini Robotics 2.5, its latest vision-language-action model for controlling physical robots, which it says achieves 30–100% higher task success rates than prior baselines. The model is beginning to roll out to robotics partners as part of DeepMind's push toward more capable "physical intelligence."</p>
+      <a class="source" href="https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/">Google DeepMind →</a>
+    </article>
+
+    <article class="story">
+      <h3 class="headline">DeepMind's AlphaGenome 2 predicts how DNA variants drive disease, cell by cell</h3>
+      <p class="summary">Google DeepMind released AlphaGenome 2, an updated DNA sequence model that predicts how genetic variants affect specific human cell types, aimed at helping researchers understand the mechanisms behind disease. It's available now for non-commercial research via the AlphaGenome API, with a private preview open for commercial research use.</p>
+      <a class="source" href="https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/">Google DeepMind →</a>
+    </article>
+
+    <article class="story">
+      <h3 class="headline">OpenAI launches ChatGPT Wallet so AI agents can pay without seeing your card details</h3>
+      <p class="summary">OpenAI introduced ChatGPT Wallet, letting AI agents complete purchases on a user's behalf without direct access to real card numbers, with a security check required for every transaction. Built with American Express, Mastercard and Visa, it's launching first for ChatGPT Pro subscribers in the US.</p>
+      <a class="source" href="https://openai.com/index/introducing-chatgpt-wallet">OpenAI →</a>
+    </article>
+
+    <article class="story">
+      <h3 class="headline">Google DeepMind opens up the Earth-science datasets behind its weather models</h3>
+      <p class="summary">DeepMind published PARDIG and SatWeave, two large open datasets of live and historical satellite and weather data tied to its WeatherNext 3 forecasting model, now freely available on Google Cloud Storage. The move is aimed at giving outside researchers the raw data needed to build and validate their own climate and weather AI systems.</p>
+      <a class="source" href="https://deepmind.google/blog/opening-the-datasets-behind-our-ai-weather-models/">Google DeepMind →</a>
     </article>
   </section>
 
