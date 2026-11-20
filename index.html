@@ -195,81 +195,99 @@
   <header>
     <p class="kicker">Morning Briefing</p>
     <h1>Cyber &amp; AI, in three minutes</h1>
-    <p class="date">Thursday, November 19, 2026</p>
+    <p class="date">Friday, November 20, 2026</p>
     <p class="deck">The stories that mattered overnight in security and artificial intelligence — verified, summarized, linked to source.</p>
   </header>
 
   <section class="section cyber">
     <div class="section-head">
       <h2>Cybersecurity</h2>
-      <span class="count">6 stories</span>
+      <span class="count">7 stories</span>
     </div>
 
     <article class="story">
-      <h3>Decade-old NGINX HTTP/2 flaw lets unauthenticated attackers run code on servers</h3>
-      <p>A newly disclosed bug dubbed "nginx2root" (CVE-2026-123007) affects every open-source NGINX release from 1.9.5 through 1.31.8 wherever HTTP/2 is enabled, letting an unauthenticated attacker achieve remote code execution. Fixed versions 1.31.9 and 1.30.7 are available now.</p>
-      <a class="source" href="https://thehackernews.com/2026/11/10-year-old-nginx-http2-flaw-lets.html" target="_blank" rel="noopener">The Hacker News →</a>
+      <h3>VMware vCenter zero-day exploited by suspected Chinese hackers since September</h3>
+      <p>Broadcom has patched an authentication-bypass flaw in vCenter Server that Mandiant says attackers with suspected ties to China have been exploiting in real-world intrusions for roughly two months. Admins running on-prem vCenter should patch immediately.</p>
+      <a class="source" href="https://www.bleepingcomputer.com/news/security/vmware-patches-vcenter-zero-day-exploited-in-attacks-since-september/" target="_blank" rel="noopener">BleepingComputer →</a>
     </article>
 
     <article class="story">
-      <h3>Apache Roller RCE flaw under active exploitation, no login required</h3>
-      <p>Attackers are exploiting an unauthenticated deserialization bug in Apache Roller's XML-RPC endpoint to achieve remote code execution. Admins should upgrade to Roller 6.1.6 or later immediately.</p>
-      <a class="source" href="https://thehackernews.com/2026/11/critical-apache-roller-rce-flaw-under.html" target="_blank" rel="noopener">The Hacker News →</a>
+      <h3>Critical NGINX "NGINX2Root" bugs put an estimated 8.8 million servers at risk</h3>
+      <p>Newly disclosed flaws let unauthenticated attackers hijack NGINX web servers outright. Censys estimates roughly 8.8 million internet-facing NGINX instances were potentially exposed as of this week; patched versions are available now.</p>
+      <a class="source" href="https://www.bleepingcomputer.com/news/security/critical-nginx-nginx2root-bugs-let-attackers-hijack-servers/" target="_blank" rel="noopener">BleepingComputer →</a>
     </article>
 
     <article class="story">
-      <h3>CISA adds actively exploited Puppet RCE flaw to its Known Exploited Vulnerabilities catalog</h3>
-      <p>A critical deserialization vulnerability (CVE-2026-115731) in Puppet's enterprise configuration-management servers is being actively exploited, prompting CISA to add it to the KEV catalog with a mandated federal patch deadline.</p>
-      <a class="source" href="https://thehackernews.com/2026/11/hackers-exploiting-critical-puppet-rce.html" target="_blank" rel="noopener">The Hacker News →</a>
-    </article>
-
-    <article class="story">
-      <h3>"Java4Shell" Base64-decoder flaw threatens Jira, Jenkins, Keycloak and more</h3>
-      <p>A newly disclosed bug in Java's Base64 decoder (CVE-2026-114938) allows pre-authentication remote code execution across a wide range of popular Java applications. Oracle and OpenJDK have shipped patches, and CISA is urging immediate patching even though in-the-wild exploitation hasn't yet been confirmed.</p>
-      <a class="source" href="https://thehackernews.com/2026/11/java4shell-cve-2026-114938-enables-pre.html" target="_blank" rel="noopener">The Hacker News →</a>
-    </article>
-
-    <article class="story">
-      <h3>CISA: four more flaws — OpenSSH, GPUStack, FreeSWITCH, IBM Aspera — being exploited</h3>
-      <p>CISA added OpenBSD's "SSHole" OpenSSH flaw alongside bugs in GPUStack, SignalWire FreeSWITCH and IBM Aspera Faspex to its Known Exploited Vulnerabilities catalog after confirming active exploitation, giving federal agencies a mid-November deadline to patch.</p>
+      <h3>CISA: OpenSSH, GPUStack, FreeSWITCH and IBM Aspera flaws being actively exploited</h3>
+      <p>CISA added OpenBSD's OpenSSH flaw alongside bugs in GPUStack, SignalWire FreeSWITCH and IBM Aspera Faspex to its Known Exploited Vulnerabilities catalog after confirming in-the-wild exploitation, giving federal agencies a tight patch deadline.</p>
       <a class="source" href="https://thehackernews.com/2026/11/cisa-warns-of-active-exploitation-of.html" target="_blank" rel="noopener">The Hacker News →</a>
     </article>
 
     <article class="story">
-      <h3>Hijacked Optimizely scripts served card skimmers and iOS exploit kits on CNN, BBC, Zoom</h3>
-      <p>Attackers compromised Optimizely's web-experimentation scripts, used by roughly 178 organizations, to inject card-skimming code, crypto-wallet swappers and iOS exploit kits into visitors' browsers on sites including CNN, BBC and Zoom. Optimizely says the flaw is now fixed and the malicious code removed.</p>
-      <a class="source" href="https://thehackernews.com/2026/11/hijacked-optimizely-scripts-served-card.html" target="_blank" rel="noopener">The Hacker News →</a>
+      <h3>Malicious versions of Microsoft's Agent Framework PyPI package stole cloud credentials</h3>
+      <p>Attackers published trojanized releases of Microsoft's "agent-framework" package to PyPI on November 17, built to harvest cloud credentials from developer machines. Both malicious versions have since been removed from the registry.</p>
+      <a class="source" href="https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html" target="_blank" rel="noopener">The Hacker News →</a>
+    </article>
+
+    <article class="story">
+      <h3>PHP security update fixes 18 flaws, including critical remote-code-execution bugs</h3>
+      <p>New PHP releases across supported branches patch 18 vulnerabilities, several of them remote code execution flaws affecting all currently supported versions. Admins are urged to update promptly.</p>
+      <a class="source" href="https://www.bleepingcomputer.com/news/security/php-security-updates-fix-18-flaws-including-critical-rce-bugs/" target="_blank" rel="noopener">BleepingComputer →</a>
+    </article>
+
+    <article class="story">
+      <h3>NVIDIA investigating ransomware gang's breach claims against a partner</h3>
+      <p>NVIDIA says it's looking into a claim by the "Gentlemen" ransomware group that it obtained company data, but has found no evidence its own systems were compromised. The probe is instead focused on a possible incident at a third-party partner.</p>
+      <a class="source" href="https://www.bleepingcomputer.com/news/security/nvidia-investigating-gentlemen-ransomware-breach-claims/" target="_blank" rel="noopener">BleepingComputer →</a>
+    </article>
+
+    <article class="story">
+      <h3>SBC Medical Group discloses breach affecting 1.6 million customers</h3>
+      <p>The clinic operator disclosed in a regulatory filing that personal data on roughly 1.6 million people was exposed in a cyberattack, adding to a run of healthcare-sector breaches this year.</p>
+      <a class="source" href="https://www.bleepingcomputer.com/news/security/hackers-steal-data-of-16-million-sbc-medical-group-customers/" target="_blank" rel="noopener">BleepingComputer →</a>
     </article>
   </section>
 
   <section class="section ai">
     <div class="section-head">
       <h2>Artificial Intelligence</h2>
-      <span class="count">4 stories</span>
+      <span class="count">6 stories</span>
     </div>
 
     <article class="story">
-      <h3>OpenAI rolls out GPT-6 Cyber to vetted security teams</h3>
-      <p>OpenAI has begun giving select Daybreak Red customers access to GPT-6 Cyber, a specialized offensive-security model it now rates "Critical" risk — up from "High" for its predecessor. OpenAI reports a score of 48.5% on its ExploitGym benchmark versus 32.1% for GPT-5.6 Cyber, with access restricted to approved networks for authorized penetration testing and exploit research.</p>
-      <a class="source" href="https://openai.com/index/introducing-gpt-6-cyber/" target="_blank" rel="noopener">OpenAI →</a>
+      <h3>Anthropic's IPO closes; shares begin trading on Nasdaq as "ANT"</h3>
+      <p>Anthropic closed its initial public offering, including full exercise of the underwriters' option, selling 1.127 billion Class A shares at $83.00 each for roughly $93.5 billion in gross proceeds. Class A shares began trading on the Nasdaq Global Select Market on November 19, alongside a concurrent private placement that brought in AMD, Broadcom, Google, Micron, Microsoft, Nvidia and TSMC as strategic investors.</p>
+      <a class="source" href="https://www.anthropic.com/news/ipo-close" target="_blank" rel="noopener">Anthropic →</a>
     </article>
 
     <article class="story">
-      <h3>Google DeepMind unveils Gemini Robotics 2.5, its most capable robot model yet</h3>
-      <p>The new vision-language-action model handled over 200 physical tasks — from delicate object handling to precision assembly — and ran on Apptronik's Apollo 2 humanoid at Mercedes-Benz production lines with a 96% success rate on a sorting task. It ships alongside an open "ASIMOV-Jailbreak" safety benchmark but is rolling out to robotics partners only, with no public API yet.</p>
-      <a class="source" href="https://roboticsandautomationnews.com/2026/11/15/google-deepmind-launches-gemini-robotics-2-5-with-improved-dexterity-and-industrial-capabilities/" target="_blank" rel="noopener">Robotics &amp; Automation News →</a>
+      <h3>OpenAI launches GPT-6.2 Astra and Sol in ChatGPT and the API</h3>
+      <p>The new models are rolling out in ChatGPT Work, Codex and the API, with Astra posting new highs on professional-work and scientific-research evals at under a third of the per-task cost of GPT-6 Astra. OpenAI paired the launch with tighter safeguards around higher-risk cybersecurity assistance.</p>
+      <a class="source" href="https://community.openai.com/t/gpt-6-2-astra-and-sol-are-now-available/1417531" target="_blank" rel="noopener">OpenAI Developer Community →</a>
     </article>
 
     <article class="story">
-      <h3>DeepMind's AlphaProof Code machine-verifies Signal's encryption</h3>
-      <p>A small DeepMind team used AI agents to generate over six million lines of formal mathematical proof checking Signal's PQXDH and Triple Ratchet protocols against the compiled binary rather than just the source. As a sanity check, researchers reinserted two previously fixed bugs and the system correctly produced proofs showing those versions were insecure.</p>
-      <a class="source" href="https://deepmind.google/blog/introducing-alphaproof-code/" target="_blank" rel="noopener">Google DeepMind →</a>
+      <h3>OpenAI details "Performance Factory," an autonomous system for keeping ChatGPT fast</h3>
+      <p>OpenAI built a Codex-powered system that automatically finds and fixes performance regressions in ChatGPT, arguing that traditional manual performance engineering can no longer keep pace with how quickly agentic development now moves.</p>
+      <a class="source" href="https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast/" target="_blank" rel="noopener">OpenAI →</a>
     </article>
 
     <article class="story">
-      <h3>OpenAI to retire ChatGPT's Advanced and Standard Voice on December 11</h3>
-      <p>OpenAI is sunsetting both legacy voice modes and shifting users to "Live," its newer voice mode that can listen and speak at the same time. Video and screen-sharing features stay on Advanced Voice for now, with no date yet set for their move to Live.</p>
-      <a class="source" href="https://www.androidauthority.com/openai-retiring-chatgpt-advanced-standard-voice-3733978/" target="_blank" rel="noopener">Android Authority →</a>
+      <h3>Google DeepMind publishes model card for Gemini 4 Neon</h3>
+      <p>DeepMind released the model card for Gemini 4 Neon, documenting its capabilities, a March 2026 knowledge cutoff, and known limitations including a continued risk of hallucination.</p>
+      <a class="source" href="https://deepmind.google/models/model-cards/gemini-4-neon/" target="_blank" rel="noopener">Google DeepMind →</a>
+    </article>
+
+    <article class="story">
+      <h3>OpenAI: coding agents are reshaping its own research cycle</h3>
+      <p>A new OpenAI report, "Research acceleration: the jagged frontier," lays out internal measurements of how agentic coding tools have sped up parts of the company's AI R&amp;D process, while cautioning that gains remain uneven across tasks.</p>
+      <a class="source" href="https://openai.com/index/research-acceleration-jagged-frontier/" target="_blank" rel="noopener">OpenAI →</a>
+    </article>
+
+    <article class="story">
+      <h3>Google ships Gemini 4 Hydrogen, a faster, cheaper model for coding and agents</h3>
+      <p>Hydrogen is aimed at everyday coding and agentic workloads, with four selectable thinking levels — low, medium, high and a new "xhigh" tier — letting developers trade off quality, latency and cost.</p>
+      <a class="source" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/" target="_blank" rel="noopener">Google →</a>
     </article>
   </section>
 
