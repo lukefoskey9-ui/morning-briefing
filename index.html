@@ -9,47 +9,32 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f7f5f1;
-    --bg-card: #ffffff;
+    --bg: #f7f5f0;
+    --surface: #ffffff;
     --text: #1c1a17;
-    --text-muted: #5b564c;
-    --rule: #e2ddd3;
-    --accent-cyber: #9a2b2b;
-    --accent-ai: #1f5f4f;
-    --chip-cyber-bg: #f6e5e1;
-    --chip-ai-bg: #e2efe9;
-    --link: #1c1a17;
-    --shadow: rgba(30, 25, 15, 0.06);
+    --text-muted: #5b5750;
+    --border: #e4e0d8;
+    --accent-cyber: #9a3324;
+    --accent-ai: #1f5c4a;
+    --accent-cyber-bg: #f8ece8;
+    --accent-ai-bg: #e9f3ee;
+    --link: #1a5276;
+    --rule: #d8d2c4;
   }
-
   @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
+    :root {
       --bg: #15140f;
-      --bg-card: #1d1b16;
-      --text: #ece8e0;
-      --text-muted: #a8a194;
-      --rule: #38352c;
-      --accent-cyber: #e2837a;
-      --accent-ai: #6fcbae;
-      --chip-cyber-bg: #3a2420;
-      --chip-ai-bg: #1c3129;
-      --link: #ece8e0;
-      --shadow: rgba(0, 0, 0, 0.3);
+      --surface: #1d1b16;
+      --text: #ece8de;
+      --text-muted: #a8a195;
+      --border: #332f27;
+      --accent-cyber: #e8836d;
+      --accent-ai: #6fcbab;
+      --accent-cyber-bg: #2a1c17;
+      --accent-ai-bg: #16271f;
+      --link: #7fc1e8;
+      --rule: #332f27;
     }
-  }
-
-  :root[data-theme="dark"] {
-    --bg: #15140f;
-    --bg-card: #1d1b16;
-    --text: #ece8e0;
-    --text-muted: #a8a194;
-    --rule: #38352c;
-    --accent-cyber: #e2837a;
-    --accent-ai: #6fcbae;
-    --chip-cyber-bg: #3a2420;
-    --chip-ai-bg: #1c3129;
-    --link: #ece8e0;
-    --shadow: rgba(0, 0, 0, 0.3);
   }
 
   * { box-sizing: border-box; }
@@ -58,242 +43,222 @@
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.55;
     -webkit-font-smoothing: antialiased;
-    line-height: 1.5;
   }
 
   .wrap {
     max-width: 680px;
     margin: 0 auto;
-    padding: 36px 20px 64px;
+    padding: 0 20px 64px;
   }
 
-  header {
+  header.masthead {
+    padding: 40px 0 28px;
+    border-bottom: 3px solid var(--text);
     margin-bottom: 36px;
   }
 
   .kicker {
     font-size: 12px;
+    font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--text-muted);
-    font-weight: 600;
     margin: 0 0 10px;
   }
 
-  h1 {
+  h1.title {
     font-family: 'Source Serif 4', Georgia, serif;
-    font-size: 40px;
-    line-height: 1.08;
     font-weight: 700;
-    margin: 0 0 12px;
+    font-size: 40px;
+    line-height: 1.05;
+    margin: 0 0 14px;
     letter-spacing: -0.01em;
   }
 
-  .date {
-    font-size: 17px;
+  .date-line {
+    font-size: 16px;
+    font-weight: 600;
     color: var(--text-muted);
     margin: 0;
   }
 
-  .deck {
-    font-size: 15px;
-    color: var(--text-muted);
-    margin: 14px 0 0;
-    max-width: 52ch;
-  }
-
   section.section {
-    margin-top: 44px;
+    margin-bottom: 44px;
   }
 
   .section-head {
     display: flex;
     align-items: baseline;
     gap: 10px;
-    margin-bottom: 18px;
-    padding-bottom: 12px;
-    border-bottom: 2px solid var(--rule);
+    margin-bottom: 20px;
   }
 
-  .section-head h2 {
+  .section-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+  }
+  .section-eyebrow.cyber { background: var(--accent-cyber-bg); color: var(--accent-cyber); }
+  .section-eyebrow.ai { background: var(--accent-ai-bg); color: var(--accent-ai); }
+
+  h2.section-title {
     font-family: 'Source Serif 4', Georgia, serif;
     font-size: 24px;
     font-weight: 700;
     margin: 0;
-    letter-spacing: -0.01em;
   }
-
-  .section-head .count {
-    font-size: 13px;
-    color: var(--text-muted);
-    font-weight: 500;
-  }
-
-  .cyber .section-head h2 { color: var(--accent-cyber); }
-  .ai .section-head h2 { color: var(--accent-ai); }
 
   article.story {
-    background: var(--bg-card);
-    border: 1px solid var(--rule);
-    border-radius: 14px;
-    padding: 20px 22px;
-    margin-bottom: 14px;
-    box-shadow: 0 1px 3px var(--shadow);
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
   }
+  article.story:last-child { border-bottom: none; }
 
-  article.story h3 {
-    font-size: 17px;
-    font-weight: 700;
+  h3.headline {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.3;
     margin: 0 0 8px;
-    line-height: 1.35;
   }
 
-  article.story p {
+  p.summary {
+    margin: 0 0 10px;
     font-size: 15px;
     color: var(--text);
-    margin: 0 0 12px;
   }
 
-  article.story a.source {
+  a.source-link {
     font-size: 13px;
     font-weight: 600;
-    color: inherit;
+    color: var(--link);
     text-decoration: none;
-    border-bottom: 1px solid currentColor;
-    padding-bottom: 1px;
     display: inline-block;
+    padding: 4px 0;
   }
-
-  .cyber article.story a.source { color: var(--accent-cyber); }
-  .ai article.story a.source { color: var(--accent-ai); }
-
-  article.story a.source:visited { color: inherit; }
+  a.source-link:hover { text-decoration: underline; }
+  a.source-link::after { content: " →"; }
 
   footer {
-    margin-top: 48px;
+    margin-top: 40px;
     padding-top: 20px;
-    border-top: 1px solid var(--rule);
+    border-top: 1px solid var(--border);
     font-size: 13px;
     color: var(--text-muted);
+    text-align: center;
   }
 
-  footer p { margin: 4px 0; }
-
   @media (max-width: 480px) {
-    h1 { font-size: 32px; }
-    .wrap { padding: 28px 16px 48px; }
-    article.story { padding: 16px 18px; }
-    .section-head h2 { font-size: 21px; }
+    h1.title { font-size: 32px; }
+    header.masthead { padding: 28px 0 22px; }
+    .wrap { padding: 0 16px 48px; }
+    h3.headline { font-size: 18px; }
   }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <header>
-    <p class="kicker">Morning Briefing</p>
-    <h1>Cyber &amp; AI, in three minutes</h1>
-    <p class="date">Friday, November 20, 2026</p>
-    <p class="deck">The stories that mattered overnight in security and artificial intelligence — verified, summarized, linked to source.</p>
+  <header class="masthead">
+    <p class="kicker">Daily Digest</p>
+    <h1 class="title">Morning Briefing</h1>
+    <p class="date-line">Saturday, November 21, 2026</p>
   </header>
 
-  <section class="section cyber">
+  <section class="section">
     <div class="section-head">
-      <h2>Cybersecurity</h2>
-      <span class="count">7 stories</span>
+      <span class="section-eyebrow cyber">Cybersecurity</span>
+      <h2 class="section-title">Threats &amp; Vulnerabilities</h2>
     </div>
 
     <article class="story">
-      <h3>VMware vCenter zero-day exploited by suspected Chinese hackers since September</h3>
-      <p>Broadcom has patched an authentication-bypass flaw in vCenter Server that Mandiant says attackers with suspected ties to China have been exploiting in real-world intrusions for roughly two months. Admins running on-prem vCenter should patch immediately.</p>
-      <a class="source" href="https://www.bleepingcomputer.com/news/security/vmware-patches-vcenter-zero-day-exploited-in-attacks-since-september/" target="_blank" rel="noopener">BleepingComputer →</a>
+      <h3 class="headline">CISA orders federal patching of four actively exploited flaws, deadline today</h3>
+      <p class="summary">CISA added four vulnerabilities to its Known Exploited Vulnerabilities catalog on November 18: Synology DiskStation Manager (CVE-2024-10441), BerriAI LiteLLM, Apache Axis, and Vanderbilt's REDCap. Federal agencies had until today, November 21, to patch the Synology, Axis, and REDCap flaws, with forensic triage required under CISA's binding directive in case systems are already compromised.</p>
+      <a class="source-link" href="https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html">The Hacker News</a>
     </article>
 
     <article class="story">
-      <h3>Critical NGINX "NGINX2Root" bugs put an estimated 8.8 million servers at risk</h3>
-      <p>Newly disclosed flaws let unauthenticated attackers hijack NGINX web servers outright. Censys estimates roughly 8.8 million internet-facing NGINX instances were potentially exposed as of this week; patched versions are available now.</p>
-      <a class="source" href="https://www.bleepingcomputer.com/news/security/critical-nginx-nginx2root-bugs-let-attackers-hijack-servers/" target="_blank" rel="noopener">BleepingComputer →</a>
+      <h3 class="headline">Visa, Mastercard and JPMorgan customer data leaked after vendor breach</h3>
+      <p class="summary">A ransomware group calling itself n0n listed Visa, Mastercard, and JPMorgan Chase on its leak site and published data tied to thousands of customers after a 48-hour extortion deadline. All three firms say their own payment networks were not compromised and point to third-party vendors instead; Visa shares fell over 2.5% on the news.</p>
+      <a class="source-link" href="https://www.businessinsurance.com/jpmorgan-visa-mastercard-say-third-party-vendors-targeted-in-cyberattack/">Business Insurance</a>
     </article>
 
     <article class="story">
-      <h3>CISA: OpenSSH, GPUStack, FreeSWITCH and IBM Aspera flaws being actively exploited</h3>
-      <p>CISA added OpenBSD's OpenSSH flaw alongside bugs in GPUStack, SignalWire FreeSWITCH and IBM Aspera Faspex to its Known Exploited Vulnerabilities catalog after confirming in-the-wild exploitation, giving federal agencies a tight patch deadline.</p>
-      <a class="source" href="https://thehackernews.com/2026/11/cisa-warns-of-active-exploitation-of.html" target="_blank" rel="noopener">The Hacker News →</a>
+      <h3 class="headline">Microsoft patches Outlook zero-day exploited by Russian hackers</h3>
+      <p class="summary">This month's Patch Tuesday fixed over 1,000 flaws, including CVE-2026-124194, an Outlook spoofing bug that lets attackers steal hashed NTLM credentials. Microsoft has tied active exploitation to a Russian threat actor and published a detection script for defenders to check for compromise.</p>
+      <a class="source-link" href="https://www.securityweek.com/microsoft-pins-outlook-zero-day-attacks-on-russian-actor-offers-detection-script/">SecurityWeek</a>
     </article>
 
     <article class="story">
-      <h3>Malicious versions of Microsoft's Agent Framework PyPI package stole cloud credentials</h3>
-      <p>Attackers published trojanized releases of Microsoft's "agent-framework" package to PyPI on November 17, built to harvest cloud credentials from developer machines. Both malicious versions have since been removed from the registry.</p>
-      <a class="source" href="https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html" target="_blank" rel="noopener">The Hacker News →</a>
+      <h3 class="headline">Cisco BroadWorks flaw under active attack against telecom providers</h3>
+      <p class="summary">CISA flagged CVE-2026-20320, an XML external entity flaw in Cisco BroadWorks, as actively exploited, giving federal agencies until November 24 to patch. Researchers say a threat actor used the unauthenticated bug to read sensitive files from a European telecom provider and more than a dozen other organizations.</p>
+      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/cisa-flags-cisco-broadworks-flaw-as-actively-exploited-in-attacks/">BleepingComputer</a>
     </article>
 
     <article class="story">
-      <h3>PHP security update fixes 18 flaws, including critical remote-code-execution bugs</h3>
-      <p>New PHP releases across supported branches patch 18 vulnerabilities, several of them remote code execution flaws affecting all currently supported versions. Admins are urged to update promptly.</p>
-      <a class="source" href="https://www.bleepingcomputer.com/news/security/php-security-updates-fix-18-flaws-including-critical-rce-bugs/" target="_blank" rel="noopener">BleepingComputer →</a>
+      <h3 class="headline">Worm-like SCKit malware spreads through ScreenConnect attacks on MSPs</h3>
+      <p class="summary">A new malware toolkit dubbed SCKit is self-propagating through managed service providers by exploiting a previously patched ScreenConnect flaw, deploying rogue remote-access clients and relaying stolen session cookies across hundreds of endpoints.</p>
+      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/new-worm-like-sckit-malware-targets-msps-in-screenconnect-attacks/">BleepingComputer</a>
     </article>
 
     <article class="story">
-      <h3>NVIDIA investigating ransomware gang's breach claims against a partner</h3>
-      <p>NVIDIA says it's looking into a claim by the "Gentlemen" ransomware group that it obtained company data, but has found no evidence its own systems were compromised. The probe is instead focused on a possible incident at a third-party partner.</p>
-      <a class="source" href="https://www.bleepingcomputer.com/news/security/nvidia-investigating-gentlemen-ransomware-breach-claims/" target="_blank" rel="noopener">BleepingComputer →</a>
-    </article>
-
-    <article class="story">
-      <h3>SBC Medical Group discloses breach affecting 1.6 million customers</h3>
-      <p>The clinic operator disclosed in a regulatory filing that personal data on roughly 1.6 million people was exposed in a cyberattack, adding to a run of healthcare-sector breaches this year.</p>
-      <a class="source" href="https://www.bleepingcomputer.com/news/security/hackers-steal-data-of-16-million-sbc-medical-group-customers/" target="_blank" rel="noopener">BleepingComputer →</a>
+      <h3 class="headline">N-able zero-day exploited within hours of proof-of-concept release</h3>
+      <p class="summary">Hackers began exploiting a newly disclosed N-able N-central flaw, nicknamed "4EverAble2Shell," almost immediately after exploit code went public, deploying cryptocurrency miners on at least 21 compromised servers. It follows N-able's decision to take hosted environments offline after a researcher published over 30 unreported zero-days.</p>
+      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/">BleepingComputer</a>
     </article>
   </section>
 
-  <section class="section ai">
+  <section class="section">
     <div class="section-head">
-      <h2>Artificial Intelligence</h2>
-      <span class="count">6 stories</span>
+      <span class="section-eyebrow ai">AI</span>
+      <h2 class="section-title">Models &amp; Industry</h2>
     </div>
 
     <article class="story">
-      <h3>Anthropic's IPO closes; shares begin trading on Nasdaq as "ANT"</h3>
-      <p>Anthropic closed its initial public offering, including full exercise of the underwriters' option, selling 1.127 billion Class A shares at $83.00 each for roughly $93.5 billion in gross proceeds. Class A shares began trading on the Nasdaq Global Select Market on November 19, alongside a concurrent private placement that brought in AMD, Broadcom, Google, Micron, Microsoft, Nvidia and TSMC as strategic investors.</p>
-      <a class="source" href="https://www.anthropic.com/news/ipo-close" target="_blank" rel="noopener">Anthropic →</a>
+      <h3 class="headline">Anthropic ships Claude Fable 5.2 and Mythos 5.2</h3>
+      <p class="summary">Anthropic's new flagship pair targets coding, science, and cybersecurity, with a 1M-token context window and faster output than their predecessors. Anthropic says Mythos 5.2 found over 10% more vulnerabilities than Opus 5.5 in testing, and demoed 1,000 coordinated agents building a working operating system from an empty folder.</p>
+      <a class="source-link" href="https://www.anthropic.com/news/claude-fable-5-mythos-5">Anthropic</a>
     </article>
 
     <article class="story">
-      <h3>OpenAI launches GPT-6.2 Astra and Sol in ChatGPT and the API</h3>
-      <p>The new models are rolling out in ChatGPT Work, Codex and the API, with Astra posting new highs on professional-work and scientific-research evals at under a third of the per-task cost of GPT-6 Astra. OpenAI paired the launch with tighter safeguards around higher-risk cybersecurity assistance.</p>
-      <a class="source" href="https://community.openai.com/t/gpt-6-2-astra-and-sol-are-now-available/1417531" target="_blank" rel="noopener">OpenAI Developer Community →</a>
+      <h3 class="headline">Google's Gemini 4 Carbon reaches general availability</h3>
+      <p class="summary">Carbon moved out of its restricted cybersecurity-defender preview and into general availability via the Gemini API, AI Studio, and Gemini for Business, with introductory pricing of $2/$10 per million input/output tokens rising after November 30. Google AI Ultra subscribers also get it in Antigravity, the Gemini app, and Search's AI Mode.</p>
+      <a class="source-link" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/">Google Blog</a>
     </article>
 
     <article class="story">
-      <h3>OpenAI details "Performance Factory," an autonomous system for keeping ChatGPT fast</h3>
-      <p>OpenAI built a Codex-powered system that automatically finds and fixes performance regressions in ChatGPT, arguing that traditional manual performance engineering can no longer keep pace with how quickly agentic development now moves.</p>
-      <a class="source" href="https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast/" target="_blank" rel="noopener">OpenAI →</a>
+      <h3 class="headline">OpenAI releases GPT-6 Cyber, its most capable offensive-security model</h3>
+      <p class="summary">OpenAI classifies the new specialized model as "Critical" risk under its Preparedness Framework, up from "High" for its predecessor, citing a jump in exploit-development benchmark scores. Access is initially limited to vetted Daybreak Red customers via the API and Codex.</p>
+      <a class="source-link" href="https://openai.com/index/introducing-gpt-6-cyber/">OpenAI</a>
     </article>
 
     <article class="story">
-      <h3>Google DeepMind publishes model card for Gemini 4 Neon</h3>
-      <p>DeepMind released the model card for Gemini 4 Neon, documenting its capabilities, a March 2026 knowledge cutoff, and known limitations including a continued risk of hallucination.</p>
-      <a class="source" href="https://deepmind.google/models/model-cards/gemini-4-neon/" target="_blank" rel="noopener">Google DeepMind →</a>
+      <h3 class="headline">Microsoft debuts new MAI model family and Agent 365 at Ignite 2026</h3>
+      <p class="summary">Microsoft introduced its own-built MAI Realtime 1 voice model, MAI Image 2.7, and MAI Cyber 2 Flash, alongside Agent 365 Business Analytics for tracking enterprise AI agent spend and outcomes, and a Perception system for coordinating AI security agents.</p>
+      <a class="source-link" href="https://scalevise.com/resources/microsoft-ignite-2026-mai-model-lineup/">Scalevise</a>
     </article>
 
     <article class="story">
-      <h3>OpenAI: coding agents are reshaping its own research cycle</h3>
-      <p>A new OpenAI report, "Research acceleration: the jagged frontier," lays out internal measurements of how agentic coding tools have sped up parts of the company's AI R&amp;D process, while cautioning that gains remain uneven across tasks.</p>
-      <a class="source" href="https://openai.com/index/research-acceleration-jagged-frontier/" target="_blank" rel="noopener">OpenAI →</a>
+      <h3 class="headline">Meta releases Muse Ember, a small model built for agent busywork</h3>
+      <p class="summary">Meta's latest addition to its Muse family targets the repetitive work AI agents handle constantly — tool calls, coding subtasks, routing, and document extraction — at a fraction of the cost of its larger models, continuing Meta's pivot away from the open-weight Llama line.</p>
+      <a class="source-link" href="https://thenewstack.io/meta-muse-ember-launch/">The New Stack</a>
     </article>
 
     <article class="story">
-      <h3>Google ships Gemini 4 Hydrogen, a faster, cheaper model for coding and agents</h3>
-      <p>Hydrogen is aimed at everyday coding and agentic workloads, with four selectable thinking levels — low, medium, high and a new "xhigh" tier — letting developers trade off quality, latency and cost.</p>
-      <a class="source" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/" target="_blank" rel="noopener">Google →</a>
+      <h3 class="headline">Claude credited in discovery of exploited Outlook zero-day</h3>
+      <p class="summary">Microsoft's advisory for this month's actively exploited Outlook flaw credits a researcher who used Anthropic's Claude in the discovery process. Coverage is cautious about the framing: the credit doesn't establish that Claude found, validated, or reported the bug on its own, but it's a notable sign of AI tools showing up in real vulnerability research.</p>
+      <a class="source-link" href="https://notebookcheck.net/Exploited-Outlook-zero-day-was-found-by-a-researcher-using-Claude.1447802.0.html">Notebookcheck</a>
     </article>
   </section>
 
   <footer>
-    <p>Compiled automatically each morning from public reporting. Headlines and summaries are written independently; always check the linked source for full details.</p>
-    <p>Published to GitHub Pages · lukefoskey9-ui/morning-briefing</p>
+    Compiled automatically from public reporting. Verify critical details against primary sources before acting.
   </footer>
 
 </div>
