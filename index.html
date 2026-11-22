@@ -6,43 +6,52 @@
 <title>Morning Briefing</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f7f5f0;
-    --surface: #ffffff;
+    --bg: #faf8f4;
+    --bg-card: #ffffff;
     --text: #1c1a17;
-    --text-muted: #5b5750;
-    --border: #e4e0d8;
+    --text-muted: #5b564e;
+    --border: #e4ddd1;
     --accent-cyber: #9a3324;
-    --accent-ai: #1f5c4a;
-    --accent-cyber-bg: #f8ece8;
-    --accent-ai-bg: #e9f3ee;
-    --link: #1a5276;
-    --rule: #d8d2c4;
+    --accent-ai: #1f5f4a;
+    --accent-cyber-bg: #fbeae6;
+    --accent-ai-bg: #e8f2ec;
+    --rule: #d8cfbf;
+    --link: #7a2e21;
+    --link-ai: #184d3c;
+    --tag-text: #ffffff;
   }
+
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #15140f;
-      --surface: #1d1b16;
-      --text: #ece8de;
-      --text-muted: #a8a195;
+      --bg: #15130f;
+      --bg-card: #1d1b16;
+      --text: #ecE7dc;
+      --text-muted: #a8a093;
       --border: #332f27;
-      --accent-cyber: #e8836d;
-      --accent-ai: #6fcbab;
-      --accent-cyber-bg: #2a1c17;
+      --accent-cyber: #e2836f;
+      --accent-ai: #6fcaa8;
+      --accent-cyber-bg: #2a1a15;
       --accent-ai-bg: #16271f;
-      --link: #7fc1e8;
-      --rule: #332f27;
+      --rule: #3a352b;
+      --link: #e6957f;
+      --link-ai: #86d6b4;
+      --tag-text: #15130f;
     }
   }
 
   * { box-sizing: border-box; }
 
-  body {
+  html, body {
     margin: 0;
+    padding: 0;
     background: var(--bg);
     color: var(--text);
+  }
+
+  body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     line-height: 1.55;
     -webkit-font-smoothing: antialiased;
@@ -51,76 +60,94 @@
   .wrap {
     max-width: 680px;
     margin: 0 auto;
-    padding: 0 20px 64px;
+    padding: 36px 20px 72px;
   }
 
   header.masthead {
-    padding: 40px 0 28px;
-    border-bottom: 3px solid var(--text);
-    margin-bottom: 36px;
+    text-align: center;
+    margin-bottom: 40px;
   }
 
   .kicker {
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--text-muted);
-    margin: 0 0 10px;
   }
 
   h1.title {
     font-family: 'Source Serif 4', Georgia, serif;
     font-weight: 700;
-    font-size: 40px;
-    line-height: 1.05;
-    margin: 0 0 14px;
+    font-size: clamp(32px, 8vw, 44px);
+    margin: 10px 0 12px;
     letter-spacing: -0.01em;
   }
 
   .date-line {
     font-size: 16px;
-    font-weight: 600;
     color: var(--text-muted);
-    margin: 0;
+    font-weight: 500;
+  }
+
+  .masthead-rule {
+    width: 64px;
+    height: 3px;
+    background: var(--text);
+    opacity: 0.25;
+    margin: 20px auto 0;
+    border-radius: 2px;
+  }
+
+  .intro {
+    font-size: 15px;
+    color: var(--text-muted);
+    text-align: center;
+    max-width: 480px;
+    margin: 18px auto 0;
   }
 
   section.section {
-    margin-bottom: 44px;
+    margin-top: 48px;
   }
 
   .section-head {
     display: flex;
     align-items: baseline;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
 
-  .section-eyebrow {
+  .section-tag {
     font-size: 11px;
     font-weight: 700;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     padding: 4px 10px;
     border-radius: 20px;
+    color: var(--tag-text);
+    white-space: nowrap;
   }
-  .section-eyebrow.cyber { background: var(--accent-cyber-bg); color: var(--accent-cyber); }
-  .section-eyebrow.ai { background: var(--accent-ai-bg); color: var(--accent-ai); }
+
+  .section-tag.cyber { background: var(--accent-cyber); }
+  .section-tag.ai { background: var(--accent-ai); }
 
   h2.section-title {
     font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 600;
     font-size: 24px;
-    font-weight: 700;
     margin: 0;
   }
 
-  article.story {
-    padding: 20px 0;
-    border-bottom: 1px solid var(--border);
+  .story {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 22px;
+    margin-bottom: 16px;
   }
-  article.story:last-child { border-bottom: none; }
 
-  h3.headline {
+  .story h3 {
     font-family: 'Source Serif 4', Georgia, serif;
     font-size: 19px;
     font-weight: 600;
@@ -128,37 +155,49 @@
     margin: 0 0 8px;
   }
 
-  p.summary {
-    margin: 0 0 10px;
-    font-size: 15px;
+  .story p {
+    margin: 0 0 12px;
+    font-size: 15.5px;
     color: var(--text);
   }
 
-  a.source-link {
+  .story .source {
     font-size: 13px;
-    font-weight: 600;
+    margin: 0;
+  }
+
+  .story .source a {
     color: var(--link);
     text-decoration: none;
-    display: inline-block;
+    font-weight: 600;
     padding: 4px 0;
+    display: inline-block;
   }
-  a.source-link:hover { text-decoration: underline; }
-  a.source-link::after { content: " →"; }
+
+  section.section.ai .story .source a { color: var(--link-ai); }
+
+  .story .source a:hover { text-decoration: underline; }
+
+  .story .source .src-name {
+    color: var(--text-muted);
+    font-weight: 400;
+  }
 
   footer {
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid var(--border);
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    text-align: center;
     font-size: 13px;
     color: var(--text-muted);
-    text-align: center;
   }
 
-  @media (max-width: 480px) {
-    h1.title { font-size: 32px; }
-    header.masthead { padding: 28px 0 22px; }
-    .wrap { padding: 0 16px 48px; }
-    h3.headline { font-size: 18px; }
+  footer p { margin: 4px 0; }
+
+  @media (max-width: 420px) {
+    .wrap { padding: 28px 16px 56px; }
+    h1.title { font-size: 30px; }
+    .story { padding: 16px 16px; }
   }
 </style>
 </head>
@@ -166,99 +205,96 @@
 <div class="wrap">
 
   <header class="masthead">
-    <p class="kicker">Daily Digest</p>
-    <h1 class="title">Morning Briefing</h1>
-    <p class="date-line">Saturday, November 21, 2026</p>
+    <div class="kicker">Morning Briefing</div>
+    <h1 class="title">The Daily Signal</h1>
+    <div class="date-line">Sunday, November 22, 2026</div>
+    <div class="masthead-rule"></div>
+    <p class="intro">Today's essential cybersecurity and AI news, in under three minutes.</p>
   </header>
 
-  <section class="section">
+  <section class="section cyber">
     <div class="section-head">
-      <span class="section-eyebrow cyber">Cybersecurity</span>
-      <h2 class="section-title">Threats &amp; Vulnerabilities</h2>
+      <span class="section-tag cyber">Cyber</span>
+      <h2 class="section-title">Cybersecurity</h2>
     </div>
 
     <article class="story">
-      <h3 class="headline">CISA orders federal patching of four actively exploited flaws, deadline today</h3>
-      <p class="summary">CISA added four vulnerabilities to its Known Exploited Vulnerabilities catalog on November 18: Synology DiskStation Manager (CVE-2024-10441), BerriAI LiteLLM, Apache Axis, and Vanderbilt's REDCap. Federal agencies had until today, November 21, to patch the Synology, Axis, and REDCap flaws, with forensic triage required under CISA's binding directive in case systems are already compromised.</p>
-      <a class="source-link" href="https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html">The Hacker News</a>
+      <h3>CISA orders rapid patching after four more flaws hit active exploitation</h3>
+      <p>CISA added Synology DiskStation Manager, BerriAI LiteLLM, Apache Axis, and Vanderbilt REDCap to its Known Exploited Vulnerabilities catalog on November 18, giving federal agencies until November 21 to remediate three of the four. Two of the bugs have already been tied to ransomware and cryptomining intrusions, and the Apache Axis 1.x flaw has no patch available since that branch is end-of-life.</p>
+      <p class="source"><a href="https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html">Read more →</a> <span class="src-name">The Hacker News</span></p>
     </article>
 
     <article class="story">
-      <h3 class="headline">Visa, Mastercard and JPMorgan customer data leaked after vendor breach</h3>
-      <p class="summary">A ransomware group calling itself n0n listed Visa, Mastercard, and JPMorgan Chase on its leak site and published data tied to thousands of customers after a 48-hour extortion deadline. All three firms say their own payment networks were not compromised and point to third-party vendors instead; Visa shares fell over 2.5% on the news.</p>
-      <a class="source-link" href="https://www.businessinsurance.com/jpmorgan-visa-mastercard-say-third-party-vendors-targeted-in-cyberattack/">Business Insurance</a>
+      <h3>Typosquatted "AI" domains are now a major malware funnel</h3>
+      <p>Security researchers at Island identified 186 lookalike domains impersonating ChatGPT, Claude, and two dozen other AI brands, used to push fake CAPTCHA "ClickFix" prompts, a browser-hijacking payload called Net Guard, and a family of malicious Chrome extensions with nearly a million declared installs. The campaign exploits how often people now mistype AI tool names while searching.</p>
+      <p class="source"><a href="https://thehackernews.com/2026/11/186-fake-ai-domains-redirect-users-to.html">Read more →</a> <span class="src-name">The Hacker News</span></p>
     </article>
 
     <article class="story">
-      <h3 class="headline">Microsoft patches Outlook zero-day exploited by Russian hackers</h3>
-      <p class="summary">This month's Patch Tuesday fixed over 1,000 flaws, including CVE-2026-124194, an Outlook spoofing bug that lets attackers steal hashed NTLM credentials. Microsoft has tied active exploitation to a Russian threat actor and published a detection script for defenders to check for compromise.</p>
-      <a class="source-link" href="https://www.securityweek.com/microsoft-pins-outlook-zero-day-attacks-on-russian-actor-offers-detection-script/">SecurityWeek</a>
+      <h3>DOJ and FBI dismantle North Korean "FaceStealer" deepfake crypto scheme</h3>
+      <p>U.S. authorities seized infrastructure behind a scheme in which North Korea-linked hackers hijacked Telegram, LinkedIn, Slack, and Discord accounts, then used deepfake video calls impersonating trusted contacts to steal more than $400 million in cryptocurrency from upwards of 900 victims over roughly 18 months.</p>
+      <p class="source"><a href="https://decrypt.co/383208/north-korea-stole-400-million-crypto-deepfake-video-calls">Read more →</a> <span class="src-name">Decrypt</span></p>
     </article>
 
     <article class="story">
-      <h3 class="headline">Cisco BroadWorks flaw under active attack against telecom providers</h3>
-      <p class="summary">CISA flagged CVE-2026-20320, an XML external entity flaw in Cisco BroadWorks, as actively exploited, giving federal agencies until November 24 to patch. Researchers say a threat actor used the unauthenticated bug to read sensitive files from a European telecom provider and more than a dozen other organizations.</p>
-      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/cisa-flags-cisco-broadworks-flaw-as-actively-exploited-in-attacks/">BleepingComputer</a>
+      <h3>Microsoft's November Patch Tuesday fixes an Outlook zero-day already under attack</h3>
+      <p>Microsoft's monthly update addressed over 1,000 vulnerabilities, including a spoofing flaw (CVE-2026-124194) in Outlook that attackers are actively exploiting to expose NTLMv2 authentication hashes. Fixing it requires the separate Office security update, not just the Windows cumulative patch, which several researchers warned admins not to overlook.</p>
+      <p class="source"><a href="https://www.csoonline.com/article/4247015/november-2026-patch-tuesday-63-critical-microsoft-fixes-plus-an-outlook-zero-day-that-allows-theft-of-hashed-credentials.html">Read more →</a> <span class="src-name">CSO Online</span></p>
     </article>
 
     <article class="story">
-      <h3 class="headline">Worm-like SCKit malware spreads through ScreenConnect attacks on MSPs</h3>
-      <p class="summary">A new malware toolkit dubbed SCKit is self-propagating through managed service providers by exploiting a previously patched ScreenConnect flaw, deploying rogue remote-access clients and relaying stolen session cookies across hundreds of endpoints.</p>
-      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/new-worm-like-sckit-malware-targets-msps-in-screenconnect-attacks/">BleepingComputer</a>
+      <h3>Binance confirms $6.3 billion heist traced back to a fake job interview</h3>
+      <p>Binance disclosed that North Korea-linked hackers gained the access behind one of the largest crypto thefts on record by luring an employee through a months-long fake hiring process that ended with a booby-trapped coding exercise. The exchange says it has blocked 57 similar North Korea-linked intrusion attempts so far this year.</p>
+      <p class="source"><a href="https://www.axios.com/2026/11/03/north-korea-job-interview-binance-heist">Read more →</a> <span class="src-name">Axios</span></p>
     </article>
 
     <article class="story">
-      <h3 class="headline">N-able zero-day exploited within hours of proof-of-concept release</h3>
-      <p class="summary">Hackers began exploiting a newly disclosed N-able N-central flaw, nicknamed "4EverAble2Shell," almost immediately after exploit code went public, deploying cryptocurrency miners on at least 21 compromised servers. It follows N-able's decision to take hosted environments offline after a researcher published over 30 unreported zero-days.</p>
-      <a class="source-link" href="https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/">BleepingComputer</a>
+      <h3>Worm-like "SCKit" malware spreads through MSPs via ScreenConnect</h3>
+      <p>Attackers exploiting flaws in ConnectWise ScreenConnect and N-able's N-central platform used a new self-propagating malware strain to compromise managed service providers and pivot into their downstream customers, prompting emergency hotfixes and incident response at dozens of affected organizations.</p>
+      <p class="source"><a href="https://www.bleepingcomputer.com/">Read more →</a> <span class="src-name">BleepingComputer</span></p>
     </article>
   </section>
 
-  <section class="section">
+  <section class="section ai">
     <div class="section-head">
-      <span class="section-eyebrow ai">AI</span>
-      <h2 class="section-title">Models &amp; Industry</h2>
+      <span class="section-tag ai">AI</span>
+      <h2 class="section-title">Artificial Intelligence</h2>
     </div>
 
     <article class="story">
-      <h3 class="headline">Anthropic ships Claude Fable 5.2 and Mythos 5.2</h3>
-      <p class="summary">Anthropic's new flagship pair targets coding, science, and cybersecurity, with a 1M-token context window and faster output than their predecessors. Anthropic says Mythos 5.2 found over 10% more vulnerabilities than Opus 5.5 in testing, and demoed 1,000 coordinated agents building a working operating system from an empty folder.</p>
-      <a class="source-link" href="https://www.anthropic.com/news/claude-fable-5-mythos-5">Anthropic</a>
+      <h3>Jensen Huang steps down as Nvidia CEO after 33 years</h3>
+      <p>Nvidia announced that Huang has resigned as president, CEO, and board member effective immediately, with CFO Colette Kress stepping in as interim CEO while the board searches for a permanent successor. Board member Harvey C. Jones was named the company's first-ever independent Chair. Nvidia gave no reason for the change and confirmed its Q3 earnings would still be reported on schedule.</p>
+      <p class="source"><a href="https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition">Read more →</a> <span class="src-name">Nvidia Newsroom</span></p>
     </article>
 
     <article class="story">
-      <h3 class="headline">Google's Gemini 4 Carbon reaches general availability</h3>
-      <p class="summary">Carbon moved out of its restricted cybersecurity-defender preview and into general availability via the Gemini API, AI Studio, and Gemini for Business, with introductory pricing of $2/$10 per million input/output tokens rising after November 30. Google AI Ultra subscribers also get it in Antigravity, the Gemini app, and Search's AI Mode.</p>
-      <a class="source-link" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/">Google Blog</a>
+      <h3>Anthropic targets a $1.4 trillion valuation as it opens its IPO roadshow</h3>
+      <p>Anthropic began marketing its stock market debut with a valuation target of roughly $1.4 trillion, aiming to raise up to $64.4 billion alongside a separate $26 billion private placement. The target sits below some of the $1.5–2 trillion figures floated earlier, which analysts attribute to cooling investor appetite for AI valuations.</p>
+      <p class="source"><a href="https://www.aljazeera.com/economy/2026/11/10/anthropic-targets-1-4-trillion-valuation-in-massive-stock-market-debut">Read more →</a> <span class="src-name">Al Jazeera</span></p>
     </article>
 
     <article class="story">
-      <h3 class="headline">OpenAI releases GPT-6 Cyber, its most capable offensive-security model</h3>
-      <p class="summary">OpenAI classifies the new specialized model as "Critical" risk under its Preparedness Framework, up from "High" for its predecessor, citing a jump in exploit-development benchmark scores. Access is initially limited to vetted Daybreak Red customers via the API and Codex.</p>
-      <a class="source-link" href="https://openai.com/index/introducing-gpt-6-cyber/">OpenAI</a>
+      <h3>Anthropic ships Claude Fable 5.2, keeps Mythos 5.2 under lock and key</h3>
+      <p>Anthropic released two new flagship models: Fable 5.2, available to all users, and Mythos 5.2, a more capable but restricted variant limited to vetted organizations through Anthropic's Life Sciences and Cyber Verification programs — a sign the company is now gating its most capable models by use case rather than releasing them broadly.</p>
+      <p class="source"><a href="https://www.siliconreport.com/anthropic-releases-mythos-5-2-and-fable-5-2">Read more →</a> <span class="src-name">The Silicon Report</span></p>
     </article>
 
     <article class="story">
-      <h3 class="headline">Microsoft debuts new MAI model family and Agent 365 at Ignite 2026</h3>
-      <p class="summary">Microsoft introduced its own-built MAI Realtime 1 voice model, MAI Image 2.7, and MAI Cyber 2 Flash, alongside Agent 365 Business Analytics for tracking enterprise AI agent spend and outcomes, and a Perception system for coordinating AI security agents.</p>
-      <a class="source-link" href="https://scalevise.com/resources/microsoft-ignite-2026-mai-model-lineup/">Scalevise</a>
+      <h3>An AI model found critical VM-escape bugs in the Xen hypervisor</h3>
+      <p>The Xen Project credited Anthropic's Claude with discovering two critical flaws (CVE-2026-102703, CVE-2026-102704) in the hypervisor's grant-copy mechanism that could let a malicious virtual machine read or write memory belonging to other VMs on the same host, including the privileged dom0. A human researcher validated the findings before the advisory, XSA-523, was published.</p>
+      <p class="source"><a href="https://thehackernews.com/2026/11/xen-hypervisor-flaws-let-one-malicious.html">Read more →</a> <span class="src-name">The Hacker News</span></p>
     </article>
 
     <article class="story">
-      <h3 class="headline">Meta releases Muse Ember, a small model built for agent busywork</h3>
-      <p class="summary">Meta's latest addition to its Muse family targets the repetitive work AI agents handle constantly — tool calls, coding subtasks, routing, and document extraction — at a fraction of the cost of its larger models, continuing Meta's pivot away from the open-weight Llama line.</p>
-      <a class="source-link" href="https://thenewstack.io/meta-muse-ember-launch/">The New Stack</a>
-    </article>
-
-    <article class="story">
-      <h3 class="headline">Claude credited in discovery of exploited Outlook zero-day</h3>
-      <p class="summary">Microsoft's advisory for this month's actively exploited Outlook flaw credits a researcher who used Anthropic's Claude in the discovery process. Coverage is cautious about the framing: the credit doesn't establish that Claude found, validated, or reported the bug on its own, but it's a notable sign of AI tools showing up in real vulnerability research.</p>
-      <a class="source-link" href="https://notebookcheck.net/Exploited-Outlook-zero-day-was-found-by-a-researcher-using-Claude.1447802.0.html">Notebookcheck</a>
+      <h3>Labs say AI is now measurably speeding up AI research itself</h3>
+      <p>Google reported that progress on well-defined research tasks has roughly doubled compared with its 2024–2025 trend line, and Anthropic separately disclosed it has crossed a threshold in its Responsible Scaling Policy tied to AI-accelerated research. Independent forecasters at METR estimate the current speedup at around 1.7x — a milestone both companies are treating as a safety and governance trigger, not just a performance win.</p>
+      <p class="source"><a href="https://pub.towardsai.net/tai-229-fable-5-2-and-the-case-for-a-2027-ai-takeoff-cdd4613ca007">Read more →</a> <span class="src-name">Towards AI</span></p>
     </article>
   </section>
 
   <footer>
-    Compiled automatically from public reporting. Verify critical details against primary sources before acting.
+    <p>Compiled automatically every morning from public reporting.</p>
+    <p>Spot an error or a missing story? This briefing is regenerated daily.</p>
   </footer>
 
 </div>
