@@ -6,53 +6,58 @@
 <title>Morning Briefing</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #faf8f4;
     --bg-card: #ffffff;
-    --text: #1c1a17;
-    --text-muted: #5b564e;
-    --border: #e4ddd1;
+    --text: #1d1b16;
+    --text-muted: #5b574c;
     --accent-cyber: #9a3324;
-    --accent-ai: #1f5f4a;
-    --accent-cyber-bg: #fbeae6;
-    --accent-ai-bg: #e8f2ec;
-    --rule: #d8cfbf;
-    --link: #7a2e21;
-    --link-ai: #184d3c;
-    --tag-text: #ffffff;
+    --accent-ai: #1f5f4f;
+    --border: #e4ded2;
+    --link: #0b5fa5;
+    --tag-bg: #f1ece0;
+    --shadow: rgba(30, 25, 10, 0.06);
   }
 
   @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #15130f;
-      --bg-card: #1d1b16;
-      --text: #ecE7dc;
-      --text-muted: #a8a093;
-      --border: #332f27;
-      --accent-cyber: #e2836f;
-      --accent-ai: #6fcaa8;
-      --accent-cyber-bg: #2a1a15;
-      --accent-ai-bg: #16271f;
-      --rule: #3a352b;
-      --link: #e6957f;
-      --link-ai: #86d6b4;
-      --tag-text: #15130f;
+    :root:not([data-theme="light"]) {
+      --bg: #15140f;
+      --bg-card: #1d1c16;
+      --text: #ece7da;
+      --text-muted: #a8a295;
+      --accent-cyber: #e2725b;
+      --accent-ai: #5fcbaa;
+      --border: #332f25;
+      --link: #7fb8e8;
+      --tag-bg: #262318;
+      --shadow: rgba(0, 0, 0, 0.35);
     }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #15140f;
+    --bg-card: #1d1c16;
+    --text: #ece7da;
+    --text-muted: #a8a295;
+    --accent-cyber: #e2725b;
+    --accent-ai: #5fcbaa;
+    --border: #332f25;
+    --link: #7fb8e8;
+    --tag-bg: #262318;
+    --shadow: rgba(0, 0, 0, 0.35);
   }
 
   * { box-sizing: border-box; }
 
-  html, body {
-    margin: 0;
-    padding: 0;
-    background: var(--bg);
-    color: var(--text);
-  }
+  html { -webkit-text-size-adjust: 100%; }
 
   body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     line-height: 1.55;
     -webkit-font-smoothing: antialiased;
   }
@@ -60,144 +65,147 @@
   .wrap {
     max-width: 680px;
     margin: 0 auto;
-    padding: 36px 20px 72px;
+    padding: 36px 20px 64px;
   }
 
   header.masthead {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 36px;
   }
 
-  .kicker {
+  .eyebrow {
     font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--text-muted);
+    margin: 0 0 10px;
+    font-weight: 600;
   }
 
   h1.title {
     font-family: 'Source Serif 4', Georgia, serif;
+    font-size: clamp(32px, 7vw, 44px);
     font-weight: 700;
-    font-size: clamp(32px, 8vw, 44px);
-    margin: 10px 0 12px;
+    margin: 0 0 12px;
     letter-spacing: -0.01em;
   }
 
   .date-line {
     font-size: 16px;
     color: var(--text-muted);
-    font-weight: 500;
+    margin: 0;
   }
 
-  .masthead-rule {
-    width: 64px;
-    height: 3px;
-    background: var(--text);
-    opacity: 0.25;
-    margin: 20px auto 0;
-    border-radius: 2px;
+  .rule {
+    height: 1px;
+    background: var(--border);
+    margin: 28px 0;
+    border: none;
   }
 
-  .intro {
-    font-size: 15px;
-    color: var(--text-muted);
-    text-align: center;
-    max-width: 480px;
-    margin: 18px auto 0;
-  }
-
-  section.section {
-    margin-top: 48px;
+  section.topic {
+    margin-bottom: 44px;
   }
 
   .section-head {
     display: flex;
     align-items: baseline;
     gap: 10px;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
   }
 
-  .section-tag {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 4px 10px;
-    border-radius: 20px;
-    color: var(--tag-text);
-    white-space: nowrap;
+  .section-head .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex: 0 0 auto;
   }
 
-  .section-tag.cyber { background: var(--accent-cyber); }
-  .section-tag.ai { background: var(--accent-ai); }
+  section.cyber .dot { background: var(--accent-cyber); }
+  section.ai .dot { background: var(--accent-ai); }
 
-  h2.section-title {
+  .section-head h2 {
     font-family: 'Source Serif 4', Georgia, serif;
-    font-weight: 600;
     font-size: 24px;
+    font-weight: 700;
     margin: 0;
   }
 
-  .story {
+  section.cyber .section-head h2 { color: var(--accent-cyber); }
+  section.ai .section-head h2 { color: var(--accent-ai); }
+
+  .section-sub {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin: -14px 0 20px 20px;
+  }
+
+  article.story {
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: 14px;
-    padding: 20px 22px;
-    margin-bottom: 16px;
+    padding: 18px 20px 20px;
+    margin-bottom: 14px;
+    box-shadow: 0 1px 3px var(--shadow);
   }
 
-  .story h3 {
-    font-family: 'Source Serif 4', Georgia, serif;
-    font-size: 19px;
+  article.story h3 {
+    font-size: 17px;
     font-weight: 600;
-    line-height: 1.3;
     margin: 0 0 8px;
+    line-height: 1.35;
   }
 
-  .story p {
+  article.story p {
     margin: 0 0 12px;
-    font-size: 15.5px;
+    font-size: 15px;
     color: var(--text);
   }
 
-  .story .source {
-    font-size: 13px;
-    margin: 0;
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    font-size: 12.5px;
+    color: var(--text-muted);
   }
 
-  .story .source a {
+  .story-date {
+    background: var(--tag-bg);
+    padding: 3px 9px;
+    border-radius: 999px;
+    font-weight: 500;
+  }
+
+  article.story a.source-link {
     color: var(--link);
     text-decoration: none;
-    font-weight: 600;
-    padding: 4px 0;
+    font-weight: 500;
+    padding: 6px 2px;
     display: inline-block;
   }
 
-  section.section.ai .story .source a { color: var(--link-ai); }
-
-  .story .source a:hover { text-decoration: underline; }
-
-  .story .source .src-name {
-    color: var(--text-muted);
-    font-weight: 400;
+  article.story a.source-link:hover,
+  article.story a.source-link:focus {
+    text-decoration: underline;
   }
 
   footer {
-    margin-top: 56px;
-    padding-top: 24px;
-    border-top: 1px solid var(--rule);
     text-align: center;
-    font-size: 13px;
     color: var(--text-muted);
+    font-size: 13px;
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
   }
 
   footer p { margin: 4px 0; }
 
   @media (max-width: 420px) {
-    .wrap { padding: 28px 16px 56px; }
+    .wrap { padding: 28px 16px 52px; }
     h1.title { font-size: 30px; }
-    .story { padding: 16px 16px; }
+    .section-sub { margin-left: 0; }
   }
 </style>
 </head>
@@ -205,96 +213,122 @@
 <div class="wrap">
 
   <header class="masthead">
-    <div class="kicker">Morning Briefing</div>
-    <h1 class="title">The Daily Signal</h1>
-    <div class="date-line">Sunday, November 22, 2026</div>
-    <div class="masthead-rule"></div>
-    <p class="intro">Today's essential cybersecurity and AI news, in under three minutes.</p>
+    <p class="eyebrow">Morning Briefing</p>
+    <h1 class="title">Cyber &amp; AI, Today</h1>
+    <p class="date-line">Monday, November 23, 2026</p>
   </header>
 
-  <section class="section cyber">
+  <hr class="rule">
+
+  <section class="topic cyber">
     <div class="section-head">
-      <span class="section-tag cyber">Cyber</span>
-      <h2 class="section-title">Cybersecurity</h2>
+      <span class="dot"></span>
+      <h2>Cybersecurity</h2>
     </div>
+    <p class="section-sub">The exploits, breaches, and advisories worth knowing about</p>
 
     <article class="story">
-      <h3>CISA orders rapid patching after four more flaws hit active exploitation</h3>
-      <p>CISA added Synology DiskStation Manager, BerriAI LiteLLM, Apache Axis, and Vanderbilt REDCap to its Known Exploited Vulnerabilities catalog on November 18, giving federal agencies until November 21 to remediate three of the four. Two of the bugs have already been tied to ransomware and cryptomining intrusions, and the Apache Axis 1.x flaw has no patch available since that branch is end-of-life.</p>
-      <p class="source"><a href="https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html">Read more →</a> <span class="src-name">The Hacker News</span></p>
+      <h3>CISA flags actively exploited Cisco BroadWorks flaw, orders federal patch by Nov. 24</h3>
+      <p>CISA added CVE-2026-20320, a blind XXE vulnerability in Cisco BroadWorks' OCI-P service, to its Known Exploited Vulnerabilities catalog after confirming active attacks. Threat researchers say the flaw was used against a European telecom and more than a dozen other organizations; a second exploited flaw in Openwave Webtop was added the same day.</p>
+      <div class="meta-row">
+        <span class="story-date">Nov 10</span>
+        <a class="source-link" href="https://www.bleepingcomputer.com/news/security/cisa-flags-cisco-broadworks-flaw-as-actively-exploited-in-attacks/" target="_blank" rel="noopener">BleepingComputer →</a>
+      </div>
     </article>
 
     <article class="story">
-      <h3>Typosquatted "AI" domains are now a major malware funnel</h3>
-      <p>Security researchers at Island identified 186 lookalike domains impersonating ChatGPT, Claude, and two dozen other AI brands, used to push fake CAPTCHA "ClickFix" prompts, a browser-hijacking payload called Net Guard, and a family of malicious Chrome extensions with nearly a million declared installs. The campaign exploits how often people now mistype AI tool names while searching.</p>
-      <p class="source"><a href="https://thehackernews.com/2026/11/186-fake-ai-domains-redirect-users-to.html">Read more →</a> <span class="src-name">The Hacker News</span></p>
+      <h3>Qilin ransomware's administrator unmasked as gang becomes the most active RaaS operation</h3>
+      <p>Researchers (via Krebs on Security) identified the alleged administrator of the Qilin ransomware-as-a-service operation as a St. Petersburg man using the handle "Haise." Qilin has claimed over 365 victims in the past three months, making it the busiest active ransomware brand tracked right now.</p>
+      <div class="meta-row">
+        <span class="story-date">Nov 2026</span>
+        <a class="source-link" href="https://cybernews.com/security/qilin-ransomware-administrator-unmasked/" target="_blank" rel="noopener">Cybernews →</a>
+      </div>
     </article>
 
     <article class="story">
-      <h3>DOJ and FBI dismantle North Korean "FaceStealer" deepfake crypto scheme</h3>
-      <p>U.S. authorities seized infrastructure behind a scheme in which North Korea-linked hackers hijacked Telegram, LinkedIn, Slack, and Discord accounts, then used deepfake video calls impersonating trusted contacts to steal more than $400 million in cryptocurrency from upwards of 900 victims over roughly 18 months.</p>
-      <p class="source"><a href="https://decrypt.co/383208/north-korea-stole-400-million-crypto-deepfake-video-calls">Read more →</a> <span class="src-name">Decrypt</span></p>
+      <h3>Microsoft's November Patch Tuesday fixes 1,093 flaws, including an actively exploited Outlook zero-day</h3>
+      <p>Microsoft's monthly update addressed 1,093 vulnerabilities, 63 rated critical, among them CVE-2026-124194, an Outlook spoofing bug Microsoft confirmed is already under active exploitation. Windows, Office, and SQL Server accounted for the largest share of fixes.</p>
+      <div class="meta-row">
+        <span class="story-date">Nov 10</span>
+        <a class="source-link" href="https://www.csoonline.com/article/4247015/november-2026-patch-tuesday-63-critical-microsoft-fixes-plus-an-outlook-zero-day-that-allows-theft-of-hashed-credentials.html" target="_blank" rel="noopener">CSO Online →</a>
+      </div>
     </article>
 
     <article class="story">
-      <h3>Microsoft's November Patch Tuesday fixes an Outlook zero-day already under attack</h3>
-      <p>Microsoft's monthly update addressed over 1,000 vulnerabilities, including a spoofing flaw (CVE-2026-124194) in Outlook that attackers are actively exploiting to expose NTLMv2 authentication hashes. Fixing it requires the separate Office security update, not just the Windows cumulative patch, which several researchers warned admins not to overlook.</p>
-      <p class="source"><a href="https://www.csoonline.com/article/4247015/november-2026-patch-tuesday-63-critical-microsoft-fixes-plus-an-outlook-zero-day-that-allows-theft-of-hashed-credentials.html">Read more →</a> <span class="src-name">CSO Online</span></p>
+      <h3>FBI and DOJ disrupt North Korean "FaceStealer" scheme behind $400M+ in deepfake crypto theft</h3>
+      <p>U.S. authorities said North Korean operatives used stolen accounts and AI-generated deepfakes on video calls to con cryptocurrency and Web3 professionals over roughly 18 months, stealing more than $400 million. The DOJ seized the campaign's cloud infrastructure as part of the takedown.</p>
+      <div class="meta-row">
+        <span class="story-date">Nov 2026</span>
+        <a class="source-link" href="https://www.bleepingcomputer.com/news/security/us-disrupts-north-korean-campaign-behind-400-million-crypto-theft/" target="_blank" rel="noopener">BleepingComputer →</a>
+      </div>
     </article>
 
     <article class="story">
-      <h3>Binance confirms $6.3 billion heist traced back to a fake job interview</h3>
-      <p>Binance disclosed that North Korea-linked hackers gained the access behind one of the largest crypto thefts on record by luring an employee through a months-long fake hiring process that ended with a booby-trapped coding exercise. The exchange says it has blocked 57 similar North Korea-linked intrusion attempts so far this year.</p>
-      <p class="source"><a href="https://www.axios.com/2026/11/03/north-korea-job-interview-binance-heist">Read more →</a> <span class="src-name">Axios</span></p>
+      <h3>Critical Red Hat Quay flaws could let attackers read and overwrite private container images</h3>
+      <p>Two critical vulnerabilities in Red Hat Quay registries (CVE-2026-123710 and CVE-2026-110697) could let attackers hijack token signing or steal other tenants' credentials, enabling them to read or replace private container images — a risk to any CI/CD pipeline using Quay as its registry. Red Hat has shipped fixes.</p>
+      <div class="meta-row">
+        <span class="story-date">Nov 2026</span>
+        <a class="source-link" href="https://thehackernews.com/2026/11/critical-red-hat-quay-flaw-lets.html" target="_blank" rel="noopener">The Hacker News →</a>
+      </div>
     </article>
 
     <article class="story">
-      <h3>Worm-like "SCKit" malware spreads through MSPs via ScreenConnect</h3>
-      <p>Attackers exploiting flaws in ConnectWise ScreenConnect and N-able's N-central platform used a new self-propagating malware strain to compromise managed service providers and pivot into their downstream customers, prompting emergency hotfixes and incident response at dozens of affected organizations.</p>
-      <p class="source"><a href="https://www.bleepingcomputer.com/">Read more →</a> <span class="src-name">BleepingComputer</span></p>
+      <h3>Researchers find 186 fake "AI brand" domains spreading ClickFix malware</h3>
+      <p>Browser security firm Island cataloged 186 lookalike domains impersonating 27 AI brands — including ChatGPT, Claude, and Gemini — that funnel typo traffic into ClickFix lures, fake "security check" pages, and malicious browser extensions.</p>
+      <div class="meta-row">
+        <span class="story-date">Nov 12</span>
+        <a class="source-link" href="https://thehackernews.com/2026/11/186-fake-ai-domains-redirect-users-to.html" target="_blank" rel="noopener">The Hacker News →</a>
+      </div>
     </article>
   </section>
 
-  <section class="section ai">
+  <section class="topic ai">
     <div class="section-head">
-      <span class="section-tag ai">AI</span>
-      <h2 class="section-title">Artificial Intelligence</h2>
+      <span class="dot"></span>
+      <h2>Artificial Intelligence</h2>
     </div>
+    <p class="section-sub">Model launches, industry moves, and research worth tracking</p>
 
     <article class="story">
-      <h3>Jensen Huang steps down as Nvidia CEO after 33 years</h3>
-      <p>Nvidia announced that Huang has resigned as president, CEO, and board member effective immediately, with CFO Colette Kress stepping in as interim CEO while the board searches for a permanent successor. Board member Harvey C. Jones was named the company's first-ever independent Chair. Nvidia gave no reason for the change and confirmed its Q3 earnings would still be reported on schedule.</p>
-      <p class="source"><a href="https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition">Read more →</a> <span class="src-name">Nvidia Newsroom</span></p>
+      <h3>Anthropic completes blockbuster Nasdaq debut</h3>
+      <p>Anthropic priced its IPO at $83/share, opened trading on Nasdaq under ticker ANT at $111.50, and closed its first day up roughly 17% at $97.17 — one of the largest tech IPOs on record. The offering formally closed this past week.</p>
+      <div class="meta-row">
+        <span class="story-date">Nov 18–20</span>
+        <a class="source-link" href="https://www.aljazeera.com/economy/2026/11/19/anthropic-starts-trading-in-the-us-after-blockbuster-ipo" target="_blank" rel="noopener">Al Jazeera →</a>
+      </div>
     </article>
 
     <article class="story">
-      <h3>Anthropic targets a $1.4 trillion valuation as it opens its IPO roadshow</h3>
-      <p>Anthropic began marketing its stock market debut with a valuation target of roughly $1.4 trillion, aiming to raise up to $64.4 billion alongside a separate $26 billion private placement. The target sits below some of the $1.5–2 trillion figures floated earlier, which analysts attribute to cooling investor appetite for AI valuations.</p>
-      <p class="source"><a href="https://www.aljazeera.com/economy/2026/11/10/anthropic-targets-1-4-trillion-valuation-in-massive-stock-market-debut">Read more →</a> <span class="src-name">Al Jazeera</span></p>
+      <h3>Anthropic upgrades Claude Fable and Mythos to version 5.2</h3>
+      <p>Anthropic released Claude Fable 5.2 and Claude Mythos 5.2 — the same underlying model, gated differently. Fable ships with stronger cybersecurity and biology safeguards for general availability, while Mythos remains limited to vetted research organizations. Anthropic reports faster output and lower pricing than the 5.1 versions.</p>
+      <div class="meta-row">
+        <span class="story-date">Nov 9</span>
+        <a class="source-link" href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank" rel="noopener">Anthropic →</a>
+      </div>
     </article>
 
     <article class="story">
-      <h3>Anthropic ships Claude Fable 5.2, keeps Mythos 5.2 under lock and key</h3>
-      <p>Anthropic released two new flagship models: Fable 5.2, available to all users, and Mythos 5.2, a more capable but restricted variant limited to vetted organizations through Anthropic's Life Sciences and Cyber Verification programs — a sign the company is now gating its most capable models by use case rather than releasing them broadly.</p>
-      <p class="source"><a href="https://www.siliconreport.com/anthropic-releases-mythos-5-2-and-fable-5-2">Read more →</a> <span class="src-name">The Silicon Report</span></p>
+      <h3>Google rolls out Gemini 4 Carbon and Gemini 4 Hydrogen for developers</h3>
+      <p>Google made two new Gemini 4 models available: Carbon, pitched as its strongest reasoning model for large-scale engineering and cybersecurity defense, and Hydrogen, a faster model tuned for everyday coding and agentic workflows. Google suggests pairing Carbon to plan with Hydrogen to execute.</p>
+      <div class="meta-row">
+        <span class="story-date">Nov 2026</span>
+        <a class="source-link" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/" target="_blank" rel="noopener">Google Blog →</a>
+      </div>
     </article>
 
     <article class="story">
-      <h3>An AI model found critical VM-escape bugs in the Xen hypervisor</h3>
-      <p>The Xen Project credited Anthropic's Claude with discovering two critical flaws (CVE-2026-102703, CVE-2026-102704) in the hypervisor's grant-copy mechanism that could let a malicious virtual machine read or write memory belonging to other VMs on the same host, including the privileged dom0. A human researcher validated the findings before the advisory, XSA-523, was published.</p>
-      <p class="source"><a href="https://thehackernews.com/2026/11/xen-hypervisor-flaws-let-one-malicious.html">Read more →</a> <span class="src-name">The Hacker News</span></p>
-    </article>
-
-    <article class="story">
-      <h3>Labs say AI is now measurably speeding up AI research itself</h3>
-      <p>Google reported that progress on well-defined research tasks has roughly doubled compared with its 2024–2025 trend line, and Anthropic separately disclosed it has crossed a threshold in its Responsible Scaling Policy tied to AI-accelerated research. Independent forecasters at METR estimate the current speedup at around 1.7x — a milestone both companies are treating as a safety and governance trigger, not just a performance win.</p>
-      <p class="source"><a href="https://pub.towardsai.net/tai-229-fable-5-2-and-the-case-for-a-2027-ai-takeoff-cdd4613ca007">Read more →</a> <span class="src-name">Towards AI</span></p>
+      <h3>Meta's Superintelligence Labs ships Muse Ember, a low-cost model for agent grunt work</h3>
+      <p>Meta released Muse Ember, the smallest model in its Muse family, aimed at high-volume agent tasks like tool calls, coding subtasks, routing, and document extraction. Meta suggests pairing it with larger Muse models that plan while Ember executes at a fraction of the cost.</p>
+      <div class="meta-row">
+        <span class="story-date">Nov 9</span>
+        <a class="source-link" href="https://www.marktechpost.com/2026/11/09/meta-muse-ember-small-agent-model/" target="_blank" rel="noopener">MarkTechPost →</a>
+      </div>
     </article>
   </section>
 
   <footer>
-    <p>Compiled automatically every morning from public reporting.</p>
-    <p>Spot an error or a missing story? This briefing is regenerated daily.</p>
+    <p>Compiled automatically from public reporting. Verify critical details against primary sources before acting.</p>
+    <p>Morning Briefing · published daily</p>
   </footer>
 
 </div>
