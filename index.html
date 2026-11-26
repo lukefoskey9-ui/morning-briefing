@@ -215,7 +215,7 @@
   <header class="masthead">
     <p class="eyebrow">Morning Briefing</p>
     <h1 class="title">Cyber &amp; AI, Today</h1>
-    <p class="date-line">Wednesday, November 25, 2026</p>
+    <p class="date-line">Thursday, November 26, 2026</p>
   </header>
 
   <hr class="rule">
@@ -228,47 +228,65 @@
     <p class="section-sub">The exploits, breaches, and advisories worth knowing about</p>
 
     <article class="story">
-      <h3>Chase discloses cyberattack, says hackers may have accessed customer personal information</h3>
-      <p>JPMorgan Chase said it detected a cyberattack on its systems and that hackers may have obtained some customers' personal information. The bank has not yet disclosed how many customers are affected or how attackers got in; an investigation is ongoing.</p>
+      <h3>Critical VMware vCenter auth-bypass flaw (CVSS 9.8) disclosed — no workaround available</h3>
+      <p>Broadcom's VMSA-2026-0009 advisory discloses CVE-2026-123890, an authentication bypass in VMware Directory Service that lets a network-adjacent attacker reach vCenter without valid credentials. It's the second critical auth-bypass flaw found in the same component this year; patching is the only fix, since there's no workaround.</p>
       <div class="meta-row">
         <span class="story-date">Nov 19</span>
-        <a class="source-link" href="https://www.kptv.com/2026/11/19/chase-bank-announces-cyberattack-says-hackers-may-have-obtained-customers-personal-information/" target="_blank" rel="noopener">KPTV/AP →</a>
+        <a class="source-link" href="https://thehackernews.com/2026/11/critical-vmware-vcenter-flaw-cvss-98.html" target="_blank" rel="noopener">The Hacker News →</a>
       </div>
     </article>
 
     <article class="story">
-      <h3>CISA flags four actively exploited flaws in Apache Axis, REDCap, LiteLLM and Synology DSM</h3>
-      <p>CISA added critical vulnerabilities in end-of-life Apache Axis 1.x, Vanderbilt's REDCap, BerriAI's LiteLLM and Synology DSM to its Known Exploited Vulnerabilities catalog, citing in-the-wild exploitation that includes cryptominer installs and ransomware activity. Federal agencies face a three-day remediation deadline for three of the four flaws; the LiteLLM fix has until December 2.</p>
+      <h3>Cisco Expressway RCE exploited days after proof-of-concept code went public</h3>
+      <p>Security firm F6 reported the first real-world exploitation of CVE-2026-76466, a critical remote-code-execution flaw in Cisco Expressway's database service, against a Russian organization — coming shortly after PoC exploit code appeared on GitHub. Clustered deployments running X15.5.3 and earlier are affected; there's no workaround, only the X15.5.20 update.</p>
       <div class="meta-row">
         <span class="story-date">Nov 18</span>
-        <a class="source-link" href="https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html" target="_blank" rel="noopener">The Hacker News →</a>
+        <a class="source-link" href="https://securityweek.com/hackers-exploit-cisco-expressway-vulnerability-soon-after-poc-release" target="_blank" rel="noopener">SecurityWeek →</a>
       </div>
     </article>
 
     <article class="story">
-      <h3>Researchers unmask administrator behind Qilin, the world's most active ransomware brand</h3>
-      <p>Krebs on Security, drawing on threat-intel firms Intel 471, Flashpoint and IntelHawk, identified the person behind the "Haise" persona running Qilin's ransomware-as-a-service operation as a 36-year-old man in St. Petersburg. Qilin has claimed at least 365 victim organizations in the past three months alone; authorities haven't confirmed the identification and no charges have been announced.</p>
+      <h3>"Trigram" campaign spoofs ~50 AI and blockchain brands to plant infostealers on developers</h3>
+      <p>Stormshield research, covered by The Hacker News, describes a North Korea-linked campaign impersonating AI and blockchain brands with fake recruiter outreach, conference invites and tracking pages. Victims are tricked into pasting a "verification" command into their terminal — a ClickFix-style lure that installs an infostealer across Windows, macOS and Linux.</p>
+      <div class="meta-row">
+        <span class="story-date">Nov 17</span>
+        <a class="source-link" href="https://thehackernews.com/2026/11/trigram-campaign-impersonates-about-50.html" target="_blank" rel="noopener">The Hacker News →</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <h3>FBI disrupts North Korean "FaceStealer" scheme behind $400M+ in deepfaked crypto theft</h3>
+      <p>The DOJ says North Korean operatives used hijacked social accounts to lure crypto-industry targets onto fake Zoom/Teams/Meet calls, playing back secretly recorded webcam footage and AI-generated deepfakes of people the victims knew to steal wallet access. The government says it has seized the operation's cloud infrastructure after roughly 18 months of activity.</p>
+      <div class="meta-row">
+        <span class="story-date">Nov 12</span>
+        <a class="source-link" href="https://bleepingcomputer.com/news/security/us-disrupts-north-korean-campaign-behind-400-million-crypto-theft" target="_blank" rel="noopener">BleepingComputer →</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <h3>Trezor confirms hidden hardware implants in wallets sold by reseller CryptoBilis</h3>
+      <p>Trezor confirmed three Safe 5 devices bought through reseller CryptoBilis contained a malicious implant board fitted between the mainboard and screen, designed to steal recovery phrases over a cellular connection. A firmware update blocks the implant going forward, but can't undo any phrase already captured — Trezor is urging anyone who bought from that reseller since March to move funds to a freshly generated wallet.</p>
       <div class="meta-row">
         <span class="story-date">Nov 11</span>
-        <a class="source-link" href="https://cybernews.com/security/qilin-ransomware-administrator-unmasked/" target="_blank" rel="noopener">Cybernews →</a>
+        <a class="source-link" href="https://www.bleepingcomputer.com/news/cryptocurrency/trezor-confirms-crypto-stealing-implants-in-three-wallets-releases-fix/" target="_blank" rel="noopener">BleepingComputer →</a>
       </div>
     </article>
 
     <article class="story">
-      <h3>Microsoft patches ~1,093 flaws, including an Outlook zero-day under active attack</h3>
-      <p>November's Patch Tuesday fixed roughly 1,093 vulnerabilities, 63 rated critical, led by CVE-2026-124194 — an Outlook spoofing bug, already being exploited, that can let attackers steal hashed NTLM credentials from a crafted message. Researchers separately flagged a critical Windows Search RCE (CVSS 9.8) as worth prioritizing even though it isn't yet known to be exploited.</p>
+      <h3>Git patches critical RCE triggerable by cloning a malicious repository</h3>
+      <p>CVE-2026-111760 lets an attacker exploit integer truncation in Git's index handling to swap a submodule's <code>.git</code> file for a symlink pointing at malicious hooks, which then execute automatically on a recursive clone. Git 2.56.1 and backports through 2.50.2 fix it, alongside five other bugs; until updated, advisories recommend avoiding recursive clones of untrusted repos.</p>
       <div class="meta-row">
         <span class="story-date">Nov 10</span>
-        <a class="source-link" href="https://www.csoonline.com/article/4247015/november-2026-patch-tuesday-63-critical-microsoft-fixes-plus-an-outlook-zero-day-that-allows-theft-of-hashed-credentials.html" target="_blank" rel="noopener">CSO Online →</a>
+        <a class="source-link" href="https://thehackernews.com/2026/11/git-patches-flaw-that-lets-malicious.html" target="_blank" rel="noopener">The Hacker News →</a>
       </div>
     </article>
 
     <article class="story">
-      <h3>CISA orders federal patch sprint for exploited GPUStack, FreeSWITCH, OpenSSH and Aspera flaws</h3>
-      <p>CISA's Known Exploited Vulnerabilities catalog grew by four entries covering GPUStack's AI inference platform, SignalWire's FreeSWITCH, OpenSSH (on musl-libc builds such as Alpine Linux) and IBM Aspera Faspex, all under active exploitation. Attackers used the GPUStack flaw to push malicious inference backends that opened reverse shells on affected servers.</p>
+      <h3>DOJ charges three in alleged $129M AI-deepfake CEO and attorney impersonation scheme</h3>
+      <p>Federal prosecutors indicted three men accused of using AI voice and video deepfakes to pose as company CEOs and attorneys at major law firms, tricking employees into authorizing fraudulent wire transfers. Reported victims include a Missouri hospital system (~$5M) and a Rhode Island bank (~$2.7M); the scheme allegedly ran from mid-2024 to early 2026 and targeted thousands of companies.</p>
       <div class="meta-row">
-        <span class="story-date">Nov 9</span>
-        <a class="source-link" href="https://www.esecurityplanet.com/vulnerabilities/news-cisa-kev-gpustack-freeswitch-openssh-ibm-november-2026/" target="_blank" rel="noopener">eSecurity Planet →</a>
+        <span class="story-date">Nov 6</span>
+        <a class="source-link" href="https://www.cyberscoop.com/ai-deepfakes-impersonate-ceo-lawyer-defraud-companies/" target="_blank" rel="noopener">CyberScoop →</a>
       </div>
     </article>
   </section>
@@ -281,47 +299,38 @@
     <p class="section-sub">Model launches, industry moves, and research worth tracking</p>
 
     <article class="story">
-      <h3>Anthropic completes record-breaking IPO, debuts on Nasdaq as "ANT"</h3>
-      <p>Anthropic priced its IPO at $83 a share, began trading on Nasdaq on November 19, and closed the offering November 20 alongside a concurrent private placement — together raising roughly $107 billion in what's being called the largest IPO on record. Shares closed up about 17% on their first day of trading.</p>
-      <div class="meta-row">
-        <span class="story-date">Nov 18–20</span>
-        <a class="source-link" href="https://www.anthropic.com/news/ipo-close" target="_blank" rel="noopener">Anthropic →</a>
-      </div>
-    </article>
-
-    <article class="story">
-      <h3>Google releases Gemini 4 Neon, a cheaper mid-tier model for coding and agents</h3>
-      <p>Google introduced Gemini 4 Neon, positioned between the lightweight Gemini 4 Hydrogen and flagship Gemini 4 Carbon, aimed at coding and agentic workloads. Google says it ranks third on the Artificial Analysis Intelligence Index while costing about 32% less per task than Carbon; it's now live in the Gemini API, AI Studio and the Gemini app.</p>
-      <div class="meta-row">
-        <span class="story-date">Nov 18</span>
-        <a class="source-link" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/" target="_blank" rel="noopener">Google →</a>
-      </div>
-    </article>
-
-    <article class="story">
-      <h3>Microsoft ships seven in-house "MAI" models at Ignite, undercutting OpenAI and Anthropic on price</h3>
-      <p>At Ignite 2026, Microsoft AI launched seven specialized models, including MAI Cyber 2 Flash — which it says matches GPT-6 Astra on vulnerability-hunting benchmarks at under 2% of the cost — and MAI Image 2.7, which it says now tops the Artificial Analysis image-editing leaderboard. The lineup signals Microsoft leaning further on its own models rather than relying solely on OpenAI's.</p>
+      <h3>OpenAI ships GPT-6.2 Astra and Sol, its first models rated "Critical" for cyber risk</h3>
+      <p>GPT-6.2 Astra (frontier, for hard professional work) and GPT-6.2 Sol (cheaper, everyday use) rolled out across ChatGPT, Codex and the API. Astra follows a canceled October release after internal testing flagged alignment issues, and is the first model OpenAI has deployed externally that meets the "High" threshold for AI self-improvement under its own Preparedness Framework.</p>
       <div class="meta-row">
         <span class="story-date">Nov 17</span>
-        <a class="source-link" href="https://www.testingcatalog.com/microsoft-launches-seven-mai-models-at-ignite-2026/" target="_blank" rel="noopener">TestingCatalog →</a>
+        <a class="source-link" href="https://openai.com/index/introducing-gpt-6-2-astra-sol" target="_blank" rel="noopener">OpenAI →</a>
       </div>
     </article>
 
     <article class="story">
-      <h3>Anthropic upgrades Claude Fable and Mythos to version 5.2</h3>
-      <p>Anthropic released Claude Fable 5.2 and Claude Mythos 5.2 — the same underlying model, gated differently. Fable ships with cybersecurity and biology safeguards for general availability, while Mythos stays limited to vetted organizations; Anthropic says both run meaningfully faster and cheaper than the prior versions, particularly on coding work.</p>
+      <h3>Research: AI inference providers caught logging and retaining users' prompts and secrets</h3>
+      <p>Dragos researchers seeded roughly two million prompts containing unique trackable secrets across AI inference services over five months. Results suggest resellers on at least one inference marketplace retained and viewed customer prompts through ordinary logging, and that a single attacker appears to have separately compromised two of the providers at once.</p>
       <div class="meta-row">
-        <span class="story-date">Nov 9</span>
-        <a class="source-link" href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank" rel="noopener">Anthropic →</a>
+        <span class="story-date">Nov 2026</span>
+        <a class="source-link" href="https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens" target="_blank" rel="noopener">Dragos →</a>
       </div>
     </article>
 
     <article class="story">
-      <h3>OpenAI releases GPT-6 Cyber, its first model rated "Critical" risk for cybersecurity</h3>
-      <p>OpenAI launched GPT-6 Cyber, a specialized variant of GPT-6 Astra built for authorized vulnerability discovery and exploit development, restricted to vetted customers in its application-only Daybreak Red program. OpenAI rates the model "Critical" under its Preparedness Framework — its highest cybersecurity risk tier — and reports a jump on its internal exploit benchmark versus its predecessor.</p>
+      <h3>OpenAI lets businesses claim verified profiles and deploy customer-facing agents in ChatGPT</h3>
+      <p>OpenAI's new Business Hub lets companies claim and verify a profile, publish product and pricing feeds, and see engagement data on how often ChatGPT mentions them. Eligible US e-commerce and online-service businesses can additionally build a "Business Agent" that answers customer questions directly inside ChatGPT; both features are free at launch.</p>
       <div class="meta-row">
-        <span class="story-date">Nov 5</span>
-        <a class="source-link" href="https://www.esecurityplanet.com/news/news-openai-gpt-6-cyber-security-benchmarks/" target="_blank" rel="noopener">eSecurity Planet →</a>
+        <span class="story-date">Nov 10</span>
+        <a class="source-link" href="https://openai.com/index/introducing-workspace-agents-in-chatgpt/" target="_blank" rel="noopener">OpenAI →</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <h3>Google's November Pixel Drop gives Gemini Intelligence the ability to act on your behalf</h3>
+      <p>The latest Pixel feature drop brings agentic automation to the Pixel 10 line — Gemini can now place grocery orders, book rides and make phone calls on a user's behalf, alongside a voice-typing cleanup feature called Rambler. The Pixel 10a and older Pixel 9 devices are left out of this round.</p>
+      <div class="meta-row">
+        <span class="story-date">Nov 10</span>
+        <a class="source-link" href="https://blog.google/products-and-platforms/devices/pixel/november-2026-pixel-drop/" target="_blank" rel="noopener">Google →</a>
       </div>
     </article>
   </section>
